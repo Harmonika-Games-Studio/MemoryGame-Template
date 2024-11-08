@@ -33,7 +33,7 @@ public class MemoryGameCard : MonoBehaviour
 
     public void ClickOnCard()
     {
-        if (!manager._canClick) return;
+        if (!manager.CanClick) return;
         RotateCard();
         manager.ClickedOnCard(this);
     }

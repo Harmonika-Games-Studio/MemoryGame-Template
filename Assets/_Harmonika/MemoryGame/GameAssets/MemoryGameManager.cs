@@ -1,36 +1,69 @@
 using Harmonika.Menu;
+using Harmonika.Tools;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Networking;
 using UnityEngine.UI;
+
+public class JsonDeserializedConfig
+{
+    public string gameName;
+    public string cardBack;
+    public string[] cardsList;
+    public bool useLeads;
+    public StorageItemConfig[] storageItems;
+
+    // Construtor padrão necessário para a desserialização
+    [JsonConstructor]
+    public JsonDeserializedConfig(
+        string gameName = "",
+        string cardBack = "",
+        string[] cardsList = null,
+        bool useLeads = false,
+        StorageItemConfig[] storageItems = null)
+    {
+        this.gameName = gameName;
+        this.cardBack = cardBack;
+        this.cardsList = cardsList ?? Array.Empty<string>();
+        this.useLeads = useLeads;
+        this.storageItems = storageItems ?? Array.Empty<StorageItemConfig>();
+
+    }
+}
 
 public class MemoryGameManager : MonoBehaviour
 {
+    public MemoryGameConfig config;
+
+    [Header("Game Config")]
+    [SerializeField] private MemoryGameConfig _memoryGameConfig;
+    
     [Header("References")]
     [SerializeField] private Transform _cardsGrid;
-    [SerializeField] private GameObject _cardPrefab;
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
     [SerializeField] private RectTransform gridRectTransform;
+    [SerializeField] private GameObject _cardPrefab;
     [SerializeField] private MenuManager _gameMenu;
     [SerializeField] private TMP_Text _timerText;
     [SerializeField] private Image _timerBackground;
-    [SerializeField] private MemoryGameConfig _memoryGameConfig;
 
     [Header("Menus")]
-    [SerializeField] private MainMenu _mainMenu;
+    [SerializeField] private StartMenu _mainMenu;
     [SerializeField] private CollectLeadsMenu _collectLeadsMenu;
     [SerializeField] private VictoryMenu _victoryMenu;
     [SerializeField] private ParticipationMenu _participationMenu;
     [SerializeField] private LoseMenu _loseMenu;
     
-    public int totalTimeInSeconds = 0;
-    public int memorizationTime = 0;
-
-    private int _revealedPairs = 0;
-    private int _remainingTime = 0;
-    public bool _canClick = true;
+    private int totalTimeInSeconds = 30;
+    private int memorizationTime = 2;
+    private int _revealedPairs;
+    private int _remainingTime;
+    private bool _canClick = true;
     private Sprite _cardBack;
     private Sprite[] _cardPairs;
     private Coroutine _gameTimer;
@@ -39,12 +72,17 @@ public class MemoryGameManager : MonoBehaviour
 
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
 
+    public bool CanClick
+    {
+        get
+        {
+            return _canClick;
+        }
+    }
+
     private void Start()
     {
-        AppManager.Instance.gameConfig = _memoryGameConfig;
-
-        SetupGameConfigFromScriptable(_memoryGameConfig);
-        SetupButtons();
+        SetupGameConfigFromScriptable();
     }
 
     public IEnumerator StartGame()
@@ -120,33 +158,37 @@ public class MemoryGameManager : MonoBehaviour
         _canClick = true;
     }
 
-    public void SetupGameConfigFromScriptable(MemoryGameConfig config)
+    public void SetupGameConfigFromScriptable()
     {
-        if (config != null)
+        AppManager.Instance.gameConfig = _memoryGameConfig;
+        AppManager.Instance.ApplyScriptableConfig();
+
+        if (_memoryGameConfig != null)
         {
-            //_mainMenu.ChangeVisualIdentity(config.primaryClr);
-            //_victoryMenu.ChangeVisualIdentity(config.primaryClr);
-            //_participationMenu.ChangeVisualIdentity(config.primaryClr);
-            //_loseMenu.ChangeVisualIdentity(config.primaryClr); 
-            memorizationTime = config.memorizationTime;
-            totalTimeInSeconds = config.gameTimer;
-            _mainMenu.TitleText = config.gameName;
-            //_victoryMenu.VictoryText = config.victoryMainText;
-            //_loseMenu.LoseText = config.loseMainText;
-            _cardBack = config.cardBack;
-            _cardPairs = config.cardPairs;
-            AppManager.Instance.gameConfig.useLeads = config.useLeads;
-            AppManager.Instance.Storage.itemsConfig = config.storageItems;
-            //_timerBackground.color = _config.primaryClr;
-            //_timerText.color = _config.primaryClr;
+            //_mainMenu.ChangeVisualIdentity(_memoryGameConfig.primaryClr);
+            //_victoryMenu.ChangeVisualIdentity(_memoryGameConfig.primaryClr);
+            //_participationMenu.ChangeVisualIdentity(_memoryGameConfig.primaryClr);
+            //_loseMenu.ChangeVisualIdentity(_memoryGameConfig.primaryClr); 
+            memorizationTime = _memoryGameConfig.memorizationTime;
+            totalTimeInSeconds = _memoryGameConfig.gameTimer;
+            _mainMenu.TitleText = _memoryGameConfig.gameName;
+            //_victoryMenu.VictoryText = _memoryGameConfig.victoryMainText;
+            //_loseMenu.LoseText = _memoryGameConfig.loseMainText;
+            _cardBack = _memoryGameConfig.cardBack;
+            _cardPairs = _memoryGameConfig.cardPairs;
+            AppManager.Instance.gameConfig.useLeads = _memoryGameConfig.useLeads;
+            AppManager.Instance.Storage.itemsConfig = _memoryGameConfig.storageItems;
+            //_timerBackground.color = _memoryGameConfig.primaryClr;
+            //_timerText.color = _memoryGameConfig.primaryClr;
 
             if (AppManager.Instance.gameConfig.useLeads)
             {
-                //_collectLeadsMenu.LeadsText = config.leadsText;
-                //_collectLeadsMenu.ChangeVisualIdentity(config.leadsTextClr);
+                //_collectLeadsMenu.LeadsText = _memoryGameConfig.leadsText;
+                //_collectLeadsMenu.ChangeVisualIdentity(_memoryGameConfig.leadsTextClr);
             }
 
             AppManager.Instance.Storage.Setup();
+            SetupButtons();
         }
     }
 
