@@ -1,0 +1,315 @@
+fileFormatVersion: 2
+guid: 6f6cd2bf06600dd4392a08a8f2458c7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6819071522999537432
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_0"
+  - first:
+      213: 8928094785133451527
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_1"
+  - first:
+      213: 493510992229246813
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_2"
+  - first:
+      213: -8639746881117960780
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_3"
+  - first:
+      213: -3752739290311058318
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_4"
+  - first:
+      213: 7456284871669435976
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_5"
+  - first:
+      213: -2456078559248546631
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_6"
+  - first:
+      213: 2023422458773609691
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_7"
+  - first:
+      213: 6745017617988528405
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_8"
+  - first:
+      213: -6736404152809063331
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_9"
+  - first:
+      213: 7232171958464274527
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_10"
+  - first:
+      213: -4191188594537899867
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_11"
+  - first:
+      213: -1165489899333045644
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_12"
+  - first:
+      213: 1954103584126087257
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_13"
+  - first:
+      213: 4845409581352657572
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_14"
+  - first:
+      213: 2058675266715678181
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_15"
+  - first:
+      213: -3683642061348091523
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_16"
+  - first:
+      213: -2376961437760110778
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_17"
+  - first:
+      213: 79725088301363717
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_18"
+  - first:
+      213: 2498100703615082724
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_19"
+  - first:
+      213: -315977446030237373
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_20"
+  - first:
+      213: -8466197320371977293
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_21"
+  - first:
+      213: 8091977340698846075
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_22"
+  - first:
+      213: 7919650708335280198
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_23"
+  - first:
+      213: 2478179111238089777
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_24"
+  - first:
+      213: 7601699394281760390
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_25"
+  - first:
+      213: -22002482387664660
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_26"
+  - first:
+      213: -622087081707588088
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_27"
+  - first:
+      213: 1423179290005947614
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_28"
+  - first:
+      213: -8661456676571317341
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_29"
+  - first:
+      213: 5885708519966030944
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_30"
+  - first:
+      213: 8810739821199352698
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_31"
+  - first:
+      213: -121697709559179846
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_32"
+  - first:
+      213: -8002874690519885511
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_33"
+  - first:
+      213: 4269528322345752840
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_34"
+  - first:
+      213: -2840292824709691837
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_35"
+  - first:
+      213: 7547451788419002041
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_36"
+  - first:
+      213: -2502144015798160721
+    second: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_37"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_7"
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 490
+        width: 800
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc9fb57104a41c10800000000000000
+      internalID: 2023422458773609691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_0"
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 496
+        width: 878
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 6, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71f258a66098bf4587b7366cc90ae29
+      internalID: 409449800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 416f2bd69b8f9cb40b421fa5f94c4be9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Logo Hapvida NotreDame Interm\xE9dica - Aplica\xE7\xE3o Fundo Azul_0": 409449800
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

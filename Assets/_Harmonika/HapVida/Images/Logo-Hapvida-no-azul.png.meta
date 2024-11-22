@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: a02041b1bafeb8c46bf20882523d7593
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1766890351798593763
+    second: Prancheta 4_0
+  - first:
+      213: -6001790704989920297
+    second: Prancheta 4_1
+  - first:
+      213: -2099129415722995637
+    second: Prancheta 4_2
+  - first:
+      213: 4121966016504850291
+    second: Prancheta 4_3
+  - first:
+      213: 6512560610060024561
+    second: Prancheta 4_4
+  - first:
+      213: 1532080958671513540
+    second: Prancheta 4_5
+  - first:
+      213: 8979368342402555240
+    second: Prancheta 4_6
+  - first:
+      213: 4984052962279065687
+    second: Prancheta 4_7
+  - first:
+      213: 6463263636714675275
+    second: Prancheta 4_8
+  - first:
+      213: -3789157644650618231
+    second: Prancheta 4_9
+  - first:
+      213: 8136160476177552489
+    second: Prancheta 4_10
+  - first:
+      213: -3097966047418595991
+    second: Prancheta 4_11
+  - first:
+      213: -8876227194038993735
+    second: Prancheta 4_12
+  - first:
+      213: 4572630503518726689
+    second: Prancheta 4_13
+  - first:
+      213: -6688355533281959714
+    second: Prancheta 4_14
+  - first:
+      213: -5569457088407866500
+    second: Prancheta 4_15
+  - first:
+      213: 4478775089323143574
+    second: Prancheta 4_16
+  - first:
+      213: -1870367361006766639
+    second: Prancheta 4_17
+  - first:
+      213: 5257810436355057982
+    second: Prancheta 4_18
+  - first:
+      213: 8063898532830723917
+    second: Prancheta 4_19
+  - first:
+      213: -5420543649526161660
+    second: Prancheta 4_20
+  - first:
+      213: -1634591499948247805
+    second: Prancheta 4_21
+  - first:
+      213: 5401863952051222660
+    second: Prancheta 4_22
+  - first:
+      213: 2124007824166445225
+    second: Prancheta 4_23
+  - first:
+      213: -6510476628717730006
+    second: Prancheta 4_24
+  - first:
+      213: -3775418031540027974
+    second: Prancheta 4_25
+  - first:
+      213: -7204614209875765707
+    second: Prancheta 4_26
+  - first:
+      213: -433046670955828815
+    second: Prancheta 4_27
+  - first:
+      213: 7563967049232982670
+    second: Prancheta 4_28
+  - first:
+      213: -7366857351671498868
+    second: Prancheta 4_29
+  - first:
+      213: 5162076472843540180
+    second: Prancheta 4_30
+  - first:
+      213: 32797904173928778
+    second: Prancheta 4_31
+  - first:
+      213: -644159353756792891
+    second: Prancheta 4_32
+  - first:
+      213: 8091525458139485078
+    second: Prancheta 4_33
+  - first:
+      213: -1712918403206914696
+    second: Prancheta 4_34
+  - first:
+      213: -3292541439010156298
+    second: Prancheta 4_35
+  - first:
+      213: 2631644064814398988
+    second: Prancheta 4_36
+  - first:
+      213: 2496656292922568479
+    second: Prancheta 4_37
+  - first:
+      213: 1891980324398754017
+    second: Prancheta 4_38
+  - first:
+      213: -8768869477596430780
+    second: Prancheta 4_39
+  - first:
+      213: -6185980871963885079
+    second: Prancheta 4_40
+  - first:
+      213: 385806618539269689
+    second: Prancheta 4_41
+  - first:
+      213: -3684062679656273681
+    second: Prancheta 4_42
+  - first:
+      213: -7829688142278764475
+    second: Prancheta 4_43
+  - first:
+      213: 5782738512027123448
+    second: Prancheta 4_44
+  - first:
+      213: -4144751636683331516
+    second: Prancheta 4_45
+  - first:
+      213: 4445587437544623690
+    second: Prancheta 4_46
+  - first:
+      213: 5120652891295132729
+    second: Prancheta 4_47
+  - first:
+      213: -8772787603566763464
+    second: Prancheta 4_48
+  - first:
+      213: 2008214073526840485
+    second: Prancheta 4_49
+  - first:
+      213: 2724577797097122244
+    second: Prancheta 4_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Prancheta 4_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 368
+        width: 829
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3a5d4172b55bca0800000000000000
+      internalID: -6001790704989920297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 4_16
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 53
+        width: 829
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69179f3d63ec72e30800000000000000
+      internalID: 4478775089323143574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 4_19
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 65
+        width: 265
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f3b22cdf8b8ef60800000000000000
+      internalID: 8063898532830723917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 4_33
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 98
+        width: 126
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6931f6f888fda4070800000000000000
+      internalID: 8091525458139485078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prancheta 4_44
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 99
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fef856d90a604050800000000000000
+      internalID: 5782738512027123448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo-Hapvida-no-azul_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 55
+        width: 258
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9125b1209b173a4a82695a2d187a32a
+      internalID: 283381389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo-Hapvida-no-azul_1
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 35
+        width: 721
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f5b617e7a0d894f800aebec0ddb5c8
+      internalID: -1227211074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d575de57c2b350444800a6e15f1396b3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Logo-Hapvida-no-azul_0: 283381389
+      Logo-Hapvida-no-azul_1: -1227211074
+      Prancheta 4_0: -1766890351798593763
+      Prancheta 4_1: -6001790704989920297
+      Prancheta 4_10: 8136160476177552489
+      Prancheta 4_11: -3097966047418595991
+      Prancheta 4_12: -8876227194038993735
+      Prancheta 4_13: 4572630503518726689
+      Prancheta 4_14: -6688355533281959714
+      Prancheta 4_15: -5569457088407866500
+      Prancheta 4_16: 4478775089323143574
+      Prancheta 4_17: -1870367361006766639
+      Prancheta 4_18: 5257810436355057982
+      Prancheta 4_19: 8063898532830723917
+      Prancheta 4_2: -2099129415722995637
+      Prancheta 4_20: -5420543649526161660
+      Prancheta 4_21: -1634591499948247805
+      Prancheta 4_22: 5401863952051222660
+      Prancheta 4_23: 2124007824166445225
+      Prancheta 4_24: -6510476628717730006
+      Prancheta 4_25: -3775418031540027974
+      Prancheta 4_26: -7204614209875765707
+      Prancheta 4_27: -433046670955828815
+      Prancheta 4_28: 7563967049232982670
+      Prancheta 4_29: -7366857351671498868
+      Prancheta 4_3: 4121966016504850291
+      Prancheta 4_30: 5162076472843540180
+      Prancheta 4_31: 32797904173928778
+      Prancheta 4_32: -644159353756792891
+      Prancheta 4_33: 8091525458139485078
+      Prancheta 4_34: -1712918403206914696
+      Prancheta 4_35: -3292541439010156298
+      Prancheta 4_36: 2631644064814398988
+      Prancheta 4_37: 2496656292922568479
+      Prancheta 4_38: 1891980324398754017
+      Prancheta 4_39: -8768869477596430780
+      Prancheta 4_4: 6512560610060024561
+      Prancheta 4_40: -6185980871963885079
+      Prancheta 4_41: 385806618539269689
+      Prancheta 4_42: -3684062679656273681
+      Prancheta 4_43: -7829688142278764475
+      Prancheta 4_44: 5782738512027123448
+      Prancheta 4_45: -4144751636683331516
+      Prancheta 4_46: 4445587437544623690
+      Prancheta 4_47: 5120652891295132729
+      Prancheta 4_48: -8772787603566763464
+      Prancheta 4_49: 2008214073526840485
+      Prancheta 4_5: 1532080958671513540
+      Prancheta 4_50: 2724577797097122244
+      Prancheta 4_6: 8979368342402555240
+      Prancheta 4_7: 4984052962279065687
+      Prancheta 4_8: 6463263636714675275
+      Prancheta 4_9: -3789157644650618231
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,20 @@
+{
+    "name": "Harmonika.MemoryGame",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:4a0318ae1d5f0ff4c8176ff2cb0e45b7",
+        "GUID:d146ef997b06cb74197ff463040be9d4",
+        "GUID:a38c82f7ccdc57f40b87b216ab77ece3",
+        "GUID:0299b2993ed354a4fadc3276144eb642"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
