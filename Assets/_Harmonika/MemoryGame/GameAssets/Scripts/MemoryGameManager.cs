@@ -323,7 +323,7 @@ public class MemoryGameManager : MonoBehaviour
         }
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("premio", prizeName);
+        //AppManager.Instance.DataSync.AddDataToJObject("premio", prizeName);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime.ToString());
 
         EndGame();
@@ -334,7 +334,7 @@ public class MemoryGameManager : MonoBehaviour
         SoundSystem.Instance.Play("Fail");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
-        AppManager.Instance.DataSync.AddDataToJObject("premio", "nenhum");
+        //AppManager.Instance.DataSync.AddDataToJObject("premio", "nenhum");
         AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime.ToString());
 
         _gameMenu.OpenMenu("LoseMenu");
