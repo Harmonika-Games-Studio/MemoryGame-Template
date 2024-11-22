@@ -216,9 +216,11 @@ public class MemoryGameManager : MonoBehaviour
         {
             _mainMenu.AddStartGameButtonListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
             _mainMenu.AddStartGameButtonListener(() => AppManager.Instance.DataSync.CleanLeads());
-            _mainMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearTextFields(true));
+            _mainMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearTextFields());
+            _mainMenu.AddStartGameButtonListener(() => _collectLeadsMenu.SetToggleFields(false));
             _collectLeadsMenu.AddContinueGameButtonListener(() => _gameMenu.OpenMenu("CollectLeadsMenu2"));
             _collectLeadsMenu.AddContinueGameButtonListener(() => _collectLeadsMenu2.ClearTextFields());
+            _collectLeadsMenu.AddContinueGameButtonListener(() => _collectLeadsMenu2.SetToggleFields(true));
             _collectLeadsMenu.AddBackButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
             _collectLeadsMenu2.AddContinueGameButtonListener(() => _gameMenu.CloseMenus());
             _collectLeadsMenu2.AddContinueGameButtonListener(() => StartCoroutine(StartGame()));
