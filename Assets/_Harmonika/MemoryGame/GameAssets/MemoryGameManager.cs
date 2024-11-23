@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -51,6 +52,7 @@ public class MemoryGameManager : MonoBehaviour
     [SerializeField] private MenuManager _gameMenu;
     [SerializeField] private TMP_Text _timerText;
     [SerializeField] private Image _timerBackground;
+    [SerializeField] private Slider _timerSlider;
 
     [Header("Menus")]
     [SerializeField] private StartMenu _mainMenu;
@@ -87,6 +89,10 @@ public class MemoryGameManager : MonoBehaviour
 
     public IEnumerator StartGame()
     {
+        _cardPairs = GetRandomSprites(_memoryGameConfig.cardPairs);
+        foreach (var item in _cardPairs) {
+            Debug.Log(item.name);
+        }
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
@@ -175,7 +181,7 @@ public class MemoryGameManager : MonoBehaviour
             //_victoryMenu.VictoryText = _memoryGameConfig.victoryMainText;
             //_loseMenu.LoseText = _memoryGameConfig.loseMainText;
             _cardBack = _memoryGameConfig.cardBack;
-            _cardPairs = _memoryGameConfig.cardPairs;
+            //_cardPairs = GetRandomSprites(_memoryGameConfig.cardPairs);
             AppManager.Instance.gameConfig.useLeads = _memoryGameConfig.useLeads;
             AppManager.Instance.Storage.itemsConfig = _memoryGameConfig.storageItems;
             //_timerBackground.color = _memoryGameConfig.primaryClr;
@@ -211,6 +217,36 @@ public class MemoryGameManager : MonoBehaviour
         _victoryMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
         _loseMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
         _participationMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
+    }
+
+    public Sprite[] GetRandomSprites(Sprite[] allSprites) {
+        // Garantir que as listas tenham os índices corretos
+        List<int> group1 = new List<int> { 0, 1, 2, 3 };
+        List<int> group2 = new List<int> { 5, 6, 7, 8 };
+        List<int> group3 = new List<int> { 9, 10, 11, 12 };
+        List<int> remainingIndexes = new List<int>();
+
+        // Selecionar ao menos 2 de cada grupo
+        List<int> selectedIndexes = new List<int>();
+        selectedIndexes.AddRange(group1.OrderBy(x => UnityEngine.Random.value).Take(2));
+        selectedIndexes.AddRange(group2.OrderBy(x => UnityEngine.Random.value).Take(2));
+        selectedIndexes.AddRange(group3.OrderBy(x => UnityEngine.Random.value).Take(2));
+
+        // Adicionar os índices restantes que não foram escolhidos nos grupos
+        remainingIndexes.AddRange(group1.Except(selectedIndexes));
+        remainingIndexes.AddRange(group2.Except(selectedIndexes));
+        remainingIndexes.AddRange(group3.Except(selectedIndexes));
+
+        // Selecionar mais 2 índices entre os que sobraram
+        selectedIndexes.AddRange(remainingIndexes.OrderBy(x => UnityEngine.Random.value).Take(3));
+
+        // Embaralhar a lista final
+        selectedIndexes = selectedIndexes.OrderBy(x => UnityEngine.Random.value).ToList();
+
+        // Criar o array final com as sprites baseadas nos índices selecionados
+        Sprite[] selectedSprites = selectedIndexes.Select(index => allSprites[index]).ToArray();
+
+        return selectedSprites;
     }
 
     private void InstantiateCards()
@@ -279,8 +315,8 @@ public class MemoryGameManager : MonoBehaviour
         float cellHeight = originalCellHeight * scaleFactor;
 
         // Configurar o GridLayoutGroup com a quantidade de colunas
-        gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        gridLayoutGroup.constraintCount = numberOfColumns;
+        gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedRowCount;
+        gridLayoutGroup.constraintCount = 3;
         gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
 
     }
@@ -328,7 +364,7 @@ public class MemoryGameManager : MonoBehaviour
         }
         _cardsList.Clear();
         _revealedPairs = 0;
-        _timerText.text = "00:00";
+        _timerText.text = "00";
 
         AppManager.Instance.DataSync.SendLeads();
     }
@@ -342,12 +378,17 @@ public class MemoryGameManager : MonoBehaviour
     IEnumerator GameTimer()
     {
         _remainingTime = totalTimeInSeconds;
+        _timerSlider.maxValue = _remainingTime;
+        _timerSlider.value = _remainingTime;
+
         while (_remainingTime > 0)
         {
             int minutes = _remainingTime / 60;
             int seconds = _remainingTime % 60;
 
-            _timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            //_timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            _timerText.text = _remainingTime.ToString();
+            _timerSlider.value = _remainingTime;
 
             yield return new WaitForSeconds(1);
 
