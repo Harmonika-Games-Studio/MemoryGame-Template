@@ -232,13 +232,13 @@ public class MemoryGameManager : MonoBehaviour
         selectedIndexes.AddRange(group2.OrderBy(x => UnityEngine.Random.value).Take(2));
         selectedIndexes.AddRange(group3.OrderBy(x => UnityEngine.Random.value).Take(2));
 
-        // Adicionar os índices restantes que não foram escolhidos nos grupos
-        remainingIndexes.AddRange(group1.Except(selectedIndexes));
-        remainingIndexes.AddRange(group2.Except(selectedIndexes));
-        remainingIndexes.AddRange(group3.Except(selectedIndexes));
+        //// Adicionar os índices restantes que não foram escolhidos nos grupos
+        //remainingIndexes.AddRange(group1.Except(selectedIndexes));
+        //remainingIndexes.AddRange(group2.Except(selectedIndexes));
+        //remainingIndexes.AddRange(group3.Except(selectedIndexes));
 
-        // Selecionar mais 2 índices entre os que sobraram
-        selectedIndexes.AddRange(remainingIndexes.OrderBy(x => UnityEngine.Random.value).Take(3));
+        //// Selecionar mais 2 índices entre os que sobraram
+        //selectedIndexes.AddRange(remainingIndexes.OrderBy(x => UnityEngine.Random.value).Take(3));
 
         // Embaralhar a lista final
         selectedIndexes = selectedIndexes.OrderBy(x => UnityEngine.Random.value).ToList();
