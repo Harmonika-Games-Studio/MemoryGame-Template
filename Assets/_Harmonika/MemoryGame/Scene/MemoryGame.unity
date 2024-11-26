@@ -2545,7 +2545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 223831947475230236, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 375944428957630852, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7329,7 +7329,7 @@ MonoBehaviour:
   - name: VictoryMenu
     group: {fileID: 7230882640180259523}
   - name: ParticipationMenu
-    group: {fileID: 1242841894}
+    group: {fileID: 7230882640180259523}
   - name: LoseMenu
     group: {fileID: 6812160803780652236}
 --- !u!114 &1761938512
