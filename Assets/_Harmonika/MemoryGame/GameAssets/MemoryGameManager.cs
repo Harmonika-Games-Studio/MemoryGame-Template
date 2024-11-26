@@ -316,7 +316,7 @@ public class MemoryGameManager : MonoBehaviour
 
         // Configurar o GridLayoutGroup com a quantidade de colunas
         gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedRowCount;
-        gridLayoutGroup.constraintCount = 3;
+        gridLayoutGroup.constraintCount = 2;
         gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
 
     }

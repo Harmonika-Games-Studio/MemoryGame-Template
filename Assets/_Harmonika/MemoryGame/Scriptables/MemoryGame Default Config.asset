@@ -24,21 +24,21 @@ MonoBehaviour:
   useLeads: 0
   memorizationTime: 8
   gameTimer: 60
-  cardBack: {fileID: 21300000, guid: b5fd2828751d34842a96569deb02c62f, type: 3}
+  cardBack: {fileID: 21300000, guid: ec0102a90a6070948b124f5819b98d1b, type: 3}
   cardPairs:
-  - {fileID: 21300000, guid: 00e0e9bec05f31e448e3825597ecffc2, type: 3}
-  - {fileID: 21300000, guid: f6b25246c68c27441bfa9d10609b8e59, type: 3}
-  - {fileID: 21300000, guid: 50536e3993134b049b17bd0275d88264, type: 3}
-  - {fileID: 21300000, guid: 94f4b30d1bb4b1743869af2ff8378b81, type: 3}
-  - {fileID: 21300000, guid: ba4f77ca64a53a64cac2c6bb1958f94e, type: 3}
-  - {fileID: 21300000, guid: d89df1c8066cb0c4297a4d4d4f9676e2, type: 3}
-  - {fileID: 21300000, guid: c309cec1cb4a6434b9a2b1ebe84961da, type: 3}
-  - {fileID: 21300000, guid: 7571e4b6717bcab4d9481f2b419d4b34, type: 3}
-  - {fileID: 21300000, guid: a485be2c79325f049a049a31a9828c43, type: 3}
-  - {fileID: 21300000, guid: afb793ff67aedec428285ef67d180fec, type: 3}
-  - {fileID: 21300000, guid: fc232862fe2a2594b8f13e1927630633, type: 3}
-  - {fileID: 21300000, guid: 33fc6e7fe56d7e14d96135254ab98cda, type: 3}
-  - {fileID: 21300000, guid: fae82769421c1dc42a9385e8e6e29161, type: 3}
+  - {fileID: 21300000, guid: d9d24922008a30749ae75777c923c95b, type: 3}
+  - {fileID: 21300000, guid: 34e166af47e8afb4cab1aedc4377df9d, type: 3}
+  - {fileID: 21300000, guid: b1a5c4cad8d226442bc8845fdd057d9e, type: 3}
+  - {fileID: 21300000, guid: 88a2710f93d7fd842a7bf7a77c97156f, type: 3}
+  - {fileID: 21300000, guid: 3db57a50c3c051e479e137f1c1616b94, type: 3}
+  - {fileID: 21300000, guid: 0af638d22b44cf247a252ed69f815c48, type: 3}
+  - {fileID: 21300000, guid: 4e345da9a92378e458cbb119ed6073f4, type: 3}
+  - {fileID: 21300000, guid: 617ee3552f37ba941a18396dab2c10f2, type: 3}
+  - {fileID: 21300000, guid: c87610b7d64aca4478bc0774c70e4908, type: 3}
+  - {fileID: 21300000, guid: 5edc8455c1657a04bb3a2a4f83839a5d, type: 3}
+  - {fileID: 21300000, guid: 8fab8f5334d407a48aeee93cd7651f15, type: 3}
+  - {fileID: 21300000, guid: 9f563610dd8322f4a8b2a80abfb8d497, type: 3}
+  - {fileID: 21300000, guid: 21e52e9699c9c8b4191eba25ce25ccda, type: 3}
   userLogo: {fileID: -7924636219656072900, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
   primaryClr: {r: 1, g: 0.50980395, b: 0.10196079, a: 1}
   secondaryClr: {r: 1, g: 0.32156864, b: 0.09019608, a: 1}
