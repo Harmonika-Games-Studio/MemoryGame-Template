@@ -12,14 +12,16 @@ public class MemoryGameConfigMenu : ConfigMenu
     [Header("Game Manager Reference ")]
     [SerializeField] private MemoryGameManager _memoryGameManager;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _inputMemTimer.onSubmit.AddListener(OnMemorizationTimeValueChanged);
         _inputGameDuration.onSubmit.AddListener(OnGameDurationValueChanged);
     }
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         UpdateInputValues();
     }
 
@@ -43,10 +45,8 @@ public class MemoryGameConfigMenu : ConfigMenu
         _memoryGameManager.GameDuration = int.Parse(value);
     }
 
-    protected override void UpdateInputValues()
+    private void UpdateInputValues()
     {
-        base.UpdateInputValues();
-
         _inputMemTimer.text = _memoryGameManager.MemorizationTime.ToString();
         _inputGameDuration.text = _memoryGameManager.GameDuration.ToString();
     }

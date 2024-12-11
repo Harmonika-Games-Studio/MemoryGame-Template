@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 72442b889f5a47649919eee4ac5e8b7f
+guid: 7f8a998853a56354eb1509a9a3133736
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7995453886447724599
-    second: Carta Hapvida 3_0
+      213: -4178046375966092550
+    second: 4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Carta Hapvida 3_0
+      name: 4_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 4
         y: 0
-        width: 406
-        height: 544
+        width: 810
+        height: 1087
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 738abbfa2fe85fe60800000000000000
-      internalID: 7995453886447724599
+      spriteID: af2de6115f89406c0800000000000000
+      internalID: -4178046375966092550
       vertices: []
       indices: 
       edges: []
