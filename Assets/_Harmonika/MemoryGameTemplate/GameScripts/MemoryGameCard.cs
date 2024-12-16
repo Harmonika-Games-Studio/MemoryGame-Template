@@ -11,7 +11,7 @@ public class MemoryGameCard : MonoBehaviour
     private bool _coroutineAllowed;
     private bool _facedUp;
     private bool isCorect = false;
-    [HideInInspector] public MemoryGameManager manager;
+    [HideInInspector] public MemoryGame manager;
     [HideInInspector] public int id;
 
     public bool IsCorect

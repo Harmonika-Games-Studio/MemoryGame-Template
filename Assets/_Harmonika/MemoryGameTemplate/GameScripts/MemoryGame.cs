@@ -32,25 +32,16 @@ public class JsonDeserializedConfig
         this.cardsList = cardsList ?? Array.Empty<string>();
         this.useLeads = useLeads;
         this.storageItems = storageItems ?? Array.Empty<StorageItemConfig>();
-
     }
 }
 
-public class MemoryGameManager : MonoBehaviour
+public class MemoryGame : MonoBehaviour
 {
-    public MemoryGameConfig config;
-
-    [Header("Game Config")]
-    [SerializeField] private MemoryGameConfig _memoryGameConfig;
+    [SerializeField] private MemoryGameConfig _config;
     
     [Header("References")]
-    [SerializeField] private Transform _cardsGrid;
+    [SerializeField] private Cronometer _cronometer;
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
-    [SerializeField] private RectTransform gridRectTransform;
-    [SerializeField] private GameObject _cardPrefab;
-    [SerializeField] private MenuManager _gameMenu;
-    [SerializeField] private TMP_Text _timerText;
-    [SerializeField] private Image _timerBackground;
 
     [Header("Menus")]
     [SerializeField] private StartMenu _mainMenu;
@@ -59,18 +50,18 @@ public class MemoryGameManager : MonoBehaviour
     [SerializeField] private ParticipationMenu _participationMenu;
     [SerializeField] private LoseMenu _loseMenu;
     
-    private int totalTimeInSeconds = 30;
-    private int memorizationTime = 2;
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
-    private Sprite _cardBack;
-    private Sprite[] _cardPairs;
-    private Coroutine _gameTimer;
+    private MenuManager _gameMenu;
+    private RectTransform _gridLayoutRect;
 
-    private MemoryGameCard lastClickedCard;
-
+    private MemoryGameCard _lastClickedCard;
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
+
+    #region Properties
+
+    public MemoryGameConfig Config { get => _config; }
 
     public bool CanClick
     {
@@ -79,25 +70,36 @@ public class MemoryGameManager : MonoBehaviour
             return _canClick;
         }
     }
+    #endregion
 
-    private void Start()
+    private void Awake()
     {
-        SetupGameConfigFromScriptable();
+        _gridLayoutRect = gridLayoutGroup.gameObject.GetComponent<RectTransform>();
+        _cronometer.onEndTimer.AddListener(() => EndGame(false));
+        AppManager.Instance.gameConfig = _config;
+
+        _gameMenu = GetComponentInChildren<MenuManager>();
+
+        AppManager.Instance.ApplyScriptableConfig();
+        AppManager.Instance.Storage.Setup();
+        
+        SetupButtons();
     }
 
     public IEnumerator StartGame()
     {
+        _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
+        _cronometer.StartTimer();
+
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
-        yield return new WaitForSeconds(memorizationTime);
+        yield return new WaitForSeconds(_config.memorizationTime);
 
         foreach (var card in _cardsList)
         {
             card.RotateCardDown();
         }
-
-        _gameTimer = StartCoroutine(GameTimer());
     }
 
     public void ShuffleCards()
@@ -118,7 +120,7 @@ public class MemoryGameManager : MonoBehaviour
         }
 
         // Se você estiver usando o GridLayoutGroup, force a atualização do layout
-        LayoutRebuilder.ForceRebuildLayoutImmediate(gridRectTransform);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_gridLayoutRect);
     }
 
     public void ClickedOnCard(MemoryGameCard card)
@@ -126,30 +128,29 @@ public class MemoryGameManager : MonoBehaviour
         SoundSystem.Instance.Play("Card", true);
 
         _canClick = false;
-        StartCoroutine(InvokeTimerCoroutine(.2f, ReenableClick));
+        Invoke(nameof(ReenableClick), .2f);
 
-        if (lastClickedCard == null)
-            lastClickedCard = card;
+        if (_lastClickedCard == null)
+            _lastClickedCard = card;
         else
         {
-            if (lastClickedCard.id == card.id)
+            if (_lastClickedCard.id == card.id)
             {
-                lastClickedCard.IsCorect = true;
+                _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _cardPairs.Length)
+                if (_revealedPairs >= _config.cardPairs.Length)
                 {
-                    StopCoroutine(_gameTimer);
-                    StartCoroutine(InvokeTimerCoroutine(1, () => WinGame(AppManager.Instance.Storage.GetRandomPrize())));
+                    EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
             }
             else
             {
-                lastClickedCard.IsCorect = false;
+                _lastClickedCard.IsCorect = false;
                 card.IsCorect = false;
             }
 
-            lastClickedCard = null;
+            _lastClickedCard = null;
         }
     }
 
@@ -158,47 +159,13 @@ public class MemoryGameManager : MonoBehaviour
         _canClick = true;
     }
 
-    public void SetupGameConfigFromScriptable()
-    {
-        AppManager.Instance.gameConfig = _memoryGameConfig;
-        AppManager.Instance.ApplyScriptableConfig();
-
-        if (_memoryGameConfig != null)
-        {
-            //_mainMenu.ChangeVisualIdentity(_memoryGameConfig.primaryClr);
-            //_victoryMenu.ChangeVisualIdentity(_memoryGameConfig.primaryClr);
-            //_participationMenu.ChangeVisualIdentity(_memoryGameConfig.primaryClr);
-            //_loseMenu.ChangeVisualIdentity(_memoryGameConfig.primaryClr); 
-            memorizationTime = _memoryGameConfig.memorizationTime;
-            totalTimeInSeconds = _memoryGameConfig.gameTimer;
-            _mainMenu.TitleText = _memoryGameConfig.gameName;
-            //_victoryMenu.VictoryText = _memoryGameConfig.victoryMainText;
-            //_loseMenu.LoseText = _memoryGameConfig.loseMainText;
-            _cardBack = _memoryGameConfig.cardBack;
-            _cardPairs = _memoryGameConfig.cardPairs;
-            AppManager.Instance.gameConfig.useLeads = _memoryGameConfig.useLeads;
-            AppManager.Instance.Storage.itemsConfig = _memoryGameConfig.storageItems;
-            //_timerBackground.color = _memoryGameConfig.primaryClr;
-            //_timerText.color = _memoryGameConfig.primaryClr;
-
-            if (AppManager.Instance.gameConfig.useLeads)
-            {
-                //_collectLeadsMenu.LeadsText = _memoryGameConfig.leadsText;
-                //_collectLeadsMenu.ChangeVisualIdentity(_memoryGameConfig.leadsTextClr);
-            }
-
-            AppManager.Instance.Storage.Setup();
-            SetupButtons();
-        }
-    }
-
     private void SetupButtons()
     {
         if (AppManager.Instance.gameConfig.useLeads)
         {
             _mainMenu.AddStartGameButtonListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
-            _mainMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearTextFields());
-            _collectLeadsMenu.AddContinueGameButtonListener(() => _gameMenu.CloseMenus());
+            _mainMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearAllFields());
+            _collectLeadsMenu.AddContinueGameButtonListener(() => _gameMenu.CloseMenus()); 
             _collectLeadsMenu.AddContinueGameButtonListener(() => StartCoroutine(StartGame()));
             _collectLeadsMenu.AddBackButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
@@ -217,16 +184,16 @@ public class MemoryGameManager : MonoBehaviour
     {
         Debug.Log("Instantiate");
 
-        for (int i = 0; i < _cardPairs.Length; i++)
+        for (int i = 0; i < _config.cardPairs.Length; i++)
         {
             for (int j = 0; j < 2; j++)
             {
-                GameObject newCard = Instantiate(_cardPrefab, _cardsGrid);
+                GameObject newCard = Instantiate(_config._cardPrefab, gridLayoutGroup.transform);
                 MemoryGameCard cardConfig = newCard.GetComponent<MemoryGameCard>();
                 cardConfig.id = i;
                 cardConfig.manager = this;
-                cardConfig.cardBack = _cardBack;
-                cardConfig.cardFront = _cardPairs[i];
+                cardConfig.cardBack = _config.cardBack;
+                cardConfig.cardFront = _config.cardPairs[i];
 
                 _cardsList.Add(cardConfig);
             }
@@ -238,7 +205,7 @@ public class MemoryGameManager : MonoBehaviour
         float originalCellWidth = gridLayoutGroup.cellSize.x;
         float originalCellHeight = gridLayoutGroup.cellSize.y;
 
-        int totalCards = _cardPairs.Length * 2;
+        int totalCards = _config.cardPairs.Length * 2;
 
         // Priorizar o maior número de colunas possível
         int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha
@@ -256,8 +223,8 @@ public class MemoryGameManager : MonoBehaviour
             }
         }
 
-        float gridWidth = gridRectTransform.rect.width;
-        float gridHeight = gridRectTransform.rect.height;
+        float gridWidth = _gridLayoutRect.rect.width;
+        float gridHeight = _gridLayoutRect.rect.height;
 
         // Obter o padding do GridLayoutGroup
         float totalHorizontalPadding = gridLayoutGroup.padding.left + gridLayoutGroup.padding.right;
@@ -285,8 +252,27 @@ public class MemoryGameManager : MonoBehaviour
 
     }
 
+    private void EndGame(bool win, string prizeName = null)
+    {
+        InvokeUtility.Invoke(() =>
+        {
+            if (win) WinGame(prizeName);
+            else LoseGame();
+
+            foreach (var card in _cardsList)
+            {
+                Destroy(card.gameObject);
+            }
+        _cardsList.Clear();
+        _revealedPairs = 0;
+
+        AppManager.Instance.DataSync.SendLeads();
+        }, 1f);
+    }
+
     private void WinGame(string prizeName = null)
     {
+        _cronometer.EndTimer();
         SoundSystem.Instance.Play("Win");
 
         if (!string.IsNullOrEmpty(prizeName))
@@ -303,8 +289,6 @@ public class MemoryGameManager : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
         AppManager.Instance.DataSync.AddDataToJObject("premio", prizeName);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime.ToString());
-
-        EndGame();
     }
 
     private void LoseGame()
@@ -316,44 +300,5 @@ public class MemoryGameManager : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime.ToString());
 
         _gameMenu.OpenMenu("LoseMenu");
-        
-        EndGame();
-    }
-
-    private void EndGame()
-    {
-        foreach (var card in _cardsList)
-        {
-            Destroy(card.gameObject);
-        }
-        _cardsList.Clear();
-        _revealedPairs = 0;
-        _timerText.text = "00:00";
-
-        AppManager.Instance.DataSync.SendLeads();
-    }
-
-    IEnumerator InvokeTimerCoroutine(float time, Action action)
-    {
-        yield return new WaitForSeconds(time);
-        action?.Invoke();
-    }
-
-    IEnumerator GameTimer()
-    {
-        _remainingTime = totalTimeInSeconds;
-        while (_remainingTime > 0)
-        {
-            int minutes = _remainingTime / 60;
-            int seconds = _remainingTime % 60;
-
-            _timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-
-            yield return new WaitForSeconds(1);
-
-            _remainingTime--;
-        }
-
-        LoseGame();
     }
 }
