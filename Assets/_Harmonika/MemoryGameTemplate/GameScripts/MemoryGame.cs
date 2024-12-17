@@ -44,20 +44,22 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
 
     [Header("Menus")]
-    [SerializeField] private StartMenu _mainMenu;
-    [SerializeField] private CollectLeadsMenu _collectLeadsMenu;
-    [SerializeField] private VictoryMenu _victoryMenu;
-    [SerializeField] private ParticipationMenu _participationMenu;
-    [SerializeField] private LoseMenu _loseMenu;
+    [SerializeField] protected StartMenu _mainMenu;
+    [SerializeField] protected CollectLeadsMenu _collectLeadsMenu;
+    [SerializeField] protected VictoryMenu _victoryMenu;
+    [SerializeField] protected ParticipationMenu _participationMenu;
+    [SerializeField] protected LoseMenu _loseMenu;
     
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
-    private MenuManager _gameMenu;
+    protected MenuManager _gameMenu;
     private RectTransform _gridLayoutRect;
 
     private MemoryGameCard _lastClickedCard;
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
+
+    private float _startTime;
 
     #region Properties
 
@@ -90,6 +92,7 @@ public class MemoryGame : MonoBehaviour
     {
         _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
         _cronometer.StartTimer();
+        _startTime = Time.time;
 
         InstantiateCards();
         AdjustGridLayout();
@@ -159,7 +162,7 @@ public class MemoryGame : MonoBehaviour
         _canClick = true;
     }
 
-    private void SetupButtons()
+    virtual protected void SetupButtons()
     {
         if (AppManager.Instance.gameConfig.useLeads)
         {
@@ -254,6 +257,9 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
+        _cronometer.EndTimer();
+        AppManager.Instance.DataSync.AddDataToJObject("tempo", Time.time - _startTime);
+
         InvokeUtility.Invoke(() =>
         {
             if (win) WinGame(prizeName);
@@ -272,7 +278,6 @@ public class MemoryGame : MonoBehaviour
 
     private void WinGame(string prizeName = null)
     {
-        _cronometer.EndTimer();
         SoundSystem.Instance.Play("Win");
 
         if (!string.IsNullOrEmpty(prizeName))
@@ -288,7 +293,7 @@ public class MemoryGame : MonoBehaviour
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
         AppManager.Instance.DataSync.AddDataToJObject("premio", prizeName);
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime.ToString());
+        AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime);
     }
 
     private void LoseGame()
@@ -297,7 +302,7 @@ public class MemoryGame : MonoBehaviour
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
         AppManager.Instance.DataSync.AddDataToJObject("premio", "nenhum");
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime.ToString());
+        AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime);
 
         _gameMenu.OpenMenu("LoseMenu");
     }

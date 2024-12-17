@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18dd0fefb58f984c837d8fe020adc80, type: 3}
+  m_Name: HapVida Quiz Config
+  m_EditorClassIdentifier: 
+  musicVolume: 100
+  sfxVolume: 100
+  storageItems: []
+  useLeads: 1
+  rightAnswersToWin: 3
+  totalQuestionCount: 5
+  randomizeAnswers: 1
+  randomizeQuestions: 1
+  answerPrefab: {fileID: 9218163366625038345, guid: 1798b631baac4d844bdde170c0b37421, type: 3}
+  questions:
+  - question: "Quantas unidades pr\xF3prias a Hapvida NotreDame Interm\xE9dica possui?"
+    rightAns: +800
+    wrongAns1: 400
+    wrongAns2: 100
+    wrongAns3: Nenhuma das alternativas
+  - question: "Para manter a sa\xFAde bucal em dia, \xE9 ideal escovar os dentes
+      quantas vezes ao dia?"
+    rightAns: 3 vezes
+    wrongAns1: 2 vezes
+    wrongAns2: 1 vez
+    wrongAns3: 4 vezes
+  - question: "Em quais alimentos \xE9 encontrada a vitamina C?"
+    rightAns: Acerola, Couve e Laranja
+    wrongAns1: Arroz, banana e abacate
+    wrongAns2: Batata, mandioca e berinjela
+    wrongAns3: "Batata, ma\xE7\xE3 e abobrinha"
+  - question: "Quantos clientes a Hapvida Notredame Interm\xE9dica possui?"
+    rightAns: "16 milh\xF5es"
+    wrongAns1: "7 milh\xF5es"
+    wrongAns2: "12 milh\xF5es"
+    wrongAns3: "1 milh\xE3o"
+  - question: "A vitamina que obtemos com o sol \xE9:"
+    rightAns: Vitamina D
+    wrongAns1: Vitamina B
+    wrongAns2: Vitamina C
+    wrongAns3: Vitamina E
+  - question: Quanto tempo a Hapvida Interodonto tem de mercado?
+    rightAns: +20 anos
+    wrongAns1: 10 anos
+    wrongAns2: 15 anos
+    wrongAns3: 5 anos
+  - question: "A Hapvida Notredame Interm\xE9dica tem quantos m\xE9dicos em sua rede?"
+    rightAns: "70 mil m\xE9dicos"
+    wrongAns1: "25 mil m\xE9dicos"
+    wrongAns2: "45 mil m\xE9dicos"
+    wrongAns3: "10 mil m\xE9dicos"
+  - question: "Quantos anos a Hapvida NotreDame Interm\xE9dica possui no mercado?"
+    rightAns: 79 anos
+    wrongAns1: 58 anos
+    wrongAns2: 49 anos
+    wrongAns3: 38 anos
+  - question: "A Hapvida NotreDame Interm\xE9dica est\xE1 presente em quantas regi\xF5es
+      do Brasil?"
+    rightAns: "Todas as regi\xF5es"
+    wrongAns1: "2 regi\xF5es"
+    wrongAns2: "4 regi\xF5es"
+    wrongAns3: Nenhuma das alternativas
+  - question: "Quantas unidades pr\xF3prias e integradas a Hapvida NotreDame Interm\xE9dica
+      temos nas 5 regi\xF5es do Brasil?"
+    rightAns: Mais de 800 unidades
+    wrongAns1: 100 unidades
+    wrongAns2: 500 unidades
+    wrongAns3: 700 unidades
+  - question: "Quantos parceiros o Clube de Vantagem da Hapvida Notre Dame Interm\xE9dica
+      possui? "
+    rightAns: 300
+    wrongAns1: 100
+    wrongAns2: 200
+    wrongAns3: 400
+  - question: "Quais h\xE1bitos podem ajudar a prevenir problemas bucais? "
+    rightAns: "Escovar os dentes corretamente, usar fio dental e evitar alimentos
+      a\xE7ucarados"
+    wrongAns1: "Evitar alimentos a\xE7ucarados e n\xE3o usar fio dental"
+    wrongAns2: "Comer alimentos ricos em a\xE7\xFAcar"
+    wrongAns3: "Escovar os dentes apenas quando necess\xE1rio"
+  - question: O que significa o prefixo HAP de Hapvida?
+    rightAns: "\xC9 a abrevia\xE7\xE3o de Hospital Antonio Prudente"
+    wrongAns1: "Abrevia\xE7\xE3o da palavra Happy"
+    wrongAns2: Significa felicidade
+    wrongAns3: "N\xE3o tem significado"
+  - question: "O fio dental \xE9 importante para:"
+    rightAns: "Prevenir doen\xE7as gengivais e c\xE1ries entre os dentes"
+    wrongAns1: "Apenas refrescar o h\xE1lito"
+    wrongAns2: "Limpar a l\xEDngua"
+    wrongAns3: "Remover manchas de caf\xE9 dos dentes"
+  - question: "Qual \xE9 a melhor forma de prevenir doen\xE7as cr\xF4nicas como diabetes
+      tipo 2 e hipertens\xE3o? "
+    rightAns: "Fazer atividades f\xEDsicas regulares e ter uma alimenta\xE7\xE3o
+      equilibrada"
+    wrongAns1: "Comer alimentos processados e ricos em a\xE7\xFAcar"
+    wrongAns2: "Evitar qualquer tipo de exerc\xEDcio f\xEDsico"
+    wrongAns3: Consumir alimentos ricos em gordura saturada
+  - question: "Como a pr\xE1tica de atividade f\xEDsica ajuda na preven\xE7\xE3o
+      de doen\xE7as? "
+    rightAns: "Melhora a fun\xE7\xE3o card\xEDaca e a circula\xE7\xE3o sangu\xEDnea"
+    wrongAns1: "Aumenta o risco de doen\xE7as cardiovasculares"
+    wrongAns2: "Diminui a flexibilidades das articula\xE7\xF5es"
+    wrongAns3: Provoca fadiga excessiva
+  - question: "Qual a melhor forma de prevenir o c\xE2ncer de pele?"
+    rightAns: "Usar protetor solar, roupas adequadas e evitar exposi\xE7\xE3o soltar
+      intensa"
+    wrongAns1: "Expor-se ao sol por longos per\xEDodos sem prote\xE7\xE3o"
+    wrongAns2: Passar bronzeador para proteger a pele
+    wrongAns3: Evitar o consumo de frutas e vegetais
+  - question: "Qual a principal recomenda\xE7\xE3o para prevenir doen\xE7as respirat\xF3rias,
+      como a gripe e a covid? "
+    rightAns: "Lavar as m\xE3os regularmente, tomar vacina e evitar contato com pessoas
+      doentes"
+    wrongAns1: "Evitar lavar as m\xE3os"
+    wrongAns2: "Manter-se em ambientes fechados e com pouca ventila\xE7\xE3o"
+    wrongAns3: "N\xE3o tomar vacina"
+  - question: "Qual \xE9 o principal diferencial da Hapvida NotreDame Interm\xE9dica
+      em rela\xE7\xE3o a outras operadoras de sa\xFAde?"
+    rightAns: "Oferecer um atendimento completo com unidades hospitalares pr\xF3prias"
+    wrongAns1: "Ter apenas planos de sa\xFAde"
+    wrongAns2: Focar apenas em clientes corporativos
+    wrongAns3: "N\xE3o oferecer planos de sa\xFAde individuais"
+  - question: "Quantos dentistas credenciados possu\xEDmos em territ\xF3rio nacional?"
+    rightAns: + de 22 mil dentistas
+    wrongAns1: 10 mil dentistas
+    wrongAns2: 15 mil dentistas
+    wrongAns3: 12 mil dentistas
+  - question: "Qual a import\xE2ncia de realizar exames de sa\xFAde peri\xF3dicos?"
+    rightAns: "Identificar doen\xE7as em est\xE1gios iniciais"
+    wrongAns1: "Apenas para saber se est\xE1 saud\xE1vel"
+    wrongAns2: "Para aumentar o risco de doen\xE7as"
+    wrongAns3: "Nenhuma import\xE2ncia"
+  - question: "Qual \xE9 a import\xE2ncia de manter uma alimenta\xE7\xE3o equilibrada
+      para a preven\xE7\xE3o da sa\xFAde?"
+    rightAns: "Reduzir o risco de doen\xE7as cr\xF4nicas, como hipertens\xE3o e colesterol
+      alto"
+    wrongAns1: Aumentar o consumo de alimentos processados
+    wrongAns2: "Evitar a ingest\xE3o de l\xEDquidos"
+    wrongAns3: Consumir apenas alimentos ricos em gordura

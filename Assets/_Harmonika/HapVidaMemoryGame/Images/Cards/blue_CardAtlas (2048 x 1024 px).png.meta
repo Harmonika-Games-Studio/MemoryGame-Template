@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: ff8602bf4470f0942b714d4808be6f15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5481966549824282524
+    second: blue_CardAtlas (2048 x 1024 px)_0
+  - first:
+      213: 3118473145392068745
+    second: blue_CardAtlas (2048 x 1024 px)_1
+  - first:
+      213: -1200563457881391837
+    second: blue_CardAtlas (2048 x 1024 px)_2
+  - first:
+      213: -22169726492939840
+    second: blue_CardAtlas (2048 x 1024 px)_3
+  - first:
+      213: -4112148084050299398
+    second: blue_CardAtlas (2048 x 1024 px)_4
+  - first:
+      213: -7378854297459571934
+    second: blue_CardAtlas (2048 x 1024 px)_5
+  - first:
+      213: 3980403725932744988
+    second: blue_CardAtlas (2048 x 1024 px)_6
+  - first:
+      213: 5352307447232215453
+    second: blue_CardAtlas (2048 x 1024 px)_7
+  - first:
+      213: 5654466577424956196
+    second: blue_CardAtlas (2048 x 1024 px)_8
+  - first:
+      213: 8518473549082913051
+    second: blue_CardAtlas (2048 x 1024 px)_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1036
+        width: 755
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f99d8488bd31c40800000000000000
+      internalID: 5481966549824282524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_1
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1036
+        width: 756
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98870b8adca074b20800000000000000
+      internalID: 3118473145392068745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_2
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 1027
+        width: 756
+        height: 1013
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d3aaa55edb65fe0800000000000000
+      internalID: -1200563457881391837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_3
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 1027
+        width: 756
+        height: 1013
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c9ee9f40cc31bff0800000000000000
+      internalID: -22169726492939840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_4
+      rect:
+        serializedVersion: 2
+        x: 3083
+        y: 1027
+        width: 757
+        height: 1013
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5f06aca17bee6c0800000000000000
+      internalID: -4112148084050299398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 755
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223ce8e7c1b099990800000000000000
+      internalID: -7378854297459571934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_6
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 0
+        width: 756
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11dcd2891c3d3730800000000000000
+      internalID: 3980403725932744988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_7
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 0
+        width: 756
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9934f8f347374a40800000000000000
+      internalID: 5352307447232215453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_8
+      rect:
+        serializedVersion: 2
+        x: 2317
+        y: 0
+        width: 756
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42bbbbdb463b87e40800000000000000
+      internalID: 5654466577424956196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_CardAtlas (2048 x 1024 px)_9
+      rect:
+        serializedVersion: 2
+        x: 3091
+        y: 0
+        width: 756
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19e5a16f82b73670800000000000000
+      internalID: 8518473549082913051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blue_CardAtlas (2048 x 1024 px)_0: 5481966549824282524
+      blue_CardAtlas (2048 x 1024 px)_1: 3118473145392068745
+      blue_CardAtlas (2048 x 1024 px)_2: -1200563457881391837
+      blue_CardAtlas (2048 x 1024 px)_3: -22169726492939840
+      blue_CardAtlas (2048 x 1024 px)_4: -4112148084050299398
+      blue_CardAtlas (2048 x 1024 px)_5: -7378854297459571934
+      blue_CardAtlas (2048 x 1024 px)_6: 3980403725932744988
+      blue_CardAtlas (2048 x 1024 px)_7: 5352307447232215453
+      blue_CardAtlas (2048 x 1024 px)_8: 5654466577424956196
+      blue_CardAtlas (2048 x 1024 px)_9: 8518473549082913051
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

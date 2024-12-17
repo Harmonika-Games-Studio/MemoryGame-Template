@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045cc4695a78a9b45b1f23df8a89877a, type: 3}
+  m_Name: MemoryGame HapVida Config
+  m_EditorClassIdentifier: 
+  musicVolume: 15
+  sfxVolume: 100
+  storageItems: []
+  useLeads: 1
+  memorizationTime: 2
+  gameTimer: 20
+  _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
+  cardBack: {fileID: 5088316998373936774, guid: df9d5230154c5b7489b2002de3baf4cc, type: 3}
+  cardPairs:
+  - {fileID: 5481966549824282524, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: 3118473145392068745, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: -1200563457881391837, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: -22169726492939840, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: -4112148084050299398, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: -7378854297459571934, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: 3980403725932744988, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: 5352307447232215453, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: 5654466577424956196, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}
+  - {fileID: 8518473549082913051, guid: ff8602bf4470f0942b714d4808be6f15, type: 3}

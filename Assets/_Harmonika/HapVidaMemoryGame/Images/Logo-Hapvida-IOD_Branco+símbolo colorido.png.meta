@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: 19872a28c4fb73a44ac657993e3ac92b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2607235215302274496
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_0"
+  - first:
+      213: 4498046232439993894
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_1"
+  - first:
+      213: -5077230418711820457
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_2"
+  - first:
+      213: 5833431542786979028
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_3"
+  - first:
+      213: 3348423837021998565
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_4"
+  - first:
+      213: -4682113769129364736
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_5"
+  - first:
+      213: -4733341619342294275
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_6"
+  - first:
+      213: 7738863562149026587
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_7"
+  - first:
+      213: 1198213287659078720
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_8"
+  - first:
+      213: -7947174732722381917
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_9"
+  - first:
+      213: 201546728457826893
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_10"
+  - first:
+      213: 901315669509335077
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_11"
+  - first:
+      213: 1462841657672679765
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_12"
+  - first:
+      213: -7585357486934914309
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_13"
+  - first:
+      213: 1326965051171462524
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_14"
+  - first:
+      213: -243088865872591554
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_15"
+  - first:
+      213: -392184638288670610
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_16"
+  - first:
+      213: -1507251879587805128
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_17"
+  - first:
+      213: -4007584713039992927
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_18"
+  - first:
+      213: 6447918226496254726
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_19"
+  - first:
+      213: -2734821786071353686
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_20"
+  - first:
+      213: -6230482947380249901
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_21"
+  - first:
+      213: -3572818953664962009
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_22"
+  - first:
+      213: 4227293800738049097
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_23"
+  - first:
+      213: 2688906829614279760
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_24"
+  - first:
+      213: 2328888489018807214
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_25"
+  - first:
+      213: -1568116520280475859
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_26"
+  - first:
+      213: 2703923351199225111
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_27"
+  - first:
+      213: 1637943209023575981
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_28"
+  - first:
+      213: 6746514680337071084
+    second: "Logo-Hapvida-IOD_Branco+s\xEDmbolo colorido_29"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Logo-Hapvida-Branco
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1548
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626bedb77354c6e30800000000000000
+      internalID: 4498046232439993894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo-Interodonto_Branco
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 0
+        width: 1543
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a727f3cfe23268c0800000000000000
+      internalID: -4007584713039992927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ae0d5ecd1517460428cd9190a4928ea2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Logo-Hapvida-Branco: 4498046232439993894
+      Logo-Interodonto_Branco: -4007584713039992927
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

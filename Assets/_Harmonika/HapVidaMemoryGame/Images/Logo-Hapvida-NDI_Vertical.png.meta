@@ -1,0 +1,361 @@
+fileFormatVersion: 2
+guid: 250f1da1289e7a64495d178a3e097501
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5529332668827006356
+    second: Logo-Hapvida-NDI_Vertical_0
+  - first:
+      213: 6275187131422196986
+    second: Logo-Hapvida-NDI_Vertical_1
+  - first:
+      213: 910695065713766149
+    second: Logo-Hapvida-NDI_Vertical_2
+  - first:
+      213: 2832681093551614430
+    second: Logo-Hapvida-NDI_Vertical_3
+  - first:
+      213: -2440978288224845622
+    second: Logo-Hapvida-NDI_Vertical_4
+  - first:
+      213: -5243463378920055390
+    second: Logo-Hapvida-NDI_Vertical_5
+  - first:
+      213: 2123971654011234231
+    second: Logo-Hapvida-NDI_Vertical_6
+  - first:
+      213: 7375539564115913134
+    second: Logo-Hapvida-NDI_Vertical_7
+  - first:
+      213: 6325449614564943607
+    second: Logo-Hapvida-NDI_Vertical_8
+  - first:
+      213: -4076925952326413945
+    second: Logo-Hapvida-NDI_Vertical_9
+  - first:
+      213: 1883026180625878621
+    second: Logo-Hapvida-NDI_Vertical_10
+  - first:
+      213: 8081671990986443778
+    second: Logo-Hapvida-NDI_Vertical_11
+  - first:
+      213: 1679347955755628792
+    second: Logo-Hapvida-NDI_Vertical_12
+  - first:
+      213: 6924708069539640618
+    second: Logo-Hapvida-NDI_Vertical_13
+  - first:
+      213: -2541221665813274450
+    second: Logo-Hapvida-NDI_Vertical_14
+  - first:
+      213: 7533542598350708648
+    second: Logo-Hapvida-NDI_Vertical_15
+  - first:
+      213: -4005439405281575384
+    second: Logo-Hapvida-NDI_Vertical_16
+  - first:
+      213: -7660397429370516347
+    second: Logo-Hapvida-NDI_Vertical_17
+  - first:
+      213: -6021306450075038768
+    second: Logo-Hapvida-NDI_Vertical_18
+  - first:
+      213: 5049591160960595533
+    second: Logo-Hapvida-NDI_Vertical_19
+  - first:
+      213: -7576826723429109877
+    second: Logo-Hapvida-NDI_Vertical_20
+  - first:
+      213: -8027460590231329322
+    second: Logo-Hapvida-NDI_Vertical_21
+  - first:
+      213: -32321868184770973
+    second: Logo-Hapvida-NDI_Vertical_22
+  - first:
+      213: -829408085847869216
+    second: Logo-Hapvida-NDI_Vertical_23
+  - first:
+      213: 1998424500599023813
+    second: Logo-Hapvida-NDI_Vertical_24
+  - first:
+      213: -3007338951577449387
+    second: Logo-Hapvida-NDI_Vertical_25
+  - first:
+      213: -2315612424817506874
+    second: Logo-Hapvida-NDI_Vertical_26
+  - first:
+      213: 5939810439611022701
+    second: Logo-Hapvida-NDI_Vertical_27
+  - first:
+      213: -4168259377628090067
+    second: Logo-Hapvida-NDI_Vertical_28
+  - first:
+      213: -2951182598645271440
+    second: Logo-Hapvida-NDI_Vertical_29
+  - first:
+      213: 864642566156566453
+    second: Logo-Hapvida-NDI_Vertical_30
+  - first:
+      213: 4341950863353682965
+    second: Logo-Hapvida-NDI_Vertical_31
+  - first:
+      213: -1783348906932281780
+    second: Logo-Hapvida-NDI_Vertical_32
+  - first:
+      213: 1569591876926990298
+    second: Logo-Hapvida-NDI_Vertical_33
+  - first:
+      213: -3852504207746483339
+    second: Logo-Hapvida-NDI_Vertical_34
+  - first:
+      213: 7787348403897395925
+    second: Logo-Hapvida-NDI_Vertical_35
+  - first:
+      213: 6194026203453786370
+    second: Logo-Hapvida-NDI_Vertical_36
+  - first:
+      213: -3784844333516237482
+    second: Logo-Hapvida-NDI_Vertical_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Logo-Hapvida-NDI_Vertical_10
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 272
+        width: 506
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e47f6a55ad12a10800000000000000
+      internalID: 1883026180625878621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo-Hapvida-NDI_Vertical_14
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 483
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea06ca1eb54cbbcd0800000000000000
+      internalID: -2541221665813274450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo-Hapvida-NDI_Vertical_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 157
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec8bba37e24e354aab2fcb18bd1ec82
+      internalID: -1245702395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo-Hapvida-NDI_Vertical_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 178
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2aa21915d6b00469c4a8fa7b292de6
+      internalID: -1369162866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ad18dc59247036c44a055777ddcd2099
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Logo-Hapvida-NDI_Vertical_0: -1245702395
+      Logo-Hapvida-NDI_Vertical_1: -1369162866
+      Logo-Hapvida-NDI_Vertical_38: 281911954
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
