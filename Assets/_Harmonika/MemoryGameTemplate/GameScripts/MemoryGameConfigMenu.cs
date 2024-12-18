@@ -27,7 +27,7 @@ public class MemoryGameConfigMenu : ConfigMenu
     {
         if (!PlayerPrefs.HasKey("GameTime"))
         {
-            PlayerPrefs.SetInt("GameTime", _memoryGame.Config.gameTimer);
+            PlayerPrefs.SetInt("GameTime", _memoryGame.Config.gameTime);
             PlayerPrefs.Save();
         }
 

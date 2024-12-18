@@ -7,7 +7,7 @@ public class MemoryGameConfig : GameConfigScriptable
     [Space(5)]
     [Header("Configurable Variables")]
     public int memorizationTime = 2;
-    public int gameTimer = 20;
+    public int gameTime = 20;
 
     [Space(5)]
     [Header("Cards")]

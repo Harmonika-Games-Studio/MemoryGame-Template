@@ -4,10 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class JsonDeserializedConfig
@@ -53,6 +50,7 @@ public class MemoryGame : MonoBehaviour
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
+    private float _startTime;
     private MenuManager _gameMenu;
     private RectTransform _gridLayoutRect;
 
@@ -88,7 +86,8 @@ public class MemoryGame : MonoBehaviour
 
     public IEnumerator StartGame()
     {
-        _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
+        _startTime = Time.time;
+         _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
         _cronometer.StartTimer();
 
         InstantiateCards();
@@ -254,6 +253,11 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
+        _cronometer.EndTimer();
+        float tempo = Time.time - _startTime;
+        AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
+        AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
+
         InvokeUtility.Invoke(() =>
         {
             if (win) WinGame(prizeName);
@@ -272,7 +276,6 @@ public class MemoryGame : MonoBehaviour
 
     private void WinGame(string prizeName = null)
     {
-        _cronometer.EndTimer();
         SoundSystem.Instance.Play("Win");
 
         if (!string.IsNullOrEmpty(prizeName))
@@ -287,8 +290,7 @@ public class MemoryGame : MonoBehaviour
         }
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("premio", prizeName);
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime.ToString());
+        AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
     }
 
     private void LoseGame()
@@ -296,8 +298,7 @@ public class MemoryGame : MonoBehaviour
         SoundSystem.Instance.Play("Fail");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
-        AppManager.Instance.DataSync.AddDataToJObject("premio", "nenhum");
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", _remainingTime.ToString());
+        AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
     }
