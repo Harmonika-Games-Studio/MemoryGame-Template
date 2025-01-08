@@ -72,6 +72,10 @@ public class MemoryGame : MonoBehaviour
 
     private void Awake()
     {
+        //This code is necessary to run the game smoothly on android
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0;
+
         _gridLayoutRect = gridLayoutGroup.gameObject.GetComponent<RectTransform>();
         _cronometer.onEndTimer.AddListener(() => EndGame(false));
         AppManager.Instance.gameConfig = _config;

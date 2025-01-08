@@ -21,9 +21,9 @@ MonoBehaviour:
   - _itemName: Item2
     _initialValue: 5
     _prizeScore: 50
-  useLeads: 1
+  useLeads: 0
   memorizationTime: 2
-  gameTimer: 15
+  gameTime: 20
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
   cardPairs:
