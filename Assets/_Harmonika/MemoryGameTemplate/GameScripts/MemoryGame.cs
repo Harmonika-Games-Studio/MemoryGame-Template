@@ -84,6 +84,11 @@ public class MemoryGame : MonoBehaviour
         SetupButtons();
     }
 
+    private void Start()
+    {
+        WebGLNetworking.Instance.ReceiveJson(WebGLNetworking.Instance.TestJson);
+    }
+
     public IEnumerator StartGame()
     {
         _startTime = Time.time;
@@ -301,5 +306,62 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
+    }
+
+    #region Networking
+    private void TrySetupGameConfigFromWebData()
+    {
+        LoadingScript.Instance.Loading = true;
+
+        if (string.IsNullOrEmpty(WebGLNetworking.Instance.jsonData))
+        {
+            Debug.Log("WebGLNetworking -> TryStartConnection: Tentando conexão");
+            Invoke(nameof(TrySetupGameConfigFromWebData), 1f);
+        }
+        else
+        {
+            Debug.Log("WebGLNetworking -> TryStartConnection: Conexão Concluída, Iniciando download");
+            Debug.Log("WebGLNetworking -> SetupGameConfigFromWeb: Baixando Imagens");
+
+            try
+            {
+                JsonDeserializedConfig data = JsonUtility.FromJson<JsonDeserializedConfig>(WebGLNetworking.Instance.jsonData);
+                Debug.Log("WebGLNetworking -> SetupGameConfigFromWeb: Desserialização com JsonUtility bem-sucedida!");
+                StartCoroutine(SetupGameConfigFromWebData(data));
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"WebGLNetworking -> SetupGameConfigFromWeb: Erro na desserialização: {ex.Message}");
+            }
+        }
+    }
+
+    IEnumerator SetupGameConfigFromWebData(JsonDeserializedConfig data)
+    {
+        _config.storageItems = data.storageItems;
+        _config.useLeads = data.useLeads;
+        //_config.gameName = data.gameName;
+        _config.cardPairs = new Sprite[data.cardsList.Length];
+
+        AppManager.Instance.gameConfig = _config;
+
+        yield return StartCoroutine(WebGLNetworking.Instance.DownloadImageRoutine(data.cardBack, (sprite) => _config.cardBack = sprite));
+        for (int i = 0; i < _config.cardPairs.Length; i++)
+        {
+            yield return StartCoroutine(WebGLNetworking.Instance.DownloadImageRoutine(data.cardsList[i], (sprite) => _config.cardPairs[i] = sprite));
+        }
+
+        SetupGameConfigFromScriptable();
+        AppManager.Instance.Storage.Setup();
+        LoadingScript.Instance.Loading = false;
+    }
+    #endregion
+
+
+    public void SetupGameConfigFromScriptable()
+    {
+        AppManager.Instance.gameConfig = _config;
+        AppManager.Instance.ApplyScriptableConfig();
+
     }
 }
