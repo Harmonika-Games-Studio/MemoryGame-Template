@@ -1,7 +1,5 @@
 using Harmonika.Tools;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,6 +46,15 @@ public class WebGLNetworking : MonoBehaviour
                 new() { _itemName = "Item2", _initialValue = 5, _prizeScore = 50 }
             };
 
+            List<LeadDataConfig> leadDataConfig = new List<LeadDataConfig>
+            {
+                new() { fieldName = "nome", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.AlphaUpper, ParseableFields.none, "")},
+                new() { fieldName = "idade", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new("Numeric", "none", "")},
+                new() { fieldName = "telefone", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.Numeric, ParseableFields.phone, "")},
+                new() { fieldName = "cpf", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new("Numeric", "cpf", "")},
+                new() { fieldName = "email", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.AlphaLowerEmail, ParseableFields.none, "")}
+            };
+
             JObject rawData = new JObject
             {
                 { "cardBack", "https://i.imgur.com/LDsqclp.png" },
@@ -62,8 +69,12 @@ public class WebGLNetworking : MonoBehaviour
                     }
                 },
                 { "storageItems", JArray.FromObject(storageItems) },
-                { "useLeads", false},
-                { "gameName", "Jogo da <b>memória</b>"}
+                { "leadDataConfig", JArray.FromObject(leadDataConfig) },
+                { "gameName", "Jogo da <b>memória</b>"},
+                { "primaryColor", "#2974DE"},
+                { "secondaryColor", "#5429DE"},
+                { "tertiaryColor", "#29D3DE"},
+                { "neutralColor", "#FFFFFF"}
             };
 
             return rawData.ToString();
@@ -114,16 +125,4 @@ public class WebGLNetworking : MonoBehaviour
             }
         }
     }
-
-
-    /*public IEnumerator DownloadCardsListRoutine(string[] urls, Action<Sprite[]> callback)
-    {
-        Sprite[] newSpriteArray = new Sprite[urls.Length];
-
-        for (int i = 0; i < urls.Length; i++)
-        {
-            yield return StartCoroutine(DownloadImageRoutine(urls[i], (sprite) => newSpriteArray[i] = sprite));
-        }
-        callback.Invoke(newSpriteArray);
-    }*/
 }

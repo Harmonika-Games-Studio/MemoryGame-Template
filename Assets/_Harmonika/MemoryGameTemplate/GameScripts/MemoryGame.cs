@@ -4,49 +4,60 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class JsonDeserializedConfig
 {
     public string gameName;
+    public string primaryColor;
     public string cardBack;
     public string[] cardsList;
     public bool useLeads;
     public StorageItemConfig[] storageItems;
+    public LeadDataConfig[] leadDataConfig;
 
     // Construtor padrão necessário para a desserialização
     [JsonConstructor]
     public JsonDeserializedConfig(
         string gameName = "",
+        string primaryColor = "",
         string cardBack = "",
         string[] cardsList = null,
-        bool useLeads = false,
-        StorageItemConfig[] storageItems = null)
+        StorageItemConfig[] storageItems = null,
+        LeadDataConfig[] leadDataConfig = null)
     {
         this.gameName = gameName;
+        this.primaryColor = primaryColor;
         this.cardBack = cardBack;
         this.cardsList = cardsList ?? Array.Empty<string>();
-        this.useLeads = useLeads;
         this.storageItems = storageItems ?? Array.Empty<StorageItemConfig>();
+        this.leadDataConfig = leadDataConfig ?? Array.Empty<LeadDataConfig>();
     }
 }
 
 public class MemoryGame : MonoBehaviour
 {
-    [SerializeField] private MemoryGameConfig _config;
+    [SerializeField] private MemoryGameWebConfig _config;
     
     [Header("References")]
     [SerializeField] private Cronometer _cronometer;
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
 
     [Header("Menus")]
-    [SerializeField] private StartMenu _mainMenu;
-    [SerializeField] private CollectLeadsMenu _collectLeadsMenu;
-    [SerializeField] private VictoryMenu _victoryMenu;
-    [SerializeField] private ParticipationMenu _participationMenu;
-    [SerializeField] private LoseMenu _loseMenu;
-    
+    [SerializeField] private CustomStartMenu _startMenu;
+    [SerializeField] private CustomCollectLeadsMenu _collectLeadsMenu;
+    [SerializeField] private CustomVictoryMenu _victoryMenu;
+    [SerializeField] private CustomParticipationMenu _participationMenu;
+    [SerializeField] private CustomLoseMenu _loseMenu;
+
+    [Header("Visuals")]
+    [SerializeField] private Image _gameBackground;
+
+    [Header("WebVersion")]
+    [SerializeField] private CustomWebAutoLeadForm _webAutoLeadForm;
+
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
@@ -59,7 +70,7 @@ public class MemoryGame : MonoBehaviour
 
     #region Properties
 
-    public MemoryGameConfig Config { get => _config; }
+    public MemoryGameWebConfig Config { get => _config; }
 
     public bool CanClick
     {
@@ -90,7 +101,13 @@ public class MemoryGame : MonoBehaviour
 
     private void Start()
     {
-        WebGLNetworking.Instance.ReceiveJson(WebGLNetworking.Instance.TestJson);
+        TrySetupGameConfigFromWebData();
+    }
+
+    private void Update()
+    {
+       if (Input.GetKeyDown(KeyCode.T))
+            WebGLNetworking.Instance.ReceiveJson(WebGLNetworking.Instance.TestJson);
     }
 
     public IEnumerator StartGame()
@@ -169,18 +186,24 @@ public class MemoryGame : MonoBehaviour
 
     private void SetupButtons()
     {
+        _startMenu.StartGameButton.onClick.RemoveAllListeners();
+        _collectLeadsMenu.ContinueGameButton.onClick.RemoveAllListeners();
+        _victoryMenu.BackButton.onClick.RemoveAllListeners();
+        _loseMenu.BackButton.onClick.RemoveAllListeners();
+        _participationMenu.BackButton.onClick.RemoveAllListeners();
+
         if (AppManager.Instance.gameConfig.useLeads)
         {
-            _mainMenu.AddStartGameButtonListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
-            _mainMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearAllFields());
+            _startMenu.AddStartGameButtonListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
+            _startMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearAllFields());
             _collectLeadsMenu.AddContinueGameButtonListener(() => _gameMenu.CloseMenus()); 
             _collectLeadsMenu.AddContinueGameButtonListener(() => StartCoroutine(StartGame()));
             _collectLeadsMenu.AddBackButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
         else
         {
-            _mainMenu.AddStartGameButtonListener(() => _gameMenu.CloseMenus());
-            _mainMenu.AddStartGameButtonListener(() => StartCoroutine(StartGame()));
+            _startMenu.AddStartGameButtonListener(() => _gameMenu.CloseMenus());
+            _startMenu.AddStartGameButtonListener(() => StartCoroutine(StartGame()));
         }
 
         _victoryMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
@@ -344,8 +367,18 @@ public class MemoryGame : MonoBehaviour
     {
         _config.storageItems = data.storageItems;
         _config.useLeads = data.useLeads;
-        //_config.gameName = data.gameName;
+        _config.gameName = data.gameName;
+        _config.primaryColor = data.primaryColor.HexToColor();
         _config.cardPairs = new Sprite[data.cardsList.Length];
+
+        if (data.leadDataConfig == null || data.leadDataConfig.Length == 0)
+        {
+            _config.useLeads = false;
+        }
+        else
+        {
+            _config.useLeads = true;
+        }
 
         AppManager.Instance.gameConfig = _config;
 
@@ -355,6 +388,13 @@ public class MemoryGame : MonoBehaviour
             yield return StartCoroutine(WebGLNetworking.Instance.DownloadImageRoutine(data.cardsList[i], (sprite) => _config.cardPairs[i] = sprite));
         }
 
+        Debug.Log("isNull: " + data.leadDataConfig == null);
+        Debug.Log("LeadDataConfig: " + data.leadDataConfig.Length);
+        Debug.Log("useLeads: " + AppManager.Instance.useLeads);
+        _webAutoLeadForm.leadDataConfig = data.leadDataConfig;
+        _webAutoLeadForm.InstantiateLeadboxes();
+        _webAutoLeadForm.submitButton.gameObject.SetActive(_webAutoLeadForm.CheckInputsFilled());
+        SetupButtons();
         SetupGameConfigFromScriptable();
         AppManager.Instance.Storage.Setup();
         LoadingScript.Instance.Loading = false;
@@ -367,5 +407,13 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.gameConfig = _config;
         AppManager.Instance.ApplyScriptableConfig();
 
+        _gameBackground.color = _config.primaryColor;
+        _cronometer.image.color = Config.tertiaryColor;
+
+        _startMenu.ChangeVisualIdentity(_config);
+        _collectLeadsMenu.ChangeVisualIdentity(_config);
+        _victoryMenu.ChangeVisualIdentity(_config);
+        _participationMenu.ChangeVisualIdentity(_config);
+        _loseMenu.ChangeVisualIdentity(_config);
     }
 }

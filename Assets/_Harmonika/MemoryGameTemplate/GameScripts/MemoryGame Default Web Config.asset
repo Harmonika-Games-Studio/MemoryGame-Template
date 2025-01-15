@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045cc4695a78a9b45b1f23df8a89877a, type: 3}
-  m_Name: MemoryGame Default Config
+  m_Script: {fileID: 11500000, guid: 58a54a06c68f0b34297f7b5cee60304f, type: 3}
+  m_Name: MemoryGame Default Web Config
   m_EditorClassIdentifier: 
-  musicVolume: 15
+  musicVolume: 100
   sfxVolume: 100
   storageItems:
   - _itemName: Item1
@@ -25,9 +25,16 @@ MonoBehaviour:
   memorizationTime: 2
   gameTime: 20
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 0}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gameName: "Jogo da <b>mem\xF3ria</b>"
+  primaryColor: {r: 0.16078432, g: 0.45490196, b: 0.87058824, a: 1}
+  secondaryColor: {r: 0.32941177, g: 0.16078432, b: 0.87058824, a: 1}
+  tertiaryColor: {r: 0.16078432, g: 0.827451, b: 0.87058824, a: 1}
+  neutralColor: {r: 1, g: 1, b: 1, a: 1}
