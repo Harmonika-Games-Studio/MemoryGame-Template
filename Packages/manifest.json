@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "com.harmonika.tools": "https://github.com/Harmonika-Games-Studio/com.harmonika.tools.git",
-    "com.harmonika.builder": "https://github.com/Harmonika-Games-Studio/com.harmonika.builder.git",
+    "com.harmonika.tools": "https://github.com/Harmonika-Games-Studio/com.harmonika.tools.git#Bump_v0.2.8",
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.31",

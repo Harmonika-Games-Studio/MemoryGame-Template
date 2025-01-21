@@ -1,10 +1,8 @@
-using Harmonika.Menu;
 using Harmonika.Tools;
 using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,7 +40,7 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private MemoryGameWebConfig _config;
     
     [Header("References")]
-    [SerializeField] private Cronometer _cronometer;
+    [SerializeField] private CustomCronometer _cronometer;
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
 
     [Header("Menus")]
@@ -56,7 +54,7 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private Image _gameBackground;
 
     [Header("WebVersion")]
-    [SerializeField] private CustomWebAutoLeadForm _webAutoLeadForm;
+    [SerializeField] private AutoLeadForm _webAutoLeadForm;
 
     private int _revealedPairs;
     private int _remainingTime;
@@ -186,29 +184,23 @@ public class MemoryGame : MonoBehaviour
 
     private void SetupButtons()
     {
-        _startMenu.StartGameButton.onClick.RemoveAllListeners();
-        _collectLeadsMenu.ContinueGameButton.onClick.RemoveAllListeners();
-        _victoryMenu.BackButton.onClick.RemoveAllListeners();
-        _loseMenu.BackButton.onClick.RemoveAllListeners();
-        _participationMenu.BackButton.onClick.RemoveAllListeners();
-
         if (AppManager.Instance.gameConfig.useLeads)
         {
-            _startMenu.AddStartGameButtonListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
-            _startMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearAllFields());
-            _collectLeadsMenu.AddContinueGameButtonListener(() => _gameMenu.CloseMenus()); 
-            _collectLeadsMenu.AddContinueGameButtonListener(() => StartCoroutine(StartGame()));
-            _collectLeadsMenu.AddBackButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
+            _startMenu.StartGameButton.onClick.AddListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
+            _startMenu.StartGameButton.onClick.AddListener(() => _collectLeadsMenu.ClearAllFields());
+            _collectLeadsMenu.ContinueGameButton.onClick.AddListener(() => _gameMenu.CloseMenus());
+            _collectLeadsMenu.ContinueGameButton.onClick.AddListener(() => StartCoroutine(StartGame()));
+            _collectLeadsMenu.BackButton.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
         else
         {
-            _startMenu.AddStartGameButtonListener(() => _gameMenu.CloseMenus());
-            _startMenu.AddStartGameButtonListener(() => StartCoroutine(StartGame()));
+            _startMenu.StartGameButton.onClick.AddListener(() => _gameMenu.CloseMenus());
+            _startMenu.StartGameButton.onClick.AddListener(() => StartCoroutine(StartGame()));
         }
 
-        _victoryMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _loseMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _participationMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _victoryMenu.BackButton.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _loseMenu.BackButton.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _participationMenu.BackButton.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
     }
 
     private void InstantiateCards()
@@ -290,7 +282,7 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
 
-        InvokeUtility.Invoke(() =>
+        InvokeUtility.Invoke(1f, () =>
         {
             if (win) WinGame(prizeName);
             else LoseGame();
@@ -299,11 +291,12 @@ public class MemoryGame : MonoBehaviour
             {
                 Destroy(card.gameObject);
             }
+
         _cardsList.Clear();
         _revealedPairs = 0;
 
         AppManager.Instance.DataSync.SendLeads();
-        }, 1f);
+        });
     }
 
     private void WinGame(string prizeName = null)
@@ -312,7 +305,7 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.ChangePrizeText("(" + prizeName + ")");
+            _victoryMenu.PrizeText = "(" + prizeName + ")";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
@@ -388,13 +381,18 @@ public class MemoryGame : MonoBehaviour
             yield return StartCoroutine(WebGLNetworking.Instance.DownloadImageRoutine(data.cardsList[i], (sprite) => _config.cardPairs[i] = sprite));
         }
 
-        Debug.Log("isNull: " + data.leadDataConfig == null);
-        Debug.Log("LeadDataConfig: " + data.leadDataConfig.Length);
-        Debug.Log("useLeads: " + AppManager.Instance.useLeads);
         _webAutoLeadForm.leadDataConfig = data.leadDataConfig;
         _webAutoLeadForm.InstantiateLeadboxes();
         _webAutoLeadForm.submitButton.gameObject.SetActive(_webAutoLeadForm.CheckInputsFilled());
-        SetupButtons();
+
+        if (!AppManager.Instance.gameConfig.useLeads)
+        {
+            _startMenu.StartGameButton.onClick.RemoveAllListeners();
+            _collectLeadsMenu.ContinueGameButton.onClick.RemoveAllListeners();
+            _startMenu.StartGameButton.onClick.AddListener(() => _gameMenu.CloseMenus());
+            _startMenu.StartGameButton.onClick.AddListener(() => StartCoroutine(StartGame()));
+        }
+
         SetupGameConfigFromScriptable();
         AppManager.Instance.Storage.Setup();
         LoadingScript.Instance.Loading = false;
@@ -408,8 +406,8 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.ApplyScriptableConfig();
 
         _gameBackground.color = _config.primaryColor;
-        _cronometer.image.color = Config.tertiaryColor;
 
+        _cronometer.ChangeVisualIdentity(_config);
         _startMenu.ChangeVisualIdentity(_config);
         _collectLeadsMenu.ChangeVisualIdentity(_config);
         _victoryMenu.ChangeVisualIdentity(_config);

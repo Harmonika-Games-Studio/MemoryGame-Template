@@ -48,11 +48,11 @@ public class WebGLNetworking : MonoBehaviour
 
             List<LeadDataConfig> leadDataConfig = new List<LeadDataConfig>
             {
-                new() { fieldName = "nome", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.AlphaUpper, ParseableFields.none, "")},
-                new() { fieldName = "idade", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new("Numeric", "none", "")},
-                new() { fieldName = "telefone", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.Numeric, ParseableFields.phone, "")},
-                new() { fieldName = "cpf", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new("Numeric", "cpf", "")},
-                new() { fieldName = "email", isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.AlphaLowerEmail, ParseableFields.none, "")}
+                new() { fieldName = "nome", id = LeadID.nome, isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.AlphaUpper, ParseableFields.none, "Sr. Harmonika")},
+                new() { fieldName = "idade", id = LeadID.idade, isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new("Numeric", "none", "Apenas Números")},
+                new() { fieldName = "telefone", id = LeadID.telefone, isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.Numeric, ParseableFields.phone, "(00) 00000-0000")},
+                new() { fieldName = "cpf", id = LeadID.id, isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new("Numeric", "cpf", "000.000.000-00")},
+                new() { fieldName = "email", id = LeadID.email, isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.AlphaLowerEmail, ParseableFields.none, "exemplo@harmonika.com")}
             };
 
             JObject rawData = new JObject
