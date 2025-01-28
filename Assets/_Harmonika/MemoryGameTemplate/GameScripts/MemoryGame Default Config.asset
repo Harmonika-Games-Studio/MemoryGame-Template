@@ -21,13 +21,28 @@ MonoBehaviour:
   - _itemName: Item2
     _initialValue: 5
     _prizeScore: 50
-  useLeads: 0
+  useLeads: 1
   memorizationTime: 2
   gameTime: 20
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 641340541814730058, guid: 483f98f51c9e90641916ec90ebd5cadf, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 21300000, guid: cf7f1fa167197514ca6a365e64f18ca7, type: 3}
+  - {fileID: 21300000, guid: 370db29f47c1ede438db9d57a5a4207d, type: 3}
+  - {fileID: 21300000, guid: 1b145c9b2bcb5584fba9b196a598e863, type: 3}
+  - {fileID: 21300000, guid: 00899acc34bf08644b77ff376bfe43ef, type: 3}
+  - {fileID: 21300000, guid: 615f6b9280d83164aa1c7669b43dbcaa, type: 3}
+  - {fileID: 21300000, guid: 0719c9e12d2ac1f48972c860fc99914d, type: 3}
+  - {fileID: 21300000, guid: ac888c8fe2786b74eb47dc314b696af8, type: 3}
+  - {fileID: 21300000, guid: b5088a256697b7441bb6c44599577795, type: 3}
+  - {fileID: 21300000, guid: 15be354efd698a340b7b7e228d101638, type: 3}
+  - {fileID: 21300000, guid: 3f574b992ba3b1f41829bae18159a87f, type: 3}
+  - {fileID: 21300000, guid: 3aa415d5b4eb8804ca9272c278b26b9d, type: 3}
+  - {fileID: 21300000, guid: 58b8a39e530f227458072e033b2c5661, type: 3}
+  - {fileID: 21300000, guid: 1d3ff32e0f7a7594fb4d31ab1bcc7f82, type: 3}
+  - {fileID: 21300000, guid: 4b77ba92e5949094eb8ed370ad5bca87, type: 3}
+  - {fileID: 21300000, guid: 59e162dbadbeec443b2e49dc278c6e4c, type: 3}
+  - {fileID: 21300000, guid: 0909bb90e966b5e40bd375e442205928, type: 3}
+  - {fileID: 21300000, guid: 3bef0ecfbd74d3042a36639fbb4aabc9, type: 3}
+  - {fileID: 21300000, guid: f788e7baa97eb704eb6154536728ee50, type: 3}
+  - {fileID: 21300000, guid: c028f24659d7a504fa111aed8a74b71d, type: 3}
