@@ -53,6 +53,7 @@ public class MemoryGame : MonoBehaviour
     private float _startTime;
     private MenuManager _gameMenu;
     private RectTransform _gridLayoutRect;
+    private int _totalCardPairsInGame = 8;
 
     private MemoryGameCard _lastClickedCard;
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
@@ -142,7 +143,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= _totalCardPairsInGame)
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
@@ -186,8 +187,8 @@ public class MemoryGame : MonoBehaviour
     private void InstantiateCards()
     {
         Debug.Log("Instantiate");
-
-        for (int i = 0; i < _config.cardPairs.Length; i++)
+        var randomCardPairs = _config.cardPairs.Shuffle();
+        for (int i = 0; i < _totalCardPairsInGame; i++)
         {
             for (int j = 0; j < 2; j++)
             {
@@ -196,7 +197,7 @@ public class MemoryGame : MonoBehaviour
                 cardConfig.id = i;
                 cardConfig.manager = this;
                 cardConfig.cardBack = _config.cardBack;
-                cardConfig.cardFront = _config.cardPairs[i];
+                cardConfig.cardFront = randomCardPairs[i];
 
                 _cardsList.Add(cardConfig);
             }
@@ -208,7 +209,7 @@ public class MemoryGame : MonoBehaviour
         float originalCellWidth = gridLayoutGroup.cellSize.x;
         float originalCellHeight = gridLayoutGroup.cellSize.y;
 
-        int totalCards = _config.cardPairs.Length * 2;
+        int totalCards = _totalCardPairsInGame * 2;
 
         // Priorizar o maior número de colunas possível
         int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha
