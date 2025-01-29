@@ -54,6 +54,7 @@ public class MemoryGame : MonoBehaviour
     private MenuManager _gameMenu;
     private RectTransform _gridLayoutRect;
     private int _totalCardPairsInGame = 8;
+    private bool _isRunning = false;
 
     private MemoryGameCard _lastClickedCard;
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
@@ -91,6 +92,7 @@ public class MemoryGame : MonoBehaviour
 
     public IEnumerator StartGame()
     {
+        _isRunning = true;
         _startTime = Time.time;
          _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
         _cronometer.StartTimer();
@@ -143,7 +145,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _totalCardPairsInGame)
+                if (_revealedPairs >= _totalCardPairsInGame && _isRunning)
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
@@ -258,6 +260,7 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
+        _isRunning = false;
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
