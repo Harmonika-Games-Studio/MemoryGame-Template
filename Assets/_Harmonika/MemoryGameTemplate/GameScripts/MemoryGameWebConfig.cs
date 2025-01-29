@@ -16,6 +16,7 @@ public class MemoryGameWebConfig : GameConfigScriptable
     public Sprite[] cardPairs;
 
     [Space(5)]
+    public Sprite userLogo;
     [Header("ProjectIdentity")]
     public string gameName = "My Memory Game";
     public Color primaryColor = "#2974DE".HexToColor();

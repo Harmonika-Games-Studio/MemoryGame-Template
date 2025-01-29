@@ -1,5 +1,6 @@
 using Harmonika.Tools;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -55,6 +56,7 @@ public class WebGLNetworking : MonoBehaviour
                 new() { fieldName = "email", id = LeadID.email, isOptional = false, inputType = LeadInputType.InputField, inputDataConfig = new(KeyboardType.AlphaLowerEmail, ParseableFields.none, "exemplo@harmonika.com")}
             };
 
+
             JObject rawData = new JObject
             {
                 { "cardBack", "https://i.imgur.com/LDsqclp.png" },
@@ -68,6 +70,7 @@ public class WebGLNetworking : MonoBehaviour
                         "https://mtginsider.com/wp-content/uploads/2024/08/senseisdiviningtop.png"
                     }
                 },
+                { "userLogo", "https://logos-world.net/wp-content/uploads/2023/05/Magic-The-Gathering-Logo.png"},
                 { "storageItems", JArray.FromObject(storageItems) },
                 { "leadDataConfig", JArray.FromObject(leadDataConfig) },
                 { "gameName", "Jogo da <b>memória</b>"},
@@ -77,7 +80,7 @@ public class WebGLNetworking : MonoBehaviour
                 { "neutralColor", "#FFFFFF"}
             };
 
-            return rawData.ToString();
+            return rawData.ToString();            
         }
     }
     #endregion
@@ -102,9 +105,9 @@ public class WebGLNetworking : MonoBehaviour
         Debug.Log("WebGLNetworking -> ReceiveJson: Recebido" + json);
     }
 
-    public IEnumerator DownloadImageRoutine(string url, UnityAction<Sprite> onDownloaded)
+    /*public IEnumerator DownloadImageRoutine(string url, UnityAction<Sprite> onDownloaded)
     {
-        Debug.Log("Downloading Image" + url);
+        Debug.Log("Downloading Image " + url);
         using (UnityWebRequest webRequest = UnityWebRequestTexture.GetTexture(url))
         {
             // Envie a solicitação e aguarde a resposta
@@ -122,6 +125,56 @@ public class WebGLNetworking : MonoBehaviour
                 Texture2D texture = DownloadHandlerTexture.GetContent(webRequest);
                 Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
                 onDownloaded?.Invoke(sprite);
+            }
+        }
+    }*/
+
+    public IEnumerator DownloadImageRoutine(string url, UnityAction<Sprite> onDownloaded)
+    {
+        Debug.Log("Downloading Image " + url);
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
+        {
+            // Envie a solicitação e aguarde a resposta
+            yield return webRequest.SendWebRequest();
+
+            // Verifique se houve erro na requisição
+            if (webRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"WebGLNetworking -> DownloadImageRoutine: Erro ao baixar a imagem: {webRequest.error}");
+                onDownloaded?.Invoke(null);
+                yield break;
+            }
+
+            // Valide os dados recebidos
+            byte[] imageData = webRequest.downloadHandler.data;
+
+            if (imageData == null || imageData.Length == 0)
+            {
+                Debug.LogError("WebGLNetworking -> DownloadImageRoutine: Dados da imagem estão vazios ou inválidos.");
+                onDownloaded?.Invoke(null);
+                yield break;
+            }
+
+            try
+            {
+                // Crie a textura a partir dos dados recebidos
+                Texture2D texture = new Texture2D(2, 2);
+                if (texture.LoadImage(imageData))
+                {
+                    // Converta a textura em um sprite
+                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                    onDownloaded?.Invoke(sprite);
+                }
+                else
+                {
+                    Debug.LogError("WebGLNetworking -> DownloadImageRoutine: Erro ao carregar os dados da imagem para a Texture2D.");
+                    onDownloaded?.Invoke(null);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"WebGLNetworking -> DownloadImageRoutine: Exceção ao processar imagem: {e.Message}");
+                onDownloaded?.Invoke(null);
             }
         }
     }

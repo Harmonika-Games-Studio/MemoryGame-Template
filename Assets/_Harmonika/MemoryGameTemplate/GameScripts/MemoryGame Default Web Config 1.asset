@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58a54a06c68f0b34297f7b5cee60304f, type: 3}
-  m_Name: MemoryGame Default Web Config
+  m_Name: MemoryGame Default Web Config 1
   m_EditorClassIdentifier: 
   musicVolume: 100
   sfxVolume: 100
@@ -35,7 +35,7 @@ MonoBehaviour:
   - {fileID: 0}
   userLogo: {fileID: 0}
   gameName: "Jogo da <b>mem\xF3ria</b>"
-  primaryColor: {r: 0.16078432, g: 0.45490196, b: 0.87058824, a: 1}
+  primaryColor: {r: 0.10208259, g: 0.6981132, b: 0.1595327, a: 1}
   secondaryColor: {r: 0.40680206, g: 0.16078432, b: 0.87058824, a: 1}
-  tertiaryColor: {r: 0.16078432, g: 0.827451, b: 0.87058824, a: 1}
-  neutralColor: {r: 1, g: 1, b: 1, a: 1}
+  tertiaryColor: {r: 0.8018868, g: 0.07186719, b: 0.08045588, a: 1}
+  neutralColor: {r: 0, g: 0, b: 0, a: 1}
