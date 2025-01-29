@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,10 @@ public class JsonDeserializedConfig
 {
     public string gameName;
     public string primaryColor;
+    public string secondaryColor;
+    public string tertiaryColor;
+    public string neutralColor;
+    public string userLogo;
     public string cardBack;
     public string[] cardsList;
     public bool useLeads;
@@ -21,6 +26,10 @@ public class JsonDeserializedConfig
     public JsonDeserializedConfig(
         string gameName = "",
         string primaryColor = "",
+        string secondaryColor = "",
+        string tertiaryColor = "",
+        string neutralColor = "",
+        string userLogo = "",
         string cardBack = "",
         string[] cardsList = null,
         StorageItemConfig[] storageItems = null,
@@ -28,6 +37,9 @@ public class JsonDeserializedConfig
     {
         this.gameName = gameName;
         this.primaryColor = primaryColor;
+        this.secondaryColor = secondaryColor;
+        this.tertiaryColor = tertiaryColor;
+        this.neutralColor = neutralColor;
         this.cardBack = cardBack;
         this.cardsList = cardsList ?? Array.Empty<string>();
         this.storageItems = storageItems ?? Array.Empty<StorageItemConfig>();
@@ -40,15 +52,15 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private MemoryGameWebConfig _config;
     
     [Header("References")]
-    [SerializeField] private CustomCronometer _cronometer;
+    [SerializeField] private CustomizableCronometer _cronometer;
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
 
     [Header("Menus")]
-    [SerializeField] private CustomStartMenu _startMenu;
-    [SerializeField] private CustomCollectLeadsMenu _collectLeadsMenu;
+    [SerializeField] private CustomizableStartMenu _startMenu;
+    [SerializeField] private CustomizableCollectLeadsMenu _collectLeadsMenu;
     [SerializeField] private CustomVictoryMenu _victoryMenu;
-    [SerializeField] private CustomParticipationMenu _participationMenu;
-    [SerializeField] private CustomLoseMenu _loseMenu;
+    [SerializeField] private CustomizableParticipationMenu _participationMenu;
+    [SerializeField] private CustomizableLoseMenu _loseMenu;
 
     [Header("Visuals")]
     [SerializeField] private Image _gameBackground;
@@ -360,8 +372,11 @@ public class MemoryGame : MonoBehaviour
     {
         _config.storageItems = data.storageItems;
         _config.useLeads = data.useLeads;
-        _config.gameName = data.gameName;
+        _config.gameName = ConvertHtmlToTMP(data.gameName);
         _config.primaryColor = data.primaryColor.HexToColor();
+        _config.secondaryColor= data.secondaryColor.HexToColor();
+        _config.tertiaryColor= data.tertiaryColor.HexToColor();
+        _config.neutralColor= data.neutralColor.HexToColor();
         _config.cardPairs = new Sprite[data.cardsList.Length];
 
         if (data.leadDataConfig == null || data.leadDataConfig.Length == 0)
@@ -374,12 +389,9 @@ public class MemoryGame : MonoBehaviour
         }
 
         AppManager.Instance.gameConfig = _config;
-
+        yield return StartCoroutine(WebGLNetworking.Instance.DownloadImageRoutine(data.userLogo, (sprite) => _config.userLogo = sprite));
         yield return StartCoroutine(WebGLNetworking.Instance.DownloadImageRoutine(data.cardBack, (sprite) => _config.cardBack = sprite));
-        for (int i = 0; i < _config.cardPairs.Length; i++)
-        {
-            yield return StartCoroutine(WebGLNetworking.Instance.DownloadImageRoutine(data.cardsList[i], (sprite) => _config.cardPairs[i] = sprite));
-        }
+        for (int i = 0; i < _config.cardPairs.Length; i++) yield return StartCoroutine(WebGLNetworking.Instance.DownloadImageRoutine(data.cardsList[i], (sprite) => _config.cardPairs[i] = sprite));
 
         _webAutoLeadForm.leadDataConfig = data.leadDataConfig;
         _webAutoLeadForm.InstantiateLeadboxes();
@@ -413,5 +425,45 @@ public class MemoryGame : MonoBehaviour
         _victoryMenu.ChangeVisualIdentity(_config);
         _participationMenu.ChangeVisualIdentity(_config);
         _loseMenu.ChangeVisualIdentity(_config);
+    }
+
+    public string ConvertHtmlToTMP(string htmlText)
+    {
+        // 1. Limpar contrabarras
+        htmlText = htmlText.Replace("\\", "");
+
+        // Remover espaços e quebras de linha desnecessárias
+        htmlText = Regex.Replace(htmlText, @"\s+", " ");
+        htmlText = htmlText.Trim();
+
+        // Remover tags que o TMP não suporta
+        string tmpText = Regex.Replace(htmlText, "<style[^>]*>.*?</style>", "", RegexOptions.Singleline);
+
+        // Converter <p> para alinhamento e indentação
+        tmpText = Regex.Replace(tmpText, "<p[^>]*>", "");
+
+        // Converter <span> com cores
+        tmpText = Regex.Replace(tmpText, "<span[^>]*style=\"[^\"]*color: (#?[a-fA-F0-9]+);?\">", "<color=$1>");
+        tmpText = tmpText.Replace("</span>", "</color>");
+
+        // Negrito
+        tmpText = tmpText.Replace("<strong>", "<b>");
+        tmpText = tmpText.Replace("</strong>", "</b>");
+
+        // Itálico
+        tmpText = tmpText.Replace("<em>", "<i>");
+        tmpText = tmpText.Replace("</em>", "</i>");
+
+        // Sublinhado (opcional, caso venha)
+        tmpText = tmpText.Replace("<u>", "<u>");
+        tmpText = tmpText.Replace("</u>", "</u>");
+
+        // Riscado (opcional, caso venha)
+        tmpText = tmpText.Replace("<s>", "<s>");
+        tmpText = tmpText.Replace("</s>", "</s>");
+
+        Debug.Log("ConvertHtmlToTMP(): " + tmpText);
+
+        return tmpText;
     }
 }

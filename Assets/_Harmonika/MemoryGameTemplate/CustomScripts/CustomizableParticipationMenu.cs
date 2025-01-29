@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CustomVictoryMenu : VictoryMenu
+public class CustomizableParticipationMenu : ParticipationMenu
 {
     public Image backgroundImg;
     public Image backgroundCircleImg;

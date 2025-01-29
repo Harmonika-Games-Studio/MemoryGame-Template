@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CustomCollectLeadsMenu : CollectLeadsMenu
+public class CustomizableCollectLeadsMenu : CollectLeadsMenu
 {
-    public Image background;
+    public Image backgroundImg;
+    public Image backgroundCircleImg;
+    public Image userLogo;
 
     public void ChangeVisualIdentity(MemoryGameWebConfig config)
     {
-        background.color = config.primaryColor;
+        backgroundImg.color = config.neutralColor;
+        backgroundCircleImg.color = config.primaryColor;
         ContinueGameButton.image.color = config.secondaryColor;
+
     }
 }
