@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 50e8553e25c2c5847b953747b137c64c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5974499346598616154
+    second: Ativo 1@2xMemoryGameLayout_0
+  - first:
+      213: -6945847597428867569
+    second: Ativo 1@2xMemoryGameLayout_1
+  - first:
+      213: -1723458182402775572
+    second: Ativo 1@2xMemoryGameLayout_2
+  - first:
+      213: -341049994810053508
+    second: Ativo 1@2xMemoryGameLayout_3
+  - first:
+      213: 1029402997036240430
+    second: Ativo 1@2xMemoryGameLayout_4
+  - first:
+      213: 7082249679043851179
+    second: Ativo 1@2xMemoryGameLayout_5
+  - first:
+      213: -562346153523718202
+    second: Ativo 1@2xMemoryGameLayout_6
+  - first:
+      213: 1812051520654505603
+    second: Ativo 1@2xMemoryGameLayout_7
+  - first:
+      213: -1921318372315787239
+    second: Ativo 1@2xMemoryGameLayout_8
+  - first:
+      213: -1770612279482281415
+    second: Ativo 1@2xMemoryGameLayout_9
+  - first:
+      213: -1358351130947319405
+    second: Ativo 1@2xMemoryGameLayout_10
+  - first:
+      213: 3104057683810244204
+    second: Ativo 1@2xMemoryGameLayout_11
+  - first:
+      213: -7773254079060196686
+    second: Ativo 1@2xMemoryGameLayout_12
+  - first:
+      213: 6400851205351782932
+    second: Ativo 1@2xMemoryGameLayout_13
+  - first:
+      213: 2459430269476112572
+    second: Ativo 1@2xMemoryGameLayout_14
+  - first:
+      213: 2547672364392153171
+    second: Ativo 1@2xMemoryGameLayout_15
+  - first:
+      213: 8372119641626835453
+    second: Ativo 1@2xMemoryGameLayout_16
+  - first:
+      213: -9186306736255695815
+    second: Ativo 1@2xMemoryGameLayout_17
+  - first:
+      213: 7068623507870715242
+    second: Ativo 1@2xMemoryGameLayout_18
+  - first:
+      213: -1391784091373968106
+    second: Ativo 1@2xMemoryGameLayout_19
+  - first:
+      213: 8661907107005528299
+    second: Ativo 1@2xMemoryGameLayout_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 20
+        width: 212
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c50d0608fa9e250800000000000000
+      internalID: 5974499346598616154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_1
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 6
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e704b29646b9f90800000000000000
+      internalID: -6945847597428867569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_2
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 171
+        width: 91
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce564a41aeb0518e0800000000000000
+      internalID: -1723458182402775572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_3
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 258
+        width: 59
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ca2b036d8544bf0800000000000000
+      internalID: -341049994810053508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 73
+        width: 140
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e4111629c294e00800000000000000
+      internalID: 1029402997036240430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_5
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 46
+        width: 141
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3780a4f84394260800000000000000
+      internalID: 7082249679043851179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_6
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 171
+        width: 77
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7596e17252238f0800000000000000
+      internalID: -562346153523718202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_7
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 173
+        width: 71
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3867153e143b52910800000000000000
+      internalID: 1812051520654505603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_8
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 173
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9109fa5be1b1655e0800000000000000
+      internalID: -1921318372315787239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_9
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 171
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932938e43858d67e0800000000000000
+      internalID: -1770612279482281415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_10
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 173
+        width: 71
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39982afd7da262de0800000000000000
+      internalID: -1358351130947319405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_11
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 140
+        width: 73
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66d4d57404d31b20800000000000000
+      internalID: 3104057683810244204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_12
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 171
+        width: 77
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2c2cc799adf1490800000000000000
+      internalID: -7773254079060196686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_13
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 171
+        width: 77
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41abf13124464d850800000000000000
+      internalID: 6400851205351782932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_14
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 33
+        width: 85
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb887f9acc6a12220800000000000000
+      internalID: 2459430269476112572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_15
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 33
+        width: 77
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3508cab64862b5320800000000000000
+      internalID: 2547672364392153171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_16
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 34
+        width: 71
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9fc38e47ebf2470800000000000000
+      internalID: 8372119641626835453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_17
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 34
+        width: 76
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93483bbc1bea38080800000000000000
+      internalID: -9186306736255695815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_18
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 34
+        width: 72
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d0c9511abc81260800000000000000
+      internalID: 7068623507870715242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_19
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 2
+        width: 81
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6156d9d2eb36face0800000000000000
+      internalID: -1391784091373968106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1@2xMemoryGameLayout_20
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 33
+        width: 77
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8fe7efe96453870800000000000000
+      internalID: 8661907107005528299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ativo 1@2xMemoryGameLayout_0: 5974499346598616154
+      Ativo 1@2xMemoryGameLayout_1: -6945847597428867569
+      Ativo 1@2xMemoryGameLayout_10: -1358351130947319405
+      Ativo 1@2xMemoryGameLayout_11: 3104057683810244204
+      Ativo 1@2xMemoryGameLayout_12: -7773254079060196686
+      Ativo 1@2xMemoryGameLayout_13: 6400851205351782932
+      Ativo 1@2xMemoryGameLayout_14: 2459430269476112572
+      Ativo 1@2xMemoryGameLayout_15: 2547672364392153171
+      Ativo 1@2xMemoryGameLayout_16: 8372119641626835453
+      Ativo 1@2xMemoryGameLayout_17: -9186306736255695815
+      Ativo 1@2xMemoryGameLayout_18: 7068623507870715242
+      Ativo 1@2xMemoryGameLayout_19: -1391784091373968106
+      Ativo 1@2xMemoryGameLayout_2: -1723458182402775572
+      Ativo 1@2xMemoryGameLayout_20: 8661907107005528299
+      Ativo 1@2xMemoryGameLayout_3: -341049994810053508
+      Ativo 1@2xMemoryGameLayout_4: 1029402997036240430
+      Ativo 1@2xMemoryGameLayout_5: 7082249679043851179
+      Ativo 1@2xMemoryGameLayout_6: -562346153523718202
+      Ativo 1@2xMemoryGameLayout_7: 1812051520654505603
+      Ativo 1@2xMemoryGameLayout_8: -1921318372315787239
+      Ativo 1@2xMemoryGameLayout_9: -1770612279482281415
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

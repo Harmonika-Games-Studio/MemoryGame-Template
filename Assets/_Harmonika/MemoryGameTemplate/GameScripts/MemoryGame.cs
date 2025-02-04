@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,7 +47,8 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private VictoryMenu _victoryMenu;
     [SerializeField] private ParticipationMenu _participationMenu;
     [SerializeField] private LoseMenu _loseMenu;
-    
+    [SerializeField] private TMP_Text _memorizationTxt;
+
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
@@ -90,14 +92,25 @@ public class MemoryGame : MonoBehaviour
 
     public IEnumerator StartGame()
     {
+        _memorizationTxt.text = "MEMORIZE AS CARTAS!";
+
+        _cronometer.gameObject.SetActive(false);
+
         _startTime = Time.time;
          _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
-        _cronometer.StartTimer();
 
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
         yield return new WaitForSeconds(_config.memorizationTime);
+
+        _memorizationTxt.text = "ENCONTRE OS PARES!";
+
+        yield return new WaitForSeconds(1f);
+
+        _cronometer.gameObject.SetActive(true);
+
+        _cronometer.StartTimer();
 
         foreach (var card in _cardsList)
         {
@@ -178,8 +191,8 @@ public class MemoryGame : MonoBehaviour
             _mainMenu.AddStartGameButtonListener(() => StartCoroutine(StartGame()));
         }
 
-        _victoryMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _loseMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _victoryMenu.AddBackToMainMenuButtonListener(ShowRanking);
+        _loseMenu.AddBackToMainMenuButtonListener(ShowRanking);
         _participationMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
     }
 
@@ -282,19 +295,19 @@ public class MemoryGame : MonoBehaviour
     {
         SoundSystem.Instance.Play("Win");
 
-        if (!string.IsNullOrEmpty(prizeName))
-        {
-            _victoryMenu.ChangePrizeText("(" + prizeName + ")");
+        //if (!string.IsNullOrEmpty(prizeName))
+        //{
+          //  _victoryMenu.ChangePrizeText("(" + prizeName + ")");
             _gameMenu.OpenMenu("VictoryMenu");
-        }
-        else
-        {
-            prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
-        }
+        //}
+        //else
+        //{
+        //    prizeName = "Nenhum";
+        //    _gameMenu.OpenMenu("ParticipationMenu");
+        //}
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+        //AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
     }
 
     private void LoseGame()
@@ -302,8 +315,14 @@ public class MemoryGame : MonoBehaviour
         SoundSystem.Instance.Play("Fail");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
+        //AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
+    }
+
+    private void ShowRanking()
+    {
+        AppManager.Instance.Ranking.LoadRanking();
+        _gameMenu.OpenMenu("RankingMenu");
     }
 }

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HarmonikaMemoryGameLogoRounded_0: -4242779466339221329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

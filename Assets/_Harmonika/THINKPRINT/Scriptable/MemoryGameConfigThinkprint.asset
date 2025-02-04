@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045cc4695a78a9b45b1f23df8a89877a, type: 3}
+  m_Name: MemoryGameConfigThinkprint
+  m_EditorClassIdentifier: 
+  musicVolume: 15
+  sfxVolume: 100
+  storageItems: []
+  useLeads: 1
+  memorizationTime: 3
+  gameTime: 60
+  _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
+  cardBack: {fileID: 777859604089297785, guid: 70bdedb1bc545694aa9454c6c5083742, type: 3}
+  cardPairs:
+  - {fileID: 21300000, guid: 1557fd4465ccc6440921a164283003e1, type: 3}
+  - {fileID: 21300000, guid: 7160fc67423b807468e48bd86904a7d3, type: 3}
+  - {fileID: 21300000, guid: ea73dec13acee8a4badb30ab56e9f631, type: 3}
+  - {fileID: 21300000, guid: 221a7d6e2ccdd7e44b5ba9b2d5e3f76a, type: 3}
+  - {fileID: 21300000, guid: f10a4d83878b8064ab9fd326b77f8d6e, type: 3}
+  - {fileID: 21300000, guid: 9cc6add8d5937784391c4fba953ccdb2, type: 3}
+  - {fileID: 21300000, guid: 99729bcd7a2dab048b5a4d99b026d594, type: 3}
+  - {fileID: 21300000, guid: 2217ed105a95b51499b3ee67d5f4845c, type: 3}
