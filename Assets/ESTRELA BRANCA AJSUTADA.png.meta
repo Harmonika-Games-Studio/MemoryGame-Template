@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a297a21595a46094fabd889515dabc45
+guid: f92d6df6616e4534d9590f412de75a25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6775298626413137717
-    second: Produtos_0
+      213: -5259732980911214830
+    second: ESTRELA BRANCA AJSUTADA_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Produtos_0
+      name: ESTRELA BRANCA AJSUTADA_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 999
-        height: 697
+        x: 64
+        y: 79
+        width: 887
+        height: 876
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc0f37ddbcd49f1a0800000000000000
-      internalID: -6775298626413137717
+      spriteID: 21f616b98bca107b0800000000000000
+      internalID: -5259732980911214830
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Produtos_0: -6775298626413137717
+      ESTRELA BRANCA AJSUTADA_0: -5259732980911214830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -93,6 +93,7 @@ public class MemoryGame : MonoBehaviour
         _startTime = Time.time;
          _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
         _cronometer.StartTimer();
+        _ParticleSystem.SetActive(false);
 
         InstantiateCards();
         AdjustGridLayout();
@@ -281,6 +282,7 @@ public class MemoryGame : MonoBehaviour
     private void WinGame(string prizeName = null)
     {
         SoundSystem.Instance.Play("Win");
+        _ParticleSystem.SetActive(true);
 
         if (!string.IsNullOrEmpty(prizeName))
         {
@@ -299,6 +301,7 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
     }
 
+    public GameObject _ParticleSystem;
 
     private void LoseGame()
     {
@@ -316,6 +319,7 @@ public class MemoryGame : MonoBehaviour
     private IEnumerator ReturnToMainMenuAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        _ParticleSystem.SetActive(true);
         _gameMenu.OpenMenu("MainMenu");
     }
 
