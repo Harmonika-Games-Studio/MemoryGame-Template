@@ -291,11 +291,14 @@ public class MemoryGame : MonoBehaviour
         {
             prizeName = "Nenhum";
             _gameMenu.OpenMenu("ParticipationMenu");
+
         }
+        StartCoroutine(ReturnToMainMenuAfterDelay(3f));
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
         AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
     }
+
 
     private void LoseGame()
     {
@@ -305,5 +308,16 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
+
+        // Aguarda 3 segundos e reinicia o jogo
+        StartCoroutine(ReturnToMainMenuAfterDelay(3f));
     }
+
+    private IEnumerator ReturnToMainMenuAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        _gameMenu.OpenMenu("MainMenu");
+    }
+
+
 }

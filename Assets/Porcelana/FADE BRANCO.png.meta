@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 8726151aa8da2764ea2366a7cd561156
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4753717649857675143
+    second: FADE BRANCO_0
+  - first:
+      213: 6095763727854466080
+    second: FADE BRANCO_1
+  - first:
+      213: -3911475883129875361
+    second: FADE BRANCO_2
+  - first:
+      213: 7293373722222396102
+    second: FADE BRANCO_3
+  - first:
+      213: -8909219738708023525
+    second: FADE BRANCO_4
+  - first:
+      213: -7478295983937214544
+    second: FADE BRANCO_5
+  - first:
+      213: 6618533435396672952
+    second: FADE BRANCO_6
+  - first:
+      213: 752782301624615983
+    second: FADE BRANCO_7
+  - first:
+      213: 9208279123401060253
+    second: FADE BRANCO_8
+  - first:
+      213: 5539914886206437005
+    second: FADE BRANCO_9
+  - first:
+      213: -9151686213448688539
+    second: FADE BRANCO_10
+  - first:
+      213: -7748695696788338450
+    second: FADE BRANCO_11
+  - first:
+      213: -8437755186058560023
+    second: FADE BRANCO_12
+  - first:
+      213: -8343545462684272263
+    second: FADE BRANCO_13
+  - first:
+      213: -7344049497720361934
+    second: FADE BRANCO_14
+  - first:
+      213: -4853386286034626260
+    second: FADE BRANCO_15
+  - first:
+      213: -4797622094595452338
+    second: FADE BRANCO_16
+  - first:
+      213: -4065744447986942832
+    second: FADE BRANCO_17
+  - first:
+      213: -7695165305474597040
+    second: FADE BRANCO_18
+  - first:
+      213: -8993050731319136442
+    second: FADE BRANCO_19
+  - first:
+      213: -8955115671739640062
+    second: FADE BRANCO_20
+  - first:
+      213: 6986588290475122267
+    second: FADE BRANCO_21
+  - first:
+      213: 4401124568618059307
+    second: FADE BRANCO_22
+  - first:
+      213: 1925996951747571926
+    second: FADE BRANCO_23
+  - first:
+      213: 1398396756233714098
+    second: FADE BRANCO_24
+  - first:
+      213: 1310491714906915159
+    second: FADE BRANCO_25
+  - first:
+      213: 5039732860046715870
+    second: FADE BRANCO_26
+  - first:
+      213: 2965414825537213881
+    second: FADE BRANCO_27
+  - first:
+      213: -3961453639113195269
+    second: FADE BRANCO_28
+  - first:
+      213: -6864647452516992411
+    second: FADE BRANCO_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FADE BRANCO_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1080
+        height: 1909
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f754a240998f140800000000000000
+      internalID: 4753717649857675143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 65
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024f97150d0889450800000000000000
+      internalID: 6095763727854466080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 64
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f54598e7865a7b9c0800000000000000
+      internalID: -3911475883129875361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 59
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c20c3722c4473560800000000000000
+      internalID: 7293373722222396102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_4
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 64
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17e868c9d71c5480800000000000000
+      internalID: -8909219738708023525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_5
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 64
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b72130ac61c73890800000000000000
+      internalID: -7478295983937214544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 62
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd4ddec711c9db50800000000000000
+      internalID: 6618533435396672952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_7
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 36
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f244981d38b627a00800000000000000
+      internalID: 752782301624615983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_8
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 66
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f27fe33116acf70800000000000000
+      internalID: 9208279123401060253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_9
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 68
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86bb3ebc3bb1ec40800000000000000
+      internalID: 5539914886206437005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_10
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 44
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c1d8760edaef080800000000000000
+      internalID: -9151686213448688539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_11
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 58
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee84550715a177490800000000000000
+      internalID: -7748695696788338450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_12
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 66
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edf4490d5217ea80800000000000000
+      internalID: -8437755186058560023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 68
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979b1619b95c53c80800000000000000
+      internalID: -8343545462684272263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_14
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 63
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ced7b64e1b41a90800000000000000
+      internalID: -7344049497720361934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_15
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 55
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29572f13ee45acb0800000000000000
+      internalID: -4853386286034626260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_16
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 63
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e429215bf1c6b6db0800000000000000
+      internalID: -4797622094595452338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_17
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 60
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cb83e37f29397c0800000000000000
+      internalID: -4065744447986942832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_18
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 63
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05fb647ece7453590800000000000000
+      internalID: -7695165305474597040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_19
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 64
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64fe7a0d104423380800000000000000
+      internalID: -8993050731319136442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_20
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 68
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 207dc672eb909b380800000000000000
+      internalID: -8955115671739640062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_21
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 50
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e5cad980955f060800000000000000
+      internalID: 6986588290475122267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_22
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 64
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2649bc1a7fe31d30800000000000000
+      internalID: 4401124568618059307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_23
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 51
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d03663f5048aba10800000000000000
+      internalID: 1925996951747571926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_24
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 53
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b97e56d07a186310800000000000000
+      internalID: 1398396756233714098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_25
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 59
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7518e1c754dcf2210800000000000000
+      internalID: 1310491714906915159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_26
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 58
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edba2f5a55ab0f540800000000000000
+      internalID: 5039732860046715870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_27
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 63
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b592d78215472920800000000000000
+      internalID: 2965414825537213881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_28
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 58
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0ca7667e61609c0800000000000000
+      internalID: -3961453639113195269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FADE BRANCO_29
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 68
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a3f6c238fdbb0a0800000000000000
+      internalID: -6864647452516992411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FADE BRANCO_0: 4753717649857675143
+      FADE BRANCO_1: 6095763727854466080
+      FADE BRANCO_10: -9151686213448688539
+      FADE BRANCO_11: -7748695696788338450
+      FADE BRANCO_12: -8437755186058560023
+      FADE BRANCO_13: -8343545462684272263
+      FADE BRANCO_14: -7344049497720361934
+      FADE BRANCO_15: -4853386286034626260
+      FADE BRANCO_16: -4797622094595452338
+      FADE BRANCO_17: -4065744447986942832
+      FADE BRANCO_18: -7695165305474597040
+      FADE BRANCO_19: -8993050731319136442
+      FADE BRANCO_2: -3911475883129875361
+      FADE BRANCO_20: -8955115671739640062
+      FADE BRANCO_21: 6986588290475122267
+      FADE BRANCO_22: 4401124568618059307
+      FADE BRANCO_23: 1925996951747571926
+      FADE BRANCO_24: 1398396756233714098
+      FADE BRANCO_25: 1310491714906915159
+      FADE BRANCO_26: 5039732860046715870
+      FADE BRANCO_27: 2965414825537213881
+      FADE BRANCO_28: -3961453639113195269
+      FADE BRANCO_29: -6864647452516992411
+      FADE BRANCO_3: 7293373722222396102
+      FADE BRANCO_4: -8909219738708023525
+      FADE BRANCO_5: -7478295983937214544
+      FADE BRANCO_6: 6618533435396672952
+      FADE BRANCO_7: 752782301624615983
+      FADE BRANCO_8: 9208279123401060253
+      FADE BRANCO_9: 5539914886206437005
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

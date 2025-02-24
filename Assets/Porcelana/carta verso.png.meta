@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc811d16f8aa26d4c8f593d807eb5b55
+guid: afa7b1d5787a1824eab70c642d57adf4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1992666512944862323
-    second: Ativo 30@4x_0
+      213: 8165340486926578809
+    second: carta verso_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ativo 30@4x_0
+      name: carta verso_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 261
-        height: 261
+        width: 306
+        height: 399
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37415ebc2af57ab10800000000000000
-      internalID: 1992666512944862323
+      spriteID: 974bf5939ed115170800000000000000
+      internalID: 8165340486926578809
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ativo 30@4x_0: 1992666512944862323
+      carta verso_0: 8165340486926578809
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
