@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolume: 15
   sfxVolume: 100
-  storageItems:
-  - _itemName: Adesivo
-    _initialValue: 10
-    _prizeScore: 100
+  storageItems: []
   useLeads: 0
   memorizationTime: 2
   gameTime: 20

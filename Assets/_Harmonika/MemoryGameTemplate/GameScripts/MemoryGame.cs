@@ -262,7 +262,14 @@ public class MemoryGame : MonoBehaviour
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
+        int pontos = (int)Math.Floor(PlayerPrefs.GetInt("GameTime", _config.gameTime) - tempo);
+
+        if(pontos < 0 )
+        {
+            pontos = 0;
+        }
+
+        AppManager.Instance.DataSync.AddDataToJObject("pontos", pontos);
 
         InvokeUtility.Invoke(() =>
         {
