@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -54,6 +55,8 @@ public class MemoryGame : MonoBehaviour
     private MenuManager _gameMenu;
     private RectTransform _gridLayoutRect;
 
+    public TMP_Text timerText;
+
     private MemoryGameCard _lastClickedCard;
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
 
@@ -91,15 +94,23 @@ public class MemoryGame : MonoBehaviour
     public IEnumerator StartGame()
     {
         _startTime = Time.time;
-         _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
-        _cronometer.StartTimer();
+         _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime", _config.gameTime);
+        //_cronometer._timerText = _cronometer.totalTimeInSeconds;
+        _remainingTime = _cronometer.totalTimeInSeconds;
+        int minutes = _remainingTime / 60;
+        int seconds = _remainingTime % 60;
+
+        if (_cronometer.useFormat) timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        else timerText.text = _remainingTime.ToString();
+
         _ParticleSystem.SetActive(false);
 
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
-        yield return new WaitForSeconds(_config.memorizationTime);
+        yield return new WaitForSeconds(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime));
 
+        _cronometer.StartTimer();
         foreach (var card in _cardsList)
         {
             card.RotateCardDown();
