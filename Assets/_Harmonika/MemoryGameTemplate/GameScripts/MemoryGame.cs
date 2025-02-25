@@ -91,16 +91,21 @@ public class MemoryGame : MonoBehaviour
     public IEnumerator StartGame()
     {
         _startTime = Time.time;
-         _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime");
-        _cronometer.StartTimer();
+        _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime", _config.gameTime);
+        _remainingTime = _cronometer.totalTimeInSeconds;
+        int minutes = _remainingTime / 60;
+        int seconds = _remainingTime % 60; 
+        if (_cronometer.useFormat) _cronometer._timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        else _cronometer._timerText.text = _remainingTime.ToString(); 
 
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
-        yield return new WaitForSeconds(_config.memorizationTime);
+        yield return new WaitForSeconds(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime));
 
-        foreach (var card in _cardsList)
-        {
+        _cronometer.StartTimer();
+
+        foreach (var card in _cardsList) {
             card.RotateCardDown();
         }
     }
