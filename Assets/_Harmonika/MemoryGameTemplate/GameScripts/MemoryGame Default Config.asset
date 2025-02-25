@@ -24,9 +24,9 @@ MonoBehaviour:
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: 21300000, guid: afa7b1d5787a1824eab70c642d57adf4, type: 3}
   cardPairs:
-  - {fileID: 21300000, guid: a65fbf92ac7c8e94f85781ab47dbd6b1, type: 3}
-  - {fileID: 21300000, guid: dc9030db5a6af7247b15c1829704a00b, type: 3}
-  - {fileID: 21300000, guid: 0c93e6feab31c6c438150140470ccaa3, type: 3}
-  - {fileID: 21300000, guid: c4a23b78b15d82f40a1bbae1b79cfa0e, type: 3}
-  - {fileID: 21300000, guid: 1a1a5e980653212448fc747ffa521041, type: 3}
-  - {fileID: 21300000, guid: e3452449a9f888f49b0a2dfa65dd43f6, type: 3}
+  - {fileID: 21300000, guid: 1a0bb836d2c1cc14997b86674dd8ec33, type: 3}
+  - {fileID: 21300000, guid: f1d1ff89081043b4badb6c3c2bb4ea1d, type: 3}
+  - {fileID: 21300000, guid: 75cd1ec4bb23a6d4ab09724f766d9cd4, type: 3}
+  - {fileID: 21300000, guid: fd08842c9ae3d2a4bb761178d5c90220, type: 3}
+  - {fileID: 21300000, guid: 7deb4d0becaf42a4d8d73803462adb01, type: 3}
+  - {fileID: 21300000, guid: 6e6a994f5333903469a79f7542031ac5, type: 3}
