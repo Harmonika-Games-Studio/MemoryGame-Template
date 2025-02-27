@@ -157,7 +157,7 @@ PlayerSettings:
   useHDRDisplay: 0
   hdrBitDepth: 0
   m_ColorGamuts: 00000000
-  targetPixelDensity: 160
+  targetPixelDensity: 140
   resolutionScalingMode: 1
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
