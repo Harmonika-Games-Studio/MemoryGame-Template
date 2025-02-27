@@ -48,6 +48,7 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private ParticipationMenu _participationMenu;
     [SerializeField] private LoseMenu _loseMenu;
     [SerializeField] private TMP_Text _memorizationTxt;
+    [SerializeField] private Button _openRankingButton;
 
     private int _revealedPairs;
     private int _remainingTime;
@@ -191,6 +192,7 @@ public class MemoryGame : MonoBehaviour
             _mainMenu.AddStartGameButtonListener(() => StartCoroutine(StartGame()));
         }
 
+        _openRankingButton.onClick.AddListener(ShowRanking);
         _victoryMenu.AddBackToMainMenuButtonListener(ShowRanking);
         _loseMenu.AddBackToMainMenuButtonListener(ShowRanking);
         _participationMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
@@ -273,7 +275,7 @@ public class MemoryGame : MonoBehaviour
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
+        AppManager.Instance.DataSync.AddDataToJObject("pontos", _config.gameTime - tempo);
 
         InvokeUtility.Invoke(() =>
         {
