@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.harmonika.tools": "https://github.com/Harmonika-Games-Studio/com.harmonika.tools.git",
     "com.harmonika.builder": "https://github.com/Harmonika-Games-Studio/com.harmonika.builder.git",
+    "com.harmonika.tools": "https://github.com/Harmonika-Games-Studio/com.harmonika.tools.git",
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.31",
@@ -9,6 +9,7 @@
     "com.unity.inputsystem": "1.11.1",
     "com.unity.multiplayer.center": "1.0.0",
     "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.recorder": "5.1.2",
     "com.unity.render-pipelines.universal": "17.0.3",
     "com.unity.test-framework": "1.4.5",
     "com.unity.timeline": "1.8.7",

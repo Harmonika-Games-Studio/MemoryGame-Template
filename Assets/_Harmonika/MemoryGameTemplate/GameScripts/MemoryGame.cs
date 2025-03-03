@@ -149,7 +149,7 @@ public class MemoryGame : MonoBehaviour
                 _revealedPairs++;
                 if (_revealedPairs >= _config.cardPairs.Length)
                 {
-                    EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
+                    EndGame(true);
                 }
             }
             else
@@ -260,7 +260,7 @@ public class MemoryGame : MonoBehaviour
 
     }
 
-    private void EndGame(bool win, string prizeName = null)
+    private void EndGame(bool win)
     {
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
@@ -269,7 +269,7 @@ public class MemoryGame : MonoBehaviour
 
         InvokeUtility.Invoke(() =>
         {
-            if (win) WinGame(prizeName);
+            if (win) WinGame();
             else LoseGame();
 
             foreach (var card in _cardsList)
@@ -283,23 +283,26 @@ public class MemoryGame : MonoBehaviour
         }, 1f);
     }
 
-    private void WinGame(string prizeName = null)
+    private void WinGame()
     {
         SoundSystem.Instance.Play("Win");
 
-        if (!string.IsNullOrEmpty(prizeName))
-        {
-            _victoryMenu.ChangePrizeText("(" + prizeName + ")");
-            _gameMenu.OpenMenu("VictoryMenu");
-        }
-        else
-        {
-            prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
-        }
+        //string prizeName = AppManager.Instance.Storage.GetRandomPrize();
+
+        //if (!string.IsNullOrEmpty(prizeName))
+        //{
+        //    _victoryMenu.ChangePrizeText("(" + prizeName + ")");
+        //    _gameMenu.OpenMenu("VictoryMenu");
+        //}
+        //else
+        //{
+        //    prizeName = "Nenhum";
+        //    _gameMenu.OpenMenu("ParticipationMenu");
+        //}
+        _gameMenu.OpenMenu("ParticipationMenu");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+        //AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
     }
 
     private void LoseGame()
@@ -307,7 +310,7 @@ public class MemoryGame : MonoBehaviour
         SoundSystem.Instance.Play("Fail");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
+        //AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
     }
