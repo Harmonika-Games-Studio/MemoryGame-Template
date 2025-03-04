@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 15067953a746ca349ae67967a0bddf3c
+guid: 6977c1fc34781ad449a0987e62fe7176
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4242779466339221329
-    second: HarmonikaMemoryGameLogoRounded_0
+      213: -2288743405476437348
+    second: logoTotvs_0
+  - first:
+      213: 559721091402842755
+    second: logoTotvs_1
+  - first:
+      213: 1023534081752003333
+    second: logoTotvs_2
+  - first:
+      213: -125218364636003630
+    second: logoTotvs_3
+  - first:
+      213: 5777843471928124419
+    second: logoTotvs_4
+  - first:
+      213: 396704404347578637
+    second: logoTotvs_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,6 +99,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Win64
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -97,7 +125,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,20 +151,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -152,13 +167,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HarmonikaMemoryGameLogoRounded_0
+      name: logoTotvs_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2000
-        height: 2000
+        width: 136
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +182,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa08788fd8e9e15c0800000000000000
-      internalID: -4242779466339221329
+      spriteID: c922f8ebfffbc30e0800000000000000
+      internalID: -2288743405476437348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoTotvs_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 31
+        width: 54
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3824c5afd5784c700800000000000000
+      internalID: 559721091402842755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoTotvs_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 31
+        width: 60
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 503755e03d2543e00800000000000000
+      internalID: 1023534081752003333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoTotvs_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 31
+        width: 54
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d204809f82234ef0800000000000000
+      internalID: -125218364636003630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoTotvs_4
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 30
+        width: 64
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304e51086060f2050800000000000000
+      internalID: 5777843471928124419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoTotvs_5
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 31
+        width: 51
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0968fdcd80618500800000000000000
+      internalID: 396704404347578637
       vertices: []
       indices: 
       edges: []
@@ -177,7 +302,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +312,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HarmonikaMemoryGameLogoRounded_0: -4242779466339221329
+      logoTotvs_0: -2288743405476437348
+      logoTotvs_1: 559721091402842755
+      logoTotvs_2: 1023534081752003333
+      logoTotvs_3: -125218364636003630
+      logoTotvs_4: 5777843471928124419
+      logoTotvs_5: 396704404347578637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

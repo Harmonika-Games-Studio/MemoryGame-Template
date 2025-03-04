@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 15067953a746ca349ae67967a0bddf3c
+guid: b77e87d28105482429b077c16ae4ac81
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4242779466339221329
-    second: HarmonikaMemoryGameLogoRounded_0
+      213: -3833424376453992818
+    second: Start04_0
+  - first:
+      213: -1681554556446283815
+    second: Start04_1
+  - first:
+      213: -4601025887202166700
+    second: Start04_2
+  - first:
+      213: -4114443625917110697
+    second: Start04_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,6 +93,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Win64
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -97,7 +119,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,20 +145,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -152,13 +161,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HarmonikaMemoryGameLogoRounded_0
+      name: Start04_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 2000
-        height: 2000
+        y: 7
+        width: 272
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +176,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa08788fd8e9e15c0800000000000000
-      internalID: -4242779466339221329
+      spriteID: e8ee22807d0fccac0800000000000000
+      internalID: -3833424376453992818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start04_1
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 6
+        width: 336
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d764984a0be9a8e0800000000000000
+      internalID: -1681554556446283815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start04_2
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 13
+        width: 202
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45830f6355fd520c0800000000000000
+      internalID: -4601025887202166700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start04_3
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 0
+        width: 228
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75627dc425f86e6c0800000000000000
+      internalID: -4114443625917110697
       vertices: []
       indices: 
       edges: []
@@ -177,7 +252,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +262,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HarmonikaMemoryGameLogoRounded_0: -4242779466339221329
+      Start04_0: -3833424376453992818
+      Start04_1: -1681554556446283815
+      Start04_2: -4601025887202166700
+      Start04_3: -4114443625917110697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
