@@ -95,7 +95,7 @@ public class MemoryGame : MonoBehaviour
         _remainingTime = _cronometer.totalTimeInSeconds;
         int minutes = _remainingTime / 60;
         int seconds = _remainingTime % 60; 
-        if (_cronometer.useFormat) _cronometer._timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (_cronometer.useFormat) _cronometer._timerText.text = string.Format("{0:00}<color=#F6AC23>:</color>{1:00}", minutes, seconds);
         else _cronometer._timerText.text = _remainingTime.ToString(); 
 
         InstantiateCards();

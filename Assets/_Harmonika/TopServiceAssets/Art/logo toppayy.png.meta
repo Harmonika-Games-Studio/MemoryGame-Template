@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      logo toppayy_0: -5653250913984463290
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
