@@ -15,7 +15,7 @@ MonoBehaviour:
   musicVolume: 5
   sfxVolume: 100
   storageItems:
-  - _itemName: Chaveiro
+  - _itemName: Brinde
     _initialValue: 100
     _prizeScore: 100
   useLeads: 1
@@ -24,11 +24,11 @@ MonoBehaviour:
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: 21300000, guid: 0686dff041b113c40a91c731fee05636, type: 3}
   cardPairs:
-  - {fileID: 21300000, guid: 15d042a078ee4cf4b8b3ce9d9884e782, type: 3}
-  - {fileID: 21300000, guid: 5b6ca1761a0781946a17b567f27c7d16, type: 3}
-  - {fileID: 21300000, guid: 4c086c69bb159354ab59f930811ab3cb, type: 3}
-  - {fileID: 21300000, guid: 4aa38e061c8286e49bdfac34b3a9add7, type: 3}
-  - {fileID: 21300000, guid: cdb00a42fb0856a4db62560d363f952d, type: 3}
-  - {fileID: 21300000, guid: 7065fd97e8056034ea248ae1566d9b2c, type: 3}
-  - {fileID: 21300000, guid: adb627860b495494fa12c62be796e673, type: 3}
-  - {fileID: 21300000, guid: 60a3877e75edb2644a237b17f61ad959, type: 3}
+  - {fileID: 21300000, guid: f64a0cff153d7d54e8604d825edee17b, type: 3}
+  - {fileID: 21300000, guid: f6dbaf47f0a26824aa163605d9475be0, type: 3}
+  - {fileID: 21300000, guid: b691957246108694ca93fa81b07dd936, type: 3}
+  - {fileID: 21300000, guid: 60b941c543781ef489d005827ea1ac2a, type: 3}
+  - {fileID: 21300000, guid: 9e820e379f1d040409537a6610fe8c17, type: 3}
+  - {fileID: 21300000, guid: 70cc30f2da0e6044b94ddfce83ecc26c, type: 3}
+  - {fileID: 21300000, guid: ed42a425f93cdd5468f1a979cbaf82d9, type: 3}
+  - {fileID: 21300000, guid: e498d5ce2604c6849b87bf3b8a2b9d80, type: 3}
