@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: 85717252ec9acd44d91411340efbca49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1970177183732010507
+    second: logo_growth_vetorizado__0
+  - first:
+      213: -211245975309269349
+    second: logo_growth_vetorizado__1
+  - first:
+      213: -5354874528023471951
+    second: logo_growth_vetorizado__2
+  - first:
+      213: -3185259810475757044
+    second: logo_growth_vetorizado__3
+  - first:
+      213: 1292609387966119311
+    second: logo_growth_vetorizado__4
+  - first:
+      213: -4168992213884706782
+    second: logo_growth_vetorizado__5
+  - first:
+      213: -7162791536014866305
+    second: logo_growth_vetorizado__6
+  - first:
+      213: 9177794287792443760
+    second: logo_growth_vetorizado__7
+  - first:
+      213: 6225955127822036525
+    second: logo_growth_vetorizado__8
+  - first:
+      213: -1105965381462911137
+    second: logo_growth_vetorizado__9
+  - first:
+      213: 3776482111190231500
+    second: logo_growth_vetorizado__10
+  - first:
+      213: -584923979265448213
+    second: logo_growth_vetorizado__11
+  - first:
+      213: 5434287589558175616
+    second: logo_growth_vetorizado__12
+  - first:
+      213: -7575315339652001505
+    second: logo_growth_vetorizado__13
+  - first:
+      213: -7531042337144069186
+    second: logo_growth_vetorizado__14
+  - first:
+      213: 7932606214519681368
+    second: logo_growth_vetorizado__15
+  - first:
+      213: -3782303266426469411
+    second: logo_growth_vetorizado__16
+  - first:
+      213: 910396686070158213
+    second: logo_growth_vetorizado__17
+  - first:
+      213: 6874501466612833991
+    second: logo_growth_vetorizado__18
+  - first:
+      213: 8882866172583968398
+    second: logo_growth_vetorizado__19
+  - first:
+      213: -8292048689389944372
+    second: logo_growth_vetorizado__20
+  - first:
+      213: -9134886901515935637
+    second: logo_growth_vetorizado__21
+  - first:
+      213: -7502502882516491930
+    second: logo_growth_vetorizado__22
+  - first:
+      213: 7921888478432385562
+    second: logo_growth_vetorizado__23
+  - first:
+      213: 2067586481434451989
+    second: logo_growth_vetorizado__24
+  - first:
+      213: -8605242851029116056
+    second: logo_growth_vetorizado__25
+  - first:
+      213: -4579334301532876815
+    second: logo_growth_vetorizado__26
+  - first:
+      213: -9201095029298096343
+    second: logo_growth_vetorizado__27
+  - first:
+      213: 6848832871606536812
+    second: logo_growth_vetorizado__28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 123
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e0decc5b9775b10800000000000000
+      internalID: 1970177183732010507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 148
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96c57997e0811df0800000000000000
+      internalID: -211245975309269349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 124
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b89f54fcf9afa5b0800000000000000
+      internalID: -5354874528023471951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02b34f141fabc3d0800000000000000
+      internalID: -3185259810475757044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 49
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d3e0bc36540f110800000000000000
+      internalID: 1292609387966119311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__5
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 38
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22068047ba3c426c0800000000000000
+      internalID: -4168992213884706782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__6
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 69
+        width: 63
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78c8af4c07a89c90800000000000000
+      internalID: -7162791536014866305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__7
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 70
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0715a7957431e5f70800000000000000
+      internalID: 9177794287792443760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__8
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 69
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2eaa55c339076650800000000000000
+      internalID: 6225955127822036525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__9
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 70
+        width: 76
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5716006852d6a0f0800000000000000
+      internalID: -1105965381462911137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__10
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 70
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc96c12b872c86430800000000000000
+      internalID: 3776482111190231500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__11
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 70
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6664b6dbee1e7f0800000000000000
+      internalID: -584923979265448213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 27
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087cde645c77a6b40800000000000000
+      internalID: 5434287589558175616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__13
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 8
+        width: 27
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11997695d21fd690800000000000000
+      internalID: -7575315339652001505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__14
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 21
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb3a91245ec5c7790800000000000000
+      internalID: -7531042337144069186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__15
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 21
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8517087c257461e60800000000000000
+      internalID: 7932606214519681368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__16
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 21
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3c9dbf73f828bc0800000000000000
+      internalID: -3782303266426469411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__17
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 21
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58397e566f062ac00800000000000000
+      internalID: 910396686070158213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__18
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 53
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce1c5549a2276f50800000000000000
+      internalID: 6874501466612833991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__19
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 21
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e733478b7464b70800000000000000
+      internalID: 8882866172583968398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__20
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 21
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc14ba076a9bcec80800000000000000
+      internalID: -8292048689389944372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__21
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 21
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6026c303cc5a3180800000000000000
+      internalID: -9134886901515935637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__22
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 21
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661a249d061c1e790800000000000000
+      internalID: -7502502882516491930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__23
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 21
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ad833699330fd60800000000000000
+      internalID: 7921888478432385562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__24
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 21
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 510ec4843fa81bc10800000000000000
+      internalID: 2067586481434451989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__25
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 21
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b90723839049880800000000000000
+      internalID: -8605242851029116056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__26
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 21
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff0f5117bfe270c0800000000000000
+      internalID: -4579334301532876815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__27
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 11
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 927131202d42f4080800000000000000
+      internalID: -9201095029298096343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_growth_vetorizado__28
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a4026c531fb0f50800000000000000
+      internalID: 6848832871606536812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      logo_growth_vetorizado__0: 1970177183732010507
+      logo_growth_vetorizado__1: -211245975309269349
+      logo_growth_vetorizado__10: 3776482111190231500
+      logo_growth_vetorizado__11: -584923979265448213
+      logo_growth_vetorizado__12: 5434287589558175616
+      logo_growth_vetorizado__13: -7575315339652001505
+      logo_growth_vetorizado__14: -7531042337144069186
+      logo_growth_vetorizado__15: 7932606214519681368
+      logo_growth_vetorizado__16: -3782303266426469411
+      logo_growth_vetorizado__17: 910396686070158213
+      logo_growth_vetorizado__18: 6874501466612833991
+      logo_growth_vetorizado__19: 8882866172583968398
+      logo_growth_vetorizado__2: -5354874528023471951
+      logo_growth_vetorizado__20: -8292048689389944372
+      logo_growth_vetorizado__21: -9134886901515935637
+      logo_growth_vetorizado__22: -7502502882516491930
+      logo_growth_vetorizado__23: 7921888478432385562
+      logo_growth_vetorizado__24: 2067586481434451989
+      logo_growth_vetorizado__25: -8605242851029116056
+      logo_growth_vetorizado__26: -4579334301532876815
+      logo_growth_vetorizado__27: -9201095029298096343
+      logo_growth_vetorizado__28: 6848832871606536812
+      logo_growth_vetorizado__3: -3185259810475757044
+      logo_growth_vetorizado__4: 1292609387966119311
+      logo_growth_vetorizado__5: -4168992213884706782
+      logo_growth_vetorizado__6: -7162791536014866305
+      logo_growth_vetorizado__7: 9177794287792443760
+      logo_growth_vetorizado__8: 6225955127822036525
+      logo_growth_vetorizado__9: -1105965381462911137
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
