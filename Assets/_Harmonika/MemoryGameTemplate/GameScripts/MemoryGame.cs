@@ -281,6 +281,7 @@ public class MemoryGame : MonoBehaviour
 
         AppManager.Instance.DataSync.SendLeads();
         }, 1f);
+        Invoke(nameof(ReturnToStart), 6f);
     }
 
     private void WinGame(string prizeName = null)
@@ -310,5 +311,9 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
+    }
+
+    private void ReturnToStart() {
+        _gameMenu.OpenMenu("MainMenu");
     }
 }

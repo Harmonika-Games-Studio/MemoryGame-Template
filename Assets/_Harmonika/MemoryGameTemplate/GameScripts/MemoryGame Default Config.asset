@@ -15,15 +15,12 @@ MonoBehaviour:
   musicVolume: 15
   sfxVolume: 100
   storageItems:
-  - _itemName: Item1
+  - _itemName: Copo
     _initialValue: 10
     _prizeScore: 100
-  - _itemName: Item2
-    _initialValue: 5
-    _prizeScore: 50
-  useLeads: 0
-  memorizationTime: 2
-  gameTime: 20
+  useLeads: 1
+  memorizationTime: 3
+  gameTime: 30
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: 21300000, guid: a8c9103edbb26594e870eeb448ff5fcf, type: 3}
   cardPairs:
