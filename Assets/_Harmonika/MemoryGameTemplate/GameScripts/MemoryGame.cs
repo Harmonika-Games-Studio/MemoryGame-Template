@@ -46,7 +46,11 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private VictoryMenu _victoryMenu;
     [SerializeField] private ParticipationMenu _participationMenu;
     [SerializeField] private LoseMenu _loseMenu;
-    
+
+    [Header("Items Transition")]
+    [SerializeField] private List<GameObject> before;
+    [SerializeField] private List<GameObject> after;
+
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
@@ -86,6 +90,15 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.Storage.Setup();
         
         SetupButtons();
+    }
+
+    public void TransitionPositions()
+    {
+        for(int i = 0; i < after.Count; i++)
+        {
+            after[i].transform.position = new Vector3(before[i].transform.position.x, before[i].transform.position.y + 3840, before[i].transform.position.z);
+            after[i].transform.rotation = before[i].transform.rotation;
+        }
     }
 
     public IEnumerator StartGame()
