@@ -182,7 +182,19 @@ public class MemoryGame : MonoBehaviour
     {
         if (AppManager.Instance.gameConfig.useLeads)
         {
-            AddStartMenuButtonListeners();
+            _mainMenu.StartBtn.onClick.AddListener(() =>
+            {
+                if (AppManager.Instance.Storage.InventoryCount <= 0)
+                {
+                    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+                        "Insira algum prêmio para continuar com a ativação", "OK", true);
+
+                    return;
+                }
+
+                _gameMenu.OpenMenu("CollectLeadsMenu");
+                _collectLeadsMenu.ClearAllFields();
+            });
             _collectLeadsMenu.ContinueBtn.onClick.AddListener(StartGame);
             _collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
@@ -266,23 +278,6 @@ public class MemoryGame : MonoBehaviour
         gridLayoutGroup.constraintCount = numberOfColumns;
         gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
 
-    }
-
-    private void AddStartMenuButtonListeners()
-    {
-        _mainMenu.StartBtn.onClick.AddListener(() =>
-        {
-            if (AppManager.Instance.Storage.InventoryCount <= 0)
-            {
-                PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                    "Insira algum prêmio para continuar com a ativação", "OK", true);
-
-                return;
-            }
-        });
-
-        _mainMenu.StartBtn.onClick.AddListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
-        _mainMenu.StartBtn.onClick.AddListener(() => _collectLeadsMenu.ClearAllFields());
     }
 
     private void EndGame(bool win, string prizeName = null)
