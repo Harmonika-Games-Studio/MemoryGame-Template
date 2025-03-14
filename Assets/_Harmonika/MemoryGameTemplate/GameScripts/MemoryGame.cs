@@ -1,4 +1,3 @@
-using Harmonika.Menu;
 using Harmonika.Tools;
 using Newtonsoft.Json;
 using System;
@@ -43,9 +42,9 @@ public class MemoryGame : MonoBehaviour
     [Header("Menus")]
     [SerializeField] private StartMenu _mainMenu;
     [SerializeField] private CollectLeadsMenu _collectLeadsMenu;
-    [SerializeField] private VictoryMenu _victoryMenu;
-    [SerializeField] private ParticipationMenu _participationMenu;
-    [SerializeField] private LoseMenu _loseMenu;
+    [SerializeField] private GameoverMenu _victoryMenu;
+    [SerializeField] private GameoverMenu _participationMenu;
+    [SerializeField] private GameoverMenu _loseMenu;
     
     private int _revealedPairs;
     private int _remainingTime;
@@ -88,26 +87,38 @@ public class MemoryGame : MonoBehaviour
         SetupButtons();
     }
 
-    public IEnumerator StartGame()
+    public void StartGame()
     {
+        if (AppManager.Instance.Storage.InventoryCount <= 0)
+        {
+            PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+                "Insira algum prêmio para continuar com a ativação", "OK", true);
+
+            return;
+        }
+        _gameMenu.CloseMenus();
+
         _startTime = Time.time;
         _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime", _config.gameTime);
         _remainingTime = _cronometer.totalTimeInSeconds;
         int minutes = _remainingTime / 60;
-        int seconds = _remainingTime % 60; 
+        int seconds = _remainingTime % 60;
         if (_cronometer.useFormat) _cronometer.TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        else _cronometer.TimerText.text = _remainingTime.ToString(); 
+        else _cronometer.TimerText.text = _remainingTime.ToString();
 
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
-        yield return new WaitForSeconds(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime));
 
-        _cronometer.StartTimer();
+        InvokeUtility.Invoke(PlayerPrefs.GetFloat("MemorizationTime", _config.memorizationTime), () =>
+        {
+            _cronometer.StartTimer();
 
-        foreach (var card in _cardsList) {
-            card.RotateCardDown();
-        }
+            foreach (var card in _cardsList)
+            {
+                card.RotateCardDown();
+            }
+        });
     }
 
     public void ShuffleCards()
@@ -171,21 +182,18 @@ public class MemoryGame : MonoBehaviour
     {
         if (AppManager.Instance.gameConfig.useLeads)
         {
-            _mainMenu.AddStartGameButtonListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
-            _mainMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearAllFields());
-            _collectLeadsMenu.AddContinueGameButtonListener(() => _gameMenu.CloseMenus()); 
-            _collectLeadsMenu.AddContinueGameButtonListener(() => StartCoroutine(StartGame()));
-            _collectLeadsMenu.AddBackButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
+            AddStartMenuButtonListeners();
+            _collectLeadsMenu.ContinueBtn.onClick.AddListener(StartGame);
+            _collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
         else
         {
-            _mainMenu.AddStartGameButtonListener(() => _gameMenu.CloseMenus());
-            _mainMenu.AddStartGameButtonListener(() => StartCoroutine(StartGame()));
+            _mainMenu.StartBtn.onClick.AddListener(StartGame);
         }
 
-        _victoryMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _loseMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _participationMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
     }
 
     private void InstantiateCards()
@@ -260,14 +268,40 @@ public class MemoryGame : MonoBehaviour
 
     }
 
+    private void AddStartMenuButtonListeners()
+    {
+        _mainMenu.StartBtn.onClick.AddListener(() =>
+        {
+            if (AppManager.Instance.Storage.InventoryCount <= 0)
+            {
+                PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+                    "Insira algum prêmio para continuar com a ativação", "OK", true);
+
+                return;
+            }
+        });
+
+        _mainMenu.StartBtn.onClick.AddListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
+        _mainMenu.StartBtn.onClick.AddListener(() => _collectLeadsMenu.ClearAllFields());
+    }
+
     private void EndGame(bool win, string prizeName = null)
     {
+        int inventoryCount = AppManager.Instance.Storage.InventoryCount;
+
+        if (inventoryCount <= 0)
+            PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
+        else if (inventoryCount == 1)
+            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
+        else if (inventoryCount <= 3)
+            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
 
-        InvokeUtility.Invoke(() =>
+        InvokeUtility.Invoke(1f, () =>
         {
             if (win) WinGame(prizeName);
             else LoseGame();
@@ -279,8 +313,8 @@ public class MemoryGame : MonoBehaviour
         _cardsList.Clear();
         _revealedPairs = 0;
 
-        AppManager.Instance.DataSync.SendLeads();
-        }, 1f);
+        AppManager.Instance.DataSync.SaveLeads();
+        });
     }
 
     private void WinGame(string prizeName = null)
@@ -289,7 +323,7 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.ChangePrizeText("(" + prizeName + ")");
+            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
