@@ -147,7 +147,8 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                //if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= PlayerPrefs.GetInt("CorrectAnswers", 3))
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
