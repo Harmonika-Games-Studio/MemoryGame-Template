@@ -8,13 +8,13 @@
       "hash": "bed9961c2a84fe6cd713fd1465b8a4fba63b2ea5"
     },
     "com.harmonika.tools": {
-      "version": "https://github.com/Harmonika-Games-Studio/com.harmonika.tools.git",
+      "version": "https://github.com/Harmonika-Games-Studio/com.harmonika.tools.git#v0.2.12",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       },
-      "hash": "f3880167ce1a4e8a3c3baf062376047f0c9ab40e"
+      "hash": "9643b3384d37afb9074a467e217cef26c43ec855"
     },
     "com.unity.2d.animation": {
       "version": "10.1.3",
