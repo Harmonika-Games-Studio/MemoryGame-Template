@@ -48,13 +48,9 @@ public class MemoryGameConfigMenu : ConfigMenu
 
     private void OnGameTimeValueChanged(string value)
     {
-        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 0)
+        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 10)
         {
-            value = "0";
-        }
-        else if (int.Parse(value) > 120)
-        {
-            value = "120";
+            value = "10";
         }
         _inputGameTime.text = value;
         PlayerPrefs.SetInt("GameTime", int.Parse(value));
@@ -63,13 +59,9 @@ public class MemoryGameConfigMenu : ConfigMenu
 
     private void OnMemorizationTimeValueChanged(string value)
     {
-        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 0)
+        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 1)
         {
-            value = "0";
-        }
-        else if (int.Parse(value) > 5)
-        {
-            value = "5";
+            value = "1";
         }
         _inputMemorizationTime.text = value;
         PlayerPrefs.SetInt("MemorizationTime", int.Parse(value));
