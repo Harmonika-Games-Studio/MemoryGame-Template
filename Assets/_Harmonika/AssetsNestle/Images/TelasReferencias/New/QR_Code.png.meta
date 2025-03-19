@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 011bf561ea4ea1049a73fa51f5a30941
+guid: 7394e42dc166c7e46994ec7c72a5d6ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3915504140752477514
-    second: LogoIco_0
-  - first:
-      213: 134601615790644489
-    second: LogoIco_1
+      213: -5465605159357400134
+    second: QR_Code_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -155,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LogoIco_0
+      name: QR_Code_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 48
-        width: 110
-        height: 32
+        x: 0
+        y: 0
+        width: 2480
+        height: 3508
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,30 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b2a0edaab559a9c0800000000000000
-      internalID: -3915504140752477514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LogoIco_1
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 48
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90d1567d4733ed100800000000000000
-      internalID: 134601615790644489
+      spriteID: abbb5f9c0154624b0800000000000000
+      internalID: -5465605159357400134
       vertices: []
       indices: 
       edges: []
