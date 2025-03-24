@@ -235,8 +235,10 @@ public class MemoryGame : MonoBehaviour
 
         int totalCards = _config.cardPairs.Length * 2;
 
+        int numberOfColumns = 4;
+        int numberOfRows = 5;
         // Priorizar o maior número de colunas possível
-        int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha
+        /*int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha
         int numberOfRows = 1;
 
         // Procurar uma combinação onde o número de colunas é maior ou igual ao de linhas
@@ -249,7 +251,7 @@ public class MemoryGame : MonoBehaviour
                 if (numberOfColumns >= numberOfRows) // Priorizamos mais colunas que linhas
                     break;
             }
-        }
+        }*/
 
         float gridWidth = _gridLayoutRect.rect.width;
         float gridHeight = _gridLayoutRect.rect.height;
@@ -259,8 +261,11 @@ public class MemoryGame : MonoBehaviour
         float totalVerticalPadding = gridLayoutGroup.padding.top + gridLayoutGroup.padding.bottom;
 
         // Calcular o tamanho máximo das células, considerando o padding
-        float maxCellWidth = (gridWidth - totalHorizontalPadding) / numberOfColumns;
-        float maxCellHeight = (gridHeight - totalVerticalPadding) / numberOfRows;
+        //float maxCellWidth = (gridWidth - totalHorizontalPadding) / numberOfColumns;
+        //float maxCellHeight = (gridHeight - totalVerticalPadding) / numberOfRows;
+
+        float maxCellWidth = 175;
+        float maxCellHeight = 271;
 
         // Calcular o fator de escala para manter a proporção
         float widthScale = maxCellWidth / originalCellWidth;

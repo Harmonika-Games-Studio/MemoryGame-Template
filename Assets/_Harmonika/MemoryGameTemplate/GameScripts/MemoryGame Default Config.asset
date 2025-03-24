@@ -15,19 +15,22 @@ MonoBehaviour:
   musicVolume: 15
   sfxVolume: 100
   storageItems:
-  - _itemName: Item1
-    _initialValue: 10
-    _prizeScore: 100
-  - _itemName: Item2
-    _initialValue: 5
-    _prizeScore: 50
+  - _itemName: Brinde
+    _initialValue: 10000
+    _prizeScore: 0
   useLeads: 1
   memorizationTime: 2
   gameTime: 20
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 21300000, guid: c0852fb68a7e0d14698fb1a1155b6b12, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 21300000, guid: 661982fe31dbedc47a21a92314b99839, type: 3}
+  - {fileID: 21300000, guid: 868d0e008177e784fb4a2433124b57f2, type: 3}
+  - {fileID: 21300000, guid: 8b72d4c736a069e44b72bc36d7e83cf4, type: 3}
+  - {fileID: 21300000, guid: cfff2e050ea7f0a4180ca5a22ac9923b, type: 3}
+  - {fileID: 21300000, guid: a6fbb41fa86b23f46abf173fe31a0c62, type: 3}
+  - {fileID: 21300000, guid: 57be589d03f4c75489cc58d8b06f6f95, type: 3}
+  - {fileID: 21300000, guid: bc152c779f88cd04ba08ed30b236d219, type: 3}
+  - {fileID: 21300000, guid: 7de56e3d1fb621448a346095de15b087, type: 3}
+  - {fileID: 21300000, guid: 428d1d06249fbb64397caf61cf49593e, type: 3}
+  - {fileID: 21300000, guid: 7d0186e2552f5a841bc44e6428748022, type: 3}
