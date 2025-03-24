@@ -44,9 +44,9 @@ public class MemoryGameConfigMenu : ConfigMenu
         {
             value = "0";
         }
-        else if (int.Parse(value) > 120)
+        else if (int.Parse(value) > 600)
         {
-            value = "120";
+            value = "600";
         }
         _inputGameTime.text = value;
         PlayerPrefs.SetInt("GameTime", int.Parse(value));
@@ -59,9 +59,9 @@ public class MemoryGameConfigMenu : ConfigMenu
         {
             value = "0";
         }
-        else if (int.Parse(value) > 5)
+        else if (int.Parse(value) > 60)
         {
-            value = "5";
+            value = "60";
         }
         _inputMemorizationTime.text = value;
         PlayerPrefs.SetInt("MemorizationTime", int.Parse(value));

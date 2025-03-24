@@ -15,7 +15,16 @@ MonoBehaviour:
   musicVolume: 15
   sfxVolume: 100
   storageItems:
-  - _itemName: Brinde
+  - _itemName: "Escalda P\xE9s"
+    _initialValue: 10000
+    _prizeScore: 0
+  - _itemName: Kit Pedras
+    _initialValue: 10000
+    _prizeScore: 0
+  - _itemName: Baralho
+    _initialValue: 10000
+    _prizeScore: 0
+  - _itemName: Minuto Sabedoria
     _initialValue: 10000
     _prizeScore: 0
   useLeads: 1

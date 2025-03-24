@@ -110,7 +110,7 @@ public class MemoryGame : MonoBehaviour
         AdjustGridLayout();
         ShuffleCards();
 
-        InvokeUtility.Invoke(PlayerPrefs.GetFloat("MemorizationTime", _config.memorizationTime), () =>
+        InvokeUtility.Invoke(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime), () =>
         {
             _cronometer.StartTimer();
 
@@ -158,7 +158,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= 3)
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
@@ -212,7 +212,10 @@ public class MemoryGame : MonoBehaviour
     {
         Debug.Log("Instantiate");
 
+        _config.cardPairs.Shuffle();
+
         for (int i = 0; i < _config.cardPairs.Length; i++)
+        //for (int i = 0; i < 4; i++)
         {
             for (int j = 0; j < 2; j++)
             {
@@ -323,13 +326,16 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+            //_victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>!";
+            prizeName = "Nenhum";
+            _victoryMenu.SecondaryText = $"Você conseguiu!";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
         {
             prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
+            _victoryMenu.SecondaryText = $"Você conseguiu!";
+            _gameMenu.OpenMenu("VictoryMenu");
         }
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
