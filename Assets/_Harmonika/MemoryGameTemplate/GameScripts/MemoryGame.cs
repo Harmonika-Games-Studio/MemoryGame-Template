@@ -56,6 +56,11 @@ public class MemoryGame : MonoBehaviour
     private MemoryGameCard _lastClickedCard;
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
 
+    [SerializeField] private StartMenu startMenu;
+    [SerializeField] private GameoverMenu gameOverMenu;
+
+    [SerializeField] private TimeTextHandler _timeTextHandler;
+
     #region Properties
 
     public MemoryGameConfig Config { get => _config; }
@@ -89,18 +94,29 @@ public class MemoryGame : MonoBehaviour
 
     public void StartGame()
     {
-        if (AppManager.Instance.Storage.InventoryCount <= 0)
+        StartCoroutine(StartGameRoutine());
+    }
+
+    private IEnumerator StartGameRoutine()
+    {
+
+        /*if (AppManager.Instance.Storage.InventoryCount <= 0)
         {
             PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
                 "Insira algum prêmio para continuar com a ativação", "OK", true);
 
             return;
-        }
+        }*/
+
+        _gameMenu
+
+        yield return new WaitForSeconds(2f);
+
         _gameMenu.CloseMenus();
 
         _startTime = Time.time;
-        _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime", _config.gameTime);
-        _remainingTime = _cronometer.totalTimeInSeconds;
+        _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime", 0);
+        _remainingTime = 0;
         int minutes = _remainingTime / 60;
         int seconds = _remainingTime % 60;
         if (_cronometer.useFormat) _cronometer.TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
@@ -160,7 +176,7 @@ public class MemoryGame : MonoBehaviour
                 _revealedPairs++;
                 if (_revealedPairs >= _config.cardPairs.Length)
                 {
-                    EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
+                    EndGame(true);
                 }
             }
             else
@@ -282,7 +298,9 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
-        int inventoryCount = AppManager.Instance.Storage.InventoryCount;
+        _timeTextHandler.ShowTime(_remainingTime);
+
+        /*int inventoryCount = AppManager.Instance.Storage.InventoryCount;
 
         if (inventoryCount <= 0)
             PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
@@ -290,6 +308,7 @@ public class MemoryGame : MonoBehaviour
             PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
         else if (inventoryCount <= 3)
             PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+        */
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
@@ -298,8 +317,9 @@ public class MemoryGame : MonoBehaviour
 
         InvokeUtility.Invoke(1f, () =>
         {
-            if (win) WinGame(prizeName);
-            else LoseGame();
+            //if (win) 
+                WinGame(prizeName);
+            //else LoseGame();
 
             foreach (var card in _cardsList)
             {
@@ -314,30 +334,40 @@ public class MemoryGame : MonoBehaviour
 
     private void WinGame(string prizeName = null)
     {
+        StartCoroutine(WinGameRoutine(prizeName));
+    }
+
+    private IEnumerator WinGameRoutine(string prizeName = null)
+    {
         SoundSystem.Instance.Play("Win");
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+            prizeName = "Nenhum";
+            //_victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
         {
             prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
+            //_gameMenu.OpenMenu("ParticipationMenu");
+            _gameMenu.OpenMenu("VictoryMenu");
         }
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
         AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+
     }
 
     private void LoseGame()
     {
-        SoundSystem.Instance.Play("Fail");
+        //SoundSystem.Instance.Play("Fail");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
         AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
-        _gameMenu.OpenMenu("LoseMenu");
+        //_gameMenu.OpenMenu("LoseMenu");
+        _gameMenu.OpenMenu("VictoryMenu");
+
     }
 }
