@@ -15,12 +15,12 @@ MonoBehaviour:
   musicVolume: 15
   sfxVolume: 100
   storageItems:
-  - _itemName: Item1
-    _initialValue: 10
-    _prizeScore: 100
-  - _itemName: Item2
-    _initialValue: 5
-    _prizeScore: 50
+  - itemName: Item 1
+    initialValue: 2
+    prizeScore: 0
+  - itemName: Item 2
+    initialValue: 2
+    prizeScore: 0
   useLeads: 1
   memorizationTime: 2
   gameTime: 20

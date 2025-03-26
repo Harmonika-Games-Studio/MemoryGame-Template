@@ -1,4 +1,5 @@
 using Harmonika.Tools;
+using NaughtyAttributes;
 using Newtonsoft.Json;
 using System;
 using System.Collections;
@@ -33,7 +34,7 @@ public class JsonDeserializedConfig
 
 public class MemoryGame : MonoBehaviour
 {
-    [SerializeField] private MemoryGameConfig _config;
+    [Expandable][SerializeField] private MemoryGameConfig _config;
     
     [Header("References")]
     [SerializeField] private Cronometer _cronometer;
