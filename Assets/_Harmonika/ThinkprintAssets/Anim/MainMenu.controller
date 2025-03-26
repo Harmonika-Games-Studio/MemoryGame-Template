@@ -109,7 +109,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: User Logo
+  m_Name: MainMenu
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Enter
@@ -173,10 +173,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -6724298618253671197}
-    m_Position: {x: 260, y: -10, z: 0}
+    m_Position: {x: 260, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6363946904404709863}
-    m_Position: {x: 260, y: 40, z: 0}
+    m_Position: {x: 260, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5306044500627407924}
     m_Position: {x: 250, y: 150, z: 0}
@@ -191,4 +191,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -5306044500627407924}
+  m_DefaultState: {fileID: -6724298618253671197}
