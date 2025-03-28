@@ -8,14 +8,14 @@
       "hash": "e8abe1fca38c7d6a35c8b6700c2f71175b2e1772"
     },
     "com.harmonika.tools": {
-      "version": "https://github.com/Harmonika-Games-Studio/com.harmonika.tools.git#v0.3.2",
+      "version": "https://github.com/Harmonika-Games-Studio/com.harmonika.tools.git#v0.3.3",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.recorder": "5.1.2"
       },
-      "hash": "7126ced411eb336d3d0b60c6bed72df20e870e35"
+      "hash": "2e45db80e5cb10cdf27e2de181495375e7ad4ce2"
     },
     "com.unity.2d.animation": {
       "version": "10.1.3",
@@ -296,6 +296,22 @@
         "com.unity.searcher": "4.9.2"
       }
     },
+    "com.unity.sysroot": {
+      "version": "2.0.10",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.sysroot.linux-x86_64": {
+      "version": "2.0.9",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "2.0.10"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
       "version": "1.4.5",
       "depth": 0,
@@ -326,6 +342,16 @@
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.toolchain.win-x86_64-linux-x86_64": {
+      "version": "2.0.10",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "2.0.10",
+        "com.unity.sysroot.linux-x86_64": "2.0.9"
       },
       "url": "https://packages.unity.com"
     },

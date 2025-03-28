@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Harmonika.Tools;
 using Newtonsoft.Json;
 using System;
@@ -38,6 +39,10 @@ public class MemoryGame : MonoBehaviour
     [Header("References")]
     [SerializeField] private Cronometer _cronometer;
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
+    [SerializeField] private Transform _startPosition;
+    [SerializeField] private GameObject _bgTimer;
+    [SerializeField] private GameObject _Timer;
+    [SerializeField] private GameObject _Prepare;
 
     [Header("Menus")]
     [SerializeField] private StartMenu _mainMenu;
@@ -89,30 +94,81 @@ public class MemoryGame : MonoBehaviour
 
     public void StartGame()
     {
-        if (AppManager.Instance.Storage.InventoryCount <= 0)
+        StartCoroutine(StartGameRoutine());
+    }
+
+    private IEnumerator StartGameRoutine()
+    {
+
+        /*if (AppManager.Instance.Storage.InventoryCount <= 0)
         {
             PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
                 "Insira algum prêmio para continuar com a ativação", "OK", true);
 
-            return;
-        }
+            yield break;
+        }*/
+
+        //_startMenu.GetComponent<Animator>().SetTrigger("Exit");
+
+        yield return new WaitForSeconds(1.5f);
+
+        //_gameAnim.SetTrigger("Enter");
+
         _gameMenu.CloseMenus();
 
         _startTime = Time.time;
         _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime", _config.gameTime);
-        _remainingTime = _cronometer.totalTimeInSeconds;
-        int minutes = _remainingTime / 60;
-        int seconds = _remainingTime % 60;
-        if (_cronometer.useFormat) _cronometer.TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        else _cronometer.TimerText.text = _remainingTime.ToString();
+        _bgTimer.SetActive(false);
+        _Timer.SetActive(false);
+        _Prepare.SetActive(true);
+        //_cronometer.TimerText.text = "PREPARE-SE";
 
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
 
+        yield return new WaitForSeconds(0.2f);
+
+        AnimateCards(0.2f, FinishCardSetup);
+    }
+
+    private void AnimateCards(float movementDelay = 0.1f, Action onAllCardsPlaced = null)
+    {
+        Debug.Log("Animate Cards");
+        int completedCards = 0;
+        int totalCards = _cardsList.Count;
+
+        for (int i = 0; i < _cardsList.Count; i++)
+        {
+            RectTransform cardRectTransform = _cardsList[i].transform.GetChild(0).GetComponent<RectTransform>();
+
+            // Set initial world position
+            cardRectTransform.position = _startPosition.position;
+
+            // Move card to local zero position
+            cardRectTransform.DOLocalMove(Vector3.zero, 0.35f)
+                .SetDelay(i * movementDelay)
+                .OnComplete(() =>
+                {
+                    completedCards++;
+
+                    if (completedCards >= totalCards)
+                    {
+                        Debug.Log("All cards have been placed");
+                        onAllCardsPlaced?.Invoke();
+                    }
+                });
+        }
+    }
+
+    private void FinishCardSetup()
+    {
         InvokeUtility.Invoke(PlayerPrefs.GetFloat("MemorizationTime", _config.memorizationTime), () =>
         {
+            _Timer.SetActive(true);
+            _Prepare.SetActive(false);
             _cronometer.StartTimer();
+            _bgTimer.SetActive(true);
 
             foreach (var card in _cardsList)
             {
@@ -184,13 +240,13 @@ public class MemoryGame : MonoBehaviour
         {
             _mainMenu.StartBtn.onClick.AddListener(() =>
             {
-                if (AppManager.Instance.Storage.InventoryCount <= 0)
+                /*if (AppManager.Instance.Storage.InventoryCount <= 0)
                 {
                     PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
                         "Insira algum prêmio para continuar com a ativação", "OK", true);
 
                     return;
-                }
+                }*/
 
                 _gameMenu.OpenMenu("CollectLeadsMenu");
                 _collectLeadsMenu.ClearAllFields();
@@ -282,14 +338,14 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
-        int inventoryCount = AppManager.Instance.Storage.InventoryCount;
+        //int inventoryCount = AppManager.Instance.Storage.InventoryCount;
 
-        if (inventoryCount <= 0)
+        /*if (inventoryCount <= 0)
             PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
         else if (inventoryCount == 1)
             PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
         else if (inventoryCount <= 3)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);*/
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
@@ -316,7 +372,7 @@ public class MemoryGame : MonoBehaviour
     {
         SoundSystem.Instance.Play("Win");
 
-        if (!string.IsNullOrEmpty(prizeName))
+        /*if (!string.IsNullOrEmpty(prizeName))
         {
             _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
             _gameMenu.OpenMenu("VictoryMenu");
@@ -325,10 +381,13 @@ public class MemoryGame : MonoBehaviour
         {
             prizeName = "Nenhum";
             _gameMenu.OpenMenu("ParticipationMenu");
-        }
+        }*/
+
+
+        _gameMenu.OpenMenu("VictoryMenu");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+        AppManager.Instance.DataSync.AddDataToJObject("brinde", "Brinde");
     }
 
     private void LoseGame()
