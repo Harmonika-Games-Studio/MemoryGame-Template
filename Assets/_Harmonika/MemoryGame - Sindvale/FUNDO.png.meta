@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9aa1f04956e75a544babf9789f41b1ca
+guid: b5cedc57bf571984283044f572ffda65
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9029626263874437315
-    second: GWM_0
+      213: -9202163437198360842
+    second: FUNDO_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GWM_0
+      name: FUNDO_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 232
-        height: 302
+        width: 1080
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c006c8fe3daf4d70800000000000000
-      internalID: 9029626263874437315
+      spriteID: 6fe34b8eb195b4080800000000000000
+      internalID: -9202163437198360842
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GWM_0: 9029626263874437315
+      FUNDO_0: -9202163437198360842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
