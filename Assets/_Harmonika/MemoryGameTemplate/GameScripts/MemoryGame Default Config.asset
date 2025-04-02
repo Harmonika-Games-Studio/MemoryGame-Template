@@ -14,20 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolume: 15
   sfxVolume: 100
-  storageItems:
-  - itemName: Item 1
-    initialValue: 2
-    prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
-    prizeScore: 0
+  storageItems: []
   useLeads: 1
   memorizationTime: 2
   gameTime: 20
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 6888831954659961101, guid: 983422177e96bcf49ab00f61b89c1bf2, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 3813570614413026173, guid: 30675588386779646996902875e5c4da, type: 3}
+  - {fileID: 7934249431583645039, guid: aa60a3eabbb88174382270fff2dcaf8b, type: 3}
+  - {fileID: 5826823911700802152, guid: 82f72b2d67974e44ab789fe591063c4e, type: 3}
+  - {fileID: -8731631455657012418, guid: 909b87d7c5399224f96ba88783c6f378, type: 3}
+  - {fileID: 1289777995167666842, guid: 840591bf3369c114d89b17a61e2686f1, type: 3}
+  - {fileID: -2395524946369514435, guid: b4ddf6eadac715a42b5837cdd41a4264, type: 3}
