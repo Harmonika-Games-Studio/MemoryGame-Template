@@ -20,7 +20,7 @@ MonoBehaviour:
     prizeScore: 0
   useLeads: 0
   memorizationTime: 2
-  gameTime: 20
+  gameTime: 30
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: 21300000, guid: fea725fa1b79342499266d4926483399, type: 3}
   cardPairs:
