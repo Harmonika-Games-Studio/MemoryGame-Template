@@ -4,6 +4,8 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -53,7 +55,9 @@ public class MemoryGame : MonoBehaviour
     
     private int _revealedPairs;
     private int _remainingTime;
+    private Sprite[] originalCards;
     private bool _canClick = true;
+    private bool firstTime;
     private float _startTime;
     private MenuManager _gameMenu;
     private RectTransform _gridLayoutRect;
@@ -88,7 +92,12 @@ public class MemoryGame : MonoBehaviour
 
         AppManager.Instance.ApplyScriptableConfig();
         AppManager.Instance.Storage.Setup();
-        
+        firstTime = true;
+        if (originalCards == null)
+        {
+            originalCards = _config.cardPairs.ToArray();
+        }
+
         SetupButtons();
     }
 
@@ -123,9 +132,20 @@ public class MemoryGame : MonoBehaviour
         _Prepare.SetActive(true);
         //_cronometer.TimerText.text = "PREPARE-SE";
 
-        InstantiateCards();
+        if (!firstTime)
+        {
+            _config.cardPairs = originalCards.ToArray();
+            ShuffleArray(_config.cardPairs);
+        }
+        else
+        {
+            _config.cardPairs = _config.cardPadronize;
+        }
+
+            InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
+        firstTime = false;
 
         yield return new WaitForSeconds(0.2f);
 
@@ -158,6 +178,15 @@ public class MemoryGame : MonoBehaviour
                         onAllCardsPlaced?.Invoke();
                     }
                 });
+        }
+    }
+
+    private void ShuffleArray(Sprite[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(i, array.Length);
+            (array[i], array[randomIndex]) = (array[randomIndex], array[i]); // Troca os valores
         }
     }
 
@@ -214,7 +243,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= 8)
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
@@ -268,7 +297,7 @@ public class MemoryGame : MonoBehaviour
     {
         Debug.Log("Instantiate");
 
-        for (int i = 0; i < _config.cardPairs.Length; i++)
+        for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 2; j++)
             {
@@ -278,7 +307,6 @@ public class MemoryGame : MonoBehaviour
                 cardConfig.manager = this;
                 cardConfig.cardBack = _config.cardBack;
                 cardConfig.cardFront = _config.cardPairs[i];
-
                 _cardsList.Add(cardConfig);
             }
         }
@@ -289,7 +317,7 @@ public class MemoryGame : MonoBehaviour
         float originalCellWidth = gridLayoutGroup.cellSize.x;
         float originalCellHeight = gridLayoutGroup.cellSize.y;
 
-        int totalCards = _config.cardPairs.Length * 2;
+        int totalCards = 16;
 
         // Priorizar o maior número de colunas possível
         int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha

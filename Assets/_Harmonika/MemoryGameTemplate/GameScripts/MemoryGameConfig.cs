@@ -14,4 +14,5 @@ public class MemoryGameConfig : GameConfigScriptable
     public GameObject _cardPrefab;
     public Sprite cardBack;
     public Sprite[] cardPairs;
+    public Sprite[] cardPadronize;
 }
