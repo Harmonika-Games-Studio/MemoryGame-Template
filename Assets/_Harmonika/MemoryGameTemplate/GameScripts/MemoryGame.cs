@@ -102,13 +102,13 @@ public class MemoryGame : MonoBehaviour
     private IEnumerator StartGameRoutine()
     {
 
-        /*if (AppManager.Instance.Storage.InventoryCount <= 0)
+        if (AppManager.Instance.Storage.InventoryCount <= 0)
         {
             PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
                 "Insira algum prêmio para continuar com a ativação", "OK", true);
 
-            return;
-        }*/
+            yield break;
+        }
 
         _startMenu.GetComponent<Animator>().SetTrigger("Exit");
 
@@ -129,6 +129,35 @@ public class MemoryGame : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         AnimateCards(0.2f, FinishCardSetup);
+    }
+
+    private void AnimateCards(float movementDelay = 0.1f, Action onAllCardsPlaced = null)
+    {
+        Debug.Log("Animate Cards");
+        int completedCards = 0;
+        int totalCards = _cardsList.Count;
+
+        for (int i = 0; i < _cardsList.Count; i++)
+        {
+            RectTransform cardRectTransform = _cardsList[i].transform.GetChild(0).GetComponent<RectTransform>();
+
+            // Set initial world position
+            cardRectTransform.position = _startPosition.position;
+
+            // Move card to local zero position
+            cardRectTransform.DOLocalMove(Vector3.zero, 0.35f)
+                .SetDelay(i * movementDelay)
+                .OnComplete(() =>
+                {
+                    completedCards++;
+
+                    if (completedCards >= totalCards)
+                    {
+                        Debug.Log("All cards have been placed");
+                        onAllCardsPlaced?.Invoke();
+                    }
+                });
+        }
     }
 
     private void FinishCardSetup()
@@ -248,35 +277,6 @@ public class MemoryGame : MonoBehaviour
 
                 _cardsList.Add(cardConfig);
             }
-        }
-    }
-
-    private void AnimateCards(float movementDelay = 0.1f, Action onAllCardsPlaced = null)
-    {
-        Debug.Log("Animate Cards");
-        int completedCards = 0;
-        int totalCards = _cardsList.Count;
-
-        for (int i = 0; i < _cardsList.Count; i++)
-        {
-            RectTransform cardRectTransform = _cardsList[i].transform.GetChild(0).GetComponent<RectTransform>();
-
-            // Set initial world position
-            cardRectTransform.position = _startPosition.position;
-
-            // Move card to local zero position
-            cardRectTransform.DOLocalMove(Vector3.zero, 0.35f)
-                .SetDelay(i * movementDelay)
-                .OnComplete(() =>
-                {
-                    completedCards++;
-
-                    if (completedCards >= totalCards)
-                    {
-                        Debug.Log("All cards have been placed");
-                        onAllCardsPlaced?.Invoke();
-                    }
-                });
         }
     }
 
