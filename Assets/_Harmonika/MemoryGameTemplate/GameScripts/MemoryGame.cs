@@ -39,7 +39,7 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private MemoryGameConfig _config;
     
     [Header("References")]
-    [SerializeField] private Cronometer _cronometer;
+    [SerializeField] private CustomCronometer _cronometer;
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
     [SerializeField] private Transform _startPosition;
     [SerializeField] private GameObject _bgTimer;
