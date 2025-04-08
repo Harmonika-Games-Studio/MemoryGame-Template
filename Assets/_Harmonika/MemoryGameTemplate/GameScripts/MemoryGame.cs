@@ -237,11 +237,11 @@ public class MemoryGame : MonoBehaviour
         int totalCards = _config.cardPairs.Length * 2;
 
         // Priorizar o maior número de colunas possível
-        int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha
-        int numberOfRows = 1;
+        int numberOfColumns = 4; // Começamos assumindo todas as cartas em uma linha
+        int numberOfRows = 5;
 
         // Procurar uma combinação onde o número de colunas é maior ou igual ao de linhas
-        for (int i = Mathf.CeilToInt(Mathf.Sqrt(totalCards)); i <= totalCards; i++)
+        /*for (int i = Mathf.CeilToInt(Mathf.Sqrt(totalCards)); i <= totalCards; i++)
         {
             if (totalCards % i == 0) // Se não sobrar resto, encontramos uma divisão exata
             {
@@ -250,7 +250,7 @@ public class MemoryGame : MonoBehaviour
                 if (numberOfColumns >= numberOfRows) // Priorizamos mais colunas que linhas
                     break;
             }
-        }
+        }*/
 
         float gridWidth = _gridLayoutRect.rect.width;
         float gridHeight = _gridLayoutRect.rect.height;
@@ -277,7 +277,7 @@ public class MemoryGame : MonoBehaviour
         // Configurar o GridLayoutGroup com a quantidade de colunas
         gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gridLayoutGroup.constraintCount = numberOfColumns;
-        gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
+        //gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
 
     }
 
@@ -319,7 +319,7 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+            _victoryMenu.SecondaryText = $"Você conseguiu!";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
