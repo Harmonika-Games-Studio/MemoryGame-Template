@@ -1,4 +1,3 @@
-using Harmonika.Menu;
 using Harmonika.Tools;
 using Newtonsoft.Json;
 using System;
@@ -43,9 +42,9 @@ public class MemoryGame : MonoBehaviour
     [Header("Menus")]
     [SerializeField] private StartMenu _mainMenu;
     [SerializeField] private CollectLeadsMenu _collectLeadsMenu;
-    [SerializeField] private VictoryMenu _victoryMenu;
-    [SerializeField] private ParticipationMenu _participationMenu;
-    [SerializeField] private LoseMenu _loseMenu;
+    [SerializeField] private GameoverMenu _victoryMenu;
+    [SerializeField] private GameoverMenu _participationMenu;
+    [SerializeField] private GameoverMenu _loseMenu;
     
     private int _revealedPairs;
     private int _remainingTime;
@@ -95,8 +94,8 @@ public class MemoryGame : MonoBehaviour
         _remainingTime = _cronometer.totalTimeInSeconds;
         int minutes = _remainingTime / 60;
         int seconds = _remainingTime % 60; 
-        if (_cronometer.useFormat) _cronometer._timerText.text = string.Format("{0:00}<color=#F6AC23>:</color>{1:00}", minutes, seconds);
-        else _cronometer._timerText.text = _remainingTime.ToString(); 
+        if (_cronometer.useFormat) _cronometer.TimerText.text = string.Format("{0:00}<color=#F6AC23>:</color>{1:00}", minutes, seconds);
+        else _cronometer.TimerText.text = _remainingTime.ToString(); 
 
         InstantiateCards();
         AdjustGridLayout();
@@ -171,21 +170,21 @@ public class MemoryGame : MonoBehaviour
     {
         if (AppManager.Instance.gameConfig.useLeads)
         {
-            _mainMenu.AddStartGameButtonListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
-            _mainMenu.AddStartGameButtonListener(() => _collectLeadsMenu.ClearAllFields());
-            _collectLeadsMenu.AddContinueGameButtonListener(() => _gameMenu.CloseMenus()); 
-            _collectLeadsMenu.AddContinueGameButtonListener(() => StartCoroutine(StartGame()));
-            _collectLeadsMenu.AddBackButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
+            _mainMenu.StartBtn.onClick.AddListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
+            _mainMenu.StartBtn.onClick.AddListener(() => _collectLeadsMenu.ClearAllFields());
+            _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => _gameMenu.CloseMenus()); 
+            _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => StartCoroutine(StartGame()));
+            _collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
         else
         {
-            _mainMenu.AddStartGameButtonListener(() => _gameMenu.CloseMenus());
-            _mainMenu.AddStartGameButtonListener(() => StartCoroutine(StartGame()));
+            _mainMenu.StartBtn.onClick.AddListener(() => _gameMenu.CloseMenus());
+            _mainMenu.StartBtn.onClick.AddListener(() => StartCoroutine(StartGame()));
         }
 
-        _victoryMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _loseMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _participationMenu.AddBackToMainMenuButtonListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
     }
 
     private void InstantiateCards()
@@ -267,7 +266,7 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
 
-        InvokeUtility.Invoke(() =>
+        InvokeUtility.Invoke(1f, () =>
         {
             if (win) WinGame();
             else LoseGame();
@@ -279,8 +278,8 @@ public class MemoryGame : MonoBehaviour
         _cardsList.Clear();
         _revealedPairs = 0;
 
-        AppManager.Instance.DataSync.SendLeads();
-        }, 1f);
+        AppManager.Instance.DataSync.SaveLeads();
+        });
     }
 
     private void WinGame()
