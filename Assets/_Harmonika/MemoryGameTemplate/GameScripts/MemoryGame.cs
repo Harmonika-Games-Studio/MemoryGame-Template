@@ -90,13 +90,13 @@ public class MemoryGame : MonoBehaviour
 
     public void StartGame()
     {
-        if (AppManager.Instance.Storage.InventoryCount <= 0)
-        {
-            PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                "Insira algum prêmio para continuar com a ativação", "OK", true);
+        //if (AppManager.Instance.Storage.InventoryCount <= 0)
+        //{
+        //    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+        //        "Insira algum prêmio para continuar com a ativação", "OK", true);
 
-            return;
-        }
+        //    return;
+        //}
         _gameMenu.CloseMenus();
 
         _startTime = Time.time;
@@ -185,13 +185,13 @@ public class MemoryGame : MonoBehaviour
         {
             _mainMenu.StartBtn.onClick.AddListener(() =>
             {
-                if (AppManager.Instance.Storage.InventoryCount <= 0)
-                {
-                    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                        "Insira algum prêmio para continuar com a ativação", "OK", true);
+                //if (AppManager.Instance.Storage.InventoryCount <= 0)
+                //{
+                //    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+                //        "Insira algum prêmio para continuar com a ativação", "OK", true);
 
-                    return;
-                }
+                //    return;
+                //}
 
                 _gameMenu.OpenMenu("CollectLeadsMenu");
                 _collectLeadsMenu.ClearAllFields();
@@ -237,20 +237,20 @@ public class MemoryGame : MonoBehaviour
         int totalCards = _config.cardPairs.Length * 2;
 
         // Priorizar o maior número de colunas possível
-        int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha
+        int numberOfColumns = 3; // Começamos assumindo todas as cartas em uma linha
         int numberOfRows = 1;
 
         // Procurar uma combinação onde o número de colunas é maior ou igual ao de linhas
-        for (int i = Mathf.CeilToInt(Mathf.Sqrt(totalCards)); i <= totalCards; i++)
-        {
-            if (totalCards % i == 0) // Se não sobrar resto, encontramos uma divisão exata
-            {
-                numberOfColumns = i;
-                numberOfRows = totalCards / i;
-                if (numberOfColumns >= numberOfRows) // Priorizamos mais colunas que linhas
-                    break;
-            }
-        }
+        //for (int i = Mathf.CeilToInt(Mathf.Sqrt(totalCards)); i <= totalCards; i++)
+        //{
+        //    if (totalCards % i == 0) // Se não sobrar resto, encontramos uma divisão exata
+        //    {
+        //        numberOfColumns = i;
+        //        numberOfRows = totalCards / i;
+        //        if (numberOfColumns >= numberOfRows) // Priorizamos mais colunas que linhas
+        //            break;
+        //    }
+        //}
 
         float gridWidth = _gridLayoutRect.rect.width;
         float gridHeight = _gridLayoutRect.rect.height;
@@ -283,33 +283,35 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
-        int inventoryCount = AppManager.Instance.Storage.InventoryCount;
+        //int inventoryCount = AppManager.Instance.Storage.InventoryCount;
 
-        if (inventoryCount <= 0)
-            PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount == 1)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount <= 3)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+        //if (inventoryCount <= 0)
+        //    PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
+        //else if (inventoryCount == 1)
+        //    PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
+        //else if (inventoryCount <= 3)
+        //    PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
+        int points = (int)Math.Floor((_revealedPairs * 10) - tempo);
+        if (points < 0) {
+            points = 0;
+        }
+        AppManager.Instance.DataSync.AddDataToJObject("pontos", points);
 
-        InvokeUtility.Invoke(1f, () =>
-        {
+        InvokeUtility.Invoke(1f, () => {
             if (win) WinGame(prizeName);
             else LoseGame();
 
-            foreach (var card in _cardsList)
-            {
+            foreach (var card in _cardsList) {
                 Destroy(card.gameObject);
             }
-        _cardsList.Clear();
-        _revealedPairs = 0;
+            _cardsList.Clear();
+            _revealedPairs = 0;
 
-        AppManager.Instance.DataSync.SaveLeads();
+            AppManager.Instance.DataSync.SaveLeads();
         });
     }
 
@@ -317,19 +319,20 @@ public class MemoryGame : MonoBehaviour
     {
         SoundSystem.Instance.Play("Win");
 
-        if (!string.IsNullOrEmpty(prizeName))
-        {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
-            _gameMenu.OpenMenu("VictoryMenu");
-        }
-        else
-        {
-            prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
-        }
+        //if (!string.IsNullOrEmpty(prizeName))
+        //{
+        //    _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+        //    _gameMenu.OpenMenu("VictoryMenu");
+        //}
+        //else
+        //{
+        //    prizeName = "Nenhum";
+        //    _gameMenu.OpenMenu("ParticipationMenu");
+        //}
+        _gameMenu.OpenMenu("VictoryMenu");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+        //AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
     }
 
     private void LoseGame()
@@ -337,7 +340,7 @@ public class MemoryGame : MonoBehaviour
         SoundSystem.Instance.Play("Fail");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
+        //AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
     }
