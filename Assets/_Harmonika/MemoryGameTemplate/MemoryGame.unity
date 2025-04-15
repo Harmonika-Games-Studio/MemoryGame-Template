@@ -1978,7 +1978,7 @@ PrefabInstance:
       objectReference: {fileID: 2416740440738062927, guid: 1e60c5888ea24c94e9489f59d34b2252, type: 3}
     - target: {fileID: 3285512468221962863, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
       propertyPath: _simpleDialogs.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3285512468221962863, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
       propertyPath: _confirmDialogs.Array.size
@@ -1988,6 +1988,10 @@ PrefabInstance:
       propertyPath: '_simpleDialogs.Array.data[0]'
       value: 
       objectReference: {fileID: 2416740440738062927, guid: 3e70f064dc2e24147aafa6cdd085a07d, type: 3}
+    - target: {fileID: 3285512468221962863, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
+      propertyPath: '_simpleDialogs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2416740440738062927, guid: 533f570190030bb45bf7d014ced0d846, type: 3}
     - target: {fileID: 3285512468221962863, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
       propertyPath: '_confirmDialogs.Array.data[0]'
       value: 
@@ -7683,7 +7687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.069592595, y: 0.10539584}
   m_AnchorMax: {x: 0.93600005, y: 0.8168751}
-  m_AnchoredPosition: {x: 0, y: -9.049866}
+  m_AnchoredPosition: {x: 0, y: -9.049805}
   m_SizeDelta: {x: 0.00000667572, y: -48.700222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1391032053
@@ -12367,7 +12371,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1924764802021555697}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.5
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
