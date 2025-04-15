@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 32616c5b17b79ce4aaa8a918f078a42a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5248154561624056210
+    second: OasisSprite (11)_0
+  - first:
+      213: -5789502302141936473
+    second: OasisSprite (11)_1
+  - first:
+      213: -6287511779067354560
+    second: OasisSprite (11)_2
+  - first:
+      213: -2438972647119363037
+    second: OasisSprite (11)_3
+  - first:
+      213: -1641719913190211493
+    second: OasisSprite (11)_4
+  - first:
+      213: -3174023110859711753
+    second: OasisSprite (11)_5
+  - first:
+      213: -4252874592379468167
+    second: OasisSprite (11)_6
+  - first:
+      213: 1385829561153636062
+    second: OasisSprite (11)_7
+  - first:
+      213: 1050495218203870954
+    second: OasisSprite (11)_8
+  - first:
+      213: 8259908044462691948
+    second: OasisSprite (11)_9
+  - first:
+      213: 4697888528747477008
+    second: OasisSprite (11)_10
+  - first:
+      213: -586797816867108444
+    second: OasisSprite (11)_11
+  - first:
+      213: 8649398824231329038
+    second: OasisSprite (11)_12
+  - first:
+      213: 895298481076413592
+    second: OasisSprite (11)_13
+  - first:
+      213: 5715585237274493782
+    second: OasisSprite (11)_14
+  - first:
+      213: -8958519118270318023
+    second: OasisSprite (11)_15
+  - first:
+      213: 7128675040218905708
+    second: OasisSprite (11)_16
+  - first:
+      213: -7282969760033449696
+    second: OasisSprite (11)_17
+  - first:
+      213: -3442896794806254250
+    second: OasisSprite (11)_18
+  - first:
+      213: -3883582799417264140
+    second: OasisSprite (11)_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OasisSprite (11)_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 167
+        width: 85
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291a2f394c035d840800000000000000
+      internalID: 5248154561624056210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 185
+        width: 60
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac068e845e87afa0800000000000000
+      internalID: -5789502302141936473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 150
+        width: 97
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0422b9f79554eb8a0800000000000000
+      internalID: -6287511779067354560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_3
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 132
+        width: 96
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3246e87bc47072ed0800000000000000
+      internalID: -2438972647119363037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 115
+        width: 81
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50cc99ef607739e0800000000000000
+      internalID: -1641719913190211493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 108
+        width: 45
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa93502cca93f3d0800000000000000
+      internalID: -3174023110859711753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97600f64711caf4c0800000000000000
+      internalID: -4252874592379468167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_7
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 74
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed64cc7b4a47b3310800000000000000
+      internalID: 1385829561153636062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 77
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6c94fc5db149e00800000000000000
+      internalID: 1050495218203870954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_9
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 33
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6617938a9611a270800000000000000
+      internalID: 8259908044462691948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_10
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 33
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0183066f9b0423140800000000000000
+      internalID: 4697888528747477008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_11
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 33
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a949aa9e764bd7f0800000000000000
+      internalID: -586797816867108444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_12
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 33
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d5df67766d80870800000000000000
+      internalID: 8649398824231329038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_13
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894a18c993dbc6c00800000000000000
+      internalID: 895298481076413592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_14
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6538637ad76d15f40800000000000000
+      internalID: 5715585237274493782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_15
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ab3f18352fca380800000000000000
+      internalID: -8958519118270318023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_16
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 0
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cf0730e242ee260800000000000000
+      internalID: 7128675040218905708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_17
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0295b4f0791bdea90800000000000000
+      internalID: -7282969760033449696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_18
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 0
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6550e3b3b9f5830d0800000000000000
+      internalID: -3442896794806254250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OasisSprite (11)_19
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7bae0250eba1ac0800000000000000
+      internalID: -3883582799417264140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      OasisSprite (11)_0: 5248154561624056210
+      OasisSprite (11)_1: -5789502302141936473
+      OasisSprite (11)_10: 4697888528747477008
+      OasisSprite (11)_11: -586797816867108444
+      OasisSprite (11)_12: 8649398824231329038
+      OasisSprite (11)_13: 895298481076413592
+      OasisSprite (11)_14: 5715585237274493782
+      OasisSprite (11)_15: -8958519118270318023
+      OasisSprite (11)_16: 7128675040218905708
+      OasisSprite (11)_17: -7282969760033449696
+      OasisSprite (11)_18: -3442896794806254250
+      OasisSprite (11)_19: -3883582799417264140
+      OasisSprite (11)_2: -6287511779067354560
+      OasisSprite (11)_3: -2438972647119363037
+      OasisSprite (11)_4: -1641719913190211493
+      OasisSprite (11)_5: -3174023110859711753
+      OasisSprite (11)_6: -4252874592379468167
+      OasisSprite (11)_7: 1385829561153636062
+      OasisSprite (11)_8: 1050495218203870954
+      OasisSprite (11)_9: 8259908044462691948
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

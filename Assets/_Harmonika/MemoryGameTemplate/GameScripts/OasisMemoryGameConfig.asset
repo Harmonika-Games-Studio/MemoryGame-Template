@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045cc4695a78a9b45b1f23df8a89877a, type: 3}
+  m_Name: OasisMemoryGameConfig
+  m_EditorClassIdentifier: 
+  musicVolume: 15
+  sfxVolume: 100
+  storageItems: []
+  useLeads: 1
+  memorizationTime: 2
+  gameTime: 20
+  _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
+  cardBack: {fileID: -309005385765385536, guid: 2df008a8394dfd04d81dd47dc3461747, type: 3}
+  cardPairs:
+  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
+  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
+  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
+  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}

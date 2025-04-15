@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 9e8080014f0ee334e9aa3210eff3561f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1050136863301854923
+    second: Ativo 1DisneyTexts_0
+  - first:
+      213: -471537529360336538
+    second: Ativo 1DisneyTexts_1
+  - first:
+      213: -403496434185608497
+    second: Ativo 1DisneyTexts_2
+  - first:
+      213: 7048779976567017768
+    second: Ativo 1DisneyTexts_3
+  - first:
+      213: 2932329772387678929
+    second: Ativo 1DisneyTexts_4
+  - first:
+      213: -8895817463347532580
+    second: Ativo 1DisneyTexts_5
+  - first:
+      213: -5191086061131905621
+    second: Ativo 1DisneyTexts_6
+  - first:
+      213: 1749982548032679264
+    second: Ativo 1DisneyTexts_7
+  - first:
+      213: 8786007992006603003
+    second: Ativo 1DisneyTexts_8
+  - first:
+      213: -4781352246012711537
+    second: Ativo 1DisneyTexts_9
+  - first:
+      213: -3485573877135063379
+    second: Ativo 1DisneyTexts_10
+  - first:
+      213: 7044563880671971785
+    second: Ativo 1DisneyTexts_11
+  - first:
+      213: 482415237066217957
+    second: Ativo 1DisneyTexts_12
+  - first:
+      213: 8051142235788790497
+    second: Ativo 1DisneyTexts_13
+  - first:
+      213: -5270340549672972414
+    second: Ativo 1DisneyTexts_14
+  - first:
+      213: -6505035972905099125
+    second: Ativo 1DisneyTexts_15
+  - first:
+      213: -8515001755492945783
+    second: Ativo 1DisneyTexts_16
+  - first:
+      213: 4484590768462053554
+    second: Ativo 1DisneyTexts_17
+  - first:
+      213: 9114544336038879474
+    second: Ativo 1DisneyTexts_18
+  - first:
+      213: 5215601259343276665
+    second: Ativo 1DisneyTexts_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 521
+        width: 257
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5399951361a2d61f0800000000000000
+      internalID: -1050136863301854923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 576
+        width: 179
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66936388d13c479f0800000000000000
+      internalID: -471537529360336538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 466
+        width: 293
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2ea34812e766af0800000000000000
+      internalID: -403496434185608497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 412
+        width: 292
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821d92bea0c42d160800000000000000
+      internalID: 7048779976567017768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_4
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 360
+        width: 244
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da387f446ab1b820800000000000000
+      internalID: 2932329772387678929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 337
+        width: 131
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc247e2625bb8480800000000000000
+      internalID: -8895817463347532580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 189
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba540cf1bbe85f7b0800000000000000
+      internalID: -5191086061131905621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_7
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 231
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06dee9a0bdf294810800000000000000
+      internalID: 1749982548032679264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_8
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 240
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0fb4de7bb2ee970800000000000000
+      internalID: 8786007992006603003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_9
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 107
+        width: 128
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d6566077935adb0800000000000000
+      internalID: -4781352246012711537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_10
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 107
+        width: 108
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6cbfea601c0afc0800000000000000
+      internalID: -3485573877135063379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_11
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 107
+        width: 60
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c90009968153c160800000000000000
+      internalID: 7044563880671971785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_12
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 107
+        width: 106
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e951972a12e1b600800000000000000
+      internalID: 482415237066217957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_13
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eac558e4376bbf60800000000000000
+      internalID: 8051142235788790497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_14
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fc76b813dfbd6b0800000000000000
+      internalID: -5270340549672972414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_15
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80aadf6f3879b5a0800000000000000
+      internalID: -6505035972905099125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_16
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980f30e8403a4d980800000000000000
+      internalID: -8515001755492945783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_17
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 0
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b04d252b877c3e30800000000000000
+      internalID: 4484590768462053554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_18
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 0
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0652f58cd5d7e70800000000000000
+      internalID: 9114544336038879474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ativo 1DisneyTexts_19
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a6c3146b9816840800000000000000
+      internalID: 5215601259343276665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ativo 1DisneyTexts_0: -1050136863301854923
+      Ativo 1DisneyTexts_1: -471537529360336538
+      Ativo 1DisneyTexts_10: -3485573877135063379
+      Ativo 1DisneyTexts_11: 7044563880671971785
+      Ativo 1DisneyTexts_12: 482415237066217957
+      Ativo 1DisneyTexts_13: 8051142235788790497
+      Ativo 1DisneyTexts_14: -5270340549672972414
+      Ativo 1DisneyTexts_15: -6505035972905099125
+      Ativo 1DisneyTexts_16: -8515001755492945783
+      Ativo 1DisneyTexts_17: 4484590768462053554
+      Ativo 1DisneyTexts_18: 9114544336038879474
+      Ativo 1DisneyTexts_19: 5215601259343276665
+      Ativo 1DisneyTexts_2: -403496434185608497
+      Ativo 1DisneyTexts_3: 7048779976567017768
+      Ativo 1DisneyTexts_4: 2932329772387678929
+      Ativo 1DisneyTexts_5: -8895817463347532580
+      Ativo 1DisneyTexts_6: -5191086061131905621
+      Ativo 1DisneyTexts_7: 1749982548032679264
+      Ativo 1DisneyTexts_8: 8786007992006603003
+      Ativo 1DisneyTexts_9: -4781352246012711537
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
