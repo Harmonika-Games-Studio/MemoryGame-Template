@@ -5015,10 +5015,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1876017613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5.4104004, y: -28}
-  m_SizeDelta: {x: -270.9918, y: -1727.8485}
+  m_SizeDelta: {x: 809.0082, y: 110.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &753576056
 MonoBehaviour:
@@ -5040,7 +5040,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RETIRE SEU SHOPPING
+  m_text: RETIRE SEU BRINDE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dec0dfa5cdc5bc14fb9eca3856194132, type: 2}
   m_sharedMaterial: {fileID: -1183421535608563213, guid: dec0dfa5cdc5bc14fb9eca3856194132, type: 2}
@@ -5067,7 +5067,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.85
+  m_fontSize: 71.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12371,7 +12371,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1924764802021555697}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.5
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
