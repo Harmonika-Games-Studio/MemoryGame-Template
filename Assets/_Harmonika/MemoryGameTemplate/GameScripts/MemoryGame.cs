@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Harmonika.Tools;
 using NaughtyAttributes;
 using Newtonsoft.Json;
@@ -46,7 +47,10 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private GameoverMenu _victoryMenu;
     [SerializeField] private GameoverMenu _participationMenu;
     [SerializeField] private GameoverMenu _loseMenu;
-    
+    [SerializeField] private Transform _startPosition;
+    [SerializeField] private GameObject _transition;
+    //[SerializeField] private GameObject _Timer;
+
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
@@ -106,14 +110,70 @@ public class MemoryGame : MonoBehaviour
         int seconds = _remainingTime % 60;
         if (_cronometer.useFormat) _cronometer.TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         else _cronometer.TimerText.text = _remainingTime.ToString();
-
+        ShuffleArray(_config.cardPairs);
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
+        _transition.SetActive(false);
+        _transition.SetActive(true);
+        AnimateCards(0.2f, FinishCardSetup);
 
+        //InvokeUtility.Invoke(PlayerPrefs.GetFloat("MemorizationTime", _config.memorizationTime), () =>
+        //{
+        //    _cronometer.StartTimer();
+        //
+        //    foreach (var card in _cardsList)
+        //    {
+        //        card.RotateCardDown();
+        //    }
+        //});
+    }
+
+    private void ShuffleArray(Sprite[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(i, array.Length);
+            (array[i], array[randomIndex]) = (array[randomIndex], array[i]); // Troca os valores
+        }
+    }
+
+    private void AnimateCards(float movementDelay = 0.1f, Action onAllCardsPlaced = null)
+    {
+        Debug.Log("Animate Cards");
+        int completedCards = 0;
+        int totalCards = _cardsList.Count;
+
+        for (int i = 0; i < _cardsList.Count; i++)
+        {
+            RectTransform cardRectTransform = _cardsList[i].transform.GetChild(0).GetComponent<RectTransform>();
+
+            // Set initial world position
+            cardRectTransform.position = _startPosition.position;
+
+            // Move card to local zero position
+            cardRectTransform.DOLocalMove(Vector3.zero, 0.35f)
+                .SetDelay(i * movementDelay)
+                .OnComplete(() =>
+                {
+                    completedCards++;
+
+                    if (completedCards >= totalCards)
+                    {
+                        Debug.Log("All cards have been placed");
+                        onAllCardsPlaced?.Invoke();
+                    }
+                });
+        }
+    }
+
+    private void FinishCardSetup()
+    {
         InvokeUtility.Invoke(PlayerPrefs.GetFloat("MemorizationTime", _config.memorizationTime), () =>
         {
+            //_Timer.SetActive(true);
             _cronometer.StartTimer();
+            //_bgTimer.SetActive(true);
 
             foreach (var card in _cardsList)
             {
@@ -159,7 +219,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= 10)
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
@@ -213,7 +273,7 @@ public class MemoryGame : MonoBehaviour
     {
         Debug.Log("Instantiate");
 
-        for (int i = 0; i < _config.cardPairs.Length; i++)
+        for (int i = 0; i < 10; i++)
         {
             for (int j = 0; j < 2; j++)
             {
@@ -234,7 +294,7 @@ public class MemoryGame : MonoBehaviour
         float originalCellWidth = gridLayoutGroup.cellSize.x;
         float originalCellHeight = gridLayoutGroup.cellSize.y;
 
-        int totalCards = _config.cardPairs.Length * 2;
+        int totalCards = 20;
 
         // Priorizar o maior número de colunas possível
         int numberOfColumns = 4; // Começamos assumindo todas as cartas em uma linha
