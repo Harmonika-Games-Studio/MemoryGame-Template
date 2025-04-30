@@ -12,22 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045cc4695a78a9b45b1f23df8a89877a, type: 3}
   m_Name: MemoryGame Default Config
   m_EditorClassIdentifier: 
-  musicVolume: 15
+  musicVolume: 5
   sfxVolume: 100
   storageItems:
-  - itemName: Item 1
-    initialValue: 2
-    prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
+  - itemName: Mini Spray Aromatizador
+    initialValue: 10000
     prizeScore: 0
   useLeads: 1
   memorizationTime: 2
   gameTime: 20
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 21300000, guid: ae1c31bca5c7b984587038005d47d473, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 21300000, guid: 226f556fc5d13cf46a3cde603c931841, type: 3}
+  - {fileID: 21300000, guid: 7a368b6bc904b6e4f8a87208f740b137, type: 3}
+  - {fileID: 21300000, guid: d6507a35d20f98d439f6e584b98204bf, type: 3}
+  - {fileID: 21300000, guid: e64bf3423d49eba4d887001882811918, type: 3}
+  - {fileID: 21300000, guid: 6f463be374d23b3449051e9c4473ecd8, type: 3}
+  - {fileID: 21300000, guid: 8da03b22de5d5b14b9d46f8b4f75a3e3, type: 3}
