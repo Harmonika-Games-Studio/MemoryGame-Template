@@ -111,7 +111,7 @@ public class MemoryGame : MonoBehaviour
         AdjustGridLayout();
         ShuffleCards();
 
-        InvokeUtility.Invoke(PlayerPrefs.GetFloat("MemorizationTime", _config.memorizationTime), () =>
+        InvokeUtility.Invoke(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime), () =>
         {
             _cronometer.StartTimer();
 
