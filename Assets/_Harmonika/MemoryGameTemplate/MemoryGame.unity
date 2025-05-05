@@ -1346,6 +1346,70 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1324773687951562977, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324773687951562977, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324773687951562977, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 838119009}
+    - target: {fileID: 1324773687951562977, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 838119009}
+    - target: {fileID: 1324773687951562977, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnEndEdit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324773687951562977, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DisableKeyboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324773687951562977, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: KeyboardScript, Harmonika.Keyboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324773687951562977, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Harmonika.Tools.Keyboard.KeyboardScript, Harmonika.Tools
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363234533861539287, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363234533861539287, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 838119009}
+    - target: {fileID: 2363234533861539287, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DisableKeyboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363234533861539287, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Harmonika.Tools.Keyboard.KeyboardScript, Harmonika.Tools
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960504647586647592, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960504647586647592, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 838119009}
+    - target: {fileID: 7960504647586647592, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DisableKeyboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960504647586647592, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Harmonika.Tools.Keyboard.KeyboardScript, Harmonika.Tools
+      objectReference: {fileID: 0}
     - target: {fileID: 9196338307679781652, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2935,7 +2999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087906483530790972, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 431.40497
+      value: 431.40503
       objectReference: {fileID: 0}
     - target: {fileID: 6283969275593445486, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: m_IsActive
@@ -3328,6 +3392,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2474855572233244534, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694559920643767594, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
+      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3003105483214408240, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
@@ -3988,7 +4056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7618244262471361990, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: _maxAllowedDate._dateTime
-      value: 01/06/2025 00:00:00
+      value: 05/06/2025 00:00:00
       objectReference: {fileID: 0}
     - target: {fileID: 7967053765974956131, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: m_Alpha
@@ -4887,6 +4955,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829552442}
   m_CullTransparentMesh: 1
+--- !u!114 &838119009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4391463851647703368, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+  m_PrefabInstance: {fileID: 381158057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b588419570d9394a94ff4cef1addb7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &841423330
 PrefabInstance:
   m_ObjectHideFlags: 0
