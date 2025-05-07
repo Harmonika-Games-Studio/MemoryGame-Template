@@ -33,7 +33,7 @@ public class MemoryGameConfigMenu : ConfigMenu
 
         if (!PlayerPrefs.HasKey("MemorizationTime"))
         {
-            PlayerPrefs.SetInt("MemorizationTime", _memoryGame.Config.memorizationTime);
+            PlayerPrefs.SetInt("MemorizationTime", 2);
             PlayerPrefs.Save();
         }
     }
