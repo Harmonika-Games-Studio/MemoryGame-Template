@@ -111,7 +111,7 @@ public class MemoryGame : MonoBehaviour
         AdjustGridLayout();
         ShuffleCards();
 
-        InvokeUtility.Invoke(PlayerPrefs.GetFloat("MemorizationTime", _config.memorizationTime), () =>
+        InvokeUtility.Invoke(PlayerPrefs.GetInt("MemorizationTime", 5), () =>
         {
             _cronometer.StartTimer();
 
@@ -277,7 +277,7 @@ public class MemoryGame : MonoBehaviour
         // Configurar o GridLayoutGroup com a quantidade de colunas
         gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gridLayoutGroup.constraintCount = numberOfColumns;
-        gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
+        //gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
 
     }
 
