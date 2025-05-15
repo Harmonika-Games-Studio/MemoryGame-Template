@@ -319,7 +319,7 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+           // _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
