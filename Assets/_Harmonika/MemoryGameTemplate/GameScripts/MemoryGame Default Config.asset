@@ -27,9 +27,11 @@ MonoBehaviour:
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: 21300000, guid: 8f4283c744aa9de45a19709f4106c7aa, type: 3}
   cardPairs:
-  - {fileID: 21300000, guid: 23a288f59c9516c41ac7bf842910386f, type: 3}
-  - {fileID: 21300000, guid: 4e3aa638ef63e39469524e3d27a40068, type: 3}
-  - {fileID: 21300000, guid: cf0a6009e71c7d44d83741e42ab23e76, type: 3}
-  - {fileID: 21300000, guid: 49ea2ab02be8dcb4abc7c4dd894b76ac, type: 3}
-  - {fileID: 21300000, guid: 8d482f4bbeb2bc746b19babaf7b78a9b, type: 3}
-  - {fileID: 21300000, guid: 43242cc50804975489627eb3e6b537a4, type: 3}
+  - {fileID: 813796157681362143, guid: 97934bdaa1a7c58428c1c61278cc5f5f, type: 3}
+  - {fileID: 7780264574027006942, guid: 7b61ba332cea5c840a0180d5f0c40fcf, type: 3}
+  - {fileID: -8566626792118560811, guid: 34f8c763eefc5b14c9773dd0575f4695, type: 3}
+  - {fileID: 1523523337861121371, guid: 72822287e8aaa684987972665dff1c80, type: 3}
+  - {fileID: -8673912324965292308, guid: b91716d7db4353c41940befa76514acd, type: 3}
+  - {fileID: 2206232363915242835, guid: e44549d95995cff4bae91f02ebb758ff, type: 3}
+  - {fileID: 622385511510613547, guid: c12419010c36b3f4f969a3f5e119aed6, type: 3}
+  - {fileID: 7153616870473833981, guid: dc314035621fb674590d14c9278e9a4f, type: 3}
