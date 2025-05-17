@@ -22,10 +22,27 @@ MonoBehaviour:
     initialValue: 2
     prizeScore: 0
   useLeads: 1
-  memorizationTime: 2
-  gameTime: 20
+  memorizationTime: 5
+  gameTime: 60
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: 21300000, guid: 8f4283c744aa9de45a19709f4106c7aa, type: 3}
+  cardBackParts:
+  - {fileID: -1430571542288611304, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 764662276889126408, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: -2646334154081516791, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 708936508897724923, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 5481751798294922034, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: -6173539420816399532, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: -9066937242699418918, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 8597265565830335070, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: -2383922630599532848, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 5615596000923261499, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 5337161631269005727, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: -324023270097890873, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: -1212133724342741081, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 7350811248589300008, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 8987182013347961477, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
+  - {fileID: 7851494864434398782, guid: c04ca826e54c2af4b8affafb18eeb8b6, type: 3}
   cardPairs:
   - {fileID: 813796157681362143, guid: 97934bdaa1a7c58428c1c61278cc5f5f, type: 3}
   - {fileID: 7780264574027006942, guid: 7b61ba332cea5c840a0180d5f0c40fcf, type: 3}

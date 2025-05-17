@@ -83,4 +83,15 @@ public class MemoryGameCard : MonoBehaviour
         _facedUp = !_facedUp;
         _coroutineAllowed = true;
     }
+
+    public void UpdateCardBackImage(Sprite newCardBack)
+    {
+        cardBack = newCardBack;
+
+        // Se a carta estiver com o verso para cima (não virada), atualize o sprite atual
+        if (!_facedUp)
+        {
+            _cardImage.sprite = cardBack;
+        }
+    }
 }

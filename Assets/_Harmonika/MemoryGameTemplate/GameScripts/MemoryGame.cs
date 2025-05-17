@@ -35,10 +35,12 @@ public class JsonDeserializedConfig
 public class MemoryGame : MonoBehaviour
 {
     [Expandable][SerializeField] private MemoryGameConfig _config;
-    
+
     [Header("References")]
     [SerializeField] private Cronometer _cronometer;
     [SerializeField] private GridLayoutGroup gridLayoutGroup;
+    [SerializeField] private CustomRankingMenu customRankingMenu;
+    [SerializeField] private Button RankingButton;
 
     [Header("Menus")]
     [SerializeField] private StartMenu _mainMenu;
@@ -46,7 +48,7 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private GameoverMenu _victoryMenu;
     [SerializeField] private GameoverMenu _participationMenu;
     [SerializeField] private GameoverMenu _loseMenu;
-    
+
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
@@ -56,7 +58,7 @@ public class MemoryGame : MonoBehaviour
 
     private MemoryGameCard _lastClickedCard;
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
-
+    
     #region Properties
 
     public MemoryGameConfig Config { get => _config; }
@@ -84,7 +86,7 @@ public class MemoryGame : MonoBehaviour
 
         AppManager.Instance.ApplyScriptableConfig();
         AppManager.Instance.Storage.Setup();
-        
+
         SetupButtons();
     }
 
@@ -108,7 +110,7 @@ public class MemoryGame : MonoBehaviour
         else _cronometer.TimerText.text = _remainingTime.ToString();
 
         InstantiateCards();
-        AdjustGridLayout();
+        //AdjustGridLayout();
         ShuffleCards();
 
         InvokeUtility.Invoke(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime), () =>
@@ -141,6 +143,39 @@ public class MemoryGame : MonoBehaviour
 
         // Se você estiver usando o GridLayoutGroup, force a atualização do layout
         LayoutRebuilder.ForceRebuildLayoutImmediate(_gridLayoutRect);
+
+        // Após o layout ser reconstruído, atribua as partes da imagem de fundo
+        StartCoroutine(AssignCardBackPartsAfterLayout());
+    }
+
+    private IEnumerator AssignCardBackPartsAfterLayout()
+    {
+        // Aguarda o fim do frame para garantir que o layout foi atualizado
+        yield return new WaitForEndOfFrame();
+
+        int columns = gridLayoutGroup.constraintCount;
+        int rows = Mathf.CeilToInt((float)_cardsList.Count / columns);
+
+        // Verifique se temos todas as partes da imagem necessárias
+        if (_config.cardBackParts != null && _config.cardBackParts.Length >= _cardsList.Count)
+        {
+            Debug.Log($"Assigning {_config.cardBackParts.Length} card back parts to {_cardsList.Count} cards");
+
+            // Percorre todas as cartas para atribuir os cardBacks específicos
+            for (int i = 0; i < _cardsList.Count; i++)
+            {
+                if (i < _config.cardBackParts.Length)
+                {
+                    // Atribui a parte específica do cardBack baseado na posição da carta no grid
+                    _cardsList[i].UpdateCardBackImage(_config.cardBackParts[i]);
+                }
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Número insuficiente de partes de imagem para o cardBack. Certifique-se de ter pelo menos " +
+                          _cardsList.Count + " sprites no array cardBackParts.");
+        }
     }
 
     public void ClickedOnCard(MemoryGameCard card)
@@ -204,9 +239,18 @@ public class MemoryGame : MonoBehaviour
             _mainMenu.StartBtn.onClick.AddListener(StartGame);
         }
 
-        _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _victoryMenu.BackBtn.onClick.AddListener(() => CallRankingOnFinish());
+        _loseMenu.BackBtn.onClick.AddListener(() => CallRankingOnFinish());
+        _participationMenu.BackBtn.onClick.AddListener(() => CallRankingOnFinish());
+        RankingButton.onClick.AddListener(() => customRankingMenu.LoadRanking());
+    }
+
+    private void CallRankingOnFinish() {
+        
+        _gameMenu.OpenMenu("MainMenu");
+        customRankingMenu.LoadRanking();
+        customRankingMenu.ShowLastPlayer();
+        AppManager.Instance.OpenMenu("RankingMenu");
     }
 
     private void InstantiateCards()
@@ -283,14 +327,14 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
-        int inventoryCount = AppManager.Instance.Storage.InventoryCount;
+        //int inventoryCount = AppManager.Instance.Storage.InventoryCount;
 
-        if (inventoryCount <= 0)
-            PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount == 1)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount <= 3)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+        //if (inventoryCount <= 0)
+        //    PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
+        //else if (inventoryCount == 1)
+        //    PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
+        //else if (inventoryCount <= 3)
+        //    PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
@@ -306,10 +350,10 @@ public class MemoryGame : MonoBehaviour
             {
                 Destroy(card.gameObject);
             }
-        _cardsList.Clear();
-        _revealedPairs = 0;
+            _cardsList.Clear();
+            _revealedPairs = 0;
 
-        AppManager.Instance.DataSync.SaveLeads();
+            AppManager.Instance.DataSync.SaveLeads();
         });
     }
 
@@ -317,19 +361,20 @@ public class MemoryGame : MonoBehaviour
     {
         SoundSystem.Instance.Play("Win");
 
-        if (!string.IsNullOrEmpty(prizeName))
-        {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
-            _gameMenu.OpenMenu("VictoryMenu");
-        }
-        else
-        {
-            prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
-        }
+        //if (!string.IsNullOrEmpty(prizeName))
+        //{
+        //    _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+        //    _gameMenu.OpenMenu("VictoryMenu");
+        //}
+        //else
+        //{
+        //    prizeName = "Nenhum";
+        //    _gameMenu.OpenMenu("ParticipationMenu");
+        //}
+        _gameMenu.OpenMenu("VictoryMenu");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+        //AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
     }
 
     private void LoseGame()
@@ -337,7 +382,7 @@ public class MemoryGame : MonoBehaviour
         SoundSystem.Instance.Play("Fail");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
+        //AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
     }

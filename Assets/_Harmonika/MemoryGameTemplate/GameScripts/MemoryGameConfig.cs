@@ -13,5 +13,7 @@ public class MemoryGameConfig : GameConfigScriptable
     [Header("Cards")]
     public GameObject _cardPrefab;
     public Sprite cardBack;
+    public Sprite[] cardBackParts;
+
     public Sprite[] cardPairs;
 }
