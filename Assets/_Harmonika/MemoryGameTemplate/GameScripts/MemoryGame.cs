@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class JsonDeserializedConfig
 {
@@ -46,6 +47,12 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private GameoverMenu _victoryMenu;
     [SerializeField] private GameoverMenu _participationMenu;
     [SerializeField] private GameoverMenu _loseMenu;
+    [SerializeField] private Button _tryAgainButton;
+
+    [Header("Rest")]
+    [SerializeField] private Button _openRestButton;
+    [SerializeField] private VideoPlayer _restVideo;
+    [SerializeField] private Button _closeRestButton;
     
     private int _revealedPairs;
     private int _remainingTime;
@@ -53,6 +60,9 @@ public class MemoryGame : MonoBehaviour
     private float _startTime;
     private MenuManager _gameMenu;
     private RectTransform _gridLayoutRect;
+
+    private bool _secondTry = true;
+    private int _restClicks;
 
     private MemoryGameCard _lastClickedCard;
     private List<MemoryGameCard> _cardsList = new List<MemoryGameCard>();
@@ -196,7 +206,11 @@ public class MemoryGame : MonoBehaviour
                 _gameMenu.OpenMenu("CollectLeadsMenu");
                 _collectLeadsMenu.ClearAllFields();
             });
-            _collectLeadsMenu.ContinueBtn.onClick.AddListener(StartGame);
+            _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => {
+                _secondTry = false;
+                StartGame();
+                _tryAgainButton.gameObject.SetActive(true);
+            });
             _collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
         else
@@ -204,9 +218,12 @@ public class MemoryGame : MonoBehaviour
             _mainMenu.StartBtn.onClick.AddListener(StartGame);
         }
 
-        _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _tryAgainButton.onClick.AddListener(() => TryAgain());
+        _victoryMenu.BackBtn.onClick.AddListener(ReturnToMainMenu);
+        _loseMenu.BackBtn.onClick.AddListener(ReturnToMainMenu);
+        _participationMenu.BackBtn.onClick.AddListener(ReturnToMainMenu);
+        _openRestButton.onClick.AddListener(OpenRestScreen);
+        _closeRestButton.onClick.AddListener(CloseRestScreen);
     }
 
     private void InstantiateCards()
@@ -308,8 +325,6 @@ public class MemoryGame : MonoBehaviour
             }
         _cardsList.Clear();
         _revealedPairs = 0;
-
-        AppManager.Instance.DataSync.SaveLeads();
         });
     }
 
@@ -328,17 +343,90 @@ public class MemoryGame : MonoBehaviour
             _gameMenu.OpenMenu("ParticipationMenu");
         }
 
-        AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+        FillJObectByResult(_secondTry, true, prizeName);
     }
 
     private void LoseGame()
     {
         SoundSystem.Instance.Play("Fail");
 
-        AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
+        FillJObectByResult(_secondTry, true);
 
         _gameMenu.OpenMenu("LoseMenu");
+    }
+
+    private void FillJObectByResult(bool triedAgain, bool won, string prizeName = "Nenhum")
+    {
+        string triedAgainText = triedAgain ? "Sim" : "Não";
+
+        if (triedAgain)
+        {
+            if (won)
+            {
+                AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
+                AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+                AppManager.Instance.DataSync.AddDataToJObject("custom3", triedAgainText);
+            }
+            else
+            {
+                AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
+                AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
+                AppManager.Instance.DataSync.AddDataToJObject("custom3", triedAgainText);
+            }
+        }
+        else
+        {
+            if (won)
+            {
+                AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
+                AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+                AppManager.Instance.DataSync.AddDataToJObject("custom3", triedAgainText);
+            }
+            else
+            {
+                AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
+                AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
+                AppManager.Instance.DataSync.AddDataToJObject("custom3", triedAgainText);
+            }
+        }
+    }
+
+    private void TryAgain()
+    {
+        _secondTry = true;
+
+        _tryAgainButton.gameObject.SetActive(false);
+
+        StartGame();
+    }
+
+    private void ReturnToMainMenu()
+    {
+        _gameMenu.OpenMenu("MainMenu");
+
+        AppManager.Instance.DataSync.SaveLeads();
+    }
+
+    private void RestScreenClick()
+    {
+        //_restClicks++;
+
+        //if (_restClicks == 4)
+        //{
+        //    _restClicks = 0;
+            OpenRestScreen();
+        //}
+    }
+
+    private void OpenRestScreen()
+    {
+        _gameMenu.OpenMenu("RestMenu");
+        _restVideo.Play();
+    }
+
+    private void CloseRestScreen()
+    {
+        _gameMenu.OpenMenu("MainMenu");
+        _restVideo.Stop();
     }
 }

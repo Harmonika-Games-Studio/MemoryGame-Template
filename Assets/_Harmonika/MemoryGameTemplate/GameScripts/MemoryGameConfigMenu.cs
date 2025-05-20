@@ -42,7 +42,7 @@ public class MemoryGameConfigMenu : ConfigMenu
     {
         if (string.IsNullOrEmpty(value) || int.Parse(value) <= 10)
         {
-            value = "10";
+            value = "5";
         }
         else if (int.Parse(value) > 999)
         {
@@ -57,7 +57,7 @@ public class MemoryGameConfigMenu : ConfigMenu
     {
         if (string.IsNullOrEmpty(value) || int.Parse(value) <= 2)
         {
-            value = "2";
+            value = "1";
         }
         else if (int.Parse(value) > 99)
         {
