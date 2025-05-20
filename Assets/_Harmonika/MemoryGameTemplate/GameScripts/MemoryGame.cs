@@ -90,13 +90,13 @@ public class MemoryGame : MonoBehaviour
 
     public void StartGame()
     {
-        if (AppManager.Instance.Storage.InventoryCount <= 0)
-        {
-            PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                "Insira algum prêmio para continuar com a ativação", "OK", true);
+        //if (AppManager.Instance.Storage.InventoryCount <= 0)
+        //{
+        //    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+        //        "Insira algum prêmio para continuar com a ativação", "OK", true);
 
-            return;
-        }
+        //    return;
+        //}
         _gameMenu.CloseMenus();
 
         _startTime = Time.time;
@@ -159,7 +159,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= PlayerPrefs.GetInt("RevealsToWin"))
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
@@ -285,12 +285,12 @@ public class MemoryGame : MonoBehaviour
     {
         int inventoryCount = AppManager.Instance.Storage.InventoryCount;
 
-        if (inventoryCount <= 0)
-            PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount == 1)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount <= 3)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+        //if (inventoryCount <= 0)
+        //    PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
+        //else if (inventoryCount == 1)
+        //    PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
+        //else if (inventoryCount <= 3)
+        //    PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;

@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class MemoryGameConfigMenu : ConfigMenu
 
     [SerializeField] private TMP_InputField _inputGameTime;
     [SerializeField] private TMP_InputField _inputMemorizationTime;
+    [SerializeField] private TMP_InputField _inputRevealsToWin;
 
     protected override void Awake()
     {
@@ -15,6 +17,7 @@ public class MemoryGameConfigMenu : ConfigMenu
         SetInitialValues();
         _inputGameTime.onSubmit.AddListener(OnGameTimeValueChanged);
         _inputMemorizationTime.onSubmit.AddListener(OnMemorizationTimeValueChanged);
+        _inputRevealsToWin.onSubmit.AddListener(OnRevealsToWinValueChanged);
     }
 
     protected override void Start()
@@ -36,6 +39,12 @@ public class MemoryGameConfigMenu : ConfigMenu
             PlayerPrefs.SetInt("MemorizationTime", _memoryGame.Config.memorizationTime);
             PlayerPrefs.Save();
         }
+
+        if (!PlayerPrefs.HasKey("RevealsToWin"))
+        {
+            PlayerPrefs.SetInt("RevealsToWin", 3);
+            PlayerPrefs.Save();
+        }
     }
 
     private void OnGameTimeValueChanged(string value)
@@ -55,9 +64,9 @@ public class MemoryGameConfigMenu : ConfigMenu
 
     private void OnMemorizationTimeValueChanged(string value)
     {
-        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 2)
+        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 1)
         {
-            value = "2";
+            value = "1";
         }
         else if (int.Parse(value) > 99)
         {
@@ -68,12 +77,30 @@ public class MemoryGameConfigMenu : ConfigMenu
         PlayerPrefs.Save();
     }
 
+    private void OnRevealsToWinValueChanged(string value)
+    {
+        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 1)
+        {
+            value = "1";
+        }
+        else if (int.Parse(value) > _memoryGame.Config.cardPairs.Length)
+        {
+            value = _memoryGame.Config.cardPairs.Length.ToString();
+        }
+        _inputRevealsToWin.text = value;
+        PlayerPrefs.SetInt("RevealsToWin", int.Parse(value));
+        PlayerPrefs.Save();
+    }
+
+
     void UpdateInputValues()
     {
         int gameTime = PlayerPrefs.GetInt("GameTime");
         int memorizationTime = PlayerPrefs.GetInt("MemorizationTime");
+        int revealsToWin = PlayerPrefs.GetInt("RevealsToWin");
 
         _inputGameTime.text = gameTime.ToString();
         _inputMemorizationTime.text = memorizationTime.ToString();
+        _inputRevealsToWin.text = revealsToWin.ToString();
     }
 }

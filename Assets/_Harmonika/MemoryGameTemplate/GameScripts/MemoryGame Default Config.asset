@@ -14,16 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolume: 15
   sfxVolume: 100
-  storageItems:
-  - itemName: Item 1
-    initialValue: 2
-    prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
-    prizeScore: 0
+  storageItems: []
   useLeads: 0
   memorizationTime: 2
-  gameTime: 20
+  gameTime: 35
   _cardPrefab: {fileID: 4771165339378910402, guid: 1f263e170257fff4d87ee5c6e5a985b6, type: 3}
   cardBack: {fileID: 21300000, guid: 08619e069da5c8644b392128cdab8287, type: 3}
   cardPairs:
