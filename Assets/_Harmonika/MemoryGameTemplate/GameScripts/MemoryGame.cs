@@ -107,6 +107,7 @@ public class MemoryGame : MonoBehaviour
         if (_cronometer.useFormat) _cronometer.TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         else _cronometer.TimerText.text = _remainingTime.ToString();
 
+        ShuffleArray(_config.cardPairs);
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
@@ -120,6 +121,15 @@ public class MemoryGame : MonoBehaviour
                 card.RotateCardDown();
             }
         });
+    }
+
+    private void ShuffleArray(Sprite[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(i, array.Length);
+            (array[i], array[randomIndex]) = (array[randomIndex], array[i]); // Troca os valores
+        }
     }
 
     public void ShuffleCards()
@@ -137,6 +147,12 @@ public class MemoryGame : MonoBehaviour
         for (int i = 0; i < _cardsList.Count; i++)
         {
             _cardsList[i].transform.SetSiblingIndex(i); // Define a nova ordem na grid
+        }
+
+        //Setar as imagens de trás para que formem uma imagem
+        for (int i = 0; i < 16; i++)
+        {
+            _cardsList[i].cardBack = _config.cardBacksDraw[i];
         }
 
         // Se você estiver usando o GridLayoutGroup, force a atualização do layout
@@ -159,7 +175,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= 8)
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
@@ -213,7 +229,7 @@ public class MemoryGame : MonoBehaviour
     {
         Debug.Log("Instantiate");
 
-        for (int i = 0; i < _config.cardPairs.Length; i++)
+        for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 2; j++)
             {
@@ -234,7 +250,7 @@ public class MemoryGame : MonoBehaviour
         float originalCellWidth = gridLayoutGroup.cellSize.x;
         float originalCellHeight = gridLayoutGroup.cellSize.y;
 
-        int totalCards = _config.cardPairs.Length * 2;
+        int totalCards = 16;
 
         // Priorizar o maior número de colunas possível
         int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha

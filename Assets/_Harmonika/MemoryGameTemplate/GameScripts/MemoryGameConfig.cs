@@ -6,12 +6,13 @@ public class MemoryGameConfig : GameConfigScriptable
 {
     [Space(5)]
     [Header("Configurable Variables")]
-    public int memorizationTime = 2;
-    public int gameTime = 20;
+    public int memorizationTime = 4;
+    public int gameTime = 40;
 
     [Space(5)]
     [Header("Cards")]
     public GameObject _cardPrefab;
     public Sprite cardBack;
+    public Sprite[] cardBacksDraw;
     public Sprite[] cardPairs;
 }

@@ -15,19 +15,42 @@ MonoBehaviour:
   musicVolume: 15
   sfxVolume: 100
   storageItems:
-  - itemName: Item 1
-    initialValue: 2
+  - itemName: Brinde
+    initialValue: 10000
     prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
-    prizeScore: 0
-  useLeads: 1
-  memorizationTime: 2
-  gameTime: 20
+  useLeads: 0
+  memorizationTime: 4
+  gameTime: 40
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBacksDraw:
+  - {fileID: 21300000, guid: e838fda99a54def43b064b527309c48d, type: 3}
+  - {fileID: 21300000, guid: 7802a549d903b0947b50beaa5409aad7, type: 3}
+  - {fileID: 21300000, guid: c1838be664b446149873b6e562b9d2b2, type: 3}
+  - {fileID: 21300000, guid: cb95d4d0ab407c64eaa97a546c4e54aa, type: 3}
+  - {fileID: 21300000, guid: a0dbb719238ef25478d7ea7176108d02, type: 3}
+  - {fileID: 21300000, guid: 5058de9979c16d84c93ad42106d31235, type: 3}
+  - {fileID: 21300000, guid: 0b410ec243e2faf4e9ee1f566238be17, type: 3}
+  - {fileID: 21300000, guid: c7d9e55b20baed74aae03d95554dc130, type: 3}
+  - {fileID: 21300000, guid: 81b0dfb535e90d242b5b7ea97026e756, type: 3}
+  - {fileID: 21300000, guid: e0c9e17ce56e4284e81949d6967f77c0, type: 3}
+  - {fileID: 21300000, guid: 97b76dceb5ac6424889678753b0a3b5e, type: 3}
+  - {fileID: 21300000, guid: 8cf5385b517b64c4fbfdeeab94bd8bf6, type: 3}
+  - {fileID: 21300000, guid: 06fff3ffddaacb94291a5e05e16b689c, type: 3}
+  - {fileID: 21300000, guid: de76f84b2b4e5ca4f9c0dae9911edc66, type: 3}
+  - {fileID: 21300000, guid: d4dc476223f6d324f9f149c44011e406, type: 3}
+  - {fileID: 21300000, guid: 528f788c5467c644f814e745629a7e8b, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 21300000, guid: 238d04213c5ca1a4b8fc47eda430baba, type: 3}
+  - {fileID: 21300000, guid: 5b6711d5dec04d14e97f3a19d442c091, type: 3}
+  - {fileID: 21300000, guid: 91bdd7b3838edf446b97401728a6c386, type: 3}
+  - {fileID: 21300000, guid: 13ef504da384d9f4f9ddbbc11276220a, type: 3}
+  - {fileID: 21300000, guid: d4f9200cb2b92fc4d8b3aedfb36b26e1, type: 3}
+  - {fileID: 21300000, guid: a12abc042a3759747aaf9acd6f1a28ce, type: 3}
+  - {fileID: 21300000, guid: 5e8018e3ac7e89e4bb0d4f6d3831db12, type: 3}
+  - {fileID: 21300000, guid: d603b180bcdd867439c8c94b2c7d4bc5, type: 3}
+  - {fileID: 21300000, guid: 5d78f955c908686499b1b7d9d7d87073, type: 3}
+  - {fileID: 21300000, guid: a2aad891280ffe44f94d84f3e54c236d, type: 3}
+  - {fileID: 21300000, guid: a75ed04af5867384c84468857b57fa10, type: 3}
+  - {fileID: 21300000, guid: 6b6dc5c80a562f445bdeb6eaf35d365b, type: 3}
+  - {fileID: 21300000, guid: ede3cad4b64121646a57a76ca1dd89ee, type: 3}
