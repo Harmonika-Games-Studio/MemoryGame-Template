@@ -88,10 +88,9 @@ public class MemoryGame : MonoBehaviour
 
     public void StartGame()
     {
-        if (EstoqueHandler.instance.InventoryCount <= 0)
+        if (!EstoqueHandler.instance.isRewardAvailable)
         {
-            PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                "Insira algum prêmio para continuar com a ativação", "OK", true);
+            PopupManager.Instance.InvokeConfirmDialog("Adicione as configurações no estoque para continuar com a ativação", "OK", true);
 
             return;
         }
@@ -183,10 +182,9 @@ public class MemoryGame : MonoBehaviour
         {
             _mainMenu.StartBtn.onClick.AddListener(() =>
             {
-                if (EstoqueHandler.instance.InventoryCount <= 0)
+                if (!EstoqueHandler.instance.isRewardAvailable)
                 {
-                    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                        "Insira algum prêmio para continuar com a ativação", "OK", true);
+                    PopupManager.Instance.InvokeConfirmDialog("Adicione as configurações no estoque para continuar com a ativação", "OK", true);
 
                     return;
                 }
@@ -291,7 +289,7 @@ public class MemoryGame : MonoBehaviour
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
-        AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
+        AppManager.Instance.DataSync.AddDataToJObject("tempo", (int)tempo);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
 
         InvokeUtility.Invoke(1f, () =>

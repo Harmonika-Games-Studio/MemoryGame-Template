@@ -68,6 +68,22 @@ public class EstoqueHandler : MonoBehaviour {
     private Dictionary<string, string> itemDisplayNames = new Dictionary<string, string>();
 
     #region Propeties
+    public bool isRewardAvailable
+    {
+        get
+        {
+            bool check = false;
+            foreach (var item in _storageElements)
+            {
+                if (item.Quantity > 0 && item.ItemChance > 0)
+                {
+                    check = true;
+                }
+            }
+            return check;
+        }
+    }
+
     public List<SicrediStorageItem> ItemsList {
         get => _storageElements;
     }

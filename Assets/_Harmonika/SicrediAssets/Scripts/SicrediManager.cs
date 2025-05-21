@@ -60,7 +60,7 @@ public class SicrediManager : MonoBehaviour {
                 directory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Create a subfolder for your app (optional)
-                string appFolder = Path.Combine(directory, "RoletaSicredi");
+                string appFolder = Path.Combine(directory, Application.productName);
                 if (!Directory.Exists(appFolder)) {
                     Directory.CreateDirectory(appFolder);
                 }
