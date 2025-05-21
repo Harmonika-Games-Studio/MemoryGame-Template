@@ -5,8 +5,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.InputSystem; // Add this for the new Input System
+
 
 public class JsonDeserializedConfig
 {
@@ -53,6 +56,7 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private Button _openRestButton;
     [SerializeField] private VideoPlayer _restVideo;
     [SerializeField] private Button _closeRestButton;
+    [SerializeField] private Button _closeRestButtonAutomatic;
     
     private int _revealedPairs;
     private int _remainingTime;
@@ -60,8 +64,12 @@ public class MemoryGame : MonoBehaviour
     private float _startTime;
     private MenuManager _gameMenu;
     private RectTransform _gridLayoutRect;
+    private float _idleTimer = 0f;
+    private bool _timerActive = false;
+    private const float IDLE_TIMEOUT = 30f; // 30 seconds before triggering idle action
 
     private bool _secondTry = true;
+    [SerializeField] private bool _inMainMenu = true;
     private int _restClicks;
 
     private MemoryGameCard _lastClickedCard;
@@ -94,9 +102,62 @@ public class MemoryGame : MonoBehaviour
 
         AppManager.Instance.ApplyScriptableConfig();
         AppManager.Instance.Storage.Setup();
+
+        _restVideo.Prepare();
         
         SetupButtons();
     }
+
+    void Update()
+    {
+        // Only track idle time if we're on the main menu
+        if (_inMainMenu)
+        {
+            // Check for any user input including touch for mobile devices using the new Input System
+            bool userInput = false;
+
+            // Check for keyboard, mouse, or gamepad activity
+            if (Keyboard.current != null && Keyboard.current.anyKey.isPressed)
+                userInput = true;
+            else if (Mouse.current != null && (Mouse.current.delta.ReadValue().magnitude > 0 || Mouse.current.leftButton.isPressed || Mouse.current.rightButton.isPressed))
+                userInput = true;
+            else if (Gamepad.current != null && Gamepad.current.wasUpdatedThisFrame)
+                userInput = true;
+            // Check for touch input for mobile devices
+            else if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+                userInput = true;
+
+            if (userInput)
+            {
+                // Reset timer when user interacts
+                _idleTimer = 0f;
+                _timerActive = true;
+            }
+            else if (_timerActive)
+            {
+                // Increment timer when no input is detected
+                _idleTimer += Time.deltaTime;
+
+                // Check if idle timeout has been reached
+                if (_idleTimer >= IDLE_TIMEOUT)
+                {
+                    // Open the rest screen automatically
+                    OpenRestScreen(true);
+
+                    // Stop the timer until user returns to main menu
+                    _timerActive = false;
+                    _idleTimer = 0f;
+                }
+            }
+        }
+        else
+        {
+            // Reset timer when not on main menu
+            _idleTimer = 0f;
+            _timerActive = false;
+        }
+    }
+
 
     public void StartGame()
     {
@@ -211,7 +272,10 @@ public class MemoryGame : MonoBehaviour
                 StartGame();
                 _tryAgainButton.gameObject.SetActive(true);
             });
-            _collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+            _collectLeadsMenu.BackBtn.onClick.AddListener(() => { 
+                _gameMenu.OpenMenu("MainMenu");
+                _inMainMenu = false;
+            });
         }
         else
         {
@@ -222,8 +286,9 @@ public class MemoryGame : MonoBehaviour
         _victoryMenu.BackBtn.onClick.AddListener(ReturnToMainMenu);
         _loseMenu.BackBtn.onClick.AddListener(ReturnToMainMenu);
         _participationMenu.BackBtn.onClick.AddListener(ReturnToMainMenu);
-        _openRestButton.onClick.AddListener(OpenRestScreen);
-        _closeRestButton.onClick.AddListener(CloseRestScreen);
+        _openRestButton.onClick.AddListener(() => OpenRestScreen());
+        _closeRestButton.onClick.AddListener(() => CloseRestScreen(false));
+        _closeRestButtonAutomatic.onClick.AddListener(() => CloseRestScreen(true));
     }
 
     private void InstantiateCards()
@@ -404,6 +469,8 @@ public class MemoryGame : MonoBehaviour
     {
         _gameMenu.OpenMenu("MainMenu");
 
+        _inMainMenu = true;
+
         AppManager.Instance.DataSync.SaveLeads();
     }
 
@@ -418,15 +485,45 @@ public class MemoryGame : MonoBehaviour
         //}
     }
 
-    private void OpenRestScreen()
+    private void OpenRestScreen(bool automatic = false)
     {
+        if (automatic)
+            _closeRestButtonAutomatic.gameObject.SetActive(true);
+        else
+            _closeRestButtonAutomatic.gameObject.SetActive(false);
+
         _gameMenu.OpenMenu("RestMenu");
+
+        AppManager.Instance.OpenMenu("CloseAll");
+
+        _inMainMenu = false;
+
         _restVideo.Play();
     }
 
-    private void CloseRestScreen()
+    private void CloseRestScreen(bool fullClick)
     {
-        _gameMenu.OpenMenu("MainMenu");
-        _restVideo.Stop();
+        if (fullClick)
+        {
+            _restClicks = 0;
+
+            _gameMenu.OpenMenu("MainMenu");
+            _restVideo.Stop();
+
+            _closeRestButtonAutomatic.gameObject.SetActive(false);
+            _inMainMenu = true;
+            return;
+        }
+        
+        _restClicks++;
+
+        if (_restClicks == 4)
+        {
+            _restClicks = 0;
+
+            _gameMenu.OpenMenu("MainMenu");
+            _restVideo.Stop();
+            _inMainMenu = true;
+        }
     }
 }
