@@ -44,7 +44,6 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private StartMenu _mainMenu;
     [SerializeField] private CollectLeadsMenu _collectLeadsMenu;
     [SerializeField] private GameoverMenu _victoryMenu;
-    [SerializeField] private GameoverMenu _participationMenu;
     [SerializeField] private GameoverMenu _loseMenu;
     
     private int _revealedPairs;
@@ -83,14 +82,13 @@ public class MemoryGame : MonoBehaviour
         _gameMenu = GetComponentInChildren<MenuManager>();
 
         AppManager.Instance.ApplyScriptableConfig();
-        AppManager.Instance.Storage.Setup();
         
         SetupButtons();
     }
 
     public void StartGame()
     {
-        if (AppManager.Instance.Storage.InventoryCount <= 0)
+        if (EstoqueHandler.instance.InventoryCount <= 0)
         {
             PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
                 "Insira algum prêmio para continuar com a ativação", "OK", true);
@@ -161,7 +159,7 @@ public class MemoryGame : MonoBehaviour
                 _revealedPairs++;
                 if (_revealedPairs >= _config.cardPairs.Length)
                 {
-                    EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
+                    EndGame(true, EstoqueHandler.instance.GetRandomPrize());
                 }
             }
             else
@@ -185,7 +183,7 @@ public class MemoryGame : MonoBehaviour
         {
             _mainMenu.StartBtn.onClick.AddListener(() =>
             {
-                if (AppManager.Instance.Storage.InventoryCount <= 0)
+                if (EstoqueHandler.instance.InventoryCount <= 0)
                 {
                     PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
                         "Insira algum prêmio para continuar com a ativação", "OK", true);
@@ -206,7 +204,6 @@ public class MemoryGame : MonoBehaviour
 
         _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
     }
 
     private void InstantiateCards()
@@ -283,7 +280,7 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
-        int inventoryCount = AppManager.Instance.Storage.InventoryCount;
+        int inventoryCount = EstoqueHandler.instance.InventoryCount;
 
         if (inventoryCount <= 0)
             PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
@@ -317,16 +314,8 @@ public class MemoryGame : MonoBehaviour
     {
         SoundSystem.Instance.Play("Win");
 
-        if (!string.IsNullOrEmpty(prizeName))
-        {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
-            _gameMenu.OpenMenu("VictoryMenu");
-        }
-        else
-        {
-            prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
-        }
+        _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+        _gameMenu.OpenMenu("VictoryMenu");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
         AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);

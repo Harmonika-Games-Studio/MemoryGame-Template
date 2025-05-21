@@ -23,7 +23,7 @@ public class EstoqueHandler : MonoBehaviour {
     public static EstoqueHandler instance;
     private int storageClicks;
     private bool isUsed = true;
-    private const int ITEMS_PER_PAGE = 4;
+    private const int ITEMS_PER_PAGE = 6;
     private const float STORAGE_CLICK_RESET_TIME = 4f;
     private const string STORAGE_USED_KEY = "isStorageUsed";
     private const string FIRST_TIME_ESTOQUE_KEY = "FirstTimeEstoque";
@@ -72,10 +72,13 @@ public class EstoqueHandler : MonoBehaviour {
         get => _storageElements;
     }
 
-    public int InventoryCount {
-        get {
+    public int InventoryCount
+    {
+        get
+        {
             int totalValue = 0;
-            foreach (var item in _storageElements) {
+            foreach (var item in _storageElements)
+            {
                 totalValue += item.Quantity;
             }
             return totalValue;
@@ -90,7 +93,7 @@ public class EstoqueHandler : MonoBehaviour {
         else if (instance != this)
             Destroy(gameObject);
 
-        OnSetupStorage += SetupStorageCall;
+        SetupStorageCall();
     }
 
     private void Start()
@@ -141,7 +144,7 @@ public class EstoqueHandler : MonoBehaviour {
 
     private IEnumerator SetupStorageWait()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.3f);
 
         SetupStorage();
     }
@@ -366,6 +369,7 @@ public class EstoqueHandler : MonoBehaviour {
 
     public void OpenStorage()
     {
+        SetupStorage();
         storageCurPage = 0;
         ShowStoragePaging();
         pnlEmptyStorage.SetActive(false);
