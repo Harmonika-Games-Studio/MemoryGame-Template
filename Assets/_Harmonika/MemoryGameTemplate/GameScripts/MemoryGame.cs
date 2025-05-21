@@ -139,6 +139,12 @@ public class MemoryGame : MonoBehaviour
             _cardsList[i].transform.SetSiblingIndex(i); // Define a nova ordem na grid
         }
 
+        //Setar as imagens de trás para que formem uma imagem
+        for (int i = 0; i < 12; i++)
+        {
+            _cardsList[i].cardBack = _config.cardBacksDraw[i];
+        }
+
         // Se você estiver usando o GridLayoutGroup, force a atualização do layout
         LayoutRebuilder.ForceRebuildLayoutImmediate(_gridLayoutRect);
     }
@@ -276,8 +282,8 @@ public class MemoryGame : MonoBehaviour
 
         // Configurar o GridLayoutGroup com a quantidade de colunas
         gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        gridLayoutGroup.constraintCount = numberOfColumns;
-        gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
+        gridLayoutGroup.constraintCount = 3;
+        //gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
 
     }
 
@@ -308,8 +314,6 @@ public class MemoryGame : MonoBehaviour
             }
         _cardsList.Clear();
         _revealedPairs = 0;
-
-        AppManager.Instance.DataSync.SaveLeads();
         });
     }
 
@@ -330,6 +334,7 @@ public class MemoryGame : MonoBehaviour
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
         AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+        AppManager.Instance.DataSync.SaveLeads();
     }
 
     private void LoseGame()
@@ -337,8 +342,8 @@ public class MemoryGame : MonoBehaviour
         SoundSystem.Instance.Play("Fail");
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
-
+        AppManager.Instance.DataSync.AddDataToJObject("brinde", "Cordão");
+        AppManager.Instance.DataSync.SaveLeads();
         _gameMenu.OpenMenu("LoseMenu");
     }
 }
