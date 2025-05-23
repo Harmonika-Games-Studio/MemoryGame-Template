@@ -107,7 +107,7 @@ public class MemoryGame : MonoBehaviour
         if (_cronometer.useFormat) _cronometer.TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         else _cronometer.TimerText.text = _remainingTime.ToString();
 
-        ShuffleArray(_config.cardPairs);
+        ShuffleArray(_config.cardPairsLeft, _config.cardPairsRight);
         InstantiateCards();
         AdjustGridLayout();
         ShuffleCards();
@@ -123,12 +123,15 @@ public class MemoryGame : MonoBehaviour
         });
     }
 
-    private void ShuffleArray(Sprite[] array)
+    private void ShuffleArray(Sprite[] arrayLeft, Sprite[] arrayRight)
     {
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < arrayLeft.Length; i++)
         {
-            int randomIndex = UnityEngine.Random.Range(i, array.Length);
-            (array[i], array[randomIndex]) = (array[randomIndex], array[i]); // Troca os valores
+            int randomIndex = UnityEngine.Random.Range(i, arrayLeft.Length);
+
+            // Troca os valores em ambos os arrays
+            (arrayLeft[i], arrayLeft[randomIndex]) = (arrayLeft[randomIndex], arrayLeft[i]);
+            (arrayRight[i], arrayRight[randomIndex]) = (arrayRight[randomIndex], arrayRight[i]);
         }
     }
 
@@ -231,17 +234,23 @@ public class MemoryGame : MonoBehaviour
 
         for (int i = 0; i < 8; i++)
         {
-            for (int j = 0; j < 2; j++)
-            {
-                GameObject newCard = Instantiate(_config._cardPrefab, gridLayoutGroup.transform);
-                MemoryGameCard cardConfig = newCard.GetComponent<MemoryGameCard>();
-                cardConfig.id = i;
-                cardConfig.manager = this;
-                cardConfig.cardBack = _config.cardBack;
-                cardConfig.cardFront = _config.cardPairs[i];
+            // Carta da esquerda
+            GameObject cardLeft = Instantiate(_config._cardPrefab, gridLayoutGroup.transform);
+            MemoryGameCard configLeft = cardLeft.GetComponent<MemoryGameCard>();
+            configLeft.id = i;
+            configLeft.manager = this;
+            configLeft.cardBack = _config.cardBack;
+            configLeft.cardFront = _config.cardPairsLeft[i];
+            _cardsList.Add(configLeft);
 
-                _cardsList.Add(cardConfig);
-            }
+            // Carta da direita
+            GameObject cardRight = Instantiate(_config._cardPrefab, gridLayoutGroup.transform);
+            MemoryGameCard configRight = cardRight.GetComponent<MemoryGameCard>();
+            configRight.id = i;
+            configRight.manager = this;
+            configRight.cardBack = _config.cardBack;
+            configRight.cardFront = _config.cardPairsRight[i];
+            _cardsList.Add(configRight);
         }
     }
 
