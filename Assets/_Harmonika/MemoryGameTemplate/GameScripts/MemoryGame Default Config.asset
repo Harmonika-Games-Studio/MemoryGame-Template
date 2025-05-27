@@ -15,19 +15,33 @@ MonoBehaviour:
   musicVolume: 15
   sfxVolume: 100
   storageItems:
-  - itemName: Item 1
-    initialValue: 2
+  - itemName: Copo Stanley
+    initialValue: 10000
     prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
+  - itemName: "Bon\xE9"
+    initialValue: 10000
+    prizeScore: 0
+  - itemName: Caneta
+    initialValue: 10000
+    prizeScore: 0
+  - itemName: Caderno com Caneta
+    initialValue: 10000
+    prizeScore: 0
+  - itemName: Bloco de notas
+    initialValue: 10000
+    prizeScore: 0
+  - itemName: Par de Meias
+    initialValue: 10000
     prizeScore: 0
   useLeads: 1
-  memorizationTime: 2
-  gameTime: 20
+  memorizationTime: 3
+  gameTime: 30
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 21300000, guid: 204a7c28015a4434b8851796e055734e, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 21300000, guid: 3010b58ddc933ec42834e49b932d6960, type: 3}
+  - {fileID: 21300000, guid: 27ee5cfa2de0bf047999cd26fc7ca6d3, type: 3}
+  - {fileID: 21300000, guid: 3ec7f212068ab1d41a4155f6aeb0a272, type: 3}
+  - {fileID: 21300000, guid: cec1991113d7a064fb19a63e84787204, type: 3}
+  - {fileID: 21300000, guid: 0b51fd22d2f04d44ab2e7d2c54f571ee, type: 3}
+  - {fileID: 21300000, guid: 3dca307914fb13b4194a6a1936586cbf, type: 3}
