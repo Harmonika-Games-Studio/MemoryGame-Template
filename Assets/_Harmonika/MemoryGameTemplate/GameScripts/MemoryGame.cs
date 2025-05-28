@@ -159,9 +159,13 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= 1 && card.prizeId != 99)
                 {
-                    EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
+                    EndGame(true, AppManager.Instance.Storage.GetSpecificPrize(card.id));
+                }
+                else if (_revealedPairs >= 1 && card.prizeId == 99)
+                {
+                    EndGame(true, null);
                 }
             }
             else
@@ -222,7 +226,18 @@ public class MemoryGame : MonoBehaviour
                 cardConfig.id = i;
                 cardConfig.manager = this;
                 cardConfig.cardBack = _config.cardBack;
-                cardConfig.cardFront = _config.cardPairs[i];
+                if (AppManager.Instance.Storage.ItemsList[i].Quantity > 0)
+                {
+                    cardConfig.prizeId = i;
+                    cardConfig.GetComponent<Button>().interactable = true;
+                    cardConfig.cardFront = _config.cardPairs[i];
+                }
+                else
+                {
+                    cardConfig.prizeId = 99;
+                    cardConfig.GetComponent<Button>().interactable = false;
+                    cardConfig.cardFront = _config.cardBack;
+                }
 
                 _cardsList.Add(cardConfig);
             }
@@ -277,7 +292,7 @@ public class MemoryGame : MonoBehaviour
         // Configurar o GridLayoutGroup com a quantidade de colunas
         gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gridLayoutGroup.constraintCount = numberOfColumns;
-        gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
+        //gridLayoutGroup.cellSize = new Vector2(cellWidth, cellHeight);
 
     }
 
@@ -319,7 +334,7 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+            _victoryMenu.SecondaryText = $"Você ganhou um cupom de desconto <b>{prizeName}</b>. Aproveite!";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else

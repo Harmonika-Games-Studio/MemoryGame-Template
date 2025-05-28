@@ -12,22 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045cc4695a78a9b45b1f23df8a89877a, type: 3}
   m_Name: MemoryGame Default Config
   m_EditorClassIdentifier: 
-  musicVolume: 15
+  musicVolume: 10
   sfxVolume: 100
   storageItems:
-  - itemName: Item 1
-    initialValue: 2
+  - itemName: Betto Carrero
+    initialValue: 200
     prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
+  - itemName: Constance
+    initialValue: 200
     prizeScore: 0
-  useLeads: 1
-  memorizationTime: 2
-  gameTime: 20
+  - itemName: Gazin
+    initialValue: 200
+    prizeScore: 0
+  - itemName: Glam
+    initialValue: 200
+    prizeScore: 0
+  - itemName: Hope
+    initialValue: 200
+    prizeScore: 0
+  - itemName: Playkids
+    initialValue: 200
+    prizeScore: 0
+  - itemName: Levis
+    initialValue: 200
+    prizeScore: 0
+  - itemName: "Z\xE9 Delivery"
+    initialValue: 200
+    prizeScore: 0
+  - itemName: Creamy Skincare
+    initialValue: 200
+    prizeScore: 0
+  useLeads: 0
+  memorizationTime: 3
+  gameTime: 30
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 21300000, guid: e5a1c4f6ffc58284bbb872902724d324, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 21300000, guid: 78ffbf98d655fa045acca797ff7506d1, type: 3}
+  - {fileID: 21300000, guid: 4669a54998574204db27db78df4235b3, type: 3}
+  - {fileID: 21300000, guid: 0647a005a62c6b44d85288629de5655c, type: 3}
+  - {fileID: 21300000, guid: 7b77d6b5aacde5a499c96432f032ebcd, type: 3}
+  - {fileID: 21300000, guid: a1db7450c5fe23242b057e46ef99798b, type: 3}
+  - {fileID: 21300000, guid: 739629edc806cd94192d7e8d25555086, type: 3}
+  - {fileID: 21300000, guid: 6e375bae9507a2849aa2ccb0d8671778, type: 3}
+  - {fileID: 21300000, guid: ac0fa3d0fb5cf084983fa3ea25a57c82, type: 3}
+  - {fileID: 21300000, guid: bda30cd20c7f0284191673b19c1d73a8, type: 3}

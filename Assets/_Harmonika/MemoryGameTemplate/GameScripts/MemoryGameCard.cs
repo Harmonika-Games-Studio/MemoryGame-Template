@@ -7,6 +7,7 @@ public class MemoryGameCard : MonoBehaviour
 {
     [SerializeField] private Image _cardImage;
     public Sprite cardFront, cardBack;
+    public int prizeId;
 
     private bool _coroutineAllowed;
     private bool _facedUp;
