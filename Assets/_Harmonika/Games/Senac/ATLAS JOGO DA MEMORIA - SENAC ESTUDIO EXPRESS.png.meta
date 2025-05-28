@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: d41624d494345f743bdf0ac1d1a6f99d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5577668591485119508
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_0
+  - first:
+      213: -450770165288202089
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_1
+  - first:
+      213: 7234365182529401293
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_2
+  - first:
+      213: 1504193866578673653
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_3
+  - first:
+      213: 246649333300414304
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_4
+  - first:
+      213: -923354221885634241
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_5
+  - first:
+      213: 6262174431315246992
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_6
+  - first:
+      213: 6852653482937232529
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_7
+  - first:
+      213: 1550581717084229378
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_8
+  - first:
+      213: 8601310652189989575
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_9
+  - first:
+      213: -2037461832264126587
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_10
+  - first:
+      213: -4651621400576062167
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_11
+  - first:
+      213: -5895040970751350935
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_12
+  - first:
+      213: 3181750858597753796
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_13
+  - first:
+      213: 2431383462332910102
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_14
+  - first:
+      213: -1003506187253373208
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_15
+  - first:
+      213: 767255156815486074
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_16
+  - first:
+      213: -3197326936854386054
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_17
+  - first:
+      213: -6905953394385685593
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_18
+  - first:
+      213: -2857395781893179983
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_19
+  - first:
+      213: 2420244705108316174
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_20
+  - first:
+      213: -1643438673416243503
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_21
+  - first:
+      213: -3887711891614143814
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_22
+  - first:
+      213: -3117267204508839653
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_23
+  - first:
+      213: 2523282353708977854
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_24
+  - first:
+      213: 6076252667982767346
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_25
+  - first:
+      213: -3353904687614059006
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_26
+  - first:
+      213: 2606189636545096676
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_27
+  - first:
+      213: 1846905160142027314
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_28
+  - first:
+      213: -1960046907753483543
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_29
+  - first:
+      213: 8899015884150513636
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_30
+  - first:
+      213: 632897672544200922
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_31
+  - first:
+      213: -1664614201107927927
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_32
+  - first:
+      213: 5828031096878571294
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_33
+  - first:
+      213: 2089126215580922542
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_34
+  - first:
+      213: -1096585460975125043
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_35
+  - first:
+      213: 2560955351926486991
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_36
+  - first:
+      213: 6472343955629289656
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_37
+  - first:
+      213: 8502392796766388362
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_38
+  - first:
+      213: -4421749204439950532
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_39
+  - first:
+      213: 8850062635257850406
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_40
+  - first:
+      213: 1627339851975709077
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_41
+  - first:
+      213: 3456971950541807612
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_42
+  - first:
+      213: 3295208717146431528
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_43
+  - first:
+      213: -2298160622448188530
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_44
+  - first:
+      213: 2059677345173903332
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_45
+  - first:
+      213: 5652065869163075990
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_46
+  - first:
+      213: -4584856498267355522
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_47
+  - first:
+      213: 328896598783609102
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_48
+  - first:
+      213: 3630063812826677428
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_49
+  - first:
+      213: -7131733754611349576
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_50
+  - first:
+      213: 328258778479752016
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_51
+  - first:
+      213: -3930720675337090699
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_52
+  - first:
+      213: -8600741588308719525
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_53
+  - first:
+      213: 6387809272762488732
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_54
+  - first:
+      213: -8165821056813144714
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_55
+  - first:
+      213: -5895121375144104332
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_56
+  - first:
+      213: -3993933856544734441
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_57
+  - first:
+      213: -8066156785316438545
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_58
+  - first:
+      213: 3403008589754649480
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_59
+  - first:
+      213: 6355026716660592196
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_60
+  - first:
+      213: 8818775083986491602
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_61
+  - first:
+      213: 980895461155415319
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_62
+  - first:
+      213: -3526941543797431583
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_63
+  - first:
+      213: 1125886663991773850
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_64
+  - first:
+      213: 4253540461033263187
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_65
+  - first:
+      213: -2335161512790794260
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_66
+  - first:
+      213: -7174466276009858759
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_67
+  - first:
+      213: -3243832147237199284
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_68
+  - first:
+      213: 4338484894367122493
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_69
+  - first:
+      213: 7024631929511679454
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_70
+  - first:
+      213: -8495768977894464236
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_71
+  - first:
+      213: 3848048541076249047
+    second: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_72
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Senac_Bg
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 63
+        width: 1082
+        height: 1922
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ce25e380cd76d40800000000000000
+      internalID: 5577668591485119508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_ButtonBg
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 1619
+        width: 829
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f450a3bd5c48510800000000000000
+      internalID: 1550581717084229378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_UserLogo
+      rect:
+        serializedVersion: 2
+        x: 3475
+        y: 1610
+        width: 334
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967edf9687b903ea0800000000000000
+      internalID: -5895040970751350935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_QuePena
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1467
+        width: 863
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4e1a0bb9f235450800000000000000
+      internalID: 6076252667982767346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Parabens
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 931
+        width: 859
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f9065876351e050800000000000000
+      internalID: 5828031096878571294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senca_Card1
+      rect:
+        serializedVersion: 2
+        x: 3089
+        y: 1150
+        width: 243
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd38bc455528c0f0800000000000000
+      internalID: -1096585460975125043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Card2
+      rect:
+        serializedVersion: 2
+        x: 3435
+        y: 1148
+        width: 242
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7b635f2575a8320800000000000000
+      internalID: 2560955351926486991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_45
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 833
+        width: 243
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7920ff1a1759c10800000000000000
+      internalID: 2059677345173903332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Card3
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 807
+        width: 243
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7602a27e415f50c0800000000000000
+      internalID: -4584856498267355522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Card4
+      rect:
+        serializedVersion: 2
+        x: 3743
+        y: 807
+        width: 243
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0c88b0ec3906230800000000000000
+      internalID: 3630063812826677428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATLAS JOGO DA MEMORIA - SENAC ESTUDIO EXPRESS_51
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 926
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05370bdae953e8400800000000000000
+      internalID: 328258778479752016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Title
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 246
+        width: 950
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b580ee7181704a880800000000000000
+      internalID: -8600741588308719525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Card5
+      rect:
+        serializedVersion: 2
+        x: 2754
+        y: 482
+        width: 243
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713ce387152b298c0800000000000000
+      internalID: -3993933856544734441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Card6
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 484
+        width: 243
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed5b9cd3214f0090800000000000000
+      internalID: -8066156785316438545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Card7
+      rect:
+        serializedVersion: 2
+        x: 2754
+        y: 122
+        width: 243
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939a9651fec2f6c90800000000000000
+      internalID: -7174466276009858759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Senac_Card8
+      rect:
+        serializedVersion: 2
+        x: 3435
+        y: 124
+        width: 242
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3486207605653c30800000000000000
+      internalID: 4338484894367122493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c9c735817e893a84394fa86b045fce58
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Senac_Bg: 5577668591485119508
+      Senac_ButtonBg: 1550581717084229378
+      Senac_Card2: 2560955351926486991
+      Senac_Card3: -4584856498267355522
+      Senac_Card4: 3630063812826677428
+      Senac_Card5: -3993933856544734441
+      Senac_Card6: -8066156785316438545
+      Senac_Card7: -7174466276009858759
+      Senac_Card8: 4338484894367122493
+      Senac_Parabens: 5828031096878571294
+      Senac_QuePena: 6076252667982767346
+      Senac_Title: -8600741588308719525
+      Senac_UserLogo: -5895040970751350935
+      Senca_Card1: -1096585460975125043
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
