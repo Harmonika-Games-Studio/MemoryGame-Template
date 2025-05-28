@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 0e22464db1b850f4c9e7dace4b9a51ae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2121478405243861332
+    second: secondLogo@4x_0
+  - first:
+      213: 1769560008020432095
+    second: secondLogo@4x_1
+  - first:
+      213: 7330138057063065382
+    second: secondLogo@4x_2
+  - first:
+      213: 61586769721510310
+    second: secondLogo@4x_3
+  - first:
+      213: -6882039362933726751
+    second: secondLogo@4x_4
+  - first:
+      213: 989798265303794130
+    second: secondLogo@4x_5
+  - first:
+      213: -5341755674342873681
+    second: secondLogo@4x_6
+  - first:
+      213: -5136925838153152334
+    second: secondLogo@4x_7
+  - first:
+      213: -6836385160969042174
+    second: secondLogo@4x_8
+  - first:
+      213: -3984897989306092516
+    second: secondLogo@4x_9
+  - first:
+      213: -2336226531563050220
+    second: secondLogo@4x_10
+  - first:
+      213: 2652161972779531797
+    second: secondLogo@4x_11
+  - first:
+      213: 3470861397349028560
+    second: secondLogo@4x_12
+  - first:
+      213: -3806221100208181106
+    second: secondLogo@4x_13
+  - first:
+      213: 3794100710203081036
+    second: secondLogo@4x_14
+  - first:
+      213: 8734936300108474939
+    second: secondLogo@4x_15
+  - first:
+      213: 5576418721092569966
+    second: secondLogo@4x_16
+  - first:
+      213: 9049150506158359162
+    second: secondLogo@4x_17
+  - first:
+      213: -1264281163449011269
+    second: secondLogo@4x_18
+  - first:
+      213: 6756787440224300800
+    second: secondLogo@4x_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: secondLogo@4x_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 133
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459f8379e51017d10800000000000000
+      internalID: 2121478405243861332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_1
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 51
+        width: 136
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd49bc6a37dbe8810800000000000000
+      internalID: 1769560008020432095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_2
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 49
+        width: 60
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627e0d5e9b1e9b560800000000000000
+      internalID: 7330138057063065382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_3
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 49
+        width: 106
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a94d1c37dccad000800000000000000
+      internalID: 61586769721510310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_4
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 164
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1641a79a51e70a0800000000000000
+      internalID: -6882039362933726751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_5
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 0
+        width: 60
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d10bb237487cbd00800000000000000
+      internalID: 989798265303794130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_6
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 11
+        width: 96
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5add914854ed5b0800000000000000
+      internalID: -5341755674342873681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_7
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 49
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b80b53ba29f5b8b0800000000000000
+      internalID: -5136925838153152334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_8
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 51
+        width: 85
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20740b4bae74021a0800000000000000
+      internalID: -6836385160969042174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_9
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 49
+        width: 88
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14fd31446cc2b8c0800000000000000
+      internalID: -3984897989306092516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_10
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 11
+        width: 102
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b675fe85e049fd0800000000000000
+      internalID: -2336226531563050220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_11
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 49
+        width: 86
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51eb252334f5ec420800000000000000
+      internalID: 2652161972779531797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_12
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 49
+        width: 82
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2da9d2d0afa2030800000000000000
+      internalID: 3470861397349028560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_13
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 49
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80be7953169d2bc0800000000000000
+      internalID: -3806221100208181106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_14
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 51
+        width: 51
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4146b17e7a57a430800000000000000
+      internalID: 3794100710203081036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_15
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 49
+        width: 82
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a61a7094ab83970800000000000000
+      internalID: 8734936300108474939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_16
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 49
+        width: 85
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b8f8d184b636d40800000000000000
+      internalID: 5576418721092569966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_17
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 51
+        width: 138
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a728d9ed07a059d70800000000000000
+      internalID: 9049150506158359162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_18
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 51
+        width: 137
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb37764fafe547ee0800000000000000
+      internalID: -1264281163449011269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: secondLogo@4x_19
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 51
+        width: 18
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00fe36db06ee4cd50800000000000000
+      internalID: 6756787440224300800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      secondLogo@4x_0: 2121478405243861332
+      secondLogo@4x_1: 1769560008020432095
+      secondLogo@4x_10: -2336226531563050220
+      secondLogo@4x_11: 2652161972779531797
+      secondLogo@4x_12: 3470861397349028560
+      secondLogo@4x_13: -3806221100208181106
+      secondLogo@4x_14: 3794100710203081036
+      secondLogo@4x_15: 8734936300108474939
+      secondLogo@4x_16: 5576418721092569966
+      secondLogo@4x_17: 9049150506158359162
+      secondLogo@4x_18: -1264281163449011269
+      secondLogo@4x_19: 6756787440224300800
+      secondLogo@4x_2: 7330138057063065382
+      secondLogo@4x_3: 61586769721510310
+      secondLogo@4x_4: -6882039362933726751
+      secondLogo@4x_5: 989798265303794130
+      secondLogo@4x_6: -5341755674342873681
+      secondLogo@4x_7: -5136925838153152334
+      secondLogo@4x_8: -6836385160969042174
+      secondLogo@4x_9: -3984897989306092516
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

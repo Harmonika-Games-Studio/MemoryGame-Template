@@ -42,6 +42,7 @@ public class MemoryGame : MonoBehaviour
 
     [Header("Menus")]
     [SerializeField] private StartMenu _mainMenu;
+    [SerializeField] private StartMenu _tutorialMenu;
     [SerializeField] private CollectLeadsMenu _collectLeadsMenu;
     [SerializeField] private GameoverMenu _victoryMenu;
     [SerializeField] private GameoverMenu _participationMenu;
@@ -108,7 +109,7 @@ public class MemoryGame : MonoBehaviour
         else _cronometer.TimerText.text = _remainingTime.ToString();
 
         InstantiateCards();
-        AdjustGridLayout();
+        //AdjustGridLayout();
         ShuffleCards();
 
         InvokeUtility.Invoke(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime), () =>
@@ -181,6 +182,9 @@ public class MemoryGame : MonoBehaviour
 
     private void SetupButtons()
     {
+
+        _tutorialMenu.StartBtn.onClick.AddListener(StartGame);
+
         if (AppManager.Instance.gameConfig.useLeads)
         {
             _mainMenu.StartBtn.onClick.AddListener(() =>
@@ -193,7 +197,7 @@ public class MemoryGame : MonoBehaviour
                     return;
                 }
 
-                _gameMenu.OpenMenu("CollectLeadsMenu");
+                _gameMenu.OpenMenu("TutorialMenu");
                 _collectLeadsMenu.ClearAllFields();
             });
             _collectLeadsMenu.ContinueBtn.onClick.AddListener(StartGame);
@@ -201,7 +205,7 @@ public class MemoryGame : MonoBehaviour
         }
         else
         {
-            _mainMenu.StartBtn.onClick.AddListener(StartGame);
+            _mainMenu.StartBtn.onClick.AddListener(() => _gameMenu.OpenMenu("TutorialMenu"));
         }
 
         _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
