@@ -3784,11 +3784,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7618244262471361990, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: _appId
-      value: 261
+      value: 392
       objectReference: {fileID: 0}
     - target: {fileID: 7618244262471361990, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: _testVersion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618244262471361990, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
+      propertyPath: _maxAllowedDate._dateTime
+      value: 28/05/2025 00:00:00
       objectReference: {fileID: 0}
     - target: {fileID: 7967053765974956131, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: m_Alpha
