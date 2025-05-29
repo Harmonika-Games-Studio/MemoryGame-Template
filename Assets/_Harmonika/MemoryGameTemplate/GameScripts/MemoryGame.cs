@@ -334,7 +334,7 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.SecondaryText = $"Você ganhou um cupom de desconto <b>{prizeName}</b>. Aproveite!";
+            _victoryMenu.SecondaryText = $"Você ganhou um cupom de desconto \n<b>{prizeName}</b>. Aproveite!";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else

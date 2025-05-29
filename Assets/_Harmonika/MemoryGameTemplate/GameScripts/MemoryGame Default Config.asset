@@ -15,7 +15,7 @@ MonoBehaviour:
   musicVolume: 10
   sfxVolume: 100
   storageItems:
-  - itemName: Betto Carrero
+  - itemName: Beto Carrero
     initialValue: 200
     prizeScore: 0
   - itemName: Constance
@@ -24,7 +24,7 @@ MonoBehaviour:
   - itemName: Gazin
     initialValue: 200
     prizeScore: 0
-  - itemName: Glam
+  - itemName: glam
     initialValue: 200
     prizeScore: 0
   - itemName: Hope
@@ -33,7 +33,7 @@ MonoBehaviour:
   - itemName: Playkids
     initialValue: 200
     prizeScore: 0
-  - itemName: Levis
+  - itemName: Levi's
     initialValue: 200
     prizeScore: 0
   - itemName: "Z\xE9 Delivery"
