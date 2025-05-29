@@ -298,6 +298,11 @@ public class MemoryGame : MonoBehaviour
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
+        int minutes = (int)(tempo / 60);
+        int seconds = (int)(tempo % 60);
+        _victoryMenu.SecondaryText = string.Format("{0:00}:{1:00}", minutes, seconds);
+        _participationMenu.SecondaryText = string.Format("{0:00}:{1:00}", minutes, seconds);
+        _loseMenu.SecondaryText = string.Format("{0:00}:{1:00}", minutes, seconds);
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
 
@@ -315,6 +320,7 @@ public class MemoryGame : MonoBehaviour
 
         AppManager.Instance.DataSync.SaveLeads();
         });
+        StartCoroutine(BackToMenu());
     }
 
     private void WinGame(string prizeName = null)
@@ -323,7 +329,7 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+            //_victoryMenu.SecondaryText = (_startTime - _cronometer.);
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
@@ -344,5 +350,11 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
+    }
+
+    private IEnumerator BackToMenu()
+    {
+        yield return new WaitForSeconds(6f);
+        _gameMenu.OpenMenu("MainMenu");
     }
 }

@@ -5989,7 +5989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7618244262471361990, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: _maxAllowedDate._dateTime
-      value: 28/07/2025 12:00:00
+      value: 30/07/2025 12:00:00
       objectReference: {fileID: 0}
     - target: {fileID: 7967053765974956131, guid: 4ce3b343ad050bc4e80ca9a5def670d6, type: 3}
       propertyPath: m_Alpha
@@ -6544,7 +6544,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682841154}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -6619,7 +6619,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 701f4db9895fa33448c6bfd7d5357c42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02ce1473e2bdde249b5d89c419228739, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6733,7 +6733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Montar campanha Full Funnel em at\xE9 01:30 segundos"
+  m_text: "Montar campanha Full Funnel em at\xE9 90 segundos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f87258754febc5448b9cd08e48f2fb59, type: 2}
   m_sharedMaterial: {fileID: 3597049435624696433, guid: f87258754febc5448b9cd08e48f2fb59, type: 2}
@@ -9090,8 +9090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _backBtn: {fileID: 501924412}
-  _primaryTxt: {fileID: 0}
-  _secondaryTxt: {fileID: 0}
+  _primaryTxt: {fileID: 179511241}
+  _secondaryTxt: {fileID: 1437045887}
 --- !u!1 &1255058648
 GameObject:
   m_ObjectHideFlags: 0
@@ -11488,7 +11488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -327.9, y: -98.9}
+  m_AnchoredPosition: {x: -327.9, y: -98.8999}
   m_SizeDelta: {x: 846, y: 162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679199371
@@ -14315,7 +14315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backBtn: {fileID: 2066175383}
   _primaryTxt: {fileID: 6453544187988702210}
-  _secondaryTxt: {fileID: 2337325421245090594}
+  _secondaryTxt: {fileID: 498930811}
 --- !u!224 &7308535934587558273
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14354,8 +14354,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _backBtn: {fileID: 1382537299}
-  _primaryTxt: {fileID: 0}
-  _secondaryTxt: {fileID: 0}
+  _primaryTxt: {fileID: 1177795188}
+  _secondaryTxt: {fileID: 312900179}
 --- !u!224 &8493687010297151782
 RectTransform:
   m_ObjectHideFlags: 0
