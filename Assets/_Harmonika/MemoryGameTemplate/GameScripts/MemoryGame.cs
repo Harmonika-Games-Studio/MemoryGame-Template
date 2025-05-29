@@ -108,7 +108,7 @@ public class MemoryGame : MonoBehaviour
         else _cronometer.TimerText.text = _remainingTime.ToString();
 
         InstantiateCards();
-        AdjustGridLayout();
+        //AdjustGridLayout();
         ShuffleCards();
 
         InvokeUtility.Invoke(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime), () =>
