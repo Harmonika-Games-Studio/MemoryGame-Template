@@ -1,0 +1,815 @@
+fileFormatVersion: 2
+guid: 692fa38a91a3d644b98f80c244739a10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5654906740625292
+    second: AtlasPM_0
+  - first:
+      213: 1238755895576204021
+    second: AtlasPM_1
+  - first:
+      213: -4716154361129994207
+    second: AtlasPM_2
+  - first:
+      213: -7719801212858423595
+    second: AtlasPM_3
+  - first:
+      213: 793505089027474649
+    second: AtlasPM_4
+  - first:
+      213: -5564820064090582782
+    second: AtlasPM_5
+  - first:
+      213: -6542362322535879797
+    second: AtlasPM_6
+  - first:
+      213: -8686163314873055279
+    second: AtlasPM_7
+  - first:
+      213: -7553845870919296147
+    second: AtlasPM_8
+  - first:
+      213: -4902688736274007087
+    second: AtlasPM_9
+  - first:
+      213: 1422219378456345854
+    second: AtlasPM_10
+  - first:
+      213: -7887919761821500115
+    second: AtlasPM_11
+  - first:
+      213: 2412062811362489306
+    second: AtlasPM_12
+  - first:
+      213: -5879351918841931933
+    second: AtlasPM_13
+  - first:
+      213: 9188518174151989291
+    second: AtlasPM_14
+  - first:
+      213: -121026384323906484
+    second: AtlasPM_15
+  - first:
+      213: -5944588521654366427
+    second: AtlasPM_16
+  - first:
+      213: 7240906302661032536
+    second: AtlasPM_17
+  - first:
+      213: -7412026354558528104
+    second: AtlasPM_18
+  - first:
+      213: -4351053276003599841
+    second: AtlasPM_19
+  - first:
+      213: 6784391537282803475
+    second: AtlasPM_20
+  - first:
+      213: -1775335902161142062
+    second: AtlasPM_21
+  - first:
+      213: 4493104206010486651
+    second: AtlasPM_22
+  - first:
+      213: -4723273768139594776
+    second: AtlasPM_23
+  - first:
+      213: 5531189600812255961
+    second: AtlasPM_24
+  - first:
+      213: 6103430494410540203
+    second: AtlasPM_25
+  - first:
+      213: -7311277563087888278
+    second: AtlasPM_26
+  - first:
+      213: -370703784186322061
+    second: AtlasPM_27
+  - first:
+      213: 6530476588736799848
+    second: AtlasPM_28
+  - first:
+      213: -60473961456752717
+    second: AtlasPM_29
+  - first:
+      213: 3621710430052111118
+    second: AtlasPM_30
+  - first:
+      213: 836322515623978777
+    second: AtlasPM_31
+  - first:
+      213: -5568472210141219606
+    second: AtlasPM_32
+  - first:
+      213: -9102251416723594585
+    second: AtlasPM_33
+  - first:
+      213: 333336081203754019
+    second: AtlasPM_34
+  - first:
+      213: 8363861678887630262
+    second: AtlasPM_35
+  - first:
+      213: 3596532398289349443
+    second: AtlasPM_36
+  - first:
+      213: -4584642362751055950
+    second: AtlasPM_37
+  - first:
+      213: -3894588925890642077
+    second: AtlasPM_38
+  - first:
+      213: 3855358594096134366
+    second: AtlasPM_39
+  - first:
+      213: -4103603767387859060
+    second: AtlasPM_40
+  - first:
+      213: -784691528203354277
+    second: AtlasPM_41
+  - first:
+      213: -5036206723432895887
+    second: AtlasPM_42
+  - first:
+      213: -7905240205310023506
+    second: AtlasPM_43
+  - first:
+      213: -1145767201774657517
+    second: AtlasPM_44
+  - first:
+      213: -497506700261901199
+    second: AtlasPM_45
+  - first:
+      213: -2040148750111512867
+    second: AtlasPM_46
+  - first:
+      213: -7386426702257327998
+    second: AtlasPM_47
+  - first:
+      213: -9045075851691529361
+    second: AtlasPM_48
+  - first:
+      213: 6882136480146110552
+    second: AtlasPM_49
+  - first:
+      213: 3359466575074382387
+    second: AtlasPM_50
+  - first:
+      213: -6824939837755830100
+    second: AtlasPM_51
+  - first:
+      213: 7937363582049076418
+    second: AtlasPM_52
+  - first:
+      213: 40952564963176263
+    second: AtlasPM_53
+  - first:
+      213: 4699892782361476508
+    second: AtlasPM_54
+  - first:
+      213: 781322314991730684
+    second: AtlasPM_55
+  - first:
+      213: -1683337866804459632
+    second: AtlasPM_56
+  - first:
+      213: -5773901756159840166
+    second: AtlasPM_57
+  - first:
+      213: 7184284701821973745
+    second: AtlasPM_58
+  - first:
+      213: -460699288564450408
+    second: AtlasPM_59
+  - first:
+      213: -8000217831537416251
+    second: AtlasPM_60
+  - first:
+      213: 6351730677530494233
+    second: AtlasPM_61
+  - first:
+      213: -7341858120388002720
+    second: AtlasPM_62
+  - first:
+      213: 7955655373825570240
+    second: AtlasPM_63
+  - first:
+      213: 7878098652605601250
+    second: AtlasPM_64
+  - first:
+      213: -7598611689480211462
+    second: AtlasPM_65
+  - first:
+      213: 4528386668046568154
+    second: AtlasPM_66
+  - first:
+      213: -2575866230146814720
+    second: AtlasPM_67
+  - first:
+      213: -952003216684009136
+    second: AtlasPM_68
+  - first:
+      213: -4096879739020361571
+    second: AtlasPM_69
+  - first:
+      213: 6476162030047194284
+    second: AtlasPM_70
+  - first:
+      213: -4009845861787310016
+    second: AtlasPM_71
+  - first:
+      213: 3399687774140782299
+    second: AtlasPM_72
+  - first:
+      213: -1692795958865946698
+    second: AtlasPM_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AtlasPM_Carta0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1744
+        width: 227
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470bc7c64e8ebeff0800000000000000
+      internalID: -5654906740625292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Carta1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1745
+        width: 227
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f29d3f7ce1f03110800000000000000
+      internalID: 1238755895576204021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Carta2
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1746
+        width: 227
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128ffe6889adc8eb0800000000000000
+      internalID: -4716154361129994207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Carta3
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1746
+        width: 227
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6a1fab2b1cdd490800000000000000
+      internalID: -7719801212858423595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Verso
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 1735
+        width: 230
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d482fe9ca8130b00800000000000000
+      internalID: 793505089027474649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Carta4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1435
+        width: 227
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2011ae8a2a9c5c2b0800000000000000
+      internalID: -5564820064090582782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Carta5
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1435
+        width: 227
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b695d612cd435a0800000000000000
+      internalID: -6542362322535879797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Carta6
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1434
+        width: 227
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d746f38c7c847780800000000000000
+      internalID: -8686163314873055279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Carta7
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1435
+        width: 227
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6bddcfc3395b2790800000000000000
+      internalID: -7553845870919296147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_UserLogo
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1435
+        width: 214
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32478f6566f30a400800000000000000
+      internalID: 333336081203754019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Button
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1171
+        width: 658
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00dac2baf4fa04cd0800000000000000
+      internalID: -2575866230146814720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Arrow
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1237
+        width: 63
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059358c4e1ec9c2f0800000000000000
+      internalID: -952003216684009136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_LeadField
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 955
+        width: 853
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9042346595f427c0800000000000000
+      internalID: -4096879739020361571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_LoseMenuTitle
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 0
+        width: 971
+        height: 957
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cace5dcdd03ffd950800000000000000
+      internalID: 6476162030047194284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_LeadTitle
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 779
+        width: 826
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048e81c0f6a2a58c0800000000000000
+      internalID: -4009845861787310016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_StartMenuTitle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1077
+        height: 573
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b714925b0bf188e0800000000000000
+      internalID: -1692795958865946698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Finalizar
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1943
+        width: 523
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0890e3d62195e4792d00ca5603cd90
+      internalID: -1053029225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Iniciar
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 1846
+        width: 380
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2a3ab425ff8b54b937f51807e20549
+      internalID: -671331258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasPM_Jogar
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 1747
+        width: 342
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f883bca58e45f004a92a1acb87df485f
+      internalID: -1491794359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 14da9ed3148c031408c1378d44920632
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AtlasPM_Arrow: -952003216684009136
+      AtlasPM_Button: -2575866230146814720
+      AtlasPM_Carta0: -5654906740625292
+      AtlasPM_Carta1: 1238755895576204021
+      AtlasPM_Carta2: -4716154361129994207
+      AtlasPM_Carta3: -7719801212858423595
+      AtlasPM_Carta4: -5564820064090582782
+      AtlasPM_Carta5: -6542362322535879797
+      AtlasPM_Carta6: -8686163314873055279
+      AtlasPM_Carta7: -7553845870919296147
+      AtlasPM_Finalizar: -1053029225
+      AtlasPM_Iniciar: -671331258
+      AtlasPM_Jogar: -1491794359
+      AtlasPM_LeadField: -4096879739020361571
+      AtlasPM_LeadTitle: -4009845861787310016
+      AtlasPM_LoseMenuTitle: 6476162030047194284
+      AtlasPM_StartMenuTitle: -1692795958865946698
+      AtlasPM_UserLogo: 333336081203754019
+      AtlasPM_Verso: 793505089027474649
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
