@@ -1723,6 +1723,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3285512468221962863, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
+      propertyPath: '_toasts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2416740440738062927, guid: d79f1d97c9c9eb641b3f7f4a262c724d, type: 3}
+    - target: {fileID: 3285512468221962863, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
+      propertyPath: '_simpleDialogs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2416740440738062927, guid: 7364cd56072f5534aaecd375da69b64c, type: 3}
+    - target: {fileID: 3285512468221962863, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
+      propertyPath: '_simpleDialogs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2416740440738062927, guid: 593da87cc8bcd704c938aef41758d7aa, type: 3}
+    - target: {fileID: 3285512468221962863, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
+      propertyPath: '_confirmDialogs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2416740440738062927, guid: 5c639f339268e0a4ba984cbb154d0eb7, type: 3}
     - target: {fileID: 8807133315808511837, guid: 03f5f612817c72d4bac7dc7632988d2c, type: 3}
       propertyPath: m_Name
       value: PopupManager
