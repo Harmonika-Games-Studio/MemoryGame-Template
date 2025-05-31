@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Harmonika/MemoryGameTemplate/MemoryGame.unity
-    guid: c7d884e6c4440c142807bbd9a9e29d78
+    path: Assets/_Harmonika/RicoGame/RicoGame.unity
+    guid: 72c87800846af6640b52977e4a01f908
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

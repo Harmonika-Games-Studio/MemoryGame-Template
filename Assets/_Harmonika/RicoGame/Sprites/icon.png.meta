@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bf5246235e97c8e40bee241078a34a45
+guid: e791a43d128c5ed47a5b9651277a3607
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -777798065587020608
-    second: GAME_0
+      213: -8289757635477254070
+    second: cardVerso_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -72,12 +72,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GAME_0
+      name: cardVerso_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1080
-        height: 1920
+        width: 233
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cc13b1c7c4b435f0800000000000000
-      internalID: -777798065587020608
+      spriteID: a40db4ff95dd4fc80800000000000000
+      internalID: -8289757635477254070
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GAME_0: -777798065587020608
+      cardVerso_0: -8289757635477254070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
