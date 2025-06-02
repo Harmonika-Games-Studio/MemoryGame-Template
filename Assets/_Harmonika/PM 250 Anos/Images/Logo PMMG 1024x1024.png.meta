@@ -1,0 +1,1931 @@
+fileFormatVersion: 2
+guid: c882d5f5aef8efc4c8d1c0abd362033a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -953253700527936894
+    second: Logo PMMG 1024x1024_0
+  - first:
+      213: -2786087991689215952
+    second: Logo PMMG 1024x1024_1
+  - first:
+      213: -3290482290443398116
+    second: Logo PMMG 1024x1024_2
+  - first:
+      213: 7655001430526424593
+    second: Logo PMMG 1024x1024_3
+  - first:
+      213: 7775555322681998426
+    second: Logo PMMG 1024x1024_4
+  - first:
+      213: 5518338140302293411
+    second: Logo PMMG 1024x1024_5
+  - first:
+      213: -602895697517345068
+    second: Logo PMMG 1024x1024_6
+  - first:
+      213: -4101983011423835233
+    second: Logo PMMG 1024x1024_7
+  - first:
+      213: 4240487898469247326
+    second: Logo PMMG 1024x1024_8
+  - first:
+      213: 6043546594973425106
+    second: Logo PMMG 1024x1024_9
+  - first:
+      213: 530787176819656312
+    second: Logo PMMG 1024x1024_10
+  - first:
+      213: -8616522089485287956
+    second: Logo PMMG 1024x1024_11
+  - first:
+      213: -3231560798761277037
+    second: Logo PMMG 1024x1024_12
+  - first:
+      213: -2965710648347745548
+    second: Logo PMMG 1024x1024_13
+  - first:
+      213: -547366874959045023
+    second: Logo PMMG 1024x1024_14
+  - first:
+      213: 4688827871486138857
+    second: Logo PMMG 1024x1024_15
+  - first:
+      213: -968463632602091827
+    second: Logo PMMG 1024x1024_16
+  - first:
+      213: 5488160835899641912
+    second: Logo PMMG 1024x1024_17
+  - first:
+      213: -6027909836062597569
+    second: Logo PMMG 1024x1024_18
+  - first:
+      213: -7174814171187600171
+    second: Logo PMMG 1024x1024_19
+  - first:
+      213: 82566870652709384
+    second: Logo PMMG 1024x1024_20
+  - first:
+      213: 6383339575012901186
+    second: Logo PMMG 1024x1024_21
+  - first:
+      213: 7374090970340122685
+    second: Logo PMMG 1024x1024_22
+  - first:
+      213: 7652414201082618757
+    second: Logo PMMG 1024x1024_23
+  - first:
+      213: 1896078478336784886
+    second: Logo PMMG 1024x1024_24
+  - first:
+      213: 1114294366413826303
+    second: Logo PMMG 1024x1024_25
+  - first:
+      213: 580190536771832262
+    second: Logo PMMG 1024x1024_26
+  - first:
+      213: 1834024154000251849
+    second: Logo PMMG 1024x1024_27
+  - first:
+      213: -4076954541228436508
+    second: Logo PMMG 1024x1024_28
+  - first:
+      213: -3326793685467301320
+    second: Logo PMMG 1024x1024_29
+  - first:
+      213: -6283099908466728555
+    second: Logo PMMG 1024x1024_30
+  - first:
+      213: 8321773287014728291
+    second: Logo PMMG 1024x1024_31
+  - first:
+      213: -3493658708277238077
+    second: Logo PMMG 1024x1024_32
+  - first:
+      213: -192036723009876697
+    second: Logo PMMG 1024x1024_33
+  - first:
+      213: 5478737583039399811
+    second: Logo PMMG 1024x1024_34
+  - first:
+      213: -1516660618319371355
+    second: Logo PMMG 1024x1024_35
+  - first:
+      213: -1493533561414181082
+    second: Logo PMMG 1024x1024_36
+  - first:
+      213: -7818965048402881545
+    second: Logo PMMG 1024x1024_37
+  - first:
+      213: -1021715220461552145
+    second: Logo PMMG 1024x1024_38
+  - first:
+      213: -8843464882225965904
+    second: Logo PMMG 1024x1024_39
+  - first:
+      213: 849186945666632460
+    second: Logo PMMG 1024x1024_40
+  - first:
+      213: 7613186092051248966
+    second: Logo PMMG 1024x1024_41
+  - first:
+      213: -549258763055826165
+    second: Logo PMMG 1024x1024_42
+  - first:
+      213: -2110793016935430247
+    second: Logo PMMG 1024x1024_43
+  - first:
+      213: -2494715400045077604
+    second: Logo PMMG 1024x1024_44
+  - first:
+      213: -6124877989946395214
+    second: Logo PMMG 1024x1024_45
+  - first:
+      213: -327920007842017853
+    second: Logo PMMG 1024x1024_46
+  - first:
+      213: 8913553677529305440
+    second: Logo PMMG 1024x1024_47
+  - first:
+      213: -2225207459259827809
+    second: Logo PMMG 1024x1024_48
+  - first:
+      213: 3488704019980444349
+    second: Logo PMMG 1024x1024_49
+  - first:
+      213: 6015109572018903975
+    second: Logo PMMG 1024x1024_50
+  - first:
+      213: -6487109148065334315
+    second: Logo PMMG 1024x1024_51
+  - first:
+      213: 1050220797447712716
+    second: Logo PMMG 1024x1024_52
+  - first:
+      213: 7680172749143596429
+    second: Logo PMMG 1024x1024_53
+  - first:
+      213: -1585146052060361722
+    second: Logo PMMG 1024x1024_54
+  - first:
+      213: -4847883981604692857
+    second: Logo PMMG 1024x1024_55
+  - first:
+      213: -6682810830005155867
+    second: Logo PMMG 1024x1024_56
+  - first:
+      213: -885253919048363675
+    second: Logo PMMG 1024x1024_57
+  - first:
+      213: 3333257418129038968
+    second: Logo PMMG 1024x1024_58
+  - first:
+      213: 7191577954329572767
+    second: Logo PMMG 1024x1024_59
+  - first:
+      213: 2242698081547716206
+    second: Logo PMMG 1024x1024_60
+  - first:
+      213: 684778873195612695
+    second: Logo PMMG 1024x1024_61
+  - first:
+      213: -3564815726718109562
+    second: Logo PMMG 1024x1024_62
+  - first:
+      213: -4696188891882909196
+    second: Logo PMMG 1024x1024_63
+  - first:
+      213: 8092168533551052935
+    second: Logo PMMG 1024x1024_64
+  - first:
+      213: -6616913225935456613
+    second: Logo PMMG 1024x1024_65
+  - first:
+      213: -4172441560248183649
+    second: Logo PMMG 1024x1024_66
+  - first:
+      213: -2868179732077754338
+    second: Logo PMMG 1024x1024_67
+  - first:
+      213: -7138511670792453405
+    second: Logo PMMG 1024x1024_68
+  - first:
+      213: -8054663830252221297
+    second: Logo PMMG 1024x1024_69
+  - first:
+      213: -4152901397986532282
+    second: Logo PMMG 1024x1024_70
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_0
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 941
+        width: 69
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28aa4375fcc55c2f0800000000000000
+      internalID: -953253700527936894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_1
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 941
+        width: 77
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030026e9bb3d559d0800000000000000
+      internalID: -2786087991689215952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_2
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 941
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1458626acbd552d0800000000000000
+      internalID: -3290482290443398116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_3
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 991
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11672ad3e370c3a60800000000000000
+      internalID: 7655001430526424593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_4
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 941
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cbbdb8e5258eb60800000000000000
+      internalID: 7775555322681998426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_5
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 941
+        width: 70
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a9353b1d43159c40800000000000000
+      internalID: 5518338140302293411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_6
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 941
+        width: 27
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d60ed0be8512a7f0800000000000000
+      internalID: -602895697517345068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_7
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 941
+        width: 75
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b25613f24d217c0800000000000000
+      internalID: -4101983011423835233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 923
+        width: 421
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e592a9ec64d39da30800000000000000
+      internalID: 4240487898469247326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_9
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 847
+        width: 85
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd99e8ab9dfed350800000000000000
+      internalID: 6043546594973425106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_10
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 847
+        width: 27
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8760ba5002cbd5700800000000000000
+      internalID: 530787176819656312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_11
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 847
+        width: 55
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced3ce8dfc6fb6880800000000000000
+      internalID: -8616522089485287956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_12
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 847
+        width: 28
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399a1c733903723d0800000000000000
+      internalID: -3231560798761277037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_13
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 847
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2a3aad0eda7d6d0800000000000000
+      internalID: -2965710648347745548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_14
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 847
+        width: 76
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e10403abc5768f0800000000000000
+      internalID: -547366874959045023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_15
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 847
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9d1ec4b10121140800000000000000
+      internalID: 4688827871486138857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_16
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 813
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce2ed015735f82f0800000000000000
+      internalID: -968463632602091827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_17
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 815
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8305206e33dd92c40800000000000000
+      internalID: 5488160835899641912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_18
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 814
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ed76bf0ff885ca0800000000000000
+      internalID: -6027909836062597569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_19
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 815
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4acec6680fd6c90800000000000000
+      internalID: -7174814171187600171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_20
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 815
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a6873a126552100800000000000000
+      internalID: 82566870652709384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_21
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 815
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2414659e58d269850800000000000000
+      internalID: 6383339575012901186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_22
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 813
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d30e98cfaa8065660800000000000000
+      internalID: 7374090970340122685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_23
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 813
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5832fa1fb26d23a60800000000000000
+      internalID: 7652414201082618757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_24
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 815
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9f6878459305a10800000000000000
+      internalID: 1896078478336784886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_25
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 815
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8a05d82d4c67f00800000000000000
+      internalID: 1114294366413826303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_26
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 815
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9045e18304d0800800000000000000
+      internalID: 580190536771832262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_27
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 815
+        width: 12
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cbdba04043c37910800000000000000
+      internalID: 1834024154000251849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_28
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 813
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3d9a4027fbb67c0800000000000000
+      internalID: -4076954541228436508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_29
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 383
+        width: 286
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a75b8e4cad4d1d0800000000000000
+      internalID: -3326793685467301320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_30
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 195
+        width: 419
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5912d8b2ce1fdc8a0800000000000000
+      internalID: -6283099908466728555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_31
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 593
+        width: 338
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36209d1c6b0ec7370800000000000000
+      internalID: 8321773287014728291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_32
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 541
+        width: 125
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c66fae3ae7048fc0800000000000000
+      internalID: -3493658708277238077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_33
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 383
+        width: 226
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d8a2d2e9fb55df0800000000000000
+      internalID: -192036723009876697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_34
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 49
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38745aeddc2680c40800000000000000
+      internalID: 5478737583039399811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_35
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 72
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3ef38043db3fae0800000000000000
+      internalID: -1516660618319371355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_36
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 71
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f98c39327e54be0800000000000000
+      internalID: -1493533561414181082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_37
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 72
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f350c217b47d7390800000000000000
+      internalID: -7818965048402881545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_38
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 59
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed77c69b6322d1f0800000000000000
+      internalID: -1021715220461552145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_39
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 72
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b497475b83b54580800000000000000
+      internalID: -8843464882225965904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_40
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 71
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0bcb54270be8cb00800000000000000
+      internalID: 849186945666632460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_41
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 71
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647b8a11a6877a960800000000000000
+      internalID: 7613186092051248966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_42
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 72
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b794aa014a068f0800000000000000
+      internalID: -549258763055826165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_43
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 71
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997403f3fe4f4b2e0800000000000000
+      internalID: -2110793016935430247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_44
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 72
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9bdd9caf8df06dd0800000000000000
+      internalID: -2494715400045077604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_45
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 71
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5f2ac4bef000ba0800000000000000
+      internalID: -6124877989946395214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_46
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 72
+        width: 57
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd45d18d7ef27bf0800000000000000
+      internalID: -327920007842017853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_47
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 72
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061d28bf7dd43bb70800000000000000
+      internalID: 8913553677529305440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_48
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 72
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f99b44ffa997e11e0800000000000000
+      internalID: -2225207459259827809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_49
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 72
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2696d72dd5a6030800000000000000
+      internalID: 3488704019980444349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_50
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 72
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab1d3d4946f97350800000000000000
+      internalID: 6015109572018903975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_51
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 72
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dbf06a999829f5a0800000000000000
+      internalID: -6487109148065334315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_52
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 71
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf299f3042239e00800000000000000
+      internalID: 1050220797447712716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_53
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 22
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8dd65e8c64759a60800000000000000
+      internalID: 7680172749143596429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_54
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 22
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c44d9601e600ae0800000000000000
+      internalID: -1585146052060361722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_55
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 22
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c5524343bd8bcb0800000000000000
+      internalID: -4847883981604692857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_56
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 21
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7c86805f2e143a0800000000000000
+      internalID: -6682810830005155867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_57
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 22
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561991b3042f6b3f0800000000000000
+      internalID: -885253919048363675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_58
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 21
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e548026fb124e20800000000000000
+      internalID: 3333257418129038968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_59
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 14
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95385efb0e9dc360800000000000000
+      internalID: 7191577954329572767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_60
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 22
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e660a19d50aaf1f10800000000000000
+      internalID: 2242698081547716206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_61
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 17
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a448ec1c2d08900800000000000000
+      internalID: 684778873195612695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_62
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 21
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688bd37dbfa378ec0800000000000000
+      internalID: -3564815726718109562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_63
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 22
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f11f259519c3deb0800000000000000
+      internalID: -4696188891882909196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_64
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 22
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78877e838682d4070800000000000000
+      internalID: 8092168533551052935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_65
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 22
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96788a9a700c24a0800000000000000
+      internalID: -6616913225935456613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_66
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 21
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94945be1828816c0800000000000000
+      internalID: -4172441560248183649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_67
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 22
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e18c78ddabd2238d0800000000000000
+      internalID: -2868179732077754338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_68
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 22
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e28f65f479eeec90800000000000000
+      internalID: -7138511670792453405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_69
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 21
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c01acfbe5183090800000000000000
+      internalID: -8054663830252221297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo PMMG 1024x1024_70
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 21
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6442ac97e2eed56c0800000000000000
+      internalID: -4152901397986532282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

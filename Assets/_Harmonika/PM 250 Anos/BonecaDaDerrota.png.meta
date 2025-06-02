@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6a804b973aa13ba468b6e389c2d2c109
+guid: a3609a007ab123a4fa1d4eb5d4259e4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2459680337299689278
-    second: QUIZ INTERATIVO  - PM250_0
+      213: -768247102109560957
+    second: Camada 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: QUIZ INTERATIVO  - PM250_0
+      name: Camada 3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 6980
-        height: 1920
+        width: 424
+        height: 776
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3fc2cd1c3a822220800000000000000
-      internalID: 2459680337299689278
+      spriteID: 38f490bb453a655f0800000000000000
+      internalID: -768247102109560957
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      QUIZ INTERATIVO  - PM250_0: 2459680337299689278
+      Camada 3_0: -768247102109560957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
