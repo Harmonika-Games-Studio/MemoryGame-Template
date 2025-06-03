@@ -298,11 +298,10 @@ public class MemoryGame : MonoBehaviour
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
-        int minutes = (int)(tempo / 60);
-        int seconds = (int)(tempo % 60);
-        _victoryMenu.SecondaryText = string.Format("{0:00}:{1:00}", minutes, seconds);
-        _participationMenu.SecondaryText = string.Format("{0:00}:{1:00}", minutes, seconds);
-        _loseMenu.SecondaryText = string.Format("{0:00}:{1:00}", minutes, seconds);
+        int tempoReal = Mathf.FloorToInt(tempo);
+        _victoryMenu.SecondaryText = "00:" + tempoReal.ToString();
+        _participationMenu.SecondaryText = "00:" + tempoReal.ToString();
+        _loseMenu.SecondaryText = "00:" + tempoReal.ToString();
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
 
