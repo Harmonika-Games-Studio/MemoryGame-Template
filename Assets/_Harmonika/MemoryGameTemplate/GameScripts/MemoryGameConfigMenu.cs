@@ -40,9 +40,9 @@ public class MemoryGameConfigMenu : ConfigMenu
 
     private void OnGameTimeValueChanged(string value)
     {
-        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 10)
+        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 5)
         {
-            value = "10";
+            value = "5";
         }
         else if (int.Parse(value) > 999)
         {
@@ -55,9 +55,9 @@ public class MemoryGameConfigMenu : ConfigMenu
 
     private void OnMemorizationTimeValueChanged(string value)
     {
-        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 2)
+        if (string.IsNullOrEmpty(value) || int.Parse(value) <= 0)
         {
-            value = "2";
+            value = "0";
         }
         else if (int.Parse(value) > 99)
         {

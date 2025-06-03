@@ -116,9 +116,12 @@ public class MemoryGame : MonoBehaviour
         {
             _cronometer.StartTimer();
 
-            foreach (var card in _cardsList)
+            if (_config.memorizationTime > 0)
             {
-                card.RotateCardDown();
+                foreach (var card in _cardsList)
+                {
+                    card.RotateCardDown();
+                }
             }
         });
     }
@@ -298,7 +301,7 @@ public class MemoryGame : MonoBehaviour
 
         _cronometer.EndTimer();
         float tempo = Time.time - _startTime;
-        int tempoReal = Mathf.FloorToInt(tempo);
+        int tempoReal = Mathf.FloorToInt(tempo) - Config.memorizationTime;
         _victoryMenu.SecondaryText = "00:" + tempoReal.ToString();
         _participationMenu.SecondaryText = "00:" + tempoReal.ToString();
         _loseMenu.SecondaryText = "00:" + tempoReal.ToString();

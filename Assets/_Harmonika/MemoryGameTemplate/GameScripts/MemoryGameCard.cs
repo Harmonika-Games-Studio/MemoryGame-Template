@@ -28,7 +28,10 @@ public class MemoryGameCard : MonoBehaviour
     {
         StartFacedUp(false);
         _coroutineAllowed = true;
-        RotateCard();
+        if (PlayerPrefs.GetInt("MemorizationTime", 0) > 0)
+        {
+            RotateCard();
+        }
     }
 
     public void ClickOnCard()
