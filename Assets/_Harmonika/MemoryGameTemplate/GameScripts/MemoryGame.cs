@@ -8,7 +8,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using UnityEngine.InputSystem; // Add this for the new Input System
 
 
 public class JsonDeserializedConfig
@@ -91,21 +90,29 @@ public class MemoryGame : MonoBehaviour
     private void Awake()
     {
         //This code is necessary to run the game smoothly on android
-        Application.targetFrameRate = 60;
-        QualitySettings.vSyncCount = 0;
-
+        //Application.targetFrameRate = 60;
+        //QualitySettings.vSyncCount = 0;
         _gridLayoutRect = gridLayoutGroup.gameObject.GetComponent<RectTransform>();
         _cronometer.onEndTimer.AddListener(() => EndGame(false));
         AppManager.Instance.gameConfig = _config;
-
         _gameMenu = GetComponentInChildren<MenuManager>();
-
         AppManager.Instance.ApplyScriptableConfig();
         AppManager.Instance.Storage.Setup();
 
+        // Load video from StreamingAssets
+        LoadVideoFromStreamingAssets();
+
         _restVideo.Prepare();
-        
+
         SetupButtons();
+    }
+
+    private void LoadVideoFromStreamingAssets()
+    {
+        string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "VideoVertical.mp4");
+
+        // Set the video URL/path
+        _restVideo.url = videoPath;
     }
 
     void Update()
