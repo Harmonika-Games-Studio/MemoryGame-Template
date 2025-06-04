@@ -12,22 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045cc4695a78a9b45b1f23df8a89877a, type: 3}
   m_Name: MemoryGame Default Config
   m_EditorClassIdentifier: 
-  musicVolume: 15
+  musicVolume: 10
   sfxVolume: 100
   storageItems:
-  - itemName: Item 1
-    initialValue: 2
+  - itemName: Brinde
+    initialValue: 100000
     prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
-    prizeScore: 0
-  useLeads: 1
-  memorizationTime: 2
-  gameTime: 20
+  useLeads: 0
+  memorizationTime: 3
+  gameTime: 30
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 21300000, guid: bef8d35695438214ead9191196a5e366, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 21300000, guid: 72473ddd524cfa0428fbff12b0392995, type: 3}
+  - {fileID: 21300000, guid: cbff74427ecec344887dec9b2766d8fb, type: 3}
+  - {fileID: 21300000, guid: 3483d1109dde03d429d3a0ee43c13575, type: 3}
+  - {fileID: 21300000, guid: d25518a6ec887384bbfdf0b36ca4372a, type: 3}
+  - {fileID: 21300000, guid: 9f1476c1fe44d1b4193b79eb476678af, type: 3}
+  - {fileID: 21300000, guid: 9c9d1d744d4ef964abfe27eb604a4ff6, type: 3}
+  - {fileID: 21300000, guid: 06e98970187d2c9469f4e24ca03fed85, type: 3}
+  - {fileID: 21300000, guid: 79f4c3d42d4ab7d4ab07448fcc8985ec, type: 3}
