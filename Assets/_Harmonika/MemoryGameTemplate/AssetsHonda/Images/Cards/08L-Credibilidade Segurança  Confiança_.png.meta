@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 13ef504da384d9f4f9ddbbc11276220a
+guid: 1af9c5e750f8c3a428ebfc45efe17070
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5220018020796821677
-    second: 04-Recompra garantida__0
+      213: -5490902487724172580
+    second: "13-Credibilidade Seguran\xE7a  Confian\xE7a__0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 04-Recompra garantida__0
+      name: "13-Credibilidade Seguran\xE7a  Confian\xE7a__0"
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da07bbaabba317840800000000000000
-      internalID: 5220018020796821677
+      spriteID: cda54ea87456cc3b0800000000000000
+      internalID: -5490902487724172580
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      04-Recompra garantida__0: 5220018020796821677
+      "13-Credibilidade Seguran\xE7a  Confian\xE7a__0": -5490902487724172580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

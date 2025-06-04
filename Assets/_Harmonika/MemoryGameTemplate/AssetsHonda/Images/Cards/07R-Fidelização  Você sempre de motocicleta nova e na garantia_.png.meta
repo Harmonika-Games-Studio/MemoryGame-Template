@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a12abc042a3759747aaf9acd6f1a28ce
+guid: d69ebb29594afce4395e23d40a4abb03
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8499341928515331059
-    second: 06-Evolution Honda_0
+      213: -4124258922354253136
+    second: "07-Fideliza\xE7\xE3o  Voc\xEA sempre de motocicleta nova e na garantia__0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 06-Evolution Honda_0
+      name: "07-Fideliza\xE7\xE3o  Voc\xEA sempre de motocicleta nova e na garantia__0"
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f36db9d37ab3f570800000000000000
-      internalID: 8499341928515331059
+      spriteID: 0b2e6538c50b3c6c0800000000000000
+      internalID: -4124258922354253136
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      06-Evolution Honda_0: 8499341928515331059
+      "07-Fideliza\xE7\xE3o  Voc\xEA sempre de motocicleta nova e na garantia__0": -4124258922354253136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a75ed04af5867384c84468857b57fa10
+guid: c626ef41c4b502f4c81da3d42105211e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4351459476093215449
-    second: 11-Tranquilidade financeira__0
+      213: -4987472381166526793
+    second: "09-Prote\xE7\xE3o em caso de eventualidade__0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 11-Tranquilidade financeira__0
+      name: "09-Prote\xE7\xE3o em caso de eventualidade__0"
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d22b07a65d736c30800000000000000
-      internalID: 4351459476093215449
+      spriteID: 7be5f794b40f8cab0800000000000000
+      internalID: -4987472381166526793
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      11-Tranquilidade financeira__0: 4351459476093215449
+      "09-Prote\xE7\xE3o em caso de eventualidade__0": -4987472381166526793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

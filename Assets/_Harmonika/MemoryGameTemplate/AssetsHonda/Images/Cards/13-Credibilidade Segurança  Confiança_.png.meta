@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6b6dc5c80a562f445bdeb6eaf35d365b
+guid: 37d784b90923b67409b8cd87e954e7ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4403039806714045954
-    second: "12-Acompanhamento do seu financiamento na palma da m\xE3o__0"
+      213: -5490902487724172580
+    second: "13-Credibilidade Seguran\xE7a  Confian\xE7a__0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "12-Acompanhamento do seu financiamento na palma da m\xE3o__0"
+      name: "13-Credibilidade Seguran\xE7a  Confian\xE7a__0"
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 206681b306dba1d30800000000000000
-      internalID: 4403039806714045954
+      spriteID: cda54ea87456cc3b0800000000000000
+      internalID: -5490902487724172580
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "12-Acompanhamento do seu financiamento na palma da m\xE3o__0": 4403039806714045954
+      "13-Credibilidade Seguran\xE7a  Confian\xE7a__0": -5490902487724172580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

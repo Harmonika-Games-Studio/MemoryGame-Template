@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 91bdd7b3838edf446b97401728a6c386
+guid: 75620ef35e710904e8c41194c214a43f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1746763335392020371
-    second: 03-Venda Digital HSF__0
+      213: -6743701552859360205
+    second: 01-Banco Honda_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 03-Venda Digital HSF__0
+      name: 01-Banco Honda_0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d68384f400042c7e0800000000000000
-      internalID: -1746763335392020371
+      spriteID: 3345196da2f8962a0800000000000000
+      internalID: -6743701552859360205
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      03-Venda Digital HSF__0: -1746763335392020371
+      01-Banco Honda_0: -6743701552859360205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 238d04213c5ca1a4b8fc47eda430baba
+guid: a027e8aef56f5b341931ff587426f64d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6743701552859360205
-    second: 01-Banco Honda_0
+      213: -5654924005591836880
+    second: "10-Seguro de Prote\xE7\xE3o Financeira (SPF)__0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 01-Banco Honda_0
+      name: "10-Seguro de Prote\xE7\xE3o Financeira (SPF)__0"
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3345196da2f8962a0800000000000000
-      internalID: -6743701552859360205
+      spriteID: 0379ed6f39ca581b0800000000000000
+      internalID: -5654924005591836880
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      01-Banco Honda_0: -6743701552859360205
+      "10-Seguro de Prote\xE7\xE3o Financeira (SPF)__0": -5654924005591836880
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

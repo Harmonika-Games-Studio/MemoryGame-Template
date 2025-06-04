@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a75ed04af5867384c84468857b57fa10
+guid: 1fe2b3d945379134581b51c63797cb3f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4351459476093215449
-    second: 11-Tranquilidade financeira__0
+      213: -1746763335392020371
+    second: 03-Venda Digital HSF__0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 11-Tranquilidade financeira__0
+      name: 03-Venda Digital HSF__0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d22b07a65d736c30800000000000000
-      internalID: 4351459476093215449
+      spriteID: d68384f400042c7e0800000000000000
+      internalID: -1746763335392020371
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      11-Tranquilidade financeira__0: 4351459476093215449
+      03-Venda Digital HSF__0: -1746763335392020371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

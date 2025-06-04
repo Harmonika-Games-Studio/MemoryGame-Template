@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a2aad891280ffe44f94d84f3e54c236d
+guid: 428df458cdb960c42a82530409711cea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5654924005591836880
-    second: "10-Seguro de Prote\xE7\xE3o Financeira (SPF)__0"
+      213: 387890959848287749
+    second: 02-APP HSF (aplicativo)__0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "10-Seguro de Prote\xE7\xE3o Financeira (SPF)__0"
+      name: 02-APP HSF (aplicativo)__0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0379ed6f39ca581b0800000000000000
-      internalID: -5654924005591836880
+      spriteID: 50ea759d5c0126500800000000000000
+      internalID: 387890959848287749
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "10-Seguro de Prote\xE7\xE3o Financeira (SPF)__0": -5654924005591836880
+      02-APP HSF (aplicativo)__0: 387890959848287749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

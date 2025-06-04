@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 91bdd7b3838edf446b97401728a6c386
+guid: c3d828b6ea7090b42b1acc412d118e23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1746763335392020371
-    second: 03-Venda Digital HSF__0
+      213: 8712156039165085943
+    second: "05-Banco da F\xE1brica_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 03-Venda Digital HSF__0
+      name: "05-Banco da F\xE1brica_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d68384f400042c7e0800000000000000
-      internalID: -1746763335392020371
+      spriteID: 7f8853632cbc7e870800000000000000
+      internalID: 8712156039165085943
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      03-Venda Digital HSF__0: -1746763335392020371
+      "05-Banco da F\xE1brica_0": 8712156039165085943
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

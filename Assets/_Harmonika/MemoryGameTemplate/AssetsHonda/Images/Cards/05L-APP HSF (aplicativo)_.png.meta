@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5d78f955c908686499b1b7d9d7d87073
+guid: 8320a6017e8d3c1418ad09dacd4608a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4987472381166526793
-    second: "09-Prote\xE7\xE3o em caso de eventualidade__0"
+      213: 387890959848287749
+    second: 02-APP HSF (aplicativo)__0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "09-Prote\xE7\xE3o em caso de eventualidade__0"
+      name: 02-APP HSF (aplicativo)__0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7be5f794b40f8cab0800000000000000
-      internalID: -4987472381166526793
+      spriteID: 50ea759d5c0126500800000000000000
+      internalID: 387890959848287749
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "09-Prote\xE7\xE3o em caso de eventualidade__0": -4987472381166526793
+      02-APP HSF (aplicativo)__0: 387890959848287749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
