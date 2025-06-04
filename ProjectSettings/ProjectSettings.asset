@@ -18,7 +18,7 @@ PlayerSettings:
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   m_ShowUnitySplashScreen: 0
-  m_ShowUnitySplashLogo: 1
+  m_ShowUnitySplashLogo: 0
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 0
@@ -44,8 +44,8 @@ PlayerSettings:
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
-  defaultScreenWidth: 1920
-  defaultScreenHeight: 1080
+  defaultScreenWidth: 1080
+  defaultScreenHeight: 1920
   defaultScreenWidthWeb: 1080
   defaultScreenHeightWeb: 1920
   m_StereoRenderingPath: 0
@@ -82,7 +82,7 @@ PlayerSettings:
   androidAutoRotationBehavior: 1
   androidPredictiveBackSupport: 0
   androidApplicationEntry: 2
-  defaultIsNativeResolution: 1
+  defaultIsNativeResolution: 0
   macRetinaSupport: 1
   runInBackground: 0
   muteOtherAudioSources: 0
@@ -94,7 +94,7 @@ PlayerSettings:
   usePlayerLog: 1
   dedicatedServerOptimizations: 1
   bakeCollisionMeshes: 0
-  forceSingleInstance: 0
+  forceSingleInstance: 1
   useFlipModelSwapchain: 1
   resizableWindow: 0
   useMacAppStoreValidation: 0
@@ -293,54 +293,52 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5074574cc6e1d874bb2d14ba8bd98ee2, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
   - m_BuildTarget: Standalone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 512
       m_Height: 512
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 256
       m_Height: 256
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 64
       m_Height: 64
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 48
       m_Height: 48
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 32
       m_Height: 32
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 16
       m_Height: 16
       m_Kind: 0
-  - m_BuildTarget: WebGL
-    m_Icons: []
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
@@ -405,7 +403,7 @@ PlayerSettings:
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      - {fileID: 2800000, guid: 411a6df6de0dd4743b27ff5b0c6b6f8d, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
