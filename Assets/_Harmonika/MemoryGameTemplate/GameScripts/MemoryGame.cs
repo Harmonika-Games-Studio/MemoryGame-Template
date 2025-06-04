@@ -115,7 +115,7 @@ public class MemoryGame : MonoBehaviour
         _restVideo.url = videoPath;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Only track idle time if we're on the main menu
         if (_inMainMenu)
@@ -275,6 +275,7 @@ public class MemoryGame : MonoBehaviour
                 _collectLeadsMenu.ClearAllFields();
             });
             _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => {
+                _inMainMenu = false;
                 _secondTry = false;
                 StartGame();
                 _tryAgainButton.gameObject.SetActive(true);
@@ -477,6 +478,8 @@ public class MemoryGame : MonoBehaviour
         _gameMenu.OpenMenu("MainMenu");
 
         _inMainMenu = true;
+
+        RDStationManager.Instance.SendConversion(AppManager.Instance.DataSync.CurrentLead);
 
         AppManager.Instance.DataSync.SaveLeads();
     }
