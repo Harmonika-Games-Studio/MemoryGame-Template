@@ -196,7 +196,7 @@ public class MemoryGame : MonoBehaviour
                 _gameMenu.OpenMenu("CollectLeadsMenu");
                 _collectLeadsMenu.ClearAllFields();
             });
-            _collectLeadsMenu.ContinueBtn.onClick.AddListener(StartGame);
+            _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => _gameMenu.OpenMenu("VictoryMenu"));
             _collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
         else
@@ -204,7 +204,10 @@ public class MemoryGame : MonoBehaviour
             _mainMenu.StartBtn.onClick.AddListener(StartGame);
         }
 
-        _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _victoryMenu.BackBtn.onClick.AddListener(() => {
+            _gameMenu.OpenMenu("MainMenu");
+            AppManager.Instance.DataSync.SaveLeads();
+        });
         _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
     }
