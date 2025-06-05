@@ -8,6 +8,7 @@ public class MemoryGameConfig : GameConfigScriptable
     [Header("Configurable Variables")]
     public int memorizationTime = 2;
     public int gameTime = 20;
+    public int totalCardPairs = 8;
 
     [Space(5)]
     [Header("Cards")]

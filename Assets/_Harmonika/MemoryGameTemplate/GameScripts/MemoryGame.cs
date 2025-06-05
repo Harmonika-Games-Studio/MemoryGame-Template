@@ -105,7 +105,7 @@ public class MemoryGame : MonoBehaviour
         else _cronometer.TimerText.text = _remainingTime.ToString();
 
         InstantiateCards();
-        AdjustGridLayout();
+        //AdjustGridLayout();
         ShuffleCards();
 
         InvokeUtility.Invoke(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime), () =>
@@ -156,7 +156,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= _config.totalCardPairs)
                 {
                     EndGame(true, EstoqueHandler.instance.GetRandomPrize());
                 }
@@ -208,7 +208,8 @@ public class MemoryGame : MonoBehaviour
     {
         Debug.Log("Instantiate");
 
-        for (int i = 0; i < _config.cardPairs.Length; i++)
+        //for (int i = 0; i < _config.cardPairs.Length; i++)
+        for (int i = 0; i < Config.totalCardPairs; i++)
         {
             for (int j = 0; j < 2; j++)
             {
