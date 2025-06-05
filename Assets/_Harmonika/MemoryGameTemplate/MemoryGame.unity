@@ -2400,7 +2400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00061035, y: -0.00073242}
+  m_AnchoredPosition: {x: 0.00061035156, y: -0.0007324219}
   m_SizeDelta: {x: -232.28, y: -412.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501924412
@@ -3202,8 +3202,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadboxPrefab
+      value: 
+      objectReference: {fileID: 2100705880506818182, guid: bdeb47b4ad7399941931966a76e1dd2e, type: 3}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.size
-      value: 5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[1].id
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[2].id
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[5].showName
@@ -3211,6 +3223,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[6].showName
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[0].fieldName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[1].fieldName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[1].inputType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[2].fieldName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[2].inputType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
@@ -3234,6 +3266,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[0].isOptional
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[5].isOptional
       value: 0
       objectReference: {fileID: 0}
@@ -3250,6 +3286,22 @@ PrefabInstance:
       value: "Eu aceito os <b>receber contatos</b> e v\xE1rias paradas."
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[0].inputDataConfig.keyboardType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[1].inputDataConfig.keyboardType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[2].inputDataConfig.keyboardType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[2].inputDataConfig.parseableFields
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[4].inputDataConfig.parseableFields
       value: 5
       objectReference: {fileID: 0}
@@ -3262,6 +3314,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[0].inputDataConfig.fieldPlaceholder
+      value: Nome completo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[1].inputDataConfig.fieldPlaceholder
+      value: Nome da empresa
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[2].inputDataConfig.fieldPlaceholder
+      value: Nome da empresa
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[4].inputDataConfig.fieldPlaceholder
       value: xx/xx/xxxx
       objectReference: {fileID: 0}
@@ -3272,6 +3336,66 @@ PrefabInstance:
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[6].inputDataConfig.fieldPlaceholder
       value: xxx.xxx.xxx-xx
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[0].dropdownDataConfig.fieldPlaceholder
+      value: sELECIONE SEU ESTADO
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[1].dropdownDataConfig.fieldPlaceholder
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[1].dropdownDataConfig.options.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[0]'
+      value: RJ
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[1]'
+      value: MG
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[2]'
+      value: DF
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[3]'
+      value: RS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[4]'
+      value: RN
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[5]'
+      value: AM
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[6]'
+      value: SP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[7]'
+      value: SC
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[8]'
+      value: SPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[9]'
+      value: CSV
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[0].dropdownDataConfig.options.Array.data[10]'
+      value: PCC
       objectReference: {fileID: 0}
     - target: {fileID: 4993801195211851150, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6812,7 +6936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00061035, y: -0.00073242}
+  m_AnchoredPosition: {x: -0.00061035156, y: -0.0007324219}
   m_SizeDelta: {x: -232.28, y: -412.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382537299
@@ -6931,8 +7055,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.13560417}
   m_AnchorMax: {x: 1, y: 0.6231876}
-  m_AnchoredPosition: {x: 0, y: 381.3294}
-  m_SizeDelta: {x: -63.5667, y: 264.9111}
+  m_AnchoredPosition: {x: 0, y: 422.08722}
+  m_SizeDelta: {x: -123.6307, y: 346.4268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1391032053
 MonoBehaviour:
@@ -9063,7 +9187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.060631, y: -0.00067139}
+  m_AnchoredPosition: {x: -0.06060791, y: -0.0006713867}
   m_SizeDelta: {x: -232.18, y: -412.9399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066175383
