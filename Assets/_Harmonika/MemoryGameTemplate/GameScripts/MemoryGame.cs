@@ -45,7 +45,11 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private GameoverMenu _victoryMenu;
     [SerializeField] private GameoverMenu _participationMenu;
     [SerializeField] private GameoverMenu _loseMenu;
-    
+    [SerializeField] private Button _option1;
+    [SerializeField] private Button _option2;
+    [SerializeField] private Button _option3;
+    [SerializeField] private Button _option4;
+
     private int _revealedPairs;
     private int _remainingTime;
     private bool _canClick = true;
@@ -195,7 +199,7 @@ public class MemoryGame : MonoBehaviour
                 _gameMenu.OpenMenu("CollectLeadsMenu");
                 _collectLeadsMenu.ClearAllFields();
             });
-            _collectLeadsMenu.ContinueBtn.onClick.AddListener(StartGame);
+            _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => _gameMenu.OpenMenu("QuestionMenu"));
             _collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
         else
@@ -203,6 +207,26 @@ public class MemoryGame : MonoBehaviour
             _mainMenu.StartBtn.onClick.AddListener(StartGame);
         }
 
+        _option1.onClick.AddListener(() =>
+        {
+            StartGame();
+            AppManager.Instance.DataSync.AddDataToJObject("custom1", "Detox Corporativo");
+        });
+        _option2.onClick.AddListener(() =>
+        {
+            StartGame();
+            AppManager.Instance.DataSync.AddDataToJObject("custom1", "Equilíbrio Zen");
+        });
+        _option3.onClick.AddListener(() =>
+        {
+            StartGame();
+            AppManager.Instance.DataSync.AddDataToJObject("custom1", "Ritmo de Performance");
+        });
+        _option4.onClick.AddListener(() =>
+        {
+            StartGame();
+            AppManager.Instance.DataSync.AddDataToJObject("custom1", "Up Total");
+        });
         _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
