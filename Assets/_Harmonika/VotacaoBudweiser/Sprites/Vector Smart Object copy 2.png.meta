@@ -1,0 +1,1898 @@
+fileFormatVersion: 2
+guid: c6b37aa30ea324b42befc01e7dac755f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9177040967385812092
+    second: Vector Smart Object copy 2_0
+  - first:
+      213: 3830963927298368178
+    second: Vector Smart Object copy 2_1
+  - first:
+      213: -5140960146369479553
+    second: Vector Smart Object copy 2_2
+  - first:
+      213: 1078027540728052064
+    second: Vector Smart Object copy 2_3
+  - first:
+      213: 1785573220969626850
+    second: Vector Smart Object copy 2_4
+  - first:
+      213: 1623323159176547770
+    second: Vector Smart Object copy 2_5
+  - first:
+      213: 7751104328247100768
+    second: Vector Smart Object copy 2_6
+  - first:
+      213: -5810177059229213186
+    second: Vector Smart Object copy 2_7
+  - first:
+      213: 2672329329093694164
+    second: Vector Smart Object copy 2_8
+  - first:
+      213: 1259970320108676368
+    second: Vector Smart Object copy 2_9
+  - first:
+      213: -782629909103754150
+    second: Vector Smart Object copy 2_10
+  - first:
+      213: 1765133240077754741
+    second: Vector Smart Object copy 2_11
+  - first:
+      213: 7017161481798837459
+    second: Vector Smart Object copy 2_12
+  - first:
+      213: -3397930982898840971
+    second: Vector Smart Object copy 2_13
+  - first:
+      213: 5105353090055054194
+    second: Vector Smart Object copy 2_14
+  - first:
+      213: -5581114140634803544
+    second: Vector Smart Object copy 2_15
+  - first:
+      213: -9167243353774815206
+    second: Vector Smart Object copy 2_16
+  - first:
+      213: 8123091032013754254
+    second: Vector Smart Object copy 2_17
+  - first:
+      213: -6721360089451268714
+    second: Vector Smart Object copy 2_18
+  - first:
+      213: 3748485035756044033
+    second: Vector Smart Object copy 2_19
+  - first:
+      213: 6353591606482690610
+    second: Vector Smart Object copy 2_20
+  - first:
+      213: 6134566454740201894
+    second: Vector Smart Object copy 2_21
+  - first:
+      213: -2492572041065480946
+    second: Vector Smart Object copy 2_22
+  - first:
+      213: -7603708874084504447
+    second: Vector Smart Object copy 2_23
+  - first:
+      213: 2222988823232540146
+    second: Vector Smart Object copy 2_24
+  - first:
+      213: -6169403849821187510
+    second: Vector Smart Object copy 2_25
+  - first:
+      213: -1841722433986805822
+    second: Vector Smart Object copy 2_26
+  - first:
+      213: 7521571562720017765
+    second: Vector Smart Object copy 2_27
+  - first:
+      213: -495007608789609503
+    second: Vector Smart Object copy 2_28
+  - first:
+      213: 2501947038390643508
+    second: Vector Smart Object copy 2_29
+  - first:
+      213: -6007540769621425408
+    second: Vector Smart Object copy 2_30
+  - first:
+      213: 259140041327558641
+    second: Vector Smart Object copy 2_31
+  - first:
+      213: 459704792165152222
+    second: Vector Smart Object copy 2_32
+  - first:
+      213: 8008482150903013331
+    second: Vector Smart Object copy 2_33
+  - first:
+      213: 7628417763709247269
+    second: Vector Smart Object copy 2_34
+  - first:
+      213: 3166312565000254534
+    second: Vector Smart Object copy 2_35
+  - first:
+      213: 8766056067510988321
+    second: Vector Smart Object copy 2_36
+  - first:
+      213: -4913489418327652258
+    second: Vector Smart Object copy 2_37
+  - first:
+      213: 2987705048597247023
+    second: Vector Smart Object copy 2_38
+  - first:
+      213: -5990176280322485747
+    second: Vector Smart Object copy 2_39
+  - first:
+      213: 4007356266535176447
+    second: Vector Smart Object copy 2_40
+  - first:
+      213: -661179447029048794
+    second: Vector Smart Object copy 2_41
+  - first:
+      213: 8416143523609379350
+    second: Vector Smart Object copy 2_42
+  - first:
+      213: -5800133413764549812
+    second: Vector Smart Object copy 2_43
+  - first:
+      213: 6842061103417750994
+    second: Vector Smart Object copy 2_44
+  - first:
+      213: -5622189900524297958
+    second: Vector Smart Object copy 2_45
+  - first:
+      213: 8293136231865462733
+    second: Vector Smart Object copy 2_46
+  - first:
+      213: 6139364722171137103
+    second: Vector Smart Object copy 2_47
+  - first:
+      213: 1806100630881788471
+    second: Vector Smart Object copy 2_48
+  - first:
+      213: 2241952453026275984
+    second: Vector Smart Object copy 2_49
+  - first:
+      213: 7050046961214840656
+    second: Vector Smart Object copy 2_50
+  - first:
+      213: 144098487719486208
+    second: Vector Smart Object copy 2_51
+  - first:
+      213: 783643163337220088
+    second: Vector Smart Object copy 2_52
+  - first:
+      213: -2855076125884761113
+    second: Vector Smart Object copy 2_53
+  - first:
+      213: -2425353628960272821
+    second: Vector Smart Object copy 2_54
+  - first:
+      213: -2951393809581550575
+    second: Vector Smart Object copy 2_55
+  - first:
+      213: -8599981769187161548
+    second: Vector Smart Object copy 2_56
+  - first:
+      213: 2470944712742382447
+    second: Vector Smart Object copy 2_57
+  - first:
+      213: 3242219573423780569
+    second: Vector Smart Object copy 2_58
+  - first:
+      213: 8996586122082615905
+    second: Vector Smart Object copy 2_59
+  - first:
+      213: 2323362414856052356
+    second: Vector Smart Object copy 2_60
+  - first:
+      213: 2989948177537116015
+    second: Vector Smart Object copy 2_61
+  - first:
+      213: 4503668002427091819
+    second: Vector Smart Object copy 2_62
+  - first:
+      213: 296891812888718696
+    second: Vector Smart Object copy 2_63
+  - first:
+      213: 6187922211530594091
+    second: Vector Smart Object copy 2_64
+  - first:
+      213: -1742153404712978197
+    second: Vector Smart Object copy 2_65
+  - first:
+      213: -3985599224429124388
+    second: Vector Smart Object copy 2_66
+  - first:
+      213: -1171561585728363064
+    second: Vector Smart Object copy 2_67
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_0
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 99
+        width: 6
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483f2c9bcd994a080800000000000000
+      internalID: -9177040967385812092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_1
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 212
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b264f105615a2530800000000000000
+      internalID: 3830963927298368178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_2
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 225
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7cf43f1cf3a7a8b0800000000000000
+      internalID: -5140960146369479553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_3
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 230
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069fe2f265ce5fe00800000000000000
+      internalID: 1078027540728052064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_4
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 230
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec38545261a7c810800000000000000
+      internalID: 1785573220969626850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_5
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 227
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd026200d3378610800000000000000
+      internalID: 1623323159176547770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_6
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 162
+        width: 55
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0654926c154719b60800000000000000
+      internalID: 7751104328247100768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 162
+        width: 55
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdd48e8fba1e5fa0800000000000000
+      internalID: -5810177059229213186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_8
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 210
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2dc7fbd55061520800000000000000
+      internalID: 2672329329093694164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_9
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 197
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 015ec9d94505c7110800000000000000
+      internalID: 1259970320108676368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_10
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 128
+        width: 249
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5446458e3a8325f0800000000000000
+      internalID: -782629909103754150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_11
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 172
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 571a11c64530f7810800000000000000
+      internalID: 1765133240077754741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_12
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 188
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d46c2e6037f16160800000000000000
+      internalID: 7017161481798837459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_13
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 181
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a450926cf18d0d0800000000000000
+      internalID: -3397930982898840971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_14
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 155
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273aca9069bd9d640800000000000000
+      internalID: 5105353090055054194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_15
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 113
+        width: 112
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a29d845246eb82b0800000000000000
+      internalID: -5581114140634803544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_16
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 155
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1801b86db867c080800000000000000
+      internalID: -9167243353774815206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_17
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 138
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f475171440bb070800000000000000
+      internalID: 8123091032013754254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_18
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 136
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 695f4c42c9ee8b2a0800000000000000
+      internalID: -6721360089451268714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_19
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 88
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f3b1a974b450430800000000000000
+      internalID: 3748485035756044033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_20
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 88
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232ed4047ed7c2850800000000000000
+      internalID: 6353591606482690610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a131d130bb522550800000000000000
+      internalID: 6134566454740201894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_22
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 32
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0db8335fea986dd0800000000000000
+      internalID: -2492572041065480946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_23
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 32
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c25b0b0133a7690800000000000000
+      internalID: -7603708874084504447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_24
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 32
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd607c8e84a9de10800000000000000
+      internalID: 2222988823232540146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a421b7fa2efd16aa0800000000000000
+      internalID: -6169403849821187510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_26
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 32
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf39534433e076e0800000000000000
+      internalID: -1841722433986805822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_27
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 32
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d3b9c3c7df16860800000000000000
+      internalID: 7521571562720017765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_28
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 32
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3daf4d3316129f0800000000000000
+      internalID: -495007608789609503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_29
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 32
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b6d165393b8b220800000000000000
+      internalID: 2501947038390643508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_30
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003c905df7de0aca0800000000000000
+      internalID: -6007540769621425408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_31
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 32
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ffb86e9e76a89300800000000000000
+      internalID: 259140041327558641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_32
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 32
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed57c86a213316600800000000000000
+      internalID: 459704792165152222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_33
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 32
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df51a2e518d32f60800000000000000
+      internalID: 8008482150903013331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_34
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 32
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f5b2cf9859dd960800000000000000
+      internalID: 7628417763709247269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_35
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 32
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64432b4808001fb20800000000000000
+      internalID: 3166312565000254534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_36
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 32
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e66218c8947a970800000000000000
+      internalID: 8766056067510988321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_37
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 32
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5880f42867cfcbb0800000000000000
+      internalID: -4913489418327652258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_38
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 32
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24b74389e5767920800000000000000
+      internalID: 2987705048597247023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_39
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 32
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02586d096e9edca0800000000000000
+      internalID: -5990176280322485747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_40
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 32
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8c343ea4dfc9730800000000000000
+      internalID: 4007356266535176447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_41
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 32
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a5b07cbc403d6f0800000000000000
+      internalID: -661179447029048794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_42
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 32
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612017fa1f52cc470800000000000000
+      internalID: 8416143523609379350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_43
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 32
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c43b0bef369c18fa0800000000000000
+      internalID: -5800133413764549812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_44
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 32
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d57bb0a252e3fe50800000000000000
+      internalID: 6842061103417750994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_45
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 32
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11e577b218f9f1b0800000000000000
+      internalID: -5622189900524297958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_46
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 32
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf2346c673271370800000000000000
+      internalID: 8293136231865462733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_47
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 32
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c4393efa7633550800000000000000
+      internalID: 6139364722171137103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_48
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 32
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732615464fe801910800000000000000
+      internalID: 1806100630881788471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_49
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09262fda0e30d1f10800000000000000
+      internalID: 2241952453026275984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_50
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f5805cb5cc6d160800000000000000
+      internalID: 7050046961214840656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_51
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003e035afc0fff100800000000000000
+      internalID: 144098487719486208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_52
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 0
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ffd06d1e4f00ea00800000000000000
+      internalID: 783643163337220088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_53
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ebb0fde36bb068d0800000000000000
+      internalID: -2855076125884761113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_54
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e4e1b79b9675ed0800000000000000
+      internalID: -2425353628960272821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_55
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114da93a7fa8a07d0800000000000000
+      internalID: -2951393809581550575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_56
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 0
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a83c4452ab6a880800000000000000
+      internalID: -8599981769187161548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_57
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 0
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ba3a6ef1f8a4220800000000000000
+      internalID: 2470944712742382447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_58
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 0
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d23eb5268daefc20800000000000000
+      internalID: 3242219573423780569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_59
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 0
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16281fd796b4adc70800000000000000
+      internalID: 8996586122082615905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_60
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 0
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e1dfd7ecd3e3020800000000000000
+      internalID: 2323362414856052356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_61
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 0
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f672deaa60e6e7920800000000000000
+      internalID: 2989948177537116015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_62
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6bb5fecf2e308e30800000000000000
+      internalID: 4503668002427091819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_63
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 0
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d24f3e785ce1400800000000000000
+      internalID: 296891812888718696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_64
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 0
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27d704677aefd550800000000000000
+      internalID: 6187922211530594091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_65
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be878df65b0a2d7e0800000000000000
+      internalID: -1742153404712978197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_66
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 0
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd464da3f9e40b8c0800000000000000
+      internalID: -3985599224429124388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vector Smart Object copy 2_67
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 11
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5ea2ae1f6cdbfe0800000000000000
+      internalID: -1171561585728363064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Vector Smart Object copy 2_0: -9177040967385812092
+      Vector Smart Object copy 2_1: 3830963927298368178
+      Vector Smart Object copy 2_10: -782629909103754150
+      Vector Smart Object copy 2_11: 1765133240077754741
+      Vector Smart Object copy 2_12: 7017161481798837459
+      Vector Smart Object copy 2_13: -3397930982898840971
+      Vector Smart Object copy 2_14: 5105353090055054194
+      Vector Smart Object copy 2_15: -5581114140634803544
+      Vector Smart Object copy 2_16: -9167243353774815206
+      Vector Smart Object copy 2_17: 8123091032013754254
+      Vector Smart Object copy 2_18: -6721360089451268714
+      Vector Smart Object copy 2_19: 3748485035756044033
+      Vector Smart Object copy 2_2: -5140960146369479553
+      Vector Smart Object copy 2_20: 6353591606482690610
+      Vector Smart Object copy 2_21: 6134566454740201894
+      Vector Smart Object copy 2_22: -2492572041065480946
+      Vector Smart Object copy 2_23: -7603708874084504447
+      Vector Smart Object copy 2_24: 2222988823232540146
+      Vector Smart Object copy 2_25: -6169403849821187510
+      Vector Smart Object copy 2_26: -1841722433986805822
+      Vector Smart Object copy 2_27: 7521571562720017765
+      Vector Smart Object copy 2_28: -495007608789609503
+      Vector Smart Object copy 2_29: 2501947038390643508
+      Vector Smart Object copy 2_3: 1078027540728052064
+      Vector Smart Object copy 2_30: -6007540769621425408
+      Vector Smart Object copy 2_31: 259140041327558641
+      Vector Smart Object copy 2_32: 459704792165152222
+      Vector Smart Object copy 2_33: 8008482150903013331
+      Vector Smart Object copy 2_34: 7628417763709247269
+      Vector Smart Object copy 2_35: 3166312565000254534
+      Vector Smart Object copy 2_36: 8766056067510988321
+      Vector Smart Object copy 2_37: -4913489418327652258
+      Vector Smart Object copy 2_38: 2987705048597247023
+      Vector Smart Object copy 2_39: -5990176280322485747
+      Vector Smart Object copy 2_4: 1785573220969626850
+      Vector Smart Object copy 2_40: 4007356266535176447
+      Vector Smart Object copy 2_41: -661179447029048794
+      Vector Smart Object copy 2_42: 8416143523609379350
+      Vector Smart Object copy 2_43: -5800133413764549812
+      Vector Smart Object copy 2_44: 6842061103417750994
+      Vector Smart Object copy 2_45: -5622189900524297958
+      Vector Smart Object copy 2_46: 8293136231865462733
+      Vector Smart Object copy 2_47: 6139364722171137103
+      Vector Smart Object copy 2_48: 1806100630881788471
+      Vector Smart Object copy 2_49: 2241952453026275984
+      Vector Smart Object copy 2_5: 1623323159176547770
+      Vector Smart Object copy 2_50: 7050046961214840656
+      Vector Smart Object copy 2_51: 144098487719486208
+      Vector Smart Object copy 2_52: 783643163337220088
+      Vector Smart Object copy 2_53: -2855076125884761113
+      Vector Smart Object copy 2_54: -2425353628960272821
+      Vector Smart Object copy 2_55: -2951393809581550575
+      Vector Smart Object copy 2_56: -8599981769187161548
+      Vector Smart Object copy 2_57: 2470944712742382447
+      Vector Smart Object copy 2_58: 3242219573423780569
+      Vector Smart Object copy 2_59: 8996586122082615905
+      Vector Smart Object copy 2_6: 7751104328247100768
+      Vector Smart Object copy 2_60: 2323362414856052356
+      Vector Smart Object copy 2_61: 2989948177537116015
+      Vector Smart Object copy 2_62: 4503668002427091819
+      Vector Smart Object copy 2_63: 296891812888718696
+      Vector Smart Object copy 2_64: 6187922211530594091
+      Vector Smart Object copy 2_65: -1742153404712978197
+      Vector Smart Object copy 2_66: -3985599224429124388
+      Vector Smart Object copy 2_67: -1171561585728363064
+      Vector Smart Object copy 2_7: -5810177059229213186
+      Vector Smart Object copy 2_8: 2672329329093694164
+      Vector Smart Object copy 2_9: 1259970320108676368
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
