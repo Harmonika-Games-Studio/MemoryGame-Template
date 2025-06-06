@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class JsonDeserializedConfig
 {
@@ -46,9 +47,11 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private GameoverMenu _victoryMenu;
     [SerializeField] private GameoverMenu _participationMenu;
     [SerializeField] private GameoverMenu _loseMenu;
+    [SerializeField] private GameoverMenu _rankingMenu;
+    [SerializeField] private VideoPlayer _startVideo;
     
     private int _revealedPairs;
-    private int _remainingTime;
+    private float _remainingTime;
     private bool _canClick = true;
     private float _startTime;
     private MenuManager _gameMenu;
@@ -90,20 +93,20 @@ public class MemoryGame : MonoBehaviour
 
     public void StartGame()
     {
-        if (AppManager.Instance.Storage.InventoryCount <= 0)
+        /*if (AppManager.Instance.Storage.InventoryCount <= 0)
         {
             PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
                 "Insira algum prêmio para continuar com a ativação", "OK", true);
 
             return;
-        }
+        }*/
         _gameMenu.CloseMenus();
 
         _startTime = Time.time;
         _cronometer.totalTimeInSeconds = PlayerPrefs.GetInt("GameTime", _config.gameTime);
         _remainingTime = _cronometer.totalTimeInSeconds;
-        int minutes = _remainingTime / 60;
-        int seconds = _remainingTime % 60;
+        int minutes = Mathf.FloorToInt(_remainingTime / 60f);
+        int seconds = Mathf.FloorToInt(_remainingTime % 60f);
         if (_cronometer.useFormat) _cronometer.TimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         else _cronometer.TimerText.text = _remainingTime.ToString();
 
@@ -159,7 +162,7 @@ public class MemoryGame : MonoBehaviour
                 _lastClickedCard.IsCorect = true;
                 card.IsCorect = true;
                 _revealedPairs++;
-                if (_revealedPairs >= _config.cardPairs.Length)
+                if (_revealedPairs >= 8)
                 {
                     EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
                 }
@@ -185,13 +188,13 @@ public class MemoryGame : MonoBehaviour
         {
             _mainMenu.StartBtn.onClick.AddListener(() =>
             {
-                if (AppManager.Instance.Storage.InventoryCount <= 0)
-                {
-                    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                        "Insira algum prêmio para continuar com a ativação", "OK", true);
+                //if (AppManager.Instance.Storage.InventoryCount <= 0)
+                //{
+                //    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+                //        "Insira algum prêmio para continuar com a ativação", "OK", true);
 
-                    return;
-                }
+                //    return;
+                //}
 
                 _gameMenu.OpenMenu("CollectLeadsMenu");
                 _collectLeadsMenu.ClearAllFields();
@@ -204,16 +207,22 @@ public class MemoryGame : MonoBehaviour
             _mainMenu.StartBtn.onClick.AddListener(StartGame);
         }
 
-        _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("RankingMenu"));
+        _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("RankingMenu"));
+        _rankingMenu.BackBtn.onClick.AddListener(() => {
+            _startVideo.time = 0;
+            _startVideo.Play();
+            _gameMenu.OpenMenu("MainMenu"); });
+        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("RankingMenu"));
     }
 
     private void InstantiateCards()
     {
         Debug.Log("Instantiate");
 
-        for (int i = 0; i < _config.cardPairs.Length; i++)
+        var shuffledCards = _config.cardPairs.Shuffle();
+
+        for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 2; j++)
             {
@@ -234,7 +243,7 @@ public class MemoryGame : MonoBehaviour
         float originalCellWidth = gridLayoutGroup.cellSize.x;
         float originalCellHeight = gridLayoutGroup.cellSize.y;
 
-        int totalCards = _config.cardPairs.Length * 2;
+        int totalCards = 8 * 2;
 
         // Priorizar o maior número de colunas possível
         int numberOfColumns = totalCards; // Começamos assumindo todas as cartas em uma linha
@@ -285,17 +294,21 @@ public class MemoryGame : MonoBehaviour
     {
         int inventoryCount = AppManager.Instance.Storage.InventoryCount;
 
-        if (inventoryCount <= 0)
-            PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount == 1)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount <= 3)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+        //if (inventoryCount <= 0)
+        //    PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
+        //else if (inventoryCount == 1)
+        //    PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
+        //else if (inventoryCount <= 3)
+        //    PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
 
         _cronometer.EndTimer();
-        float tempo = Time.time - _startTime;
-        AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
+
+        Debug.Log($"what {_config.gameTime} and {_cronometer.EndTime}");
+
+        string playTime = _cronometer.EndTime.ToString("F2");
+
+        AppManager.Instance.DataSync.AddDataToJObject("tempo", playTime);
+        AppManager.Instance.DataSync.AddDataToJObject("pontos", _revealedPairs);
 
         InvokeUtility.Invoke(1f, () =>
         {
@@ -308,6 +321,8 @@ public class MemoryGame : MonoBehaviour
             }
         _cardsList.Clear();
         _revealedPairs = 0;
+
+        RankingManager.Instance.SaveRankingData(AppManager.Instance.DataSync.CurrentLead);
 
         AppManager.Instance.DataSync.SaveLeads();
         });
@@ -329,7 +344,7 @@ public class MemoryGame : MonoBehaviour
         }
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
-        AppManager.Instance.DataSync.AddDataToJObject("brinde", prizeName);
+        AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
     }
 
     private void LoseGame()
