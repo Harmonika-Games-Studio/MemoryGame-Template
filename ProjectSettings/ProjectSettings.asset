@@ -13,12 +13,12 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Harmonika Games
-  productName: "Jogo da mem\xF3ria - Siredi"
+  productName: Jogo Memoria Sicredi
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   m_ShowUnitySplashScreen: 0
-  m_ShowUnitySplashLogo: 1
+  m_ShowUnitySplashLogo: 0
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 0
@@ -94,7 +94,7 @@ PlayerSettings:
   usePlayerLog: 1
   dedicatedServerOptimizations: 1
   bakeCollisionMeshes: 0
-  forceSingleInstance: 0
+  forceSingleInstance: 1
   useFlipModelSwapchain: 1
   resizableWindow: 0
   useMacAppStoreValidation: 0
@@ -159,20 +159,20 @@ PlayerSettings:
   hdrBitDepth: 0
   m_ColorGamuts: 00000000
   targetPixelDensity: 160
-  resolutionScalingMode: 1
+  resolutionScalingMode: 0
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.HarmonikaGames.MemoryGame
+    Android: com.HarmonikaGames.JogodaMemoriaSicredi
     Standalone: com.DefaultCompany.Harmonika-Tools
   buildNumber:
     Standalone: 0
     VisionOS: 0
     iPhone: 0
     tvOS: 0
-  overrideDefaultApplicationIdentifier: 1
+  overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
@@ -293,49 +293,49 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5074574cc6e1d874bb2d14ba8bd98ee2, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
   - m_BuildTarget: Standalone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 512
       m_Height: 512
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 256
       m_Height: 256
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 64
       m_Height: 64
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 48
       m_Height: 48
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 32
       m_Height: 32
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 16
       m_Height: 16
       m_Kind: 0
@@ -403,7 +403,7 @@ PlayerSettings:
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 5bbd3c4e43c77f64989ed3785e12a7e8, type: 3}
+      - {fileID: 2800000, guid: 1dbbdc1c045116a40903d93f3a98fc08, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0

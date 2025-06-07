@@ -44,13 +44,13 @@ public class SicrediManager : MonoBehaviour {
                     }
                 }
 
-                csvPath = Path.Combine(directory, "Leads.csv");
+                csvPath = Path.Combine(directory, $"Leads_{DateTime.Now:yyyyMMdd_HHmmss}.csv");
             }
             catch (System.Exception e) {
                 Debug.LogError("Erro ao acessar diretório de documentos no Android: " + e.Message);
                 AppManager.Instance.ShowLeadsMessage($"Erro ao salvar CSV: Não foi possível acessar diretório de documentos");
                 directory = Application.persistentDataPath;
-                csvPath = Path.Combine(directory, "Leads.csv");
+                csvPath = Path.Combine(directory, $"Leads_{DateTime.Now:yyyyMMdd_HHmmss}.csv");
             }
         } else {
             // Fix for Windows and other platforms
@@ -66,7 +66,7 @@ public class SicrediManager : MonoBehaviour {
                 }
 
                 directory = appFolder;
-                csvPath = Path.Combine(directory, "Leads.csv");
+                csvPath = Path.Combine(directory, $"Leads_{DateTime.Now:yyyyMMdd_HHmmss}.csv");
 
                 // Log path for debugging
                 Debug.Log("Trying to save CSV to: " + csvPath);
@@ -78,7 +78,7 @@ public class SicrediManager : MonoBehaviour {
 
                 // Fallback to persistent data path if there's an error
                 directory = Application.persistentDataPath;
-                csvPath = Path.Combine(directory, "Leads.csv");
+                csvPath = Path.Combine(directory, $"Leads_{DateTime.Now:yyyyMMdd_HHmmss}.csv");
                 Debug.Log("Fallback path: " + csvPath);
             }
         }
