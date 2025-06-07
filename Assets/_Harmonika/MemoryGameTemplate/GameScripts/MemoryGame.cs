@@ -90,13 +90,13 @@ public class MemoryGame : MonoBehaviour
 
     public void StartGame()
     {
-        if (AppManager.Instance.Storage.InventoryCount <= 0)
-        {
-            PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                "Insira algum prêmio para continuar com a ativação", "OK", true);
+        //if (AppManager.Instance.Storage.InventoryCount <= 0)
+        //{
+        //    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+        //        "Insira algum prêmio para continuar com a ativação", "OK", true);
 
-            return;
-        }
+        //    return;
+        //}
         _gameMenu.CloseMenus();
 
         _startTime = Time.time;
@@ -185,28 +185,35 @@ public class MemoryGame : MonoBehaviour
         {
             _mainMenu.StartBtn.onClick.AddListener(() =>
             {
-                if (AppManager.Instance.Storage.InventoryCount <= 0)
-                {
-                    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
-                        "Insira algum prêmio para continuar com a ativação", "OK", true);
+                //if (AppManager.Instance.Storage.InventoryCount <= 0)
+                //{
+                //    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+                //        "Insira algum prêmio para continuar com a ativação", "OK", true);
 
-                    return;
-                }
+                //    return;
+                //}
 
                 _gameMenu.OpenMenu("CollectLeadsMenu");
                 _collectLeadsMenu.ClearAllFields();
             });
-            _collectLeadsMenu.ContinueBtn.onClick.AddListener(StartGame);
-            _collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+
+            //ISSO AQUI É O GAME
+            _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => { 
+                _gameMenu.OpenMenu("VictoryMenu");
+                InvokeUtility.Invoke(2.5f, () => { _gameMenu.OpenMenu("CollectLeadsMenu"); _collectLeadsMenu.ClearAllFields(); });
+            });
+
+
+            //_collectLeadsMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
         }
         else
         {
             _mainMenu.StartBtn.onClick.AddListener(StartGame);
         }
 
-        _victoryMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
-        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("MainMenu"));
+        _victoryMenu.BackBtn.onClick.AddListener(() => { _gameMenu.OpenMenu("CollectLeadsMenu"); _collectLeadsMenu.ClearAllFields(); });
+        _loseMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
+        _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("CollectLeadsMenu"));
     }
 
     private void InstantiateCards()
