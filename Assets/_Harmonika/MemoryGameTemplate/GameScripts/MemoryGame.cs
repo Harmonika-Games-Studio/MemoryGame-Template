@@ -200,6 +200,7 @@ public class MemoryGame : MonoBehaviour
             //ISSO AQUI É O GAME
             _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => { 
                 _gameMenu.OpenMenu("VictoryMenu");
+                InvokeUtility.Invoke(1f, () => AppManager.Instance.DataSync.SaveLeads());
                 InvokeUtility.Invoke(2.5f, () => { _gameMenu.OpenMenu("CollectLeadsMenu"); _collectLeadsMenu.ClearAllFields(); });
             });
 
