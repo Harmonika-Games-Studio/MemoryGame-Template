@@ -288,16 +288,19 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
 
-        prizeName = GetPrizeByTime(tempo);
+        if (win) {
 
-        int inventoryCount = AppManager.Instance.Storage.InventoryCount;
+            prizeName = GetPrizeByTime(tempo);
 
-        if (inventoryCount <= 0)
-            PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount == 1)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
-        else if (inventoryCount <= 3)
-            PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+            int inventoryCount = AppManager.Instance.Storage.InventoryCount;
+
+            if (inventoryCount <= 0)
+                PopupManager.Instance.InvokeToast("O estoque está vazio!", 3, ToastPosition.LowerMiddle);
+            else if (inventoryCount == 1)
+                PopupManager.Instance.InvokeToast($"{inventoryCount} prêmio restante no estoque!", 3, ToastPosition.LowerMiddle);
+            else if (inventoryCount <= 3)
+                PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
+        }
 
         _cronometer.EndTimer();
         
@@ -331,7 +334,7 @@ public class MemoryGame : MonoBehaviour
         else
         {
             prizeName = "Nenhum";
-            _victoryMenu.PrimaryText = $"Seu tempo foi de\n<b>{time.ToString("F2")}</b> segundos";
+            _victoryMenu.PrimaryText = $"Seu tempo foi de\n<b><color=#5C2C82>{time.ToString("F2")}</color></b> segundos";
             _prizeText.SetActive(false);
             _victoryMenu.SecondaryText = $"{prizeName}";
             _gameMenu.OpenMenu("VictoryMenu");

@@ -1851,6 +1851,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4391463851647703368, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: inputDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391463851647703368, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
+      propertyPath: textColor.rgba
+      value: 4282515493
+      objectReference: {fileID: 0}
     - target: {fileID: 9196338307679781652, guid: 378273a07ad27df4dafee1a0e1b979b2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
