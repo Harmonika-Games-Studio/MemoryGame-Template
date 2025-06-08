@@ -46,6 +46,7 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private GameoverMenu _victoryMenu;
     [SerializeField] private GameoverMenu _participationMenu;
     [SerializeField] private GameoverMenu _loseMenu;
+    [SerializeField] private GameObject _prizeText;
     
     private int _revealedPairs;
     private int _remainingTime;
@@ -161,7 +162,7 @@ public class MemoryGame : MonoBehaviour
                 _revealedPairs++;
                 if (_revealedPairs >= _config.cardPairs.Length)
                 {
-                    EndGame(true, AppManager.Instance.Storage.GetRandomPrize());
+                    EndGame(true, null);
                 }
             }
             else
@@ -283,6 +284,35 @@ public class MemoryGame : MonoBehaviour
 
     private void EndGame(bool win, string prizeName = null)
     {
+        float tempo = Time.time - _startTime;
+        AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
+        AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
+
+        if (tempo > 60)
+        {
+            AppManager.Instance.Storage.GetSpecificPrize(0);
+        }
+        else if(tempo >= 45 && tempo <= 60) {
+            AppManager.Instance.Storage.GetSpecificPrize(0);
+        }
+        else if (tempo >= 30 && tempo < 45)
+        {
+            AppManager.Instance.Storage.GetSpecificPrize(1);
+        }
+        else if (tempo >= 20 && tempo < 30)
+        {
+            AppManager.Instance.Storage.GetSpecificPrize(2);
+        }
+        else if (tempo >= 15 && tempo < 20)
+        {
+            AppManager.Instance.Storage.GetSpecificPrize(3);
+        }
+        else if (tempo >= 0 && tempo < 15)
+        {
+            //RANDOM ENTRE INDEX 4 E 7
+            AppManager.Instance.Storage.GetSpecificPrize(0);
+        }
+
         int inventoryCount = AppManager.Instance.Storage.InventoryCount;
 
         if (inventoryCount <= 0)
@@ -293,13 +323,10 @@ public class MemoryGame : MonoBehaviour
             PopupManager.Instance.InvokeToast($"{inventoryCount} prêmios restantes no estoque!", 3, ToastPosition.LowerMiddle);
 
         _cronometer.EndTimer();
-        float tempo = Time.time - _startTime;
-        AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
-        AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
-
+        
         InvokeUtility.Invoke(1f, () =>
         {
-            if (win) WinGame(prizeName);
+            if (win) WinGame(prizeName, tempo);
             else LoseGame();
 
             foreach (var card in _cardsList)
@@ -313,19 +340,25 @@ public class MemoryGame : MonoBehaviour
         });
     }
 
-    private void WinGame(string prizeName = null)
+    private void WinGame(string prizeName = null, float time = 0f)
     {
         SoundSystem.Instance.Play("Win");
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.SecondaryText = $"Você ganhou um <b>{prizeName}</b>";
+            _victoryMenu.PrimaryText = $"Seu tempo foi de\n<b>{time}</b> segundos";
+            _prizeText.SetActive(true);
+            _victoryMenu.SecondaryText = $"Você ganhou um\n<b>{prizeName}</b>";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
         {
             prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
+            _victoryMenu.PrimaryText = $"Seu tempo foi de\n<b>{time}</b> segundos";
+            _prizeText.SetActive(false);
+            _victoryMenu.SecondaryText = $"Você ganhou um\n<b>{prizeName}</b>";
+            _gameMenu.OpenMenu("VictoryMenu");
+            //_gameMenu.OpenMenu("ParticipationMenu");
         }
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");

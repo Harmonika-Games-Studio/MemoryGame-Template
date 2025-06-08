@@ -15,15 +15,33 @@ MonoBehaviour:
   musicVolume: 15
   sfxVolume: 100
   storageItems:
-  - itemName: Item 1
-    initialValue: 2
+  - itemName: Caneta
+    initialValue: 300
     prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
+  - itemName: Chaveiro
+    initialValue: 300
+    prizeScore: 0
+  - itemName: Bolsa Personalizada
+    initialValue: 500
+    prizeScore: 0
+  - itemName: Necessaire
+    initialValue: 50
+    prizeScore: 0
+  - itemName: Garrafa
+    initialValue: 9
+    prizeScore: 0
+  - itemName: Mochila
+    initialValue: 9
+    prizeScore: 0
+  - itemName: Porta-cabos
+    initialValue: 9
+    prizeScore: 0
+  - itemName: Copo Personalizado
+    initialValue: 9
     prizeScore: 0
   useLeads: 1
-  memorizationTime: 2
-  gameTime: 20
+  memorizationTime: 3
+  gameTime: 60
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
   cardBack: {fileID: 21300000, guid: 180eacdb964c0794f8a75747f58dcd33, type: 3}
   cardPairs:
