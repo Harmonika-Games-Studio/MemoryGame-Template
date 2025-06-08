@@ -62,7 +62,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: productName
-    value: Memory Game
+    value: MemoryGame Somapay
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: defaultCursor
@@ -98,7 +98,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ShowUnitySplashLogo
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SplashScreenOverlayOpacity
@@ -698,7 +698,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: applicationIdentifier.Array.data[0].second
-    value: com.HarmonikaGames.MemoryGame
+    value: com.HarmonikaGames.MemoryGameSomapay
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: applicationIdentifier.Array.data[1].first
@@ -746,7 +746,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: overrideDefaultApplicationIdentifier
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: AndroidBundleVersionCode
@@ -1210,7 +1210,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetIcons.Array.size
-    value: 2
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetIcons.Array.data[0].m_BuildTarget
@@ -1223,7 +1223,7 @@ Preset:
   - target: {fileID: 0}
     propertyPath: m_BuildTargetIcons.Array.data[0].m_Icons.Array.data[0].m_Icon
     value: 
-    objectReference: {fileID: 2800000, guid: 5074574cc6e1d874bb2d14ba8bd98ee2, type: 3}
+    objectReference: {fileID: 2800000, guid: 1757d7c341331b245a44cd11205f7751, type: 3}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetIcons.Array.data[0].m_Icons.Array.data[0].m_Width
     value: 128
@@ -1234,142 +1234,6 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetIcons.Array.data[0].m_Icons.Array.data[0].m_Kind
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_BuildTarget
-    value: Standalone
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.size
-    value: 8
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[0].m_Icon
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[0].m_Width
-    value: 1024
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[0].m_Height
-    value: 1024
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[0].m_Kind
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[1].m_Icon
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[1].m_Width
-    value: 512
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[1].m_Height
-    value: 512
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[1].m_Kind
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[2].m_Icon
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[2].m_Width
-    value: 256
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[2].m_Height
-    value: 256
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[2].m_Kind
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[3].m_Icon
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[3].m_Width
-    value: 128
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[3].m_Height
-    value: 128
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[3].m_Kind
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[4].m_Icon
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[4].m_Width
-    value: 64
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[4].m_Height
-    value: 64
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[4].m_Kind
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[5].m_Icon
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[5].m_Width
-    value: 48
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[5].m_Height
-    value: 48
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[5].m_Kind
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[6].m_Icon
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[6].m_Width
-    value: 32
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[6].m_Height
-    value: 32
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[6].m_Kind
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[7].m_Icon
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[7].m_Width
-    value: 16
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[7].m_Height
-    value: 16
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_BuildTargetIcons.Array.data[1].m_Icons.Array.data[7].m_Kind
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
@@ -1506,23 +1370,19 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[6].m_Textures.Array.size
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: 'm_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[6].m_Textures.Array.data[0]'
-    value: 
-    objectReference: {fileID: 2800000, guid: e8ae1adeda161dd41ae48c48caf5bfd9, type: 3}
-  - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[6].m_Width
-    value: 192
+    value: 432
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[6].m_Height
-    value: 192
+    value: 432
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[6].m_Kind
-    value: 0
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[6].m_SubKind
@@ -1534,15 +1394,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[7].m_Width
-    value: 144
+    value: 324
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[7].m_Height
-    value: 144
+    value: 324
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[7].m_Kind
-    value: 0
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[7].m_SubKind
@@ -1554,15 +1414,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[8].m_Width
-    value: 96
+    value: 216
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[8].m_Height
-    value: 96
+    value: 216
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[8].m_Kind
-    value: 0
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[8].m_SubKind
@@ -1574,15 +1434,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[9].m_Width
-    value: 72
+    value: 162
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[9].m_Height
-    value: 72
+    value: 162
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[9].m_Kind
-    value: 0
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[9].m_SubKind
@@ -1594,15 +1454,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[10].m_Width
-    value: 48
+    value: 108
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[10].m_Height
-    value: 48
+    value: 108
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[10].m_Kind
-    value: 0
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[10].m_SubKind
@@ -1614,15 +1474,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[11].m_Width
-    value: 36
+    value: 81
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[11].m_Height
-    value: 36
+    value: 81
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[11].m_Kind
-    value: 0
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[11].m_SubKind
@@ -1634,15 +1494,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[12].m_Width
-    value: 432
+    value: 192
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[12].m_Height
-    value: 432
+    value: 192
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[12].m_Kind
-    value: 2
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[12].m_SubKind
@@ -1654,15 +1514,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[13].m_Width
-    value: 324
+    value: 144
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[13].m_Height
-    value: 324
+    value: 144
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[13].m_Kind
-    value: 2
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[13].m_SubKind
@@ -1674,15 +1534,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[14].m_Width
-    value: 216
+    value: 96
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[14].m_Height
-    value: 216
+    value: 96
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[14].m_Kind
-    value: 2
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[14].m_SubKind
@@ -1694,15 +1554,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[15].m_Width
-    value: 162
+    value: 72
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[15].m_Height
-    value: 162
+    value: 72
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[15].m_Kind
-    value: 2
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[15].m_SubKind
@@ -1714,15 +1574,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[16].m_Width
-    value: 108
+    value: 48
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[16].m_Height
-    value: 108
+    value: 48
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[16].m_Kind
-    value: 2
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[16].m_SubKind
@@ -1734,15 +1594,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[17].m_Width
-    value: 81
+    value: 36
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[17].m_Height
-    value: 81
+    value: 36
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[17].m_Kind
-    value: 2
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_BuildTargetPlatformIcons.Array.data[0].m_Icons.Array.data[17].m_SubKind

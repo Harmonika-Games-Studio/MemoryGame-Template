@@ -288,30 +288,7 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("tempo", tempo);
         AppManager.Instance.DataSync.AddDataToJObject("pontos", (int)Math.Floor(_config.gameTime - tempo));
 
-        if (tempo > 60)
-        {
-            AppManager.Instance.Storage.GetSpecificPrize(0);
-        }
-        else if(tempo >= 45 && tempo <= 60) {
-            AppManager.Instance.Storage.GetSpecificPrize(0);
-        }
-        else if (tempo >= 30 && tempo < 45)
-        {
-            AppManager.Instance.Storage.GetSpecificPrize(1);
-        }
-        else if (tempo >= 20 && tempo < 30)
-        {
-            AppManager.Instance.Storage.GetSpecificPrize(2);
-        }
-        else if (tempo >= 15 && tempo < 20)
-        {
-            AppManager.Instance.Storage.GetSpecificPrize(3);
-        }
-        else if (tempo >= 0 && tempo < 15)
-        {
-            //RANDOM ENTRE INDEX 4 E 7
-            AppManager.Instance.Storage.GetSpecificPrize(0);
-        }
+        prizeName = GetPrizeByTime(tempo);
 
         int inventoryCount = AppManager.Instance.Storage.InventoryCount;
 
@@ -346,17 +323,17 @@ public class MemoryGame : MonoBehaviour
 
         if (!string.IsNullOrEmpty(prizeName))
         {
-            _victoryMenu.PrimaryText = $"Seu tempo foi de\n<b>{time}</b> segundos";
+            _victoryMenu.PrimaryText = $"Seu tempo foi de\n<b><color=#5C2C82>{time.ToString("F2")}</color></b> segundos";
             _prizeText.SetActive(true);
-            _victoryMenu.SecondaryText = $"Você ganhou um\n<b>{prizeName}</b>";
+            _victoryMenu.SecondaryText = $"{prizeName}";
             _gameMenu.OpenMenu("VictoryMenu");
         }
         else
         {
             prizeName = "Nenhum";
-            _victoryMenu.PrimaryText = $"Seu tempo foi de\n<b>{time}</b> segundos";
+            _victoryMenu.PrimaryText = $"Seu tempo foi de\n<b>{time.ToString("F2")}</b> segundos";
             _prizeText.SetActive(false);
-            _victoryMenu.SecondaryText = $"Você ganhou um\n<b>{prizeName}</b>";
+            _victoryMenu.SecondaryText = $"{prizeName}";
             _gameMenu.OpenMenu("VictoryMenu");
             //_gameMenu.OpenMenu("ParticipationMenu");
         }
@@ -373,5 +350,78 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
         _gameMenu.OpenMenu("LoseMenu");
+    }
+
+    public string GetPrizeByTime(float tempo)
+    {
+        // Função auxiliar para verificar se um índice tem estoque
+        bool HasStock(int index)
+        {
+            return index >= 0 && index < AppManager.Instance.Storage.ItemsList.Count &&
+                   AppManager.Instance.Storage.ItemsList[index].Quantity > 0;
+        }
+
+        // Função auxiliar para tentar pegar um prêmio, com fallback para índices menores
+        string TryGetPrizeWithFallback(int targetIndex)
+        {
+            for (int i = targetIndex; i >= 0; i--)
+            {
+                if (HasStock(i))
+                {
+                    return AppManager.Instance.Storage.GetSpecificPrize(i);
+                }
+            }
+            return null; // Nenhum item disponível
+        }
+
+        // Lógica baseada no tempo
+        if (tempo > 60)
+        {
+            return TryGetPrizeWithFallback(0);
+        }
+        else if (tempo >= 45 && tempo <= 60)
+        {
+            return TryGetPrizeWithFallback(0);
+        }
+        else if (tempo >= 30 && tempo < 45)
+        {
+            return TryGetPrizeWithFallback(1);
+        }
+        else if (tempo >= 20 && tempo < 30)
+        {
+            return TryGetPrizeWithFallback(2);
+        }
+        else if (tempo >= 15 && tempo < 20)
+        {
+            return TryGetPrizeWithFallback(3);
+        }
+        else if (tempo >= 0 && tempo < 15)
+        {
+            // Random entre índices 4 e 7, com fallback
+            List<int> availableIndices = new List<int>();
+
+            // Verifica quais índices entre 4 e 7 têm estoque
+            for (int i = 4; i <= 7; i++)
+            {
+                if (HasStock(i))
+                {
+                    availableIndices.Add(i);
+                }
+            }
+
+            // Se tem índices disponíveis entre 4-7, escolhe um aleatório
+            if (availableIndices.Count > 0)
+            {
+                int randomIndex = availableIndices[UnityEngine.Random.Range(0, availableIndices.Count)];
+                return AppManager.Instance.Storage.GetSpecificPrize(randomIndex);
+            }
+            else
+            {
+                // Se não há estoque nos índices 4-7, usa fallback para índices menores
+                return TryGetPrizeWithFallback(3);
+            }
+        }
+
+        return null;
     }
 }
