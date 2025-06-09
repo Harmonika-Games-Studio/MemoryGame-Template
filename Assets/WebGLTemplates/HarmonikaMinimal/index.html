@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{{{ PRODUCT_NAME }}}</title>
+	<style>
+		html, body {
+			background: var(--background-color, linear-gradient(135deg, #270c19 0%, #253b6f 100%));
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+			padding: 0;
+			margin: 0;
+		}
+		div#gameContainer {
+			background: transparent !important;
+			position: absolute;
+		}
+		div#gameContainer canvas {
+			position: absolute;
+		}
+		div#gameContainer canvas[data-pixel-art="true"] {
+			position: absolute;
+			image-rendering: optimizeSpeed;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -o-crisp-edges;
+			image-rendering: crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: optimize-contrast;
+			image-rendering: pixelated;
+			-ms-interpolation-mode: nearest-neighbor;
+		}
+        /* Logo and progress bar styles */
+        #logo {
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 50%;
+			height: auto;
+			padding: 20px;
+			border-radius: 10px;
+			z-index: 10;
+		}
+		#progress-bar-container {
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 80%;
+			height: 30px;
+			background: var(--progress-bg-color, #231F20);
+			border: 2px solid black;
+			border-radius: 5px;
+			z-index: 10;
+		}
+		#progress-bar {
+			height: 100%;
+			width: 0%;
+			background: var(--progress-bar-color, linear-gradient(90deg, #270c19 0%, #253b6f 100%));
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+    <!-- Color configuration script -->
+    <script>
+        // Função para configurar cores personalizadas
+        function setCustomColors() {
+            const root = document.documentElement;
+            
+            // Configurações de cor padrão - EDITE AQUI PARA PERSONALIZAR
+            const colors = {
+                backgroundColor: 'linear-gradient(135deg, #DB0117 0%, #DB0117 100%)',
+                progressBarColor: 'linear-gradient(90deg, #DDA544 0%, #DDA544 100%)',
+                progressBgColor: '#FFFFFF'
+            };
+            
+            // Aplica as cores personalizadas
+            root.style.setProperty('--background-color', colors.backgroundColor);
+            root.style.setProperty('--progress-bar-color', colors.progressBarColor);
+            root.style.setProperty('--progress-bg-color', colors.progressBgColor);
+        }
+        
+        // Aplica as cores ao carregar
+        setCustomColors();
+    </script>
+
+    <!-- Loading UI elements -->
+    <img id="logo" src="Images/logo.png" alt="Loading Logo" onerror="this.style.display='none'">
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+    
+	<div id="gameContainer">
+		<canvas id="unity-canvas" width="{{{ WIDTH }}}" height="{{{ HEIGHT }}}" tabindex="-1" data-pixel-art=""></canvas>
+		<script src="Build/{{{ LOADER_FILENAME }}}"></script>
+		<script>
+			if (typeof createUnityInstance === 'undefined') {
+				console.error('createUnityInstance não foi carregado. Verifique se o arquivo loader existe.');
+				alert('Erro ao carregar o jogo. Verifique se todos os arquivos estão presentes.');
+			}
+
+			var canvas = document.querySelector("#unity-canvas");
+			var config = {
+				arguments: [],
+				dataUrl: "Build/{{{ DATA_FILENAME }}}",
+				frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+				codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+				memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+				symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+				streamingAssetsUrl: "StreamingAssets",
+				companyName: "{{{ COMPANY_NAME }}}",
+				productName: "{{{ PRODUCT_NAME }}}",
+				productVersion: "{{{ PRODUCT_VERSION }}}",
+			};
+			
+			var scaleToFit;
+			try {
+				scaleToFit = !!JSON.parse("{{{ SCALE_TO_FIT }}}");
+			} catch (e) {
+				scaleToFit = true;
+			}
+            
+            // Loading UI elements
+            var progressBar = document.querySelector("#progress-bar");
+            var logo = document.getElementById("logo");
+            var progressBarContainer = document.getElementById("progress-bar-container");
+            
+			function progressHandler(progress) {
+				// Update progress bar
+				var percent = progress * 100 + '%';
+				if (progressBar) {
+					progressBar.style.width = percent;
+				}
+			}
+            
+			function onResize() {
+				var container = canvas.parentElement;
+				var w;
+				var h;
+				if (scaleToFit) {
+					w = window.innerWidth;
+					h = window.innerHeight;
+					var r = {{{ HEIGHT }}} / {{{ WIDTH }}};
+					if (w * r > window.innerHeight) {
+						w = Math.min(w, Math.ceil(h / r));
+					}
+					h = Math.floor(w * r);
+				} else {
+					w = {{{ WIDTH }}};
+					h = {{{ HEIGHT }}};
+				}
+				container.style.width = canvas.style.width = w + "px";
+				container.style.height = canvas.style.height = h + "px";
+				container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+				container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+			}
+
+			// Só executa se createUnityInstance estiver disponível
+			if (typeof createUnityInstance !== 'undefined') {
+				createUnityInstance(canvas, config, progressHandler).then(function (instance) {
+					canvas = instance.Module.canvas;
+					onResize();
+					
+					// Hide loading UI when game is loaded
+					if (progressBarContainer) progressBarContainer.style.display = 'none';
+					if (logo) logo.style.display = 'none';
+				}).catch(function (error) {
+					// Error handling
+					console.error("Failed to create Unity instance:", error);
+					alert("Erro ao carregar o jogo: " + error);
+				});
+			}
+            
+			window.addEventListener('resize', onResize);
+			onResize();
+			
+			if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+				// Mobile device style: fill the whole browser client area with the game canvas:
+				const meta = document.createElement('meta');
+				meta.name = 'viewport';
+				meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+				document.getElementsByTagName('head')[0].appendChild(meta);
+			}
+		</script>
+	</div>
+</body>
+</html>
