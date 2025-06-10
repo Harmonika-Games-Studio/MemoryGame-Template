@@ -12,20 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045cc4695a78a9b45b1f23df8a89877a, type: 3}
   m_Name: MemoryGame Default Config
   m_EditorClassIdentifier: 
-  musicVolume: 15
+  musicVolume: 10
   sfxVolume: 100
   storageItems:
-  - itemName: Item 1
-    initialValue: 2
-    prizeScore: 0
-  - itemName: Item 2
-    initialValue: 2
+  - itemName: Nenhum
+    initialValue: 99999
     prizeScore: 0
   useLeads: 1
-  memorizationTime: 2
-  gameTime: 20
+  memorizationTime: 3
+  gameTime: 30
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 21300000, guid: ad13c0ca59cbb0a48b89789d2edefb28, type: 3}
   cardPairs:
   - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
   - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
