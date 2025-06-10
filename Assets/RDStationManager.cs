@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -15,8 +17,15 @@ public class RDStationManager : MonoBehaviour
     [Header("Debug Settings")]
     [SerializeField] private bool enableDebugLogs = true;
 
+    [Header("Offline Storage Settings")]
+    [SerializeField] private int maxRetryAttempts = 3;
+    [SerializeField] private float retryDelaySeconds = 5f;
+    [SerializeField] private int maxStoredConversions = 100; // Máximo de conversões armazenadas offline
+    [SerializeField] private float autoRetryIntervalSeconds = 30f; // Intervalo para tentar reenviar dados pendentes
+
     // Endpoint correto para conversões
     private const string CONVERSION_ENDPOINT = "/platform/conversions";
+    private const string OFFLINE_DATA_FILENAME = "rd_station_offline_data.json";
 
     [System.Serializable]
     public class ConversionData
@@ -31,7 +40,35 @@ public class RDStationManager : MonoBehaviour
         public string cf_estado_civil;
     }
 
+    [System.Serializable]
+    public class OfflineConversionEntry
+    {
+        public string jsonData;
+        public int retryCount;
+        public long timestamp;
+        public string id;
+
+        public OfflineConversionEntry(string data)
+        {
+            jsonData = data;
+            retryCount = 0;
+            timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            id = Guid.NewGuid().ToString();
+        }
+    }
+
+    [System.Serializable]
+    public class OfflineDataContainer
+    {
+        public List<OfflineConversionEntry> pendingConversions = new List<OfflineConversionEntry>();
+    }
+
     public static RDStationManager Instance;
+
+    private OfflineDataContainer offlineData;
+    private string offlineDataPath;
+    private bool isProcessingOfflineData = false;
+    private Coroutine autoRetryCoroutine;
 
     private void Awake()
     {
@@ -39,11 +76,246 @@ public class RDStationManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            InitializeOfflineStorage();
         }
         else
         {
             Destroy(gameObject);
             return;
+        }
+    }
+
+    private void Start()
+    {
+        // Tentar processar dados offline ao iniciar
+        StartCoroutine(ProcessOfflineDataOnStart());
+
+        // Iniciar corrotina de retry automático
+        if (autoRetryCoroutine == null)
+        {
+            autoRetryCoroutine = StartCoroutine(AutoRetryOfflineData());
+        }
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+        {
+            SaveOfflineData();
+        }
+    }
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (!hasFocus)
+        {
+            SaveOfflineData();
+        }
+        else
+        {
+            // Quando voltar o foco, tentar processar dados offline
+            StartCoroutine(ProcessOfflineDataDelayed());
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SaveOfflineData();
+        if (autoRetryCoroutine != null)
+        {
+            StopCoroutine(autoRetryCoroutine);
+        }
+    }
+
+    private void InitializeOfflineStorage()
+    {
+        // Usar persistentDataPath para Android
+        offlineDataPath = Path.Combine(Application.persistentDataPath, OFFLINE_DATA_FILENAME);
+        LoadOfflineData();
+        LogDebug($"Offline data path: {offlineDataPath}");
+    }
+
+    private void LoadOfflineData()
+    {
+        try
+        {
+            if (File.Exists(offlineDataPath))
+            {
+                string jsonContent = File.ReadAllText(offlineDataPath);
+                offlineData = JsonConvert.DeserializeObject<OfflineDataContainer>(jsonContent);
+
+                if (offlineData == null)
+                {
+                    offlineData = new OfflineDataContainer();
+                }
+
+                LogDebug($"Carregados {offlineData.pendingConversions.Count} conversões offline");
+            }
+            else
+            {
+                offlineData = new OfflineDataContainer();
+                LogDebug("Nenhum arquivo de dados offline encontrado, criando novo");
+            }
+        }
+        catch (Exception ex)
+        {
+            LogError($"Erro ao carregar dados offline: {ex.Message}");
+            offlineData = new OfflineDataContainer();
+        }
+    }
+
+    private void SaveOfflineData()
+    {
+        try
+        {
+            string jsonContent = JsonConvert.SerializeObject(offlineData, Formatting.Indented);
+            File.WriteAllText(offlineDataPath, jsonContent);
+            LogDebug($"Dados offline salvos: {offlineData.pendingConversions.Count} conversões pendentes");
+        }
+        catch (Exception ex)
+        {
+            LogError($"Erro ao salvar dados offline: {ex.Message}");
+        }
+    }
+
+    private IEnumerator ProcessOfflineDataOnStart()
+    {
+        yield return new WaitForSeconds(2f); // Aguardar inicialização completa
+        yield return ProcessOfflineData();
+    }
+
+    private IEnumerator ProcessOfflineDataDelayed()
+    {
+        yield return new WaitForSeconds(1f);
+        yield return ProcessOfflineData();
+    }
+
+    private IEnumerator AutoRetryOfflineData()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(autoRetryIntervalSeconds);
+
+            if (offlineData.pendingConversions.Count > 0 && !isProcessingOfflineData)
+            {
+                LogDebug("Auto-retry: Tentando processar dados offline...");
+                yield return ProcessOfflineData();
+            }
+        }
+    }
+
+    private IEnumerator ProcessOfflineData()
+    {
+        if (isProcessingOfflineData || offlineData.pendingConversions.Count == 0)
+        {
+            yield break;
+        }
+
+        isProcessingOfflineData = true;
+        LogDebug($"Processando {offlineData.pendingConversions.Count} conversões offline...");
+
+        List<OfflineConversionEntry> toRemove = new List<OfflineConversionEntry>();
+
+        foreach (var entry in offlineData.pendingConversions)
+        {
+            if (entry.retryCount >= maxRetryAttempts)
+            {
+                LogError($"Conversão {entry.id} excedeu máximo de tentativas ({maxRetryAttempts}), removendo...");
+                toRemove.Add(entry);
+                continue;
+            }
+
+            // Verificar se a conversão não é muito antiga (ex: mais de 7 dias)
+            long currentTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            if (currentTimestamp - entry.timestamp > 604800) // 7 dias em segundos
+            {
+                LogError($"Conversão {entry.id} muito antiga, removendo...");
+                toRemove.Add(entry);
+                continue;
+            }
+
+            // Tentar reenviar
+            bool success = false;
+            yield return StartCoroutine(RetryOfflineConversion(entry, (result) => success = result));
+
+            if (success)
+            {
+                LogDebug($"Conversão offline {entry.id} enviada com sucesso!");
+                toRemove.Add(entry);
+            }
+            else
+            {
+                entry.retryCount++;
+                LogDebug($"Falha ao reenviar conversão {entry.id}, tentativa {entry.retryCount}/{maxRetryAttempts}");
+            }
+
+            // Pequena pausa entre tentativas
+            yield return new WaitForSeconds(1f);
+        }
+
+        // Remover conversões processadas com sucesso ou que excederam tentativas
+        foreach (var entry in toRemove)
+        {
+            offlineData.pendingConversions.Remove(entry);
+        }
+
+        if (toRemove.Count > 0)
+        {
+            SaveOfflineData();
+        }
+
+        isProcessingOfflineData = false;
+        LogDebug($"Processamento offline concluído. Restam {offlineData.pendingConversions.Count} conversões pendentes");
+    }
+
+    private IEnumerator RetryOfflineConversion(OfflineConversionEntry entry, System.Action<bool> callback)
+    {
+        JObject conversionData = null;
+        bool success = false;
+
+        // Parse JSON outside of try-catch with yield
+        try
+        {
+            conversionData = JObject.Parse(entry.jsonData);
+        }
+        catch (Exception ex)
+        {
+            LogError($"Erro ao fazer parse da conversão {entry.id}: {ex.Message}");
+            callback?.Invoke(false);
+            yield break;
+        }
+
+        // Send conversion (yield allowed here)
+        yield return StartCoroutine(SendConversionCoroutine(conversionData,
+            onSuccess: () => success = true,
+            onError: (error) => success = false,
+            isRetry: true));
+
+        callback?.Invoke(success);
+    }
+
+    private void StoreOfflineConversion(JObject conversionData)
+    {
+        try
+        {
+            // Verificar limite de armazenamento
+            if (offlineData.pendingConversions.Count >= maxStoredConversions)
+            {
+                // Remover a conversão mais antiga
+                offlineData.pendingConversions.RemoveAt(0);
+                LogDebug("Limite de armazenamento offline atingido, removendo conversão mais antiga");
+            }
+
+            string jsonData = conversionData.ToString(Formatting.None);
+            var offlineEntry = new OfflineConversionEntry(jsonData);
+            offlineData.pendingConversions.Add(offlineEntry);
+
+            SaveOfflineData();
+            LogDebug($"Conversão armazenada offline: {offlineEntry.id}");
+        }
+        catch (Exception ex)
+        {
+            LogError($"Erro ao armazenar conversão offline: {ex.Message}");
         }
     }
 
@@ -70,7 +342,20 @@ public class RDStationManager : MonoBehaviour
             return;
         }
 
-        StartCoroutine(SendConversionCoroutine(conversionData, onSuccess, onError));
+        // Primeiro, tentar processar dados offline pendentes
+        StartCoroutine(ProcessOfflineDataBeforeSending(conversionData, onSuccess, onError));
+    }
+
+    private IEnumerator ProcessOfflineDataBeforeSending(JObject conversionData, System.Action onSuccess, System.Action<string> onError)
+    {
+        // Processar dados offline pendentes primeiro
+        if (offlineData.pendingConversions.Count > 0 && !isProcessingOfflineData)
+        {
+            yield return ProcessOfflineData();
+        }
+
+        // Agora tentar enviar a nova conversão
+        yield return StartCoroutine(SendConversionCoroutine(conversionData, onSuccess, onError));
     }
 
     /// <summary>
@@ -105,7 +390,7 @@ public class RDStationManager : MonoBehaviour
         };
     }
 
-    private IEnumerator SendConversionCoroutine(JObject conversionData, System.Action onSuccess, System.Action<string> onError)
+    private IEnumerator SendConversionCoroutine(JObject conversionData, System.Action onSuccess, System.Action<string> onError, bool isRetry = false)
     {
         string url = $"{rdStationBaseUrl}{CONVERSION_ENDPOINT}?api_key={apiKey}";
 
@@ -142,7 +427,11 @@ public class RDStationManager : MonoBehaviour
         };
 
         string jsonPayload = requestBody.ToString(Formatting.None);
-        LogDebug($"Enviando conversão para RD Station: {jsonPayload}");
+
+        if (!isRetry)
+        {
+            LogDebug($"Enviando conversão para RD Station: {jsonPayload}");
+        }
 
         // Criar requisição
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
@@ -153,7 +442,6 @@ public class RDStationManager : MonoBehaviour
 
             // Headers corretos
             request.SetRequestHeader("Content-Type", "application/json");
-            //request.SetRequestHeader("Authorization", $"Bearer {apiKey}");
             request.SetRequestHeader("Accept", "application/json");
 
             // Timeout
@@ -176,16 +464,27 @@ public class RDStationManager : MonoBehaviour
                     errorMessage += $", Response: {request.downloadHandler.text}";
                 }
 
-                LogError(errorMessage);
-                LogError($"URL da requisição: {url}");
-                LogError($"Payload enviado: {jsonPayload}");
-                LogError($"API Key configurada: {!string.IsNullOrEmpty(apiKey)}");
-
-                // Verificar headers de resposta para debug
-                var responseHeaders = request.GetResponseHeaders();
-                if (responseHeaders != null)
+                // Se não é um retry, armazenar offline
+                if (!isRetry)
                 {
-                    LogError($"Response Headers: {string.Join(", ", responseHeaders)}");
+                    LogDebug("Armazenando conversão offline devido à falha de envio");
+                    StoreOfflineConversion(conversionData);
+                }
+
+                LogError(errorMessage);
+
+                if (!isRetry) // Evitar spam de logs em retries
+                {
+                    LogError($"URL da requisição: {url}");
+                    LogError($"Payload enviado: {jsonPayload}");
+                    LogError($"API Key configurada: {!string.IsNullOrEmpty(apiKey)}");
+
+                    // Verificar headers de resposta para debug
+                    var responseHeaders = request.GetResponseHeaders();
+                    if (responseHeaders != null)
+                    {
+                        LogError($"Response Headers: {string.Join(", ", responseHeaders)}");
+                    }
                 }
 
                 onError?.Invoke(errorMessage);
@@ -319,6 +618,56 @@ public class RDStationManager : MonoBehaviour
         callback?.Invoke(success);
     }
 
+    /// <summary>
+    /// Força o processamento de dados offline pendentes
+    /// </summary>
+    public void ForceProcessOfflineData()
+    {
+        StartCoroutine(ProcessOfflineData());
+    }
+
+    /// <summary>
+    /// Limpa todos os dados offline armazenados
+    /// </summary>
+    public void ClearOfflineData()
+    {
+        offlineData.pendingConversions.Clear();
+        SaveOfflineData();
+        LogDebug("Dados offline limpos");
+    }
+
+    /// <summary>
+    /// Retorna informações sobre dados offline
+    /// </summary>
+    public int GetPendingConversionsCount()
+    {
+        return offlineData.pendingConversions.Count;
+    }
+
+    /// <summary>
+    /// Retorna informações detalhadas sobre dados offline
+    /// </summary>
+    public string GetOfflineDataInfo()
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine($"Conversões pendentes: {offlineData.pendingConversions.Count}");
+        sb.AppendLine($"Limite máximo: {maxStoredConversions}");
+        sb.AppendLine($"Tentativas máximas por conversão: {maxRetryAttempts}");
+        sb.AppendLine($"Intervalo de retry automático: {autoRetryIntervalSeconds}s");
+
+        if (offlineData.pendingConversions.Count > 0)
+        {
+            sb.AppendLine("\nDetalhes das conversões pendentes:");
+            foreach (var conversion in offlineData.pendingConversions)
+            {
+                var date = DateTimeOffset.FromUnixTimeSeconds(conversion.timestamp).ToString("dd/MM/yyyy HH:mm:ss");
+                sb.AppendLine($"- ID: {conversion.id.Substring(0, 8)}... | Tentativas: {conversion.retryCount}/{maxRetryAttempts} | Data: {date}");
+            }
+        }
+
+        return sb.ToString();
+    }
+
     private void LogDebug(string message)
     {
         if (enableDebugLogs)
@@ -380,6 +729,21 @@ public class RDStationManager : MonoBehaviour
                 onError: (error) => {
                     LogError($"Falha na conversão avançada: {error}");
                 });
+        }
+    }
+
+    /// <summary>
+    /// Exemplo de verificação de status offline
+    /// </summary>
+    public void ExampleCheckOfflineStatus()
+    {
+        Debug.Log("=== STATUS OFFLINE ===");
+        Debug.Log(GetOfflineDataInfo());
+
+        if (GetPendingConversionsCount() > 0)
+        {
+            Debug.Log("Forçando processamento de dados offline...");
+            ForceProcessOfflineData();
         }
     }
 
