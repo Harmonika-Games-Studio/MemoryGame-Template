@@ -602,7 +602,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: bundleVersion
-    value: 1.0
+    value: 1.1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: preloadedAssets.Array.size
@@ -750,7 +750,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: AndroidBundleVersionCode
-    value: 2
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: AndroidMinSdkVersion
