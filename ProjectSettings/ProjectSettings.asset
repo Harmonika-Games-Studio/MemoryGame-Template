@@ -165,7 +165,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.HarmonikaGames.JogodaMemoriaAbradit
+    Android: com.HarmonikaGames.JogodaMemriaAbradit
     Standalone: com.DefaultCompany.Harmonika-Tools
   buildNumber:
     Standalone: 0

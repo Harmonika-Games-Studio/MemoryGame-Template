@@ -49,6 +49,7 @@ public class MemoryGame : MonoBehaviour
     [SerializeField] private GameoverMenu _loseMenu;
     [SerializeField] private GameoverMenu _rankingMenu;
     [SerializeField] private VideoPlayer _startVideo;
+    [SerializeField] private Animator _startButton;
     
     private int _revealedPairs;
     private float _remainingTime;
@@ -212,6 +213,7 @@ public class MemoryGame : MonoBehaviour
         _rankingMenu.BackBtn.onClick.AddListener(() => {
             _startVideo.time = 0;
             _startVideo.Play();
+            _startButton.SetTrigger("Animate");
             _gameMenu.OpenMenu("MainMenu"); });
         _participationMenu.BackBtn.onClick.AddListener(() => _gameMenu.OpenMenu("RankingMenu"));
     }
@@ -340,7 +342,7 @@ public class MemoryGame : MonoBehaviour
         else
         {
             prizeName = "Nenhum";
-            _gameMenu.OpenMenu("ParticipationMenu");
+            _gameMenu.OpenMenu("VictoryMenu");
         }
 
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "sim");
@@ -354,6 +356,6 @@ public class MemoryGame : MonoBehaviour
         AppManager.Instance.DataSync.AddDataToJObject("ganhou", "não");
         AppManager.Instance.DataSync.AddDataToJObject("brinde", "nenhum");
 
-        _gameMenu.OpenMenu("LoseMenu");
+        _gameMenu.OpenMenu("VictoryMenu");
     }
 }

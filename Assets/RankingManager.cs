@@ -59,6 +59,10 @@ public class RankingManager : MonoBehaviour
     public string rankingFileName = "ranking_data.json";
     public string resetSuffix = "_reset";
 
+    [Header("Display Settings")]
+    [Range(1, 100)]
+    public int maxEntriesToShow = 10;
+
     [Header("Data Configuration")]
     public List<RankingDataField> rankingFields = new List<RankingDataField>();
     public RankingDataID sortByField = RankingDataID.pontos;
@@ -133,6 +137,25 @@ public class RankingManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Sets the maximum number of entries to display in the ranking
+    /// </summary>
+    /// <param name="maxEntries">Maximum number of entries to show (minimum 1)</param>
+    public void SetMaxEntriesToShow(int maxEntries)
+    {
+        maxEntriesToShow = Mathf.Max(1, maxEntries);
+        ShowRanking(); // Refresh the display with new limit
+    }
+
+    /// <summary>
+    /// Gets the current maximum number of entries to display
+    /// </summary>
+    /// <returns>Current maximum entries limit</returns>
+    public int GetMaxEntriesToShow()
+    {
+        return maxEntriesToShow;
+    }
+
+    /// <summary>
     /// Saves ranking data to the ranking file
     /// </summary>
     /// <param name="data">JObject containing the ranking data</param>
@@ -201,6 +224,13 @@ public class RankingManager : MonoBehaviour
             if (rankingData.Any(entry => entry.ContainsKey(sortByField.ToString())))
             {
                 rankingData = SortRankingData(rankingData);
+            }
+
+            // Limit the number of entries to show
+            if (rankingData.Count > maxEntriesToShow)
+            {
+                rankingData = rankingData.Take(maxEntriesToShow).ToList();
+                Debug.Log($"Limiting ranking display to top {maxEntriesToShow} entries");
             }
 
             DisplayRankingData(rankingData, todayOnly);
@@ -390,8 +420,9 @@ public class RankingManager : MonoBehaviour
     /// Gets the current ranking data
     /// </summary>
     /// <param name="todayOnly">If true, returns only today's data</param>
+    /// <param name="limitEntries">If true, limits results to maxEntriesToShow</param>
     /// <returns>List of ranking entries</returns>
-    public List<Dictionary<string, string>> GetRankingData(bool todayOnly = false)
+    public List<Dictionary<string, string>> GetRankingData(bool todayOnly = false, bool limitEntries = false)
     {
         var data = LoadLocalData(rankingFilePath);
 
@@ -400,6 +431,16 @@ public class RankingManager : MonoBehaviour
             string today = DateTime.Now.ToString("yyyy-MM-dd");
             data = data.Where(entry =>
                 entry.ContainsKey("date") && entry["date"] == today).ToList();
+        }
+
+        if (data != null && limitEntries && data.Count > maxEntriesToShow)
+        {
+            // Sort before limiting if we have sort criteria
+            if (data.Any(entry => entry.ContainsKey(sortByField.ToString())))
+            {
+                data = SortRankingData(data);
+            }
+            data = data.Take(maxEntriesToShow).ToList();
         }
 
         return data ?? new List<Dictionary<string, string>>();
@@ -437,7 +478,7 @@ public class RankingManager : MonoBehaviour
             return;
         }
 
-        Debug.Log($"Displaying {rankingData.Count} ranking entries ({(todayOnly ? "Today" : "All Time")})");
+        Debug.Log($"Displaying {rankingData.Count} ranking entries ({(todayOnly ? "Today" : "All Time")}) - Limited to {maxEntriesToShow} max");
 
         for (int i = 0; i < rankingData.Count; i++)
         {
