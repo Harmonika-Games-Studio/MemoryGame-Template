@@ -339,6 +339,8 @@ PlayerSettings:
       m_Width: 16
       m_Height: 16
       m_Kind: 0
+  - m_BuildTarget: WebGL
+    m_Icons: []
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
