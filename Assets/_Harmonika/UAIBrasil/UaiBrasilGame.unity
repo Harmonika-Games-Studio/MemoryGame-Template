@@ -3971,7 +3971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[4].inputType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[5].fieldName
@@ -4082,12 +4082,128 @@ PrefabInstance:
       value: xxx.xxx.xxx-xx
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[4].dropdownDataConfig.fieldPlaceholder
+      value: UF
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[5].dropdownDataConfig.fieldPlaceholder
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.size
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: leadDataConfig.Array.data[5].dropdownDataConfig.options.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[0]'
+      value: AC
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[1]'
+      value: AL
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[2]'
+      value: AP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[3]'
+      value: AM
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[4]'
+      value: BA
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[5]'
+      value: CE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[6]'
+      value: DF
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[7]'
+      value: ES
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[8]'
+      value: GO
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[9]'
+      value: MA
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[10]'
+      value: MT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[11]'
+      value: MS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[12]'
+      value: MG
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[13]'
+      value: PA
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[14]'
+      value: PB
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[15]'
+      value: PR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[16]'
+      value: PE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[17]'
+      value: PI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[18]'
+      value: RJ
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[19]'
+      value: RN
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[20]'
+      value: RS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[21]'
+      value: RO
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[22]'
+      value: RR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[23]'
+      value: SC
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[24]'
+      value: SP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[25]'
+      value: SE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672325468113740176, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
+      propertyPath: 'leadDataConfig.Array.data[4].dropdownDataConfig.options.Array.data[26]'
+      value: TO
       objectReference: {fileID: 0}
     - target: {fileID: 4993801195211851150, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4171,7 +4287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087906483530790972, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 397.04156
+      value: 397.04163
       objectReference: {fileID: 0}
     - target: {fileID: 6283969275593445486, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: m_IsActive
@@ -10433,7 +10549,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 59.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
