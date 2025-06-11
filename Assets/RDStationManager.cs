@@ -1,7 +1,8 @@
-using System;
+Ôªøusing System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -20,10 +21,10 @@ public class RDStationManager : MonoBehaviour
     [Header("Offline Storage Settings")]
     [SerializeField] private int maxRetryAttempts = 3;
     [SerializeField] private float retryDelaySeconds = 5f;
-    [SerializeField] private int maxStoredConversions = 100; // M·ximo de conversıes armazenadas offline
+    [SerializeField] private int maxStoredConversions = 100; // M√°ximo de convers√µes armazenadas offline
     [SerializeField] private float autoRetryIntervalSeconds = 30f; // Intervalo para tentar reenviar dados pendentes
 
-    // Endpoint correto para conversıes
+    // Endpoint correto para convers√µes
     private const string CONVERSION_ENDPOINT = "/platform/conversions";
     private const string OFFLINE_DATA_FILENAME = "rd_station_offline_data.json";
 
@@ -47,6 +48,9 @@ public class RDStationManager : MonoBehaviour
         public int retryCount;
         public long timestamp;
         public string id;
+        public bool sentSuccessfully;
+        public long lastRetryTimestamp;
+        public int initialFailCount;
 
         public OfflineConversionEntry(string data)
         {
@@ -54,6 +58,8 @@ public class RDStationManager : MonoBehaviour
             retryCount = 0;
             timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             id = Guid.NewGuid().ToString();
+            sentSuccessfully = false;
+            lastRetryTimestamp = 0;
         }
     }
 
@@ -90,7 +96,7 @@ public class RDStationManager : MonoBehaviour
         // Tentar processar dados offline ao iniciar
         StartCoroutine(ProcessOfflineDataOnStart());
 
-        // Iniciar corrotina de retry autom·tico
+        // Iniciar corrotina de retry autom√°tico
         if (autoRetryCoroutine == null)
         {
             autoRetryCoroutine = StartCoroutine(AutoRetryOfflineData());
@@ -149,7 +155,7 @@ public class RDStationManager : MonoBehaviour
                     offlineData = new OfflineDataContainer();
                 }
 
-                LogDebug($"Carregados {offlineData.pendingConversions.Count} conversıes offline");
+                LogDebug($"Carregados {offlineData.pendingConversions.Count} convers√µes offline");
             }
             else
             {
@@ -170,7 +176,7 @@ public class RDStationManager : MonoBehaviour
         {
             string jsonContent = JsonConvert.SerializeObject(offlineData, Formatting.Indented);
             File.WriteAllText(offlineDataPath, jsonContent);
-            LogDebug($"Dados offline salvos: {offlineData.pendingConversions.Count} conversıes pendentes");
+            LogDebug($"Dados offline salvos: {offlineData.pendingConversions.Count} convers√µes pendentes");
         }
         catch (Exception ex)
         {
@@ -180,7 +186,7 @@ public class RDStationManager : MonoBehaviour
 
     private IEnumerator ProcessOfflineDataOnStart()
     {
-        yield return new WaitForSeconds(2f); // Aguardar inicializaÁ„o completa
+        yield return new WaitForSeconds(2f); // Aguardar inicializa√ß√£o completa
         yield return ProcessOfflineData();
     }
 
@@ -196,100 +202,152 @@ public class RDStationManager : MonoBehaviour
         {
             yield return new WaitForSeconds(autoRetryIntervalSeconds);
 
-            if (offlineData.pendingConversions.Count > 0 && !isProcessingOfflineData)
+            int unsentCount = GetUnsentConversionsCount();
+            if (unsentCount > 0 && !isProcessingOfflineData)
             {
-                LogDebug("Auto-retry: Tentando processar dados offline...");
-                yield return ProcessOfflineData();
+                LogDebug($"Auto-retry: Processando {unsentCount} convers√µes offline pendentes...");
+                yield return StartCoroutine(ProcessOfflineData());
+
+                int remainingUnsent = GetUnsentConversionsCount();
+                if (remainingUnsent != unsentCount)
+                {
+                    LogDebug($"Auto-retry resultado: {unsentCount - remainingUnsent} enviadas, {remainingUnsent} restam");
+                }
             }
+        }
+    }
+
+    public void ProcessPendingDataNow()
+    {
+        int unsentCount = GetUnsentConversionsCount();
+        if (unsentCount > 0)
+        {
+            LogDebug($"Processando manualmente {unsentCount} convers√µes pendentes...");
+            StartCoroutine(ProcessOfflineData());
+        }
+        else
+        {
+            LogDebug("Nenhuma convers√£o pendente para processar");
         }
     }
 
     private IEnumerator ProcessOfflineData()
     {
-        if (isProcessingOfflineData || offlineData.pendingConversions.Count == 0)
+        if (isProcessingOfflineData)
         {
+            LogDebug("J√° processando dados offline, pulando...");
+            yield break;
+        }
+
+        // Get only unsent conversions
+        var unsentConversions = offlineData.pendingConversions
+            .Where(c => !c.sentSuccessfully)
+            .ToList();
+
+        if (unsentConversions.Count == 0)
+        {
+            LogDebug("Nenhuma convers√£o pendente para processar");
             yield break;
         }
 
         isProcessingOfflineData = true;
-        LogDebug($"Processando {offlineData.pendingConversions.Count} conversıes offline...");
+        LogDebug($"Processando {unsentConversions.Count} convers√µes n√£o enviadas...");
 
-        List<OfflineConversionEntry> toRemove = new List<OfflineConversionEntry>();
+        int successCount = 0;
+        int failureCount = 0;
 
-        foreach (var entry in offlineData.pendingConversions)
+        foreach (var entry in unsentConversions)
         {
-            if (entry.retryCount >= maxRetryAttempts)
-            {
-                LogError($"Convers„o {entry.id} excedeu m·ximo de tentativas ({maxRetryAttempts}), removendo...");
-                toRemove.Add(entry);
-                continue;
-            }
+            //// Check if we haven't exceeded OFFLINE retry attempts
+            //if (entry.retryCount >= maxRetryAttempts)
+            //{
+            //    LogDebug($"Convers√£o {entry.id} j√° excedeu tentativas de retry offline ({entry.retryCount}/{maxRetryAttempts}). Total de falhas: inicial({entry.initialFailCount}) + offline({entry.retryCount})");
+            //    continue;
+            //}
 
-            // Verificar se a convers„o n„o È muito antiga (ex: mais de 7 dias)
+            // Check if enough time has passed since last retry
             long currentTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            if (currentTimestamp - entry.timestamp > 604800) // 7 dias em segundos
+            if (entry.lastRetryTimestamp > 0 && (currentTimestamp - entry.lastRetryTimestamp) < retryDelaySeconds)
             {
-                LogError($"Convers„o {entry.id} muito antiga, removendo...");
-                toRemove.Add(entry);
+                LogDebug($"Convers√£o {entry.id} ainda est√° em cooldown, pulando...");
                 continue;
             }
 
-            // Tentar reenviar
+            // Try to send the conversion
             bool success = false;
+            entry.lastRetryTimestamp = currentTimestamp;
+            entry.retryCount++;
+
             yield return StartCoroutine(RetryOfflineConversion(entry, (result) => success = result));
 
             if (success)
             {
-                LogDebug($"Convers„o offline {entry.id} enviada com sucesso!");
-                toRemove.Add(entry);
+                LogDebug($"‚úì Convers√£o offline {entry.id} enviada com sucesso! (ap√≥s {entry.retryCount} tentativas offline)");
+                entry.sentSuccessfully = true;
+                successCount++;
             }
             else
             {
-                entry.retryCount++;
-                LogDebug($"Falha ao reenviar convers„o {entry.id}, tentativa {entry.retryCount}/{maxRetryAttempts}");
+                LogDebug($"‚úó Falha ao reenviar convers√£o {entry.id}, tentativa offline {entry.retryCount}/{maxRetryAttempts} (total de falhas: {entry.initialFailCount + entry.retryCount})");
+                failureCount++;
             }
 
-            // Pequena pausa entre tentativas
+            // Small pause between attempts to avoid overwhelming the API
             yield return new WaitForSeconds(1f);
         }
 
-        // Remover conversıes processadas com sucesso ou que excederam tentativas
-        foreach (var entry in toRemove)
-        {
-            offlineData.pendingConversions.Remove(entry);
-        }
-
-        if (toRemove.Count > 0)
-        {
-            SaveOfflineData();
-        }
+        // Always save the current state
+        SaveOfflineData();
 
         isProcessingOfflineData = false;
-        LogDebug($"Processamento offline concluÌdo. Restam {offlineData.pendingConversions.Count} conversıes pendentes");
+        int remainingUnsent = GetUnsentConversionsCount();
+        LogDebug($"Processamento conclu√≠do. Sucessos: {successCount}, Falhas: {failureCount}, Restam: {remainingUnsent} n√£o enviadas");
     }
 
     private IEnumerator RetryOfflineConversion(OfflineConversionEntry entry, System.Action<bool> callback)
     {
         JObject conversionData = null;
-        bool success = false;
 
-        // Parse JSON outside of try-catch with yield
         try
         {
             conversionData = JObject.Parse(entry.jsonData);
         }
         catch (Exception ex)
         {
-            LogError($"Erro ao fazer parse da convers„o {entry.id}: {ex.Message}");
+            LogError($"Erro ao fazer parse da convers√£o {entry.id}: {ex.Message}");
             callback?.Invoke(false);
             yield break;
         }
 
-        // Send conversion (yield allowed here)
+        bool success = false;
+        bool requestCompleted = false;
+
+        // Use a coroutine with callback to handle the async nature properly
         yield return StartCoroutine(SendConversionCoroutine(conversionData,
-            onSuccess: () => success = true,
-            onError: (error) => success = false,
+            onSuccess: () => {
+                success = true;
+                requestCompleted = true;
+            },
+            onError: (error) => {
+                success = false;
+                requestCompleted = true;
+                LogDebug($"Retry falhou para {entry.id}: {error}");
+            },
             isRetry: true));
+
+        // Wait a bit more if needed to ensure request completed
+        float waitTime = 0f;
+        while (!requestCompleted && waitTime < 30f)
+        {
+            yield return new WaitForSeconds(0.1f);
+            waitTime += 0.1f;
+        }
+
+        if (!requestCompleted)
+        {
+            LogError($"Timeout ao tentar reenviar convers√£o {entry.id}");
+            success = false;
+        }
 
         callback?.Invoke(success);
     }
@@ -298,12 +356,30 @@ public class RDStationManager : MonoBehaviour
     {
         try
         {
-            // Verificar limite de armazenamento
-            if (offlineData.pendingConversions.Count >= maxStoredConversions)
+            // Verificar limite de armazenamento apenas para convers√µes n√£o enviadas
+            int unsentCount = GetUnsentConversionsCount();
+            if (unsentCount >= maxStoredConversions)
             {
-                // Remover a convers„o mais antiga
-                offlineData.pendingConversions.RemoveAt(0);
-                LogDebug("Limite de armazenamento offline atingido, removendo convers„o mais antiga");
+                // Tentar encontrar convers√µes muito antigas que foram enviadas com sucesso para remover
+                var oldSentConversions = offlineData.pendingConversions
+                    .Where(c => c.sentSuccessfully)
+                    .OrderBy(c => c.timestamp)
+                    .ToList();
+
+                if (oldSentConversions.Count > 0)
+                {
+                    // Remover apenas as convers√µes enviadas mais antigas se necess√°rio
+                    int toRemove = Math.Min(oldSentConversions.Count, unsentCount - maxStoredConversions + 1);
+                    for (int i = 0; i < toRemove; i++)
+                    {
+                        offlineData.pendingConversions.Remove(oldSentConversions[i]);
+                        LogDebug($"Removendo convers√£o enviada antiga para liberar espa√ßo: {oldSentConversions[i].id}");
+                    }
+                }
+                else
+                {
+                    LogError($"Limite de armazenamento offline atingido ({maxStoredConversions}) e n√£o h√° convers√µes enviadas antigas para remover. Armazenando mesmo assim para n√£o perder dados.");
+                }
             }
 
             string jsonData = conversionData.ToString(Formatting.None);
@@ -311,55 +387,64 @@ public class RDStationManager : MonoBehaviour
             offlineData.pendingConversions.Add(offlineEntry);
 
             SaveOfflineData();
-            LogDebug($"Convers„o armazenada offline: {offlineEntry.id}");
+            LogDebug($"Convers√£o armazenada offline: {offlineEntry.id}");
         }
         catch (Exception ex)
         {
-            LogError($"Erro ao armazenar convers„o offline: {ex.Message}");
+            LogError($"Erro ao armazenar convers√£o offline: {ex.Message}");
         }
     }
 
     /// <summary>
-    /// Envia dados de convers„o para RD Station usando JObject
+    /// Envia dados de convers√£o para RD Station usando JObject
     /// </summary>
     public void SendConversion(JObject conversionData, System.Action onSuccess = null, System.Action<string> onError = null)
     {
         if (string.IsNullOrEmpty(apiKey))
         {
-            LogError("API Key n„o configurada. Configure sua API Key da RD Station.");
-            onError?.Invoke("API Key n„o configurada");
+            LogError("API Key n√£o configurada. Configure sua API Key da RD Station.");
+            onError?.Invoke("API Key n√£o configurada");
             return;
         }
 
-        // Garantir que conversion_identifier est· definido
+        // Garantir que conversion_identifier est√° definido
         if (conversionData["conversion_identifier"] == null)
             conversionData["conversion_identifier"] = "unity_game_conversion";
 
-        // Validar dados obrigatÛrios
+        // Validar dados obrigat√≥rios
         if (!ValidateConversionData(conversionData))
         {
-            onError?.Invoke("Dados de convers„o inv·lidos");
+            onError?.Invoke("Dados de convers√£o inv√°lidos");
             return;
         }
 
-        // Primeiro, tentar processar dados offline pendentes
+        // Sempre tentar processar dados offline pendentes antes de enviar novos dados
         StartCoroutine(ProcessOfflineDataBeforeSending(conversionData, onSuccess, onError));
     }
 
     private IEnumerator ProcessOfflineDataBeforeSending(JObject conversionData, System.Action onSuccess, System.Action<string> onError)
     {
-        // Processar dados offline pendentes primeiro
-        if (offlineData.pendingConversions.Count > 0 && !isProcessingOfflineData)
+        // Always try to process offline data first if we have any unsent conversions
+        int unsentCount = GetUnsentConversionsCount();
+        if (unsentCount > 0 && !isProcessingOfflineData)
         {
-            yield return ProcessOfflineData();
+            LogDebug($"Processando {unsentCount} convers√µes offline pendentes antes de enviar nova convers√£o...");
+            yield return StartCoroutine(ProcessOfflineData());
+
+            // Log results after processing
+            int remainingUnsent = GetUnsentConversionsCount();
+            if (remainingUnsent < unsentCount)
+            {
+                LogDebug($"Enviadas {unsentCount - remainingUnsent} convers√µes offline. Restam {remainingUnsent}");
+            }
         }
 
-        // Agora tentar enviar a nova convers„o
+        // Now try to send the new conversion
         yield return StartCoroutine(SendConversionCoroutine(conversionData, onSuccess, onError));
     }
 
     /// <summary>
-    /// Envia dados de convers„o usando ConversionData object
+    /// Envia dados de convers√£o usando ConversionData object
     /// </summary>
     public void SendConversion(ConversionData conversionData, System.Action onSuccess = null, System.Action<string> onError = null)
     {
@@ -371,7 +456,7 @@ public class RDStationManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Cria objeto ConversionData com par‚metros especÌficos
+    /// Cria objeto ConversionData com par√¢metros espec√≠ficos
     /// </summary>
     public ConversionData CreateConversionData(string conversionIdentifier, string email, string name,
                                              string city = null, string mobilePhone = null, string jobTitle = null,
@@ -397,13 +482,13 @@ public class RDStationManager : MonoBehaviour
         // Criar payload no formato da API RD Station
         JObject payload = new JObject();
 
-        // Campos obrigatÛrios
+        // Campos obrigat√≥rios
         payload["conversion_identifier"] = conversionData["conversion_identifier"]?.ToString() ?? "unity_game_conversion";
 
         if (conversionData["email"] != null)
             payload["email"] = conversionData["email"].ToString();
 
-        // Campos opcionais padr„o
+        // Campos opcionais padr√£o
         AddFieldIfExists(payload, conversionData, "name");
 
         // Mapear diferentes nomes de campos
@@ -418,7 +503,7 @@ public class RDStationManager : MonoBehaviour
         // Remover campos nulos/vazios
         RemoveNullOrEmptyFields(payload);
 
-        // CORRE«√O: Criar o objeto principal com a estrutura correta da API RD Station
+        // CORRE√á√ÉO: Criar o objeto principal com a estrutura correta da API RD Station
         JObject requestBody = new JObject
         {
             ["event_type"] = "CONVERSION",
@@ -430,10 +515,10 @@ public class RDStationManager : MonoBehaviour
 
         if (!isRetry)
         {
-            LogDebug($"Enviando convers„o para RD Station: {jsonPayload}");
+            LogDebug($"Enviando convers√£o para RD Station: {jsonPayload}");
         }
 
-        // Criar requisiÁ„o
+        // Criar requisi√ß√£o
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {
             byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonPayload);
@@ -452,22 +537,22 @@ public class RDStationManager : MonoBehaviour
             // Tratar resposta
             if (request.result == UnityWebRequest.Result.Success)
             {
-                LogDebug($"Convers„o enviada com sucesso! Response: {request.downloadHandler.text}");
+                LogDebug($"Convers√£o enviada com sucesso! Response: {request.downloadHandler.text}");
                 onSuccess?.Invoke();
             }
             else
             {
-                string errorMessage = $"Falha ao enviar convers„o. Status: {request.responseCode}, Erro: {request.error}";
+                string errorMessage = $"Falha ao enviar convers√£o. Status: {request.responseCode}, Erro: {request.error}";
 
                 if (!string.IsNullOrEmpty(request.downloadHandler.text))
                 {
                     errorMessage += $", Response: {request.downloadHandler.text}";
                 }
 
-                // Se n„o È um retry, armazenar offline
+                // Se n√£o √© um retry, armazenar offline
                 if (!isRetry)
                 {
-                    LogDebug("Armazenando convers„o offline devido ‡ falha de envio");
+                    LogDebug("Armazenando convers√£o offline devido √† falha de envio");
                     StoreOfflineConversion(conversionData);
                 }
 
@@ -475,7 +560,7 @@ public class RDStationManager : MonoBehaviour
 
                 if (!isRetry) // Evitar spam de logs em retries
                 {
-                    LogError($"URL da requisiÁ„o: {url}");
+                    LogError($"URL da requisi√ß√£o: {url}");
                     LogError($"Payload enviado: {jsonPayload}");
                     LogError($"API Key configurada: {!string.IsNullOrEmpty(apiKey)}");
 
@@ -504,7 +589,7 @@ public class RDStationManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Adiciona campo mapeado de m˙ltiplas possibilidades
+    /// Adiciona campo mapeado de m√∫ltiplas possibilidades
     /// </summary>
     private void AddMappedField(JObject target, JObject source, string targetField, string[] possibleSourceFields)
     {
@@ -540,35 +625,35 @@ public class RDStationManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Valida dados de convers„o antes do envio
+    /// Valida dados de convers√£o antes do envio
     /// </summary>
     public bool ValidateConversionData(JObject conversionData)
     {
         if (conversionData == null)
         {
-            LogError("Dados de convers„o s„o nulos");
+            LogError("Dados de convers√£o s√£o nulos");
             return false;
         }
 
-        // Verificar campos obrigatÛrios
+        // Verificar campos obrigat√≥rios
         string conversionId = conversionData["conversion_identifier"]?.ToString();
         if (string.IsNullOrEmpty(conversionId))
         {
-            LogError("conversion_identifier È obrigatÛrio");
+            LogError("conversion_identifier √© obrigat√≥rio");
             return false;
         }
 
         string email = conversionData["email"]?.ToString();
         if (string.IsNullOrEmpty(email))
         {
-            LogError("email È obrigatÛrio");
+            LogError("email √© obrigat√≥rio");
             return false;
         }
 
         // Validar formato do email
         if (!IsValidEmail(email))
         {
-            LogError($"Formato de email inv·lido: {email}");
+            LogError($"Formato de email inv√°lido: {email}");
             return false;
         }
 
@@ -598,7 +683,7 @@ public class RDStationManager : MonoBehaviour
 
     private IEnumerator TestConnectionCoroutine(System.Action<bool> callback)
     {
-        // Teste simples enviando dados mÌnimos
+        // Teste simples enviando dados m√≠nimos
         JObject testData = new JObject
         {
             ["conversion_identifier"] = "test_connection",
@@ -609,7 +694,7 @@ public class RDStationManager : MonoBehaviour
         SendConversion(testData,
             onSuccess: () => { success = true; },
             onError: (error) => {
-                LogError($"Teste de conex„o falhou: {error}");
+                LogError($"Teste de conex√£o falhou: {error}");
                 success = false;
             });
 
@@ -619,7 +704,40 @@ public class RDStationManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ForÁa o processamento de dados offline pendentes
+    /// For√ßa o processamento de dados offline pendentes (incluindo os que excederam tentativas)
+    /// </summary>
+    public void ForceProcessAllOfflineData()
+    {
+        StartCoroutine(ForceProcessAllOfflineDataCoroutine());
+    }
+
+    private IEnumerator ForceProcessAllOfflineDataCoroutine()
+    {
+        if (isProcessingOfflineData)
+        {
+            LogDebug("J√° processando dados offline, aguardando...");
+            yield break;
+        }
+
+        LogDebug("For√ßando processamento de TODOS os dados offline, incluindo os que excederam tentativas...");
+
+        // Resetar contadores de retry para tentar novamente
+        foreach (var entry in offlineData.pendingConversions)
+        {
+            if (!entry.sentSuccessfully)
+            {
+                entry.retryCount = 0; // Resetar para tentar novamente
+                entry.lastRetryTimestamp = 0;
+                LogDebug($"Resetando tentativas para convers√£o {entry.id}");
+            }
+        }
+
+        // Processar todos os dados
+        yield return ProcessOfflineData();
+    }
+
+    /// <summary>
+    /// For√ßa o processamento apenas de dados offline que ainda n√£o excedaram tentativas
     /// </summary>
     public void ForceProcessOfflineData()
     {
@@ -627,17 +745,31 @@ public class RDStationManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Limpa todos os dados offline armazenados
+    /// Limpa apenas convers√µes que foram enviadas com sucesso
     /// </summary>
-    public void ClearOfflineData()
+    public void ClearSentConversions()
     {
-        offlineData.pendingConversions.Clear();
+        int initialCount = offlineData.pendingConversions.Count;
+        offlineData.pendingConversions.RemoveAll(c => c.sentSuccessfully);
+        int removedCount = initialCount - offlineData.pendingConversions.Count;
+
         SaveOfflineData();
-        LogDebug("Dados offline limpos");
+        LogDebug($"Removidas {removedCount} convers√µes enviadas com sucesso. Restam {offlineData.pendingConversions.Count} n√£o enviadas");
     }
 
     /// <summary>
-    /// Retorna informaÁıes sobre dados offline
+    /// M√âTODO PERIGOSO: Limpa TODOS os dados offline - usar apenas em casos extremos
+    /// </summary>
+    public void ClearAllOfflineData()
+    {
+        LogError("ATEN√á√ÉO: Limpando TODOS os dados offline - isso pode causar perda de dados!");
+        offlineData.pendingConversions.Clear();
+        SaveOfflineData();
+        LogDebug("TODOS os dados offline foram limpos");
+    }
+
+    /// <summary>
+    /// Retorna informa√ß√µes sobre dados offline
     /// </summary>
     public int GetPendingConversionsCount()
     {
@@ -645,23 +777,55 @@ public class RDStationManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Retorna informaÁıes detalhadas sobre dados offline
+    /// Retorna apenas convers√µes que ainda n√£o foram enviadas
+    /// </summary>
+    public int GetUnsentConversionsCount()
+    {
+        return offlineData.pendingConversions.Count(c => !c.sentSuccessfully);
+    }
+
+    /// <summary>
+    /// Retorna convers√µes que foram enviadas com sucesso
+    /// </summary>
+    public int GetSentConversionsCount()
+    {
+        return offlineData.pendingConversions.Count(c => c.sentSuccessfully);
+    }
+
+    /// <summary>
+    /// Retorna convers√µes que excederam tentativas mas ainda n√£o foram enviadas
+    /// </summary>
+    public int GetFailedConversionsCount()
+    {
+        return offlineData.pendingConversions.Count(c => !c.sentSuccessfully && c.retryCount >= maxRetryAttempts);
+    }
+
+    /// <summary>
+    /// Retorna informa√ß√µes detalhadas sobre dados offline
     /// </summary>
     public string GetOfflineDataInfo()
     {
         var sb = new StringBuilder();
-        sb.AppendLine($"Conversıes pendentes: {offlineData.pendingConversions.Count}");
-        sb.AppendLine($"Limite m·ximo: {maxStoredConversions}");
-        sb.AppendLine($"Tentativas m·ximas por convers„o: {maxRetryAttempts}");
-        sb.AppendLine($"Intervalo de retry autom·tico: {autoRetryIntervalSeconds}s");
+        sb.AppendLine($"=== STATUS OFFLINE STORAGE ===");
+        sb.AppendLine($"Total de convers√µes armazenadas: {offlineData.pendingConversions.Count}");
+        sb.AppendLine($"Convers√µes enviadas com sucesso: {GetSentConversionsCount()}");
+        sb.AppendLine($"Convers√µes n√£o enviadas: {GetUnsentConversionsCount()}");
+        sb.AppendLine($"Convers√µes que excederam tentativas: {GetFailedConversionsCount()}");
+        sb.AppendLine($"Limite m√°ximo: {maxStoredConversions}");
+        sb.AppendLine($"Tentativas m√°ximas por convers√£o: {maxRetryAttempts}");
+        sb.AppendLine($"Intervalo de retry autom√°tico: {autoRetryIntervalSeconds}s");
 
         if (offlineData.pendingConversions.Count > 0)
         {
-            sb.AppendLine("\nDetalhes das conversıes pendentes:");
+            sb.AppendLine("\n=== DETALHES DAS CONVERS√ïES ===");
             foreach (var conversion in offlineData.pendingConversions)
             {
                 var date = DateTimeOffset.FromUnixTimeSeconds(conversion.timestamp).ToString("dd/MM/yyyy HH:mm:ss");
-                sb.AppendLine($"- ID: {conversion.id.Substring(0, 8)}... | Tentativas: {conversion.retryCount}/{maxRetryAttempts} | Data: {date}");
+                string status = conversion.sentSuccessfully ? "‚úì ENVIADA" :
+                               conversion.retryCount >= maxRetryAttempts ? "‚úó FALHARAM TODAS TENTATIVAS" :
+                               "‚è≥ PENDENTE";
+
+                sb.AppendLine($"- ID: {conversion.id.Substring(0, 8)}... | Status: {status} | Tentativas: {conversion.retryCount}/{maxRetryAttempts} | Data: {date}");
             }
         }
 
@@ -679,7 +843,7 @@ public class RDStationManager : MonoBehaviour
         Debug.LogError($"[RDStationManager] {message}");
     }
 
-    #region MÈtodos de Exemplo
+    #region M√©todos de Exemplo
 
     /// <summary>
     /// Exemplo de uso simples
@@ -689,17 +853,17 @@ public class RDStationManager : MonoBehaviour
         var conversionData = CreateConversionData(
             conversionIdentifier: "memory_game_completion",
             email: "jogador@exemplo.com",
-            name: "Jo„o Silva",
-            city: "Crici˙ma",
+            name: "Jo√£o Silva",
+            city: "Crici√∫ma",
             mobilePhone: "+5548999999999"
         );
 
         SendConversion(conversionData,
             onSuccess: () => {
-                Debug.Log("Convers„o enviada com sucesso!");
+                Debug.Log("Convers√£o enviada com sucesso!");
             },
             onError: (error) => {
-                Debug.LogError($"Erro ao enviar convers„o: {error}");
+                Debug.LogError($"Erro ao enviar convers√£o: {error}");
             });
     }
 
@@ -713,37 +877,81 @@ public class RDStationManager : MonoBehaviour
             ["conversion_identifier"] = "unity_game_score",
             ["email"] = "player@example.com",
             ["name"] = "Maria Santos",
-            ["cidade"] = "Crici˙ma",           // Ser· mapeado para "city"
-            ["telefone"] = "+5548999888777",   // Ser· mapeado para "mobile_phone"
-            ["profissao"] = "Designer",        // Ser· mapeado para "job_title"
-            ["custom1"] = "Solteiro(a)",       // Ser· mapeado para "cf_estado_civil"
-            ["custom2"] = "R$5.000 - R$10.000" // Ser· mapeado para "cf_renda_7_tiers"
+            ["cidade"] = "Crici√∫ma",           // Ser√° mapeado para "city"
+            ["telefone"] = "+5548999888777",   // Ser√° mapeado para "mobile_phone"
+            ["profissao"] = "Designer",        // Ser√° mapeado para "job_title"
+            ["custom1"] = "Solteiro(a)",       // Ser√° mapeado para "cf_estado_civil"
+            ["custom2"] = "R$5.000 - R$10.000" // Ser√° mapeado para "cf_renda_7_tiers"
         };
 
         if (ValidateConversionData(conversionData))
         {
             SendConversion(conversionData,
                 onSuccess: () => {
-                    LogDebug("Convers„o avanÁada enviada!");
+                    LogDebug("Convers√£o avan√ßada enviada!");
                 },
                 onError: (error) => {
-                    LogError($"Falha na convers„o avanÁada: {error}");
+                    LogError($"Falha na convers√£o avan√ßada: {error}");
                 });
         }
     }
 
     /// <summary>
-    /// Exemplo de verificaÁ„o de status offline
+    /// Exemplo de verifica√ß√£o de status offline
     /// </summary>
     public void ExampleCheckOfflineStatus()
     {
-        Debug.Log("=== STATUS OFFLINE ===");
         Debug.Log(GetOfflineDataInfo());
 
-        if (GetPendingConversionsCount() > 0)
+        if (GetUnsentConversionsCount() > 0)
         {
-            Debug.Log("ForÁando processamento de dados offline...");
+            Debug.Log("For√ßando processamento de dados offline pendentes...");
             ForceProcessOfflineData();
+        }
+
+        if (GetFailedConversionsCount() > 0)
+        {
+            Debug.Log($"Existem {GetFailedConversionsCount()} convers√µes que falharam todas as tentativas.");
+            Debug.Log("Use ForceProcessAllOfflineData() para tentar reenviar todas, incluindo as que falharam.");
+        }
+    }
+
+    /// <summary>
+    /// Exemplo de limpeza de dados enviados com sucesso
+    /// </summary>
+    public void ExampleCleanupSentData()
+    {
+        Debug.Log("=== LIMPEZA DE DADOS ENVIADOS ===");
+        Debug.Log($"Convers√µes enviadas com sucesso: {GetSentConversionsCount()}");
+
+        if (GetSentConversionsCount() > 0)
+        {
+            Debug.Log("Removendo convers√µes enviadas com sucesso para liberar espa√ßo...");
+            ClearSentConversions();
+            Debug.Log("Limpeza conclu√≠da!");
+        }
+        else
+        {
+            Debug.Log("Nenhuma convers√£o enviada para limpar.");
+        }
+    }
+
+    /// <summary>
+    /// Exemplo de retry for√ßado para todas as convers√µes
+    /// </summary>
+    public void ExampleForceRetryAll()
+    {
+        Debug.Log("=== RETRY FOR√áADO DE TODAS AS CONVERS√ïES ===");
+        int failedCount = GetFailedConversionsCount();
+
+        if (failedCount > 0)
+        {
+            Debug.Log($"Tentando reenviar {failedCount} convers√µes que falharam anteriormente...");
+            ForceProcessAllOfflineData();
+        }
+        else
+        {
+            Debug.Log("N√£o h√° convers√µes que falharam para tentar novamente.");
         }
     }
 

@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Video;
-
+using Newtonsoft.Json;
 
 public class JsonDeserializedConfig
 {
@@ -85,10 +85,20 @@ public class MemoryGame : MonoBehaviour
             return _canClick;
         }
     }
+
+    public static MemoryGame Instance;
     #endregion
 
     private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }    
+
         //This code is necessary to run the game smoothly on android
         //Application.targetFrameRate = 60;
         //QualitySettings.vSyncCount = 0;
@@ -274,16 +284,12 @@ public class MemoryGame : MonoBehaviour
                 _gameMenu.OpenMenu("CollectLeadsMenu");
                 _collectLeadsMenu.ClearAllFields();
             });
-            _collectLeadsMenu.ContinueBtn.onClick.AddListener(() => {
-                _inMainMenu = false;
-                _secondTry = false;
-                StartGame();
-                _tryAgainButton.gameObject.SetActive(true);
-            });
             _collectLeadsMenu.BackBtn.onClick.AddListener(() => { 
                 _gameMenu.OpenMenu("MainMenu");
                 _inMainMenu = false;
             });
+
+            _collectLeadsMenu.Leads.OnSubmitEvent += (data) => BeginGame();
         }
         else
         {
@@ -297,6 +303,14 @@ public class MemoryGame : MonoBehaviour
         _openRestButton.onClick.AddListener(() => OpenRestScreen());
         _closeRestButton.onClick.AddListener(() => CloseRestScreen(false));
         _closeRestButtonAutomatic.onClick.AddListener(() => CloseRestScreen(true));
+    }
+
+    public void BeginGame()
+    {
+        _inMainMenu = false;
+        _secondTry = false;
+        StartGame();
+        _tryAgainButton.gameObject.SetActive(true);
     }
 
     private void InstantiateCards()

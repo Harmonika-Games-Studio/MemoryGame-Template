@@ -4187,7 +4187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087906483530790972, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 431.4052
+      value: 431.40485
       objectReference: {fileID: 0}
     - target: {fileID: 6283969275593445486, guid: ec4868dd05efc4f48be244210dd9b1a0, type: 3}
       propertyPath: m_IsActive
@@ -6268,6 +6268,10 @@ MonoBehaviour:
   apiKey: iyDsxcKNcNSIDmFzgTNiTWOGSrNCMCPsFDSe
   rdStationBaseUrl: https://api.rd.services
   enableDebugLogs: 1
+  maxRetryAttempts: 3
+  retryDelaySeconds: 5
+  maxStoredConversions: 100
+  autoRetryIntervalSeconds: 30
 --- !u!4 &781306814
 Transform:
   m_ObjectHideFlags: 0
