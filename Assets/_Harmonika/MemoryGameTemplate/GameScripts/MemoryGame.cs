@@ -108,7 +108,7 @@ public class MemoryGame : MonoBehaviour
         else _cronometer.TimerText.text = _remainingTime.ToString();
 
         InstantiateCards();
-        AdjustGridLayout();
+        //AdjustGridLayout();
         ShuffleCards();
 
         InvokeUtility.Invoke(PlayerPrefs.GetInt("MemorizationTime", _config.memorizationTime), () =>
@@ -187,7 +187,7 @@ public class MemoryGame : MonoBehaviour
             {
                 if (AppManager.Instance.Storage.InventoryCount <= 0)
                 {
-                    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" +
+                    PopupManager.Instance.InvokeConfirmDialog("Nenhum item no estoque\n" + 
                         "Insira algum prêmio para continuar com a ativação", "OK", true);
 
                     return;

@@ -21,13 +21,17 @@ MonoBehaviour:
   - itemName: Item 2
     initialValue: 2
     prizeScore: 0
-  useLeads: 1
+  useLeads: 0
   memorizationTime: 2
   gameTime: 20
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
-  cardBack: {fileID: -8289757635477254070, guid: 8eca86f6bc01594479a4e6e83dbacef3, type: 3}
+  cardBack: {fileID: 21300000, guid: 34a913312cf66684590a7ee8230cabe9, type: 3}
   cardPairs:
-  - {fileID: 3086702787477723114, guid: 60fbddf2033719f4d9b0e972b078cc36, type: 3}
-  - {fileID: 3602359228215184582, guid: c28b6d6f424625f4eacffd9134d30007, type: 3}
-  - {fileID: -6032549039451073316, guid: 8fbaf5cd735e92b4fbd18599737df462, type: 3}
-  - {fileID: -3572086445711286175, guid: 5bdf5f0fa5c08dc45a83324ff7fda652, type: 3}
+  - {fileID: 21300000, guid: b19c5473038acbd47a6494178ef49821, type: 3}
+  - {fileID: 21300000, guid: 528de0ae04e0ee54780a0029faa2e416, type: 3}
+  - {fileID: 21300000, guid: c4cb79be2336f9b4c9a59c8345c7551a, type: 3}
+  - {fileID: 21300000, guid: 36649c4dbab000e44bd0e8ce5e1c22ef, type: 3}
+  - {fileID: 21300000, guid: ab75655e37d8ec84a9c175489c7ac12c, type: 3}
+  - {fileID: 21300000, guid: 59afaa4b031e86d45bf8863e0af0db80, type: 3}
+  - {fileID: 21300000, guid: dc43729c7e702794d826461ef2031425, type: 3}
+  - {fileID: 21300000, guid: 20194ce0ba4727e4486fd80e64c25105, type: 3}
