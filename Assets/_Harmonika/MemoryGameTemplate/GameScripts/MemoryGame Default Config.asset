@@ -21,7 +21,7 @@ MonoBehaviour:
   - itemName: Item 2
     initialValue: 2
     prizeScore: 0
-  useLeads: 0
+  useLeads: 1
   memorizationTime: 2
   gameTime: 20
   _cardPrefab: {fileID: 4771165339378910402, guid: abd790d0add2e51479c462b93241d30a, type: 3}
