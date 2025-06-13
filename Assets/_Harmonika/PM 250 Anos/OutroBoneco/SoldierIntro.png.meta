@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 338030578590bfc408b66ba0e8eecc8d
+guid: 05d9486f0b1efde4dbee7659300b6451
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9011662928670266658
-    second: PM_Bg_0
+      213: 8217453685554261216
+    second: SoldierIntro_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PM_Bg_0
+      name: SoldierIntro_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1080
-        height: 1920
+        width: 1028
+        height: 1010
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eda6d0def4420f280800000000000000
-      internalID: -9011662928670266658
+      spriteID: 0ecafadc6924a0270800000000000000
+      internalID: 8217453685554261216
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PM_Bg_0: -9011662928670266658
+      SoldierIntro_0: 8217453685554261216
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
